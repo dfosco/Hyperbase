@@ -1,0 +1,4 @@
+.stage { padding: 24px; }
+.metadata { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; }
+.metadata dt { color: var(--muted-foreground); }
+.metadata dd { margin: 0; text-align: right; }

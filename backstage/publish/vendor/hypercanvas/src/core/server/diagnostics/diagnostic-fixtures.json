@@ -1,0 +1,481 @@
+{
+  "valid": [
+    {
+      "schemaVersion": 1,
+      "incidentId": "incident_1234567890abcd",
+      "correlationId": "episode_1234567890abcd",
+      "occurredAt": "2026-10-23T10:00:00.000Z",
+      "code": "CORE_READY_TIMEOUT",
+      "title": "Hypercanvas Core is taking too long to start",
+      "description": "The local Core service did not report that it was ready in time.",
+      "runtime": "mygo",
+      "component": "core-supervisor",
+      "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+      "details": {
+        "timeoutSeconds": 45,
+        "credential": "fixture-secret"
+      },
+      "location": {
+        "file": "packages/mygo/main.go",
+        "line": 323
+      },
+      "recovery": {
+        "state": "recovering",
+        "attempt": 1,
+        "limit": 2,
+        "action": "retry-core"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "incidentId": "incident_abcdefghijkl",
+      "correlationId": "episode_abcdefghijkl",
+      "occurredAt": "2026-10-23T10:00:01Z",
+      "code": "CORE_UPSTREAM_UNAVAILABLE",
+      "title": "Hypercanvas service is unavailable",
+      "description": "The local service needed for this page did not respond.",
+      "runtime": "core",
+      "component": "instance-proxy",
+      "recovery": {
+        "state": "recovered",
+        "attempt": 1,
+        "limit": 2
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "incidentId": "incident_1234567890abcd",
+      "correlationId": "episode_1234567890abcd",
+      "occurredAt": "2026-10-23T10:00:00.000Z",
+      "code": "CORE_READY_TIMEOUT",
+      "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀",
+      "description": "The local Core service did not report that it was ready in time.",
+      "runtime": "mygo",
+      "component": "core-supervisor",
+      "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+      "details": {
+        "timeoutSeconds": 45,
+        "credential": "fixture-secret"
+      },
+      "location": {
+        "file": "packages/mygo/main.go",
+        "line": 323
+      },
+      "recovery": {
+        "state": "recovering",
+        "attempt": 1,
+        "limit": 2,
+        "action": "retry-core"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "reason": "unsupported catalog code",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "UNLISTED_FAILURE",
+        "title": "Unknown",
+        "description": "Keep the original cause in the safe fallback record.",
+        "runtime": "core",
+        "component": "diagnostics"
+      }
+    },
+    {
+      "reason": "arbitrary recovery action",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "recovery": {
+          "state": "manual",
+          "attempt": 0,
+          "limit": 2,
+          "action": "run-shell-command"
+        }
+      }
+    },
+    {
+      "reason": "absolute source paths are not accepted",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "location": {
+          "file": "/Users/private/token=secret/main.go",
+          "line": 323
+        }
+      }
+    },
+    {
+      "reason": "pending startup is not a failure incident state",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "recovery": {
+          "state": "pending",
+          "attempt": 0,
+          "limit": 2
+        }
+      }
+    },
+    {
+      "reason": "missing recovery attempt",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null recovery attempt",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": null,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null optional instruction",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": null,
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "empty optional instruction",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null optional details",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": null,
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null optional location",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": null,
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null optional recovery",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": null
+      }
+    },
+    {
+      "reason": "null optional location line",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": null
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    },
+    {
+      "reason": "null optional recovery action",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": null
+        }
+      }
+    },
+    {
+      "reason": "empty optional recovery action",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "packages/mygo/main.go",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": ""
+        }
+      }
+    },
+    {
+      "reason": "empty location file",
+      "incident": {
+        "schemaVersion": 1,
+        "incidentId": "incident_1234567890abcd",
+        "correlationId": "episode_1234567890abcd",
+        "occurredAt": "2026-10-23T10:00:00.000Z",
+        "code": "CORE_READY_TIMEOUT",
+        "title": "Hypercanvas Core is taking too long to start",
+        "description": "The local Core service did not report that it was ready in time.",
+        "runtime": "mygo",
+        "component": "core-supervisor",
+        "instruction": "Check that Node.js 24 is installed, then retry Core startup.",
+        "details": {
+          "timeoutSeconds": 45,
+          "credential": "fixture-secret"
+        },
+        "location": {
+          "file": "",
+          "line": 323
+        },
+        "recovery": {
+          "state": "recovering",
+          "attempt": 1,
+          "limit": 2,
+          "action": "retry-core"
+        }
+      }
+    }
+  ],
+  "redactions": [
+    {
+      "input": "{\"token\":\"fixture-only-credential\"}",
+      "expected": "{\"token\":\"[redacted]\"}"
+    },
+    {
+      "input": "{\"nested\":{\"accessToken\":\"fixture-only-credential\"}}",
+      "expected": "{\"nested\":{\"accessToken\":\"[redacted]\"}}"
+    },
+    {
+      "input": "Authorization: Bearer fixture-only-credential",
+      "expected": "Authorization: [redacted]"
+    }
+  ],
+  "unicodeBoundary": {
+    "maxCodePoints": 160,
+    "character": "😀",
+    "redactionMaxCodePoints": 2000
+  },
+  "unknownErrors": [
+    {
+      "input": {
+        "message": "backend unavailable",
+        "component": "instance-proxy"
+      },
+      "expected": "backend unavailable",
+      "expectedReportedComponent": "instance-proxy"
+    }
+  ]
+}

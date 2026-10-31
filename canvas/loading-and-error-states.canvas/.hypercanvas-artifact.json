@@ -1,0 +1,10 @@
+{
+  "formatVersion": 1,
+  "id": "canvas-8bcc2d311124f74bf8f9",
+  "kind": "canvas",
+  "migrationAliases": {
+    "legacyCanvasIds": [
+      "loading-and-error-states"
+    ]
+  }
+}

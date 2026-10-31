@@ -1,0 +1,21 @@
+/* Canonical app-level loading spinner. The MyGo splash receives this file
+ * from scripts/sync-mygo-loading-spinner.mjs before dev and packaging. */
+.main-loading-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid color-mix(in srgb, CanvasText 18%, transparent);
+  border-top-color: CanvasText;
+  border-radius: 50%;
+  animation: hc-main-loading-spin 0.7s linear infinite;
+}
+
+@keyframes hc-main-loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-loading-spinner {
+    animation-duration: 2s;
+  }
+}

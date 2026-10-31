@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Hypercanvas loading states</title>
+  <script>
+    (() => {
+      const params = new URLSearchParams(location.search)
+      const variant = ['start', 'loaders', 'skeleton', 'error'].includes(params.get('variant'))
+        ? params.get('variant') : 'start'
+      document.documentElement.dataset.variant = variant
+      const requestedTheme = params.get('_sb_canvas_theme') || params.get('theme')
+      if (requestedTheme === 'light' || requestedTheme === 'dark') {
+        document.documentElement.dataset.theme = requestedTheme
+      }
+    })()
+  </script>
+  <style>
+    /* Preview-only brand reference: hypercanvas-site LandingContent/Landing.module.css. */
+    @font-face {
+      font-family: 'Mona Sans';
+      src: url('./Mona-Sans.woff2') format('woff2');
+      font-weight: 200 900;
+      font-stretch: 75% 125%;
+      font-display: swap;
+    }
+    :root {
+      color-scheme: light;
+      --hc-color-background: #ffffff;
+      --hc-color-background-muted: #f6f8fa;
+      --hc-color-background-inset: #f6f8fa;
+      --hc-color-foreground: #1f2328;
+      --hc-color-foreground-muted: #59636e;
+      --hc-color-foreground-accent: #0969da;
+      --hc-color-border: #d1d9e0;
+      --hc-color-border-muted: #d1d9e0b3;
+      --hc-color-background-neutral-muted: #818b981f;
+      --hc-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --preview-radius: 12px;
+      --preview-gap: 16px;
+      font-family: var(--hc-font-sans);
+      color: var(--hc-color-foreground);
+      background: var(--hc-color-background);
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --hc-color-background: #0d1117;
+      --hc-color-background-muted: #151b23;
+      --hc-color-background-inset: #010409;
+      --hc-color-foreground: #f0f6fc;
+      --hc-color-foreground-muted: #9198a1;
+      --hc-color-foreground-accent: #4493f8;
+      --hc-color-border: #3d444d;
+      --hc-color-border-muted: #3d444db3;
+      --hc-color-background-neutral-muted: #656c7633;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        color-scheme: dark;
+        --hc-color-background: #0d1117;
+        --hc-color-background-muted: #151b23;
+        --hc-color-background-inset: #010409;
+        --hc-color-foreground: #f0f6fc;
+        --hc-color-foreground-muted: #9198a1;
+        --hc-color-foreground-accent: #4493f8;
+        --hc-color-border: #3d444d;
+        --hc-color-border-muted: #3d444db3;
+        --hc-color-background-neutral-muted: #656c7633;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { min-width: 320px; min-height: 100%; margin: 0; }
+    body {
+      min-height: 100vh;
+      background: var(--hc-color-background);
+      color: var(--hc-color-foreground);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    [hidden] { display: none !important; }
+    .surface { min-height: 100vh; padding: 28px; }
+    .caption {
+      margin: 0 0 12px;
+      color: var(--hc-color-foreground-muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .muted { color: var(--hc-color-foreground-muted); }
+    .start-layout, .error-layout {
+      display: grid;
+      min-height: 100vh;
+      align-content: center;
+      justify-items: center;
+      padding: 32px;
+    }
+    .variant-start.start-layout {
+      display: block;
+      padding: max(24px, calc(50vh - 150px)) 32px 0;
+    }
+    .start-content, .error-content {
+      display: grid;
+      justify-items: center;
+      gap: 20px;
+      width: min(100%, 560px);
+      text-align: center;
+    }
+    .variant-start .start-content { margin: 0 auto; }
+    .start-content .app-icon {
+      display: block;
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      transform: rotate(2deg);
+      animation: hc-brand-icon-float 2200ms ease-in-out infinite;
+    }
+    @keyframes hc-brand-icon-float {
+      0%, 100% { transform: translateY(0) rotate(2deg); }
+      50% { transform: translateY(-3px) rotate(2deg); }
+    }
+    :root[data-braille-paused="true"] .start-content .app-icon { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      .start-content .app-icon { animation: none; transform: rotate(2deg); }
+    }
+    .start-content .brand-title {
+      box-sizing: border-box;
+      width: min(100%, 460px);
+      height: 38.4px;
+      margin: 0;
+      font-family: 'Mona Sans', var(--hc-font-sans);
+      font-size: 32px;
+      font-weight: 700;
+      font-style: italic;
+      font-stretch: 125%;
+      letter-spacing: -0.02em;
+      line-height: 38.4px;
+      text-shadow: 6.5px 0 1px rgba(0, 30, 255, .5), -6.5px 0 1px rgba(255, 0, 80, .3), 0 0 3px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .startup-operations {
+      display: grid;
+      gap: 10px;
+      width: min(100%, 460px);
+      margin: 32px 0 0;
+      padding: 0;
+      list-style: none;
+      font: 14px/1.5 var(--hc-font-sans);
+      text-align: left;
+    }
+    .startup-operation {
+      display: grid;
+      grid-template-columns: 1rem minmax(0, 1fr);
+      align-items: baseline;
+      column-gap: 8px;
+    }
+    .startup-operation[data-state="complete"] { color: var(--hc-color-foreground-muted); }
+    .startup-operation-text { grid-column: 2; }
+    .braille {
+      grid-column: 1;
+      width: 1rem;
+      height: 1em;
+      overflow: hidden;
+      color: inherit;
+      font-size: 15px;
+      line-height: 1;
+    }
+    .braille-strip { display: block; animation: hc-braille-frames 1600ms steps(10, end) infinite; will-change: transform; }
+    .braille-strip > span { display: block; height: 1em; }
+    @keyframes hc-braille-frames { to { transform: translate3d(0, -10em, 0); } }
+    :root[data-braille-paused="true"] .braille-strip { animation-play-state: paused; }
+    .loader-comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--preview-gap);
+      width: min(100%, 1040px);
+      margin: 0 auto;
+    }
+    .demo-card, .error-card {
+      overflow: hidden;
+      border: 1px solid var(--hc-color-border);
+      border-radius: var(--preview-radius);
+      background: var(--hc-color-background);
+    }
+    .demo-head {
+      display: flex;
+      min-height: 44px;
+      align-items: center;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--hc-color-border-muted);
+      color: var(--hc-color-foreground-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .full-loader-stage {
+      display: grid;
+      min-height: 284px;
+      place-items: center;
+      background: var(--hc-color-background);
+    }
+    .content-loader-stage {
+      display: grid;
+      min-height: 284px;
+      place-items: center;
+      padding: 24px;
+      background: var(--hc-color-background-inset);
+    }
+    .content-region {
+      display: grid;
+      min-height: 176px;
+      width: min(100%, 340px);
+      place-items: center;
+      gap: 10px;
+      border: 1px solid var(--hc-color-border);
+      border-radius: 8px;
+      background: var(--hc-color-background);
+    }
+    .main-loading-spinner {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 2px solid color-mix(in srgb, var(--hc-color-foreground) 18%, transparent);
+      border-top-color: var(--hc-color-foreground);
+      border-radius: 50%;
+      animation: hc-main-loading-spin .7s linear infinite;
+    }
+    @keyframes hc-main-loading-spin { to { transform: rotate(360deg); } }
+    .skeleton-app {
+      display: grid;
+      grid-template-rows: 52px 1fr;
+      min-height: calc(100vh - 56px);
+      overflow: hidden;
+      border: 1px solid var(--hc-color-border);
+      border-radius: var(--preview-radius);
+      background: var(--hc-color-background);
+    }
+    .skeleton-topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--hc-color-border);
+    }
+    .skeleton-content {
+      display: grid;
+      grid-template-columns: 196px 1fr;
+      min-height: 0;
+    }
+    .skeleton-sidebar {
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      padding: 22px 16px;
+      border-right: 1px solid var(--hc-color-border);
+      background: var(--hc-color-background-muted);
+    }
+    .skeleton-main { display: grid; align-content: start; gap: 22px; padding: 28px; }
+    .skeleton-title { display: grid; gap: 10px; padding-bottom: 16px; border-bottom: 1px solid var(--hc-color-border-muted); }
+    .skeleton-rows { display: grid; gap: 14px; }
+    .skeleton-row { display: grid; grid-template-columns: 1fr 120px; gap: 20px; align-items: center; }
+    .skeleton-line, .skeleton-dot {
+      display: block;
+      overflow: hidden;
+      background: linear-gradient(100deg,
+        var(--hc-color-background-neutral-muted) 20%,
+        color-mix(in srgb, var(--hc-color-foreground) 13%, var(--hc-color-background)) 38%,
+        var(--hc-color-background-neutral-muted) 56%);
+      background-size: 240% 100%;
+      animation: hc-skeleton-shimmer 1.8s ease-in-out infinite;
+    }
+    .skeleton-line { height: 10px; border-radius: 999px; }
+    .skeleton-line.short { width: 45%; }
+    .skeleton-line.medium { width: 68%; }
+    .skeleton-line.title { width: min(48%, 260px); height: 20px; }
+    .skeleton-line.topbar { width: 150px; }
+    .skeleton-line.nav { width: 78%; }
+    .skeleton-dot { width: 20px; height: 20px; border-radius: 6px; }
+    @keyframes hc-skeleton-shimmer { to { background-position: -140% 0; } }
+    .error-symbol {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      color: var(--hc-color-foreground-muted);
+      font-size: 40px;
+      line-height: 1;
+    }
+    h1 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; }
+    .error-card {
+      width: min(100%, 460px);
+      min-width: 0;
+      padding: 16px;
+      border-radius: 8px;
+      background: var(--hc-color-background-muted);
+      font-size: 13px;
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+    .error-card p { margin: 0; }
+    .error-card .error-guidance { margin-top: 8px; color: var(--hc-color-foreground-muted); }
+    .error-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .quiet-button {
+      padding: 8px 12px;
+      border: 1px solid var(--hc-color-border);
+      border-radius: 6px;
+      background: var(--hc-color-background);
+      color: inherit;
+      font: inherit;
+    }
+    .quiet-button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+    @media (max-width: 620px) {
+      .surface { padding: 18px; }
+      .loader-comparison { grid-template-columns: 1fr; }
+      .skeleton-content { grid-template-columns: 132px 1fr; }
+      .skeleton-sidebar { padding: 18px 12px; }
+      .skeleton-main { padding: 20px 14px; }
+      .skeleton-row { grid-template-columns: 1fr 70px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .main-loading-spinner, .skeleton-line, .skeleton-dot { animation: none; }
+      .braille-strip { animation: none; transform: none; will-change: auto; }
+    }
+    html[data-variant="start"] .variant:not(.variant-start),
+    html[data-variant="loaders"] .variant:not(.variant-loaders),
+    html[data-variant="skeleton"] .variant:not(.variant-skeleton),
+    html[data-variant="error"] .variant:not(.variant-error) { display: none; }
+  </style>
+</head>
+<body>
+  <section class="surface variant variant-start start-layout" aria-label="Startup view">
+    <div class="start-content">
+      <img class="app-icon" src="./hypercanvas-icon.png" width="64" height="64" alt="">
+      <h1 class="brand-title">Hypercanvas</h1>
+      <ol class="startup-operations" aria-label="Startup operations" aria-live="polite">
+        <li class="startup-operation" data-state="complete"><span class="braille" aria-hidden="true"></span><span class="startup-operation-text">Node.js and npm verified</span></li>
+        <li class="startup-operation" data-state="complete"><span class="braille" aria-hidden="true"></span><span class="startup-operation-text">The local Core runtime is prepared</span></li>
+        <li class="startup-operation" data-state="complete"><span class="braille" aria-hidden="true"></span><span class="startup-operation-text">Hypercanvas Core started</span></li>
+        <li class="startup-operation" data-state="running">
+          <span class="braille" aria-hidden="true"><span class="braille-strip"><span>⠋</span><span>⠙</span><span>⠹</span><span>⠸</span><span>⠼</span><span>⠴</span><span>⠦</span><span>⠧</span><span>⠇</span><span>⠏</span><span>⠋</span></span></span>
+          <span class="startup-operation-text">Connecting to the local Hypercanvas server</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="surface variant variant-loaders" aria-label="Regular loading states">
+    <p class="caption">One regular loader · 24 px / 2 px</p>
+    <div class="loader-comparison">
+      <article class="demo-card">
+        <div class="demo-head">Full document</div>
+        <div class="full-loader-stage"><span class="main-loading-spinner" aria-hidden="true"></span></div>
+      </article>
+      <article class="demo-card">
+        <div class="demo-head">Content region</div>
+        <div class="content-loader-stage">
+          <div class="content-region"><span class="main-loading-spinner" aria-hidden="true"></span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="surface variant variant-skeleton" aria-label="Optional skeleton preview">
+    <p class="caption">Review option · not selected as production behavior</p>
+    <div class="skeleton-app" aria-hidden="true">
+      <div class="skeleton-topbar"><span class="skeleton-dot"></span><span class="skeleton-line topbar"></span><span class="skeleton-line short" style="margin-left:auto"></span></div>
+      <div class="skeleton-content">
+        <aside class="skeleton-sidebar"><span class="skeleton-line nav"></span><span class="skeleton-line nav"></span><span class="skeleton-line medium"></span><span class="skeleton-line nav"></span><span class="skeleton-line short"></span></aside>
+        <main class="skeleton-main">
+          <div class="skeleton-title"><span class="skeleton-line title"></span><span class="skeleton-line medium"></span></div>
+          <div class="skeleton-rows">
+            <div class="skeleton-row"><span class="skeleton-line"></span><span class="skeleton-line medium"></span></div>
+            <div class="skeleton-row"><span class="skeleton-line medium"></span><span class="skeleton-line short"></span></div>
+            <div class="skeleton-row"><span class="skeleton-line"></span><span class="skeleton-line medium"></span></div>
+            <div class="skeleton-row"><span class="skeleton-line short"></span><span class="skeleton-line"></span></div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface variant variant-error error-layout" aria-label="Neutral error slot preview">
+    <div class="error-content">
+      <span class="error-symbol" aria-hidden="true">&#x26A0;&#xFE0E;</span>
+      <h1>An error has occurred</h1>
+      <article class="error-card" aria-label="Error details and recovery">
+        <p role="alert">Importing a module script failed.</p>
+        <p class="error-guidance">Automatic retry did not resolve the error. You can reload the page.</p>
+        <div class="error-actions">
+          <button class="quiet-button" type="button">Reload page</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <script>
+    // Preview motion follows the production transform strip; no startup simulation/timer.
+    const syncBraille = () => { document.documentElement.dataset.braillePaused = String(document.hidden) }
+    const cleanupBraille = () => {
+      document.documentElement.dataset.braillePaused = 'true'
+      document.removeEventListener('visibilitychange', syncBraille)
+    }
+    document.addEventListener('visibilitychange', syncBraille)
+    window.addEventListener('pagehide', cleanupBraille, { once: true })
+    syncBraille()
+  </script>
+</body>
+</html>

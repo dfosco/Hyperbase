@@ -1,0 +1,14 @@
+/**
+ * Storyboard Knobs core barrel.
+ *
+ * Re-exports framework-agnostic knob helpers for hash keys, coercion,
+ * discovery, iframe-safe writes, and in-page highlight overlay.
+ */
+export { buildKnobKey, buildLegacyKnobKey } from './keys.js';
+export { coerceByType } from './coerce.js';
+export type { CoercedKnobValue, KnobDefinition } from './contracts.js';
+export { initKnobs, getPrototypeKnobs, getComponentKnobs, resolveKnobDef, flattenKnobs, } from './discovery.js';
+export { setKnobValue, clearKnobValue, serializeKnobValue } from './writer.js';
+export { createHypercanvasKnobRuntime } from './statefullyAdapter.js';
+export { detectCurrentPrototypeRoute } from './route.js';
+export { resolveKnobColor, isKnobHighlightEnabled, installKnobsHighlight, uninstallKnobsHighlight, DEFAULT_KNOB_COLOR, } from './highlight.js';

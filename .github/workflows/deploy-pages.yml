@@ -1,0 +1,42 @@
+# Hypercanvas publication deploy — installs and builds the committed publication source, then deploys.
+# Build output: backstage/publish/dist (generated here, not committed; see DOCS/publishing.md).
+name: Deploy published site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backstage/publish/package-lock.json
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+        working-directory: backstage/publish
+      - run: npm run build
+        working-directory: backstage/publish
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: backstage/publish/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

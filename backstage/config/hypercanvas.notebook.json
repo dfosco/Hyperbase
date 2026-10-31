@@ -1,0 +1,191 @@
+{
+  "formatVersion": 2,
+  "id": "nb_dcb6f6b6638b4ea99837656f2fd44fdd",
+  "title": "Hyperbase",
+  "pages": [
+    {
+      "id": "canvas-e2c08e1e2d26d34bd54d",
+      "type": "canvas",
+      "title": "Chrome Components",
+      "path": "canvas/chrome-components.canvas/chrome-components.canvas.jsonl",
+      "route": "/canvas/chrome-components"
+    },
+    {
+      "id": "prototype-97f2b8604ad9afcca7da",
+      "type": "prototype",
+      "title": "Chrome Overview",
+      "path": "prototypes/chrome-overview.prototype",
+      "route": "/chrome-overview.prototype"
+    },
+    {
+      "id": "canvas-8bcc2d311124f74bf8f9",
+      "type": "canvas",
+      "title": "Loading and error states",
+      "path": "canvas/loading-and-error-states.canvas/loading-and-error-states.canvas.jsonl",
+      "route": "/canvas/loading-and-error-states"
+    },
+    {
+      "id": "artifact-canvas-5dc9413ede1842eb2b36",
+      "type": "canvas",
+      "title": "Publish · Design exploration",
+      "path": "publish-design.canvas/publish-design.canvas.jsonl",
+      "route": "/canvas/publish-design"
+    },
+    {
+      "id": "d2fcc33d-c6cd-4ce2-b5fe-d92b6327e644",
+      "type": "component",
+      "title": "PublishStates",
+      "path": "PublishStates.component",
+      "route": "/components/PublishStates"
+    },
+    {
+      "id": "246a6051-71b1-4ed0-9357-78c072d254ac",
+      "type": "component",
+      "title": "ChromeSidebar",
+      "path": "ChromeSidebar.component",
+      "route": "/components/ChromeSidebar"
+    },
+    {
+      "id": "edaa1369-310b-4ea5-b85e-4933e23e24b9",
+      "type": "component",
+      "title": "ChromeTopbar",
+      "path": "ChromeTopbar.component",
+      "route": "/components/ChromeTopbar"
+    },
+    {
+      "id": "2db42750-d1cc-4a53-a343-562ca51c8fe4",
+      "type": "component",
+      "title": "ChromeMenus",
+      "path": "ChromeMenus.component",
+      "route": "/components/ChromeMenus"
+    },
+    {
+      "id": "591eeb01-7673-4e4f-86ff-e13fadb10efa",
+      "type": "component",
+      "title": "ChromeDialogs",
+      "path": "ChromeDialogs.component",
+      "route": "/components/ChromeDialogs"
+    },
+    {
+      "id": "751b33c0-fb00-494f-a13b-f095b74c2e2d",
+      "type": "component",
+      "title": "ChromePanels",
+      "path": "ChromePanels.component",
+      "route": "/components/ChromePanels"
+    },
+    {
+      "id": "494304d5-c195-4a1c-90f1-f862fa7247d1",
+      "type": "component",
+      "title": "PublishFiles",
+      "path": "PublishFiles.component",
+      "route": "/components/PublishFiles"
+    },
+    {
+      "id": "artifact-component-55677a720a2febdbb88a",
+      "type": "component",
+      "title": "Toast",
+      "path": "Toast.component",
+      "route": "/components/Toast"
+    }
+  ],
+  "navigation": {
+    "mode": "type",
+    "sectionsEnabled": true,
+    "type": {
+      "groups": [
+        "prototype",
+        "canvas",
+        "component",
+        "site"
+      ],
+      "order": {
+        "prototype": [
+          "prototype-97f2b8604ad9afcca7da"
+        ],
+        "canvas": [
+          "canvas-e2c08e1e2d26d34bd54d",
+          "canvas-8bcc2d311124f74bf8f9",
+          "artifact-canvas-5dc9413ede1842eb2b36"
+        ],
+        "component": [
+          "d2fcc33d-c6cd-4ce2-b5fe-d92b6327e644",
+          "246a6051-71b1-4ed0-9357-78c072d254ac",
+          "edaa1369-310b-4ea5-b85e-4933e23e24b9",
+          "2db42750-d1cc-4a53-a343-562ca51c8fe4",
+          "591eeb01-7673-4e4f-86ff-e13fadb10efa",
+          "751b33c0-fb00-494f-a13b-f095b74c2e2d",
+          "494304d5-c195-4a1c-90f1-f862fa7247d1",
+          "artifact-component-55677a720a2febdbb88a"
+        ],
+        "site": []
+      }
+    },
+    "files": {
+      "flatOrder": [
+        "canvas-e2c08e1e2d26d34bd54d",
+        "prototype-97f2b8604ad9afcca7da",
+        "canvas-8bcc2d311124f74bf8f9",
+        "artifact-canvas-5dc9413ede1842eb2b36",
+        "d2fcc33d-c6cd-4ce2-b5fe-d92b6327e644",
+        "246a6051-71b1-4ed0-9357-78c072d254ac",
+        "edaa1369-310b-4ea5-b85e-4933e23e24b9",
+        "2db42750-d1cc-4a53-a343-562ca51c8fe4",
+        "591eeb01-7673-4e4f-86ff-e13fadb10efa",
+        "751b33c0-fb00-494f-a13b-f095b74c2e2d",
+        "494304d5-c195-4a1c-90f1-f862fa7247d1",
+        "artifact-component-55677a720a2febdbb88a"
+      ],
+      "entries": [
+        {
+          "type": "page",
+          "pageId": "canvas-e2c08e1e2d26d34bd54d"
+        },
+        {
+          "type": "page",
+          "pageId": "prototype-97f2b8604ad9afcca7da"
+        },
+        {
+          "type": "page",
+          "pageId": "canvas-8bcc2d311124f74bf8f9"
+        },
+        {
+          "type": "page",
+          "pageId": "artifact-canvas-5dc9413ede1842eb2b36"
+        },
+        {
+          "type": "page",
+          "pageId": "d2fcc33d-c6cd-4ce2-b5fe-d92b6327e644"
+        },
+        {
+          "type": "page",
+          "pageId": "246a6051-71b1-4ed0-9357-78c072d254ac"
+        },
+        {
+          "type": "page",
+          "pageId": "edaa1369-310b-4ea5-b85e-4933e23e24b9"
+        },
+        {
+          "type": "page",
+          "pageId": "2db42750-d1cc-4a53-a343-562ca51c8fe4"
+        },
+        {
+          "type": "page",
+          "pageId": "591eeb01-7673-4e4f-86ff-e13fadb10efa"
+        },
+        {
+          "type": "page",
+          "pageId": "751b33c0-fb00-494f-a13b-f095b74c2e2d"
+        },
+        {
+          "type": "page",
+          "pageId": "494304d5-c195-4a1c-90f1-f862fa7247d1"
+        },
+        {
+          "type": "page",
+          "pageId": "artifact-component-55677a720a2febdbb88a"
+        }
+      ],
+      "sections": []
+    }
+  }
+}

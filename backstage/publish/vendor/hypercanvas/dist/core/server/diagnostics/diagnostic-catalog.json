@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "limits": {
+    "history": 50,
+    "snapshotBytes": 16777216
+  },
+  "codes": [
+    {
+      "code": "NODE_RUNTIME_UNAVAILABLE",
+      "title": "Node.js is unavailable",
+      "description": "Hypercanvas could not verify the Node.js runtime needed to start its local services.",
+      "runtime": "mygo",
+      "component": "runtime-discovery"
+    },
+    {
+      "code": "CORE_RUNTIME_UNAVAILABLE",
+      "title": "Hypercanvas Core is unavailable",
+      "description": "The bundled Hypercanvas Core files could not be found or verified.",
+      "runtime": "mygo",
+      "component": "core-runtime"
+    },
+    {
+      "code": "CORE_START_FAILED",
+      "title": "Hypercanvas Core could not start",
+      "description": "Hypercanvas could not start its local Core service.",
+      "runtime": "mygo",
+      "component": "core-launcher"
+    },
+    {
+      "code": "CORE_READY_TIMEOUT",
+      "title": "Hypercanvas Core is taking too long to start",
+      "description": "The local Core service did not report that it was ready in time.",
+      "runtime": "mygo",
+      "component": "core-supervisor"
+    },
+    {
+      "code": "CORE_PROCESS_EXITED",
+      "title": "Hypercanvas Core stopped unexpectedly",
+      "description": "The local Core process stopped while Hypercanvas was using it.",
+      "runtime": "mygo",
+      "component": "core-supervisor"
+    },
+    {
+      "code": "CORE_NAVIGATION_FAILED",
+      "title": "Hypercanvas could not open its workspace",
+      "description": "The app window could not open the local Hypercanvas workspace.",
+      "runtime": "mygo",
+      "component": "webview-navigation"
+    },
+    {
+      "code": "CORE_UPSTREAM_UNAVAILABLE",
+      "title": "Hypercanvas service is unavailable",
+      "description": "The local service needed for this page did not respond.",
+      "runtime": "core",
+      "component": "instance-proxy"
+    },
+    {
+      "code": "CORE_REQUEST_FAILED",
+      "title": "Hypercanvas could not complete this request",
+      "description": "A local Hypercanvas service returned an error while handling this request.",
+      "runtime": "core",
+      "component": "instance-proxy"
+    },
+    {
+      "code": "UNKNOWN_CORE_FAILURE",
+      "title": "Hypercanvas encountered a problem",
+      "description": "The original failure could not be classified. Its safe diagnostic details are retained.",
+      "runtime": "core",
+      "component": "diagnostics"
+    },
+    {
+      "code": "UNKNOWN_MYGO_FAILURE",
+      "title": "Hypercanvas could not start",
+      "description": "The original startup failure could not be classified. Its safe diagnostic details are retained.",
+      "runtime": "mygo",
+      "component": "diagnostics"
+    }
+  ]
+}

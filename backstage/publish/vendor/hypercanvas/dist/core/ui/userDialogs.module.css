@@ -1,0 +1,43 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  box-sizing: border-box;
+  width: min(28rem, calc(100vw - 2rem));
+  height: fit-content;
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--borderColor-default, #888);
+  border-radius: 12px;
+  background: var(--bgColor-default, Canvas);
+  color: var(--fgColor-default, CanvasText);
+  box-shadow: 0 16px 48px #0004;
+  font: inherit;
+}
+
+.dialog::backdrop { background: #0007; }
+.dialog h2 { margin: 0 0 1rem; font-size: 1.125rem; }
+.message { white-space: pre-wrap; overflow-wrap: anywhere; }
+.dialog input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borderColor-default, #888);
+  border-radius: 6px;
+  background: var(--bgColor-default, Canvas);
+  color: inherit;
+  font: inherit;
+}
+.actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.5rem; }
+.actions button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--borderColor-default, #888);
+  border-radius: 6px;
+  background: var(--bgColor-muted, ButtonFace);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.actions .submit { background: var(--bgColor-accent-emphasis, #0969da); color: #fff; }
+.actions button:disabled { opacity: 0.5; cursor: default; }

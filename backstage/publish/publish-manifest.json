@@ -1,0 +1,35 @@
+{
+  "formatVersion": 1,
+  "title": "Hyperbase",
+  "notebookId": "nb_dcb6f6b6638b4ea99837656f2fd44fdd",
+  "pages": [
+    {
+      "id": "canvas-e2c08e1e2d26d34bd54d",
+      "type": "canvas",
+      "title": "Chrome Components",
+      "slug": "canvas-e2c08e1e2d26d34bd54d",
+      "prototypeName": null
+    },
+    {
+      "id": "prototype-97f2b8604ad9afcca7da",
+      "type": "prototype",
+      "title": "Chrome Overview",
+      "slug": "prototype-97f2b8604ad9afcca7da",
+      "prototypeName": "chrome-overview.prototype"
+    },
+    {
+      "id": "canvas-8bcc2d311124f74bf8f9",
+      "type": "canvas",
+      "title": "Loading and error states",
+      "slug": "canvas-8bcc2d311124f74bf8f9",
+      "prototypeName": null
+    },
+    {
+      "id": "artifact-canvas-5dc9413ede1842eb2b36",
+      "type": "canvas",
+      "title": "Publish · Design exploration",
+      "slug": "artifact-canvas-5dc9413ede1842eb2b36",
+      "prototypeName": null
+    }
+  ]
+}

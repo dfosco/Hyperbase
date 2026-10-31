@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hypercanvas.dev/schemas/desktop-diagnostic-incident-v1.json",
+  "title": "Hypercanvas desktop diagnostic incident",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "incidentId",
+    "correlationId",
+    "occurredAt",
+    "code",
+    "title",
+    "description",
+    "runtime",
+    "component"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "incidentId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{16,128}$"
+    },
+    "correlationId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{16,128}$"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{2,63}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "runtime": {
+      "enum": [
+        "mygo",
+        "core"
+      ]
+    },
+    "component": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,63}$"
+    },
+    "instruction": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "details": {
+      "type": "object",
+      "maxProperties": 20,
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ],
+        "maxLength": 2000
+      },
+      "propertyNames": {
+        "minLength": 1,
+        "maxLength": 64
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240,
+          "pattern": "^(?![\\\\/])(?![A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$))[^\\u0000-\\u001f]+$"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "attempt",
+        "limit"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "recovering",
+            "recovered",
+            "exhausted",
+            "manual"
+          ]
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "action": {
+          "enum": [
+            "retry-core",
+            "reload-page",
+            "restart-app",
+            "open-diagnostics"
+          ]
+        }
+      }
+    }
+  },
+  "$comment": "This schema defines shared structural types, presence, nullability, and Unicode code-point bounds. Runtime validators additionally enforce catalog code-to-runtime/component parity and cross-field recovery semantics such as attempt <= limit."
+}

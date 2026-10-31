@@ -1,0 +1,16 @@
+{
+  "formatVersion": 1,
+  "id": "prototype-97f2b8604ad9afcca7da",
+  "kind": "prototype",
+  "migrationAliases": {
+    "legacyRoutes": [
+      {
+        "from": "/chrome-overview",
+        "targetPath": ""
+      }
+    ],
+    "legacyScopes": {
+      "prototype": "chrome-overview"
+    }
+  }
+}

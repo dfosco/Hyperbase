@@ -1,0 +1,45 @@
+{
+  "$id": "artifact:canvas",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 64,
+      "description": "Kebab-case identifier"
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description"
+    },
+    "folder": {
+      "type": "string",
+      "description": "Parent directory. In a Notebook, use a notebook-relative ordinary folder path; omit to create at the Notebook root. In source-repository mode this retains the legacy canvas grouping behavior. Artifact folders cannot contain canvases."
+    },
+    "parentPath": {
+      "type": "string",
+      "description": "Notebook-relative ordinary parent directory; omit to create at the Notebook root. Preferred creation-context field; folder remains accepted for compatibility."
+    },
+    "folderKind": {
+      "type": "string",
+      "enum": ["workspace", "pages"],
+      "default": "pages",
+      "description": "Legacy source-repository grouping only. Ignored for new Notebook Canvas artifacts."
+    },
+    "grid": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show dot grid"
+    },
+    "jsx": {
+      "type": "boolean",
+      "default": false,
+      "description": "Include JSX companion file"
+    }
+  }
+}

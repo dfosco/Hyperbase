@@ -1,0 +1,178 @@
+.container {
+  padding: 80px 24px 24px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--hc-color-foreground, #e6edf3);
+}
+
+.banner {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--hc-color-border-danger-emphasis, #da3633);
+  background-color: var(--hc-color-background-danger-muted, rgba(248, 81, 73, 0.1));
+  color: var(--hc-color-foreground-danger, #f85149);
+}
+
+.banner strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hint {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--hc-color-foreground-muted, #9198a1);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.meta {
+  color: var(--hc-color-foreground-muted, #9198a1);
+}
+
+.meta a,
+.homeLink {
+  color: var(--hc-color-foreground-accent, #4493f8);
+  text-decoration: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.homeLink:hover {
+  text-decoration: underline;
+}
+
+.retryBtn {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--hc-color-border, #3d444d);
+  background: var(--hc-color-background, #0d1117);
+  color: var(--hc-color-foreground, #e6edf3);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.retryBtn:hover {
+  background: var(--hc-color-background-muted, #161b22);
+}
+
+.stackDetails {
+  margin-top: 12px;
+}
+
+.stackSummary {
+  cursor: pointer;
+  color: var(--hc-color-foreground-muted, #9198a1);
+  font-size: 12px;
+  user-select: none;
+}
+
+.stackSummary:hover {
+  color: var(--hc-color-foreground, #e6edf3);
+}
+
+.stackPre {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--hc-color-background-muted, #161b22);
+  color: var(--hc-color-foreground-muted, #9198a1);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Match the startup composition without changing route-level error displays. */
+.appError {
+  box-sizing: border-box;
+  min-height: var(--sb-window-content-height, calc(100vh - var(--sb-branch-bar-height, 0px)));
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 20px;
+  padding: 32px;
+  color: var(--hc-color-foreground, #1f2328);
+  font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.appWarning {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--hc-color-foreground-muted, #59636e);
+  font-size: 40px;
+  line-height: 1;
+}
+
+.appHeading {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.appRecovery {
+  box-sizing: border-box;
+  width: min(100%, 460px);
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--hc-color-border, #d1d9e0);
+  border-radius: 8px;
+  background: var(--hc-color-background-muted, #f6f8fa);
+  font-size: 13px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.appMessage {
+  margin: 0;
+  color: inherit;
+}
+
+.appHint {
+  margin: 8px 0 0;
+  color: var(--hc-color-foreground-muted, #59636e);
+}
+
+.appActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.appAction {
+  padding: 8px 12px;
+  border: 1px solid var(--hc-color-border, #d1d9e0);
+  border-radius: 6px;
+  background: var(--hc-color-background, #fff);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.appAction:hover {
+  background: var(--hc-color-background-muted, #f6f8fa);
+}
+
+.appAction:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

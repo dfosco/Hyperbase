@@ -1,0 +1,221 @@
+/* AuthModal — PAT entry dialog (BaseUI Dialog) */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--hc-color-overlay-backdrop, rgba(0, 0, 0, 0.4));
+  z-index: 10000;
+}
+
+.popupWrap {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.popupWrap > * {
+  pointer-events: auto;
+}
+
+.popup {
+  background: var(--hc-color-background);
+  border-radius: 12px;
+  box-shadow: var(--hc-shadow-floating, 0 16px 48px rgba(0, 0, 0, 0.12));
+  padding: 28px;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: var(--hc-color-foreground);
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--hc-color-foreground-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.closeBtn:hover {
+  background: var(--hc-color-background-neutral-muted);
+  color: var(--hc-color-foreground);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--hc-color-foreground);
+  padding-right: 32px;
+}
+
+.desc {
+  font-size: 15px;
+  color: var(--hc-color-foreground-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid var(--hc-color-border);
+  margin: 16px 0;
+}
+
+/* Token config card — matches GitHub PAT settings screenshot */
+
+.tokenCard {
+  background: var(--hc-color-background-muted);
+  border: 1px solid var(--hc-color-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.tokenCardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--hc-color-foreground);
+  margin-bottom: 8px;
+}
+
+.tokenCardRow {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--hc-color-foreground-muted);
+}
+
+.tokenCardLabel {
+  flex-shrink: 0;
+}
+
+.tokenCardCode {
+  font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 13px;
+  color: var(--hc-color-foreground);
+  background: var(--hc-color-background);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.tokenCardHint {
+  color: var(--hc-color-foreground-muted);
+}
+
+.tokenLink {
+  display: inline-block;
+  font-size: 15px;
+  color: var(--hc-color-foreground-accent);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.tokenLink:hover {
+  text-decoration: underline;
+}
+
+/* Input */
+
+.label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--hc-color-foreground);
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--hc-color-border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background: var(--hc-color-background);
+  color: var(--hc-color-foreground);
+}
+
+.input::placeholder {
+  color: var(--hc-color-foreground-muted);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--hc-color-border-accent-emphasis);
+  box-shadow: 0 0 0 3px var(--hc-color-border-accent-muted);
+}
+
+/* Warning banner */
+
+.warning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--hc-color-background-attention-muted);
+  border: 1px solid var(--hc-color-border-attention-muted);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--hc-color-foreground-attention);
+  margin-bottom: 8px;
+}
+
+.warningIcon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btnSecondary {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  color: var(--hc-color-foreground-muted);
+  cursor: pointer;
+}
+
+.btnSecondary:hover {
+  color: var(--hc-color-foreground);
+  background: var(--hc-color-background-neutral-muted);
+}
+
+.btnPrimary {
+  padding: 8px 20px;
+  background: var(--hc-color-background-accent-emphasis);
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--hc-color-foreground-on-emphasis);
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background: var(--hc-color-background-accent-emphasis-hover, var(--hc-color-background-accent-emphasis));
+}

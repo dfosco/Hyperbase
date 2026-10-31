@@ -1,0 +1,40 @@
+.canvasLoading {
+  display: grid;
+  place-items: center;
+  min-height: var(--sb-window-content-height, calc(100dvh - var(--sb-window-content-top, var(--sb-branch-bar-height, 0px)) - var(--hc-lifecycle-debug-inset, 0px)));
+}
+
+.notebookSwitchOverlay {
+  position: fixed;
+  z-index: 2147483001;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--hc-color-background, #fff);
+}
+
+.coreRecoveryOverlay {
+  position: fixed;
+  z-index: 2147483000;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--hc-color-background, #fff);
+  color: var(--hc-color-foreground, #171717);
+}
+
+.coreRecoveryActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.coreRecoveryActions p {
+  margin: 0;
+  color: var(--hc-color-muted-foreground, #737373);
+  font-size: 0.875rem;
+}

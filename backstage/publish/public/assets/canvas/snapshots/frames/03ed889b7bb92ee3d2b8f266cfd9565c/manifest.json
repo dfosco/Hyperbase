@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "sourceKey": "03ed889b7bb92ee3d2b8f266cfd9565c",
+  "target": {
+    "kind": "prototype",
+    "src": "/chrome-overview.prototype",
+    "zoom": 100,
+    "viewport": {
+      "width": 1392,
+      "height": 827
+    }
+  },
+  "viewport": {
+    "width": 1392,
+    "height": 827
+  },
+  "images": {
+    "light": {
+      "file": "e84b2025de21993caba500354046a1d9-light.png",
+      "digest": "e84b2025de21993caba500354046a1d9",
+      "bytes": 118703,
+      "width": 2784,
+      "height": 1654,
+      "updatedAt": "2026-10-30T11:19:52.174Z"
+    }
+  },
+  "updatedAt": "2026-10-30T11:19:52.174Z"
+}

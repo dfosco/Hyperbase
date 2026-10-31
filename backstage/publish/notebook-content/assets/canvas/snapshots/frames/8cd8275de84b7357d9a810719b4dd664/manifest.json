@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "sourceKey": "8cd8275de84b7357d9a810719b4dd664",
+  "target": {
+    "kind": "prototype",
+    "src": "/notebook-assets/previews/loading-state-consistency/index.html?variant=error",
+    "zoom": 100,
+    "viewport": {
+      "width": 980,
+      "height": 583
+    }
+  },
+  "viewport": {
+    "width": 980,
+    "height": 583
+  },
+  "images": {
+    "light": {
+      "file": "63c7d9290824c3b516251011bb8faeb4-light.png",
+      "digest": "63c7d9290824c3b516251011bb8faeb4",
+      "bytes": 41510,
+      "width": 1960,
+      "height": 1166,
+      "updatedAt": "2026-10-26T00:21:43.702Z"
+    }
+  },
+  "updatedAt": "2026-10-26T00:21:43.702Z"
+}

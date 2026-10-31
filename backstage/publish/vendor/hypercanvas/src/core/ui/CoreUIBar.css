@@ -1,0 +1,210 @@
+.toolbar-separator {
+  width: 1px;
+  height: 20px;
+  background: var(--sb--trigger-border, var(--hc-color-slate-400));
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+:root {
+  --sb--notebook-sidebar-width: 286px;
+}
+
+html.hc-lifecycle-debug-panel-visible {
+  --hc-lifecycle-debug-inset: 40px;
+}
+
+html.hc-lifecycle-debug-panel-visible :is(
+  #storyboard-controls,
+  [data-core-ui-bar],
+  [aria-label="Canvas toolbar"],
+  [aria-label="Canvas controls"],
+  .sb-mode-switch
+) {
+  translate: 0 calc(-1 * var(--hc-lifecycle-debug-inset, 40px));
+}
+
+/* Full error fallbacks keep their explicit recovery action but suppress app tools. */
+html:has([data-hc-full-error]) :is(
+  #sb-core-ui,
+  #storyboard-controls,
+  [aria-label="Canvas toolbar"],
+  [aria-label="Canvas controls"],
+  [data-collab-bar],
+  [data-sb-skip-link]
+) {
+  display: none !important;
+}
+
+html[data-notebook-sidebar-open="true"] [aria-label="Canvas toolbar"] {
+  left: calc(var(--sb--notebook-sidebar-width) + 24px) !important;
+  transition: left 150ms ease;
+}
+
+html:not([data-notebook-sidebar-open="true"]) [aria-label="Canvas toolbar"] {
+  transition: left 150ms ease;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --sb--notebook-sidebar-width: min(86vw, 320px);
+  }
+}
+
+@media (max-width: 900px) {
+  html[data-notebook-sidebar-open="true"] [aria-label="Canvas toolbar"] {
+    right: 24px !important;
+    bottom: 96px !important;
+    max-width: calc(100vw - var(--sb--notebook-sidebar-width) - 48px);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  html[data-notebook-sidebar-open="true"] [aria-label="Canvas toolbar"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  html[data-notebook-sidebar-open="true"] [aria-label="Canvas toolbar"] > * {
+    flex-shrink: 0;
+  }
+}
+
+/* Keep the global toolbar clear of the Site terminal panel when it is open. */
+html[data-site-terminal-open="true"] #storyboard-controls {
+  bottom: calc(var(--site-terminal-toolbar-offset, 244px) + 12px) !important;
+}
+
+.default-button-dimmed {
+  opacity: 0.3;
+  transition: opacity 200ms;
+}
+
+.default-button-dimmed:hover,
+.default-button-dimmed:focus-within {
+  opacity: 1;
+}
+
+.tool-inactive {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.tool-dimmed {
+  opacity: 0.3;
+  transition: opacity 200ms;
+}
+.tool-dimmed:hover,
+.tool-dimmed:focus-within {
+  opacity: 1;
+}
+[data-local-only] {
+  position: relative;
+}
+[data-local-only]::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  background: hsl(212, 92%, 45%);
+  border-radius: 50%;
+  border: 2px solid var(--sb--sc-border-color, transparent);
+  box-sizing: content-box;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Collab bar / Agents Ready trigger ───────────────────────────── */
+
+[data-collab-bar] {
+  top: calc(12px + var(--sb-window-content-top, calc(var(--sb-window-inset-top, 0px) + var(--sb-branch-bar-height, 0px))));
+  right: 16px;
+}
+
+.agents-ready-btn {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 2.5px solid var(--sb--trigger-border, var(--hc-color-slate-400));
+  background: var(--sb--trigger-bg, var(--hc-color-slate-100));
+  color: var(--sb--trigger-text, var(--hc-color-slate-600));
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background 120ms;
+}
+.agents-ready-btn:hover:not(:disabled) {
+  background: var(--sb--trigger-bg-hover, var(--hc-color-slate-300));
+}
+.agents-ready-btn:disabled {
+  cursor: default;
+}
+.agents-ready-btn[data-ready] {
+  background: var(--hc-color-background-success-emphasis, #1a7f37);
+  border-color: var(--hc-color-background-success-emphasis, #1a7f37);
+  color: var(--hc-color-foreground-on-emphasis, #ffffff);
+}
+.agents-ready-btn[data-ready]:hover {
+  background: var(--hc-color-background-success-hover, #1a7f37cc);
+}
+.agents-ready-btn-label {
+  white-space: nowrap;
+}
+.agents-ready-btn-count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  min-width: 1ch;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: var(--sb--trigger-border, rgba(148, 163, 184, 0.35));
+  color: inherit;
+}
+.agents-ready-btn[data-ready] .agents-ready-btn-count {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.agents-ready-btn-working {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: var(--sb--trigger-border, rgba(148, 163, 184, 0.35));
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.agents-ready-btn[data-ready] .agents-ready-btn-working {
+  background: rgba(255, 255, 255, 0.22);
+}
+.agents-ready-btn-icon-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: sb-agents-spinner 0.85s linear infinite;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+.agents-ready-btn-spinner {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: sb-agents-spinner 0.85s linear infinite;
+  display: inline-block;
+}
+.agents-ready-btn-working-count {
+  line-height: 1;
+}
+@keyframes sb-agents-spinner {
+  to { transform: rotate(360deg); }
+}

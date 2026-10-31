@@ -1,0 +1,7 @@
+.hypercanvas/
+.storyboard/
+.DS_Store
+node_modules/
+dist/
+src/router.ts
+vendor/hypercanvas/dist/

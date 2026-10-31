@@ -1,0 +1,10 @@
+{
+  "formatVersion": 1,
+  "id": "canvas-e2c08e1e2d26d34bd54d",
+  "kind": "canvas",
+  "migrationAliases": {
+    "legacyCanvasIds": [
+      "chrome-components"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+.document { box-sizing: border-box; width: min(100%, 960px); margin: 0 auto; padding: 40px 32px 96px; color: var(--hc-color-foreground, #202124); line-height: 1.65; overflow-wrap: anywhere; }
+.document h1, .document h2, .document h3 { line-height: 1.25; }
+.document img { max-width: 100%; height: auto; }
+.document figure { margin: 24px 0; }
+.document pre { overflow-x: auto; padding: 16px; background: var(--hc-color-background-muted, #f4f4f4); }
+.document table { border-collapse: collapse; width: 100%; }
+.document th, .document td { border: 1px solid #8886; padding: 8px; }
+.document a { color: var(--hc-color-foreground-accent, #0969da); }
+.embed iframe { display: block; width: 100%; min-height: 360px; border: 1px solid #8886; border-radius: 8px; }
+.unavailable { padding: 12px 16px; background: var(--hc-color-background-muted, #8881); border: 1px solid #8886; border-radius: 6px; }
+@media (max-width: 600px) { .document { padding: 24px 16px 64px; } }

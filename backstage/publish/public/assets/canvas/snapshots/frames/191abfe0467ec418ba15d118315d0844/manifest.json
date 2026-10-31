@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "sourceKey": "191abfe0467ec418ba15d118315d0844",
+  "target": {
+    "kind": "prototype",
+    "src": "/@fs/Users/danielfosco/workspace/hypercanvas/.agents/previews/loading-state-consistency/index.html?variant=skeleton",
+    "zoom": 100,
+    "viewport": {
+      "width": 980,
+      "height": 583
+    }
+  },
+  "viewport": {
+    "width": 980,
+    "height": 583
+  },
+  "images": {
+    "light": {
+      "file": "d5d058d19acc387c2c45d87dcd3b62c3-light.png",
+      "digest": "d5d058d19acc387c2c45d87dcd3b62c3",
+      "bytes": 9322,
+      "width": 1960,
+      "height": 1166,
+      "updatedAt": "2026-10-23T11:04:33.091Z"
+    }
+  },
+  "updatedAt": "2026-10-23T11:04:33.091Z"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "base-nova",
+  "rsc": false,
+  "tsx": false,
+  "tailwind": {
+    "config": "",
+    "css": "prototypes/chrome-overview.prototype/styles/shadcn.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "#hyperbase/components",
+    "utils": "#hyperbase/lib/utils",
+    "ui": "#hyperbase/components/ui",
+    "lib": "#hyperbase/lib",
+    "hooks": "#hyperbase/hooks"
+  }
+}

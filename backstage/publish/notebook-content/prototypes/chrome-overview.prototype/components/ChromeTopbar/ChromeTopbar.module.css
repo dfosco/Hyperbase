@@ -1,0 +1,6 @@
+.frame { width: 100%; container-type: inline-size; }
+.bar { box-sizing: border-box; display: flex; align-items: center; gap: 16px; width: 100%; height: 49px; min-height: 49px; padding: 4px 12px; border-bottom: 1px solid var(--border); background: var(--background); }
+.sidebarToggle { flex: 0 0 auto; }
+.actions { display: flex; align-items: center; gap: 4px; }
+.breadcrumb { flex: 1; min-width: 0; }
+@container (max-width: 560px) { .bar { gap: 4px; } .notebook { display: none; } .actions { margin-left: auto; } .actions > button[aria-label="Back"], .actions > button[aria-label="Forward"], .actions > button[aria-label="Open in browser"] { display: none; } }
