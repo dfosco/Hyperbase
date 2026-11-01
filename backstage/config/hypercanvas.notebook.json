@@ -86,6 +86,13 @@
       "title": "Toast",
       "path": "Toast.component",
       "route": "/components/Toast"
+    },
+    {
+      "id": "artifact-canvas-85b2ce3bb04e257733d2",
+      "type": "canvas",
+      "title": "Point-to-Prompt · Current Experience",
+      "path": "point-to-prompt-experience.canvas/point-to-prompt-experience.canvas.jsonl",
+      "route": "/canvas/point-to-prompt-experience"
     }
   ],
   "navigation": {
@@ -105,7 +112,8 @@
         "canvas": [
           "canvas-e2c08e1e2d26d34bd54d",
           "canvas-8bcc2d311124f74bf8f9",
-          "artifact-canvas-5dc9413ede1842eb2b36"
+          "artifact-canvas-5dc9413ede1842eb2b36",
+          "artifact-canvas-85b2ce3bb04e257733d2"
         ],
         "component": [
           "d2fcc33d-c6cd-4ce2-b5fe-d92b6327e644",
@@ -133,7 +141,8 @@
         "591eeb01-7673-4e4f-86ff-e13fadb10efa",
         "751b33c0-fb00-494f-a13b-f095b74c2e2d",
         "494304d5-c195-4a1c-90f1-f862fa7247d1",
-        "artifact-component-55677a720a2febdbb88a"
+        "artifact-component-55677a720a2febdbb88a",
+        "artifact-canvas-85b2ce3bb04e257733d2"
       ],
       "entries": [
         {
@@ -183,6 +192,10 @@
         {
           "type": "page",
           "pageId": "artifact-component-55677a720a2febdbb88a"
+        },
+        {
+          "type": "page",
+          "pageId": "artifact-canvas-85b2ce3bb04e257733d2"
         }
       ],
       "sections": []
