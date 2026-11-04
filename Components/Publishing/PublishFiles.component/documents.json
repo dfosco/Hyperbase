@@ -1,0 +1,672 @@
+[
+  {
+    "id": "NotebookConfig",
+    "title": "Notebook publishing contract",
+    "kind": "Committed file",
+    "path": "backstage/config/hypercanvas.config.json",
+    "action": "Create repository / use reviewed repository / Save settings",
+    "root": "Notebook root",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Create repository / use reviewed repository / Save settings",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · actual Hyperbase",
+        "text": "{\n  \"devDomainColor\": \"#663399\",\n  \"prodDomain\": \"https://dfosco.github.io/hypercanvas/\",\n  \"repository\": {\n    \"owner\": \"dfosco\",\n    \"name\": \"hypercanvas\"\n  },\n  \"modes\": {\n    \"enabled\": false\n  },\n  \"comments\": {\n    \"discussions\": {\n      \"category\": \"General\"\n    }\n  },\n  \"workshop\": {\n    \"features\": {\n      \"createPrototype\": true,\n      \"createCanvas\": true,\n      \"createComponent\": false,\n      \"createFlow\": false,\n      \"createPage\": false,\n      \"createObject\": false,\n      \"createRecord\": false\n    },\n    \"partials\": [\n      {\n        \"directory\": \"template\",\n        \"name\": \"Application\"\n      }\n    ]\n  },\n  \"featureFlags\": {\n    \"agentChat\": true\n  },\n  \"hypercanvas\": {\n    \"proxyPort\": 1234\n  },\n  \"ui\": {\n    \"hide\": [\"workspace:components\", \"branch-bar\"]\n  },\n  \"canvas\": {\n    \"zoom\": {\n      \"min\": 10,\n      \"max\": 250,\n      \"step\": 5\n    }\n  },\n  \"customerMode\": {\n    \"enabled\": false,\n    \"homepage\": false,\n    \"tools\": \"all\",\n    \"commandPalette\": true,\n    \"branchBar\": true\n  },\n  \"theming\": {\n    \"themes\": {\n      \"light\": {\n        \"label\": \"Light\",\n        \"attrs\": { \"data-color-mode\": \"light\", \"data-light-theme\": \"light\" }\n      },\n      \"dark\": {\n        \"label\": \"Dark\",\n        \"attrs\": { \"data-color-mode\": \"dark\", \"data-dark-theme\": \"dark\" }\n      }\n    },\n    \"surfaces\": {\n      \"prototype\": { \"label\": \"Prototype\",  \"sync\": true  },\n      \"canvas\":    { \"label\": \"Canvas\",     \"sync\": true  },\n      \"toolbar\":   { \"label\": \"Tools\",      \"sync\": true  },\n      \"codeBoxes\": { \"label\": \"Code boxes\", \"sync\": true  }\n    },\n    \"default\": \"system\"\n  },\n  \"widgets\": {\n    \"tiles\": {\n      \"label\": \"Tiles\",\n      \"icon\": \"iconoir/view-grid\",\n      \"unlisted\": true,\n      \"interactGate\": true,\n      \"interactGateLabel\": \"Click to interact\",\n      \"resize\": { \"enabled\": true, \"prod\": false },\n      \"props\": {\n        \"tiles\":    { \"type\": \"text\",   \"label\": \"Tiles\",     \"category\": \"content\",  \"default\": [] },\n        \"columns\":  { \"type\": \"number\", \"label\": \"Columns\",   \"category\": \"settings\", \"default\": 3,  \"min\": 1,   \"max\": 20 },\n        \"rows\":     { \"type\": \"number\", \"label\": \"Rows\",      \"category\": \"settings\", \"default\": 3,  \"min\": 1,   \"max\": 20 },\n        \"tileSize\": { \"type\": \"number\", \"label\": \"Tile size\", \"category\": \"settings\", \"default\": 80, \"min\": 40,  \"max\": 300 },\n        \"width\":    { \"type\": \"number\", \"label\": \"Width\",     \"category\": \"size\",     \"default\": 270, \"min\": 200 },\n        \"height\":   { \"type\": \"number\", \"label\": \"Height\",    \"category\": \"size\",     \"default\": 270, \"min\": 100 }\n      },\n      \"features\": [\n        {\n          \"id\": \"grid-actions\",\n          \"type\": \"dropdown\",\n          \"icon\": \"grid\",\n          \"label\": \"Grid\",\n          \"items\": [\n            { \"action\": \"add-column\",    \"label\": \"Add column\",    \"icon\": \"plus\" },\n            { \"action\": \"remove-column\", \"label\": \"Remove column\", \"icon\": \"dash\" },\n            { \"action\": \"add-row\",       \"label\": \"Add row\",       \"icon\": \"plus\" },\n            { \"action\": \"remove-row\",    \"label\": \"Remove row\",    \"icon\": \"dash\" }\n          ]\n        },\n        { \"id\": \"randomize\", \"type\": \"action\", \"action\": \"randomize\", \"label\": \"Randomize\", \"icon\": \"sync\" },\n        { \"id\": \"copy\",      \"type\": \"action\", \"action\": \"copy\",      \"label\": \"$label:duplicate\", \"icon\": \"copy\" },\n        {\n          \"id\": \"copy-link\",\n          \"type\": \"action\",\n          \"action\": \"copy-link\",\n          \"label\": \"$label:copy-link\",\n          \"icon\": \"link\",\n          \"menu\": true,\n          \"prod\": true,\n          \"alt\": { \"label\": \"$label:copy-id\", \"action\": \"copy-widget-id\" }\n        },\n        { \"id\": \"delete\", \"type\": \"action\", \"action\": \"delete\", \"label\": \"$label:delete\", \"icon\": \"trash\", \"menu\": true }\n      ],\n      \"connectors\": {\n        \"anchors\": { \"top\": \"available\", \"bottom\": \"available\", \"left\": \"available\", \"right\": \"available\" },\n        \"accept\":  [\"*\"],\n        \"exclude\": []\n      }\n    }\n  },\n  \"hotPool\": {\n    \"load_balancer\": false,\n    \"pools\": {\n      \"terminal\": {\n        \"pool_size\": 0\n      },\n      \"copilot\": {\n        \"pool_size\": 0\n      },\n      \"claude\": {\n        \"pool_size\": 0\n      },\n      \"codex\": {\n        \"pool_size\": 0\n      },\n      \"opencode\": {\n        \"pool_size\": 0\n      },\n      \"prompt\": {\n        \"pool_size\": 0\n      }\n    }\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · proposed",
+        "text": "{\n  \"devDomainColor\": \"#663399\",\n  \"prodDomain\": \"https://dfosco.github.io/hyperbase/\",\n  \"repository\": {\n    \"owner\": \"dfosco\",\n    \"name\": \"hyperbase\"\n  },\n  \"modes\": {\n    \"enabled\": false\n  },\n  \"comments\": {\n    \"discussions\": {\n      \"category\": \"General\"\n    }\n  },\n  \"workshop\": {\n    \"features\": {\n      \"createPrototype\": true,\n      \"createCanvas\": true,\n      \"createComponent\": false,\n      \"createFlow\": false,\n      \"createPage\": false,\n      \"createObject\": false,\n      \"createRecord\": false\n    },\n    \"partials\": [\n      {\n        \"directory\": \"template\",\n        \"name\": \"Application\"\n      }\n    ]\n  },\n  \"featureFlags\": {\n    \"agentChat\": true\n  },\n  \"hypercanvas\": {\n    \"proxyPort\": 1234\n  },\n  \"ui\": {\n    \"hide\": [\n      \"workspace:components\",\n      \"branch-bar\"\n    ]\n  },\n  \"canvas\": {\n    \"zoom\": {\n      \"min\": 10,\n      \"max\": 250,\n      \"step\": 5\n    }\n  },\n  \"customerMode\": {\n    \"enabled\": false,\n    \"homepage\": false,\n    \"tools\": \"all\",\n    \"commandPalette\": true,\n    \"branchBar\": true\n  },\n  \"theming\": {\n    \"themes\": {\n      \"light\": {\n        \"label\": \"Light\",\n        \"attrs\": {\n          \"data-color-mode\": \"light\",\n          \"data-light-theme\": \"light\"\n        }\n      },\n      \"dark\": {\n        \"label\": \"Dark\",\n        \"attrs\": {\n          \"data-color-mode\": \"dark\",\n          \"data-dark-theme\": \"dark\"\n        }\n      }\n    },\n    \"surfaces\": {\n      \"prototype\": {\n        \"label\": \"Prototype\",\n        \"sync\": true\n      },\n      \"canvas\": {\n        \"label\": \"Canvas\",\n        \"sync\": true\n      },\n      \"toolbar\": {\n        \"label\": \"Tools\",\n        \"sync\": true\n      },\n      \"codeBoxes\": {\n        \"label\": \"Code boxes\",\n        \"sync\": true\n      }\n    },\n    \"default\": \"system\"\n  },\n  \"widgets\": {\n    \"tiles\": {\n      \"label\": \"Tiles\",\n      \"icon\": \"iconoir/view-grid\",\n      \"unlisted\": true,\n      \"interactGate\": true,\n      \"interactGateLabel\": \"Click to interact\",\n      \"resize\": {\n        \"enabled\": true,\n        \"prod\": false\n      },\n      \"props\": {\n        \"tiles\": {\n          \"type\": \"text\",\n          \"label\": \"Tiles\",\n          \"category\": \"content\",\n          \"default\": []\n        },\n        \"columns\": {\n          \"type\": \"number\",\n          \"label\": \"Columns\",\n          \"category\": \"settings\",\n          \"default\": 3,\n          \"min\": 1,\n          \"max\": 20\n        },\n        \"rows\": {\n          \"type\": \"number\",\n          \"label\": \"Rows\",\n          \"category\": \"settings\",\n          \"default\": 3,\n          \"min\": 1,\n          \"max\": 20\n        },\n        \"tileSize\": {\n          \"type\": \"number\",\n          \"label\": \"Tile size\",\n          \"category\": \"settings\",\n          \"default\": 80,\n          \"min\": 40,\n          \"max\": 300\n        },\n        \"width\": {\n          \"type\": \"number\",\n          \"label\": \"Width\",\n          \"category\": \"size\",\n          \"default\": 270,\n          \"min\": 200\n        },\n        \"height\": {\n          \"type\": \"number\",\n          \"label\": \"Height\",\n          \"category\": \"size\",\n          \"default\": 270,\n          \"min\": 100\n        }\n      },\n      \"features\": [\n        {\n          \"id\": \"grid-actions\",\n          \"type\": \"dropdown\",\n          \"icon\": \"grid\",\n          \"label\": \"Grid\",\n          \"items\": [\n            {\n              \"action\": \"add-column\",\n              \"label\": \"Add column\",\n              \"icon\": \"plus\"\n            },\n            {\n              \"action\": \"remove-column\",\n              \"label\": \"Remove column\",\n              \"icon\": \"dash\"\n            },\n            {\n              \"action\": \"add-row\",\n              \"label\": \"Add row\",\n              \"icon\": \"plus\"\n            },\n            {\n              \"action\": \"remove-row\",\n              \"label\": \"Remove row\",\n              \"icon\": \"dash\"\n            }\n          ]\n        },\n        {\n          \"id\": \"randomize\",\n          \"type\": \"action\",\n          \"action\": \"randomize\",\n          \"label\": \"Randomize\",\n          \"icon\": \"sync\"\n        },\n        {\n          \"id\": \"copy\",\n          \"type\": \"action\",\n          \"action\": \"copy\",\n          \"label\": \"$label:duplicate\",\n          \"icon\": \"copy\"\n        },\n        {\n          \"id\": \"copy-link\",\n          \"type\": \"action\",\n          \"action\": \"copy-link\",\n          \"label\": \"$label:copy-link\",\n          \"icon\": \"link\",\n          \"menu\": true,\n          \"prod\": true,\n          \"alt\": {\n            \"label\": \"$label:copy-id\",\n            \"action\": \"copy-widget-id\"\n          }\n        },\n        {\n          \"id\": \"delete\",\n          \"type\": \"action\",\n          \"action\": \"delete\",\n          \"label\": \"$label:delete\",\n          \"icon\": \"trash\",\n          \"menu\": true\n        }\n      ],\n      \"connectors\": {\n        \"anchors\": {\n          \"top\": \"available\",\n          \"bottom\": \"available\",\n          \"left\": \"available\",\n          \"right\": \"available\"\n        },\n        \"accept\": [\n          \"*\"\n        ],\n        \"exclude\": []\n      }\n    }\n  },\n  \"hotPool\": {\n    \"load_balancer\": false,\n    \"pools\": {\n      \"terminal\": {\n        \"pool_size\": 0\n      },\n      \"copilot\": {\n        \"pool_size\": 0\n      },\n      \"claude\": {\n        \"pool_size\": 0\n      },\n      \"codex\": {\n        \"pool_size\": 0\n      },\n      \"opencode\": {\n        \"pool_size\": 0\n      },\n      \"prompt\": {\n        \"pool_size\": 0\n      }\n    }\n  },\n  \"publishing\": {\n    \"schemaVersion\": 1,\n    \"sourceBranch\": \"main\",\n    \"projectDirectory\": \"backstage/publish\",\n    \"defaultProvider\": \"github-pages\",\n    \"providers\": [\n      {\n        \"id\": \"github-pages\",\n        \"provider\": \"github-pages\",\n        \"basePath\": \"/hyperbase/\",\n        \"requestedWebsiteAccess\": \"public\"\n      },\n      {\n        \"id\": \"vercel\",\n        \"provider\": \"vercel\",\n        \"basePath\": \"/\",\n        \"requestedWebsiteAccess\": \"vercel-authentication\"\n      },\n      {\n        \"id\": \"netlify\",\n        \"provider\": \"netlify\",\n        \"basePath\": \"/\",\n        \"requestedWebsiteAccess\": \"private\"\n      },\n      {\n        \"id\": \"cloudflare-pages\",\n        \"provider\": \"cloudflare-pages\",\n        \"basePath\": \"/\",\n        \"requestedWebsiteAccess\": \"cloudflare-access\"\n      }\n    ]\n  }\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Full current config preserved except the explicitly illustrated new repository/domain and proposed publishing block. New schemaVersion/sourceBranch/providers are not implemented by the current app. Default provider is shared configuration; current selection belongs to private runtime. requestedWebsiteAccess expresses intent, never protection. Before is a real local snapshot; after is the fictional dfosco/hyperbase pairing shown in the UI.",
+    "sources": [],
+    "beforeBasis": "actual file read only; no config written",
+    "reference": "F01 · 01 · Source setup and operation state"
+  },
+  {
+    "id": "PortablePackage",
+    "title": "Portable package and build commands",
+    "kind": "Committed file",
+    "path": "package.json",
+    "action": "First provider Publish; regenerate when required source dependencies change",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "First provider Publish; regenerate when required source dependencies change",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · generator example",
+        "text": "{\n  \"name\": \"published-notebook-site\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"npm run build:runtime && vite\",\n    \"build\": \"npm run build:runtime && vite build\",\n    \"preview\": \"vite preview\",\n    \"build:runtime\": \"npm run build:css --prefix vendor/hypercanvas && npm run build:ui --prefix vendor/hypercanvas && npm run build:canvas --prefix vendor/hypercanvas\"\n  },\n  \"dependencies\": {\n    \"@base-ui/react\": \"1.8.0\",\n    \"@clack/prompts\": \"1.2.0\",\n    \"@codemirror/autocomplete\": \"6.20.3\",\n    \"@codemirror/commands\": \"6.10.3\",\n    \"@codemirror/lang-css\": \"6.3.1\",\n    \"@codemirror/lang-html\": \"6.4.11\",\n    \"@codemirror/lang-javascript\": \"6.2.5\",\n    \"@codemirror/lang-json\": \"6.0.2\",\n    \"@codemirror/lang-markdown\": \"6.5.0\",\n    \"@codemirror/lang-python\": \"6.2.1\",\n    \"@codemirror/lang-yaml\": \"6.1.3\",\n    \"@codemirror/language\": \"6.12.4\",\n    \"@codemirror/search\": \"6.7.0\",\n    \"@codemirror/state\": \"6.6.0\",\n    \"@codemirror/theme-one-dark\": \"6.1.3\",\n    \"@codemirror/view\": \"6.43.0\",\n    \"@dfosco/hypercanvas\": \"file:vendor/hypercanvas\",\n    \"@dfosco/statefully\": \"0.2.1\",\n    \"@generouted/react-router\": \"1.19.11\",\n    \"@github/browserslist-config\": \"1.0.0\",\n    \"@mdx-js/mdx\": \"3.1.1\",\n    \"@neodrag/react\": \"2.3.1\",\n    \"@primer/octicons-react\": \"19.40.0\",\n    \"@tailwindcss/node\": \"4.2.2\",\n    \"@tailwindcss/oxide\": \"4.2.2\",\n    \"@tailwindcss/vite\": \"4.2.2\",\n    \"@toon-format/toon\": \"2.1.0\",\n    \"@vitejs/plugin-react\": \"5.2.0\",\n    \"ansi-to-html\": \"0.7.2\",\n    \"class-variance-authority\": \"0.7.1\",\n    \"clsx\": \"2.1.1\",\n    \"cmdk\": \"1.1.1\",\n    \"codemirror\": \"6.0.2\",\n    \"feather-icons\": \"4.29.2\",\n    \"ghostty-web\": \"0.4.0\",\n    \"glob\": \"11.1.0\",\n    \"highlight.js\": \"11.11.1\",\n    \"html-to-image\": \"1.11.13\",\n    \"iconoir\": \"7.11.0\",\n    \"ignore\": \"5.3.2\",\n    \"jsonc-parser\": \"3.3.1\",\n    \"lucide-react\": \"1.54.0\",\n    \"postcss\": \"8.5.29\",\n    \"postcss-preset-env\": \"10.6.0\",\n    \"postcss-selector-parser\": \"7.1.6\",\n    \"postcss-value-parser\": \"4.2.0\",\n    \"react\": \"19.2.3\",\n    \"react-dom\": \"19.2.3\",\n    \"react-is\": \"19.2.3\",\n    \"react-router-dom\": \"7.17.0\",\n    \"rehype-raw\": \"7.0.0\",\n    \"rehype-sanitize\": \"6.0.0\",\n    \"rehype-stringify\": \"10.0.1\",\n    \"remark-gfm\": \"4.0.1\",\n    \"remark-parse\": \"11.0.0\",\n    \"remark-rehype\": \"11.1.2\",\n    \"tailwind-merge\": \"3.7.0\",\n    \"tailwind-variants\": \"3.2.2\",\n    \"tailwindcss\": \"4.2.2\",\n    \"tw-animate-css\": \"1.4.0\",\n    \"typescript\": \"5.9.3\",\n    \"unified\": \"11.0.5\",\n    \"vite\": \"7.3.5\",\n    \"ws\": \"8.21.0\",\n    \"yaml\": \"2.9.1\",\n    \"zod\": \"3.25.76\"\n  },\n  \"devDependencies\": {}\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · proposed",
+        "text": "{\n  \"name\": \"published-notebook-site\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"npm run build:runtime && vite\",\n    \"build\": \"npm run build:runtime && vite build\",\n    \"preview\": \"vite preview\",\n    \"build:runtime\": \"npm run build:css --prefix vendor/hypercanvas && npm run build:ui --prefix vendor/hypercanvas && npm run build:canvas --prefix vendor/hypercanvas\",\n    \"build:pages\": \"VITE_BASE_PATH=/hyperbase/ npm run build\",\n    \"build:root\": \"VITE_BASE_PATH=/ npm run build\",\n    \"build:netlify\": \"npm run build:root && node scripts/prepare-publish-output.mjs netlify\",\n    \"build:cloudflare\": \"npm run build:root && node scripts/prepare-publish-output.mjs cloudflare\"\n  },\n  \"dependencies\": {\n    \"@base-ui/react\": \"1.8.0\",\n    \"@clack/prompts\": \"1.2.0\",\n    \"@codemirror/autocomplete\": \"6.20.3\",\n    \"@codemirror/commands\": \"6.10.3\",\n    \"@codemirror/lang-css\": \"6.3.1\",\n    \"@codemirror/lang-html\": \"6.4.11\",\n    \"@codemirror/lang-javascript\": \"6.2.5\",\n    \"@codemirror/lang-json\": \"6.0.2\",\n    \"@codemirror/lang-markdown\": \"6.5.0\",\n    \"@codemirror/lang-python\": \"6.2.1\",\n    \"@codemirror/lang-yaml\": \"6.1.3\",\n    \"@codemirror/language\": \"6.12.4\",\n    \"@codemirror/search\": \"6.7.0\",\n    \"@codemirror/state\": \"6.6.0\",\n    \"@codemirror/theme-one-dark\": \"6.1.3\",\n    \"@codemirror/view\": \"6.43.0\",\n    \"@dfosco/hypercanvas\": \"file:vendor/hypercanvas\",\n    \"@dfosco/statefully\": \"0.2.1\",\n    \"@generouted/react-router\": \"1.19.11\",\n    \"@github/browserslist-config\": \"1.0.0\",\n    \"@mdx-js/mdx\": \"3.1.1\",\n    \"@neodrag/react\": \"2.3.1\",\n    \"@primer/octicons-react\": \"19.40.0\",\n    \"@tailwindcss/node\": \"4.2.2\",\n    \"@tailwindcss/oxide\": \"4.2.2\",\n    \"@tailwindcss/vite\": \"4.2.2\",\n    \"@toon-format/toon\": \"2.1.0\",\n    \"@vitejs/plugin-react\": \"5.2.0\",\n    \"ansi-to-html\": \"0.7.2\",\n    \"class-variance-authority\": \"0.7.1\",\n    \"clsx\": \"2.1.1\",\n    \"cmdk\": \"1.1.1\",\n    \"codemirror\": \"6.0.2\",\n    \"feather-icons\": \"4.29.2\",\n    \"ghostty-web\": \"0.4.0\",\n    \"glob\": \"11.1.0\",\n    \"highlight.js\": \"11.11.1\",\n    \"html-to-image\": \"1.11.13\",\n    \"iconoir\": \"7.11.0\",\n    \"ignore\": \"5.3.2\",\n    \"jsonc-parser\": \"3.3.1\",\n    \"lucide-react\": \"1.54.0\",\n    \"postcss\": \"8.5.29\",\n    \"postcss-preset-env\": \"10.6.0\",\n    \"postcss-selector-parser\": \"7.1.6\",\n    \"postcss-value-parser\": \"4.2.0\",\n    \"react\": \"19.2.3\",\n    \"react-dom\": \"19.2.3\",\n    \"react-is\": \"19.2.3\",\n    \"react-router-dom\": \"7.17.0\",\n    \"rehype-raw\": \"7.0.0\",\n    \"rehype-sanitize\": \"6.0.0\",\n    \"rehype-stringify\": \"10.0.1\",\n    \"remark-gfm\": \"4.0.1\",\n    \"remark-parse\": \"11.0.0\",\n    \"remark-rehype\": \"11.1.2\",\n    \"tailwind-merge\": \"3.7.0\",\n    \"tailwind-variants\": \"3.2.2\",\n    \"tailwindcss\": \"4.2.2\",\n    \"tw-animate-css\": \"1.4.0\",\n    \"typescript\": \"5.9.3\",\n    \"unified\": \"11.0.5\",\n    \"vite\": \"7.3.5\",\n    \"ws\": \"8.21.0\",\n    \"yaml\": \"2.9.1\",\n    \"zod\": \"3.25.76\"\n  },\n  \"devDependencies\": {},\n  \"engines\": {\n    \"node\": \">=22.18.0\"\n  }\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "This file is inside backstage/publish, not the Notebook root package.json. Exact dependency snapshot follows current generator responsibilities plus declared Notebook runtime imports. vendor/hypercanvas and publication sources remain generated by the real materializer. private:true prevents npm package publication; it does not make a website private. Script environment prefixes assume the macOS/Linux publishing environment, matching the current product. Lockfile generation must complete before npm ci.",
+    "sources": [],
+    "reference": "F06 · 02 · Shared publication files"
+  },
+  {
+    "id": "PortableVite",
+    "title": "Portable Vite base path",
+    "kind": "Committed file",
+    "path": "vite.config.js",
+    "action": "Generated with portable source at first Publish",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Generated with portable source at first Publish",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · generated Pages example",
+        "text": "import documents from '@dfosco/hypercanvas/vite/documents'\nimport { defineConfig } from 'vite'\nimport path from 'path'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\nimport generouted from '@generouted/react-router/plugin'\nimport { fileURLToPath } from 'node:url'\nimport storyboardData from '@dfosco/hypercanvas/vite'\nimport storyboardServer from '@dfosco/hypercanvas/vite/server'\nimport notebookRoutes from '@dfosco/hypercanvas/notebook/vite-routes'\nimport postcssPresetEnv from 'postcss-preset-env'\nimport browsers from '@github/browserslist-config'\n\nconst __dirname = path.dirname(fileURLToPath(import.meta.url))\nprocess.env.HYPERCANVAS_NOTEBOOK_ROOT = path.resolve(__dirname, './notebook-content')\n\nexport default defineConfig(() => {\n    const base = process.env.VITE_BASE_PATH || \"/hyperbase/\"\n\n    return {\n    base,\n    define: {\n      'globalThis.__HYPERCANVAS_NOTEBOOK_PUBLICATION__': 'true',\n      'import.meta.env.VITE_NOTEBOOK_PUBLISHED': JSON.stringify('1'),\n    },\n    resolve: {\n        alias: {\n            '@': fileURLToPath(new URL('./notebook-content/', import.meta.url)),\n        },\n        dedupe: ['react', 'react-dom'],\n    },\n    plugins: [\n        documents({ root: () => process.env.HYPERCANVAS_NOTEBOOK_ROOT || null }),\n        tailwindcss(),\n        storyboardData(),\n        storyboardServer(),\n        notebookRoutes(),\n        react(),\n        generouted({\n            source: {\n                routes: './src/prototypes/**/[\\\\w[-]*.{jsx,tsx,mdx}',\n                modals: './src/prototypes/**/[+]*.{jsx,tsx,mdx}',\n            },\n        }),\n        // generouted's built-in watcher only listens for /src/pages/ changes.\n        // This plugin triggers a full reload when prototypes are added/removed.\n        {\n            name: 'prototypes-watcher',\n            configureServer(server) {\n                const listener = (file = '') => {\n                    if (file.includes(path.normalize('/src/prototypes/'))) {\n                        server.ws.send({ type: 'full-reload' })\n                    }\n                }\n                server.watcher.on('add', listener)\n                server.watcher.on('unlink', listener)\n            },\n        },\n        {\n            name: 'base-redirect',\n            configureServer(server) {\n                const baseNoTrail = base.replace(/\\/$/, '')\n                server.middlewares.use((req, res, next) => {\n                    if (req.url === baseNoTrail) {\n                        res.writeHead(302, { Location: base })\n                        res.end()\n                        return\n                    }\n                    if (req.url && req.url !== baseNoTrail && !req.url.startsWith(base) && !req.url.startsWith('/@') && !req.url.startsWith('/node_modules/')) {\n                        const newUrl = baseNoTrail + req.url\n                        res.writeHead(302, { Location: newUrl })\n                        res.end()\n                        return\n                    }\n                    next()\n                })\n            },\n        },\n    ],\n    server: {\n        port: 1234,\n        fs: { allow: ['..'] },\n        warmup: {\n            clientFiles: [\n                'src/library/mount.jsx',\n                'src/library/prototypes-entry.jsx',\n                'src/prototypes/**/*.jsx',\n                'src/components/**/*.jsx',\n                'src/templates/**/*.jsx',\n            ],\n        },\n    },\n    optimizeDeps: {\n        include: [\n            'prop-types',\n            '@base-ui/react/accordion',\n            '@base-ui/react/checkbox',\n            '@base-ui/react/dialog',\n            '@base-ui/react/number-field',\n            '@base-ui/react/progress',\n            '@base-ui/react/radio',\n            '@base-ui/react/radio-group',\n            '@base-ui/react/select',\n            '@base-ui/react/slider',\n            '@base-ui/react/switch',\n            '@base-ui/react/tabs',\n            '@base-ui/react/tooltip',\n            // CommonJS leaf pulled in transitively via @dfosco/storyboard ->\n            // unified (markdown). unified does `import extend from 'extend'`,\n            // but `extend` is CJS; without pre-bundling Vite serves it raw and\n            // the default-import interop fails (\"does not provide an export\n            // named 'default'\"). Forcing it into optimizeDeps gives it a\n            // synthesized default export.\n            'extend',\n        ],\n    },\n    esbuild: {\n        // Preserve function names so the storyboard inspector shows\n        // real component names instead of minified identifiers\n        keepNames: true,\n    },\n    build: {\n        chunkSizeWarningLimit: 700,\n        rollupOptions: {\n            output: {\n                manualChunks: {\n                    'vendor-react': ['react', 'react-dom', 'react-router-dom'],\n                },\n            },\n        },\n    },\n    css: {\n        postcss: {\n            plugins: [\n                postcssPresetEnv({\n                    stage: 2,\n                    browsers,\n                    features: {\n                        'nesting-rules': {\n                            noIsPseudoSelector: true,\n                        },\n                        'focus-visible-pseudo-class': false,\n                        'logical-properties-and-values': false,\n                    },\n                }),\n            ],\n        },\n    },\n}})\n",
+        "language": "javascript"
+      },
+      {
+        "label": "After · proposed",
+        "text": "import documents from '@dfosco/hypercanvas/vite/documents'\nimport { defineConfig } from 'vite'\nimport path from 'path'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\nimport generouted from '@generouted/react-router/plugin'\nimport { fileURLToPath } from 'node:url'\nimport storyboardData from '@dfosco/hypercanvas/vite'\nimport storyboardServer from '@dfosco/hypercanvas/vite/server'\nimport notebookRoutes from '@dfosco/hypercanvas/notebook/vite-routes'\nimport postcssPresetEnv from 'postcss-preset-env'\nimport browsers from '@github/browserslist-config'\n\nconst __dirname = path.dirname(fileURLToPath(import.meta.url))\nprocess.env.HYPERCANVAS_NOTEBOOK_ROOT = path.resolve(__dirname, './notebook-content')\n\nexport default defineConfig(() => {\n    const base = process.env.VITE_BASE_PATH || '/'\n\n    return {\n    base,\n    define: {\n      'globalThis.__HYPERCANVAS_NOTEBOOK_PUBLICATION__': 'true',\n      'import.meta.env.VITE_NOTEBOOK_PUBLISHED': JSON.stringify('1'),\n    },\n    resolve: {\n        alias: {\n            '@': fileURLToPath(new URL('./notebook-content/', import.meta.url)),\n        },\n        dedupe: ['react', 'react-dom'],\n    },\n    plugins: [\n        documents({ root: () => process.env.HYPERCANVAS_NOTEBOOK_ROOT || null }),\n        tailwindcss(),\n        storyboardData(),\n        storyboardServer(),\n        notebookRoutes(),\n        react(),\n        generouted({\n            source: {\n                routes: './src/prototypes/**/[\\\\w[-]*.{jsx,tsx,mdx}',\n                modals: './src/prototypes/**/[+]*.{jsx,tsx,mdx}',\n            },\n        }),\n        // generouted's built-in watcher only listens for /src/pages/ changes.\n        // This plugin triggers a full reload when prototypes are added/removed.\n        {\n            name: 'prototypes-watcher',\n            configureServer(server) {\n                const listener = (file = '') => {\n                    if (file.includes(path.normalize('/src/prototypes/'))) {\n                        server.ws.send({ type: 'full-reload' })\n                    }\n                }\n                server.watcher.on('add', listener)\n                server.watcher.on('unlink', listener)\n            },\n        },\n        {\n            name: 'base-redirect',\n            configureServer(server) {\n                const baseNoTrail = base.replace(/\\/$/, '')\n                server.middlewares.use((req, res, next) => {\n                    if (req.url === baseNoTrail) {\n                        res.writeHead(302, { Location: base })\n                        res.end()\n                        return\n                    }\n                    if (req.url && req.url !== baseNoTrail && !req.url.startsWith(base) && !req.url.startsWith('/@') && !req.url.startsWith('/node_modules/')) {\n                        const newUrl = baseNoTrail + req.url\n                        res.writeHead(302, { Location: newUrl })\n                        res.end()\n                        return\n                    }\n                    next()\n                })\n            },\n        },\n    ],\n    server: {\n        port: 1234,\n        fs: { allow: ['..'] },\n        warmup: {\n            clientFiles: [\n                'src/library/mount.jsx',\n                'src/library/prototypes-entry.jsx',\n                'src/prototypes/**/*.jsx',\n                'src/components/**/*.jsx',\n                'src/templates/**/*.jsx',\n            ],\n        },\n    },\n    optimizeDeps: {\n        include: [\n            'prop-types',\n            '@base-ui/react/accordion',\n            '@base-ui/react/checkbox',\n            '@base-ui/react/dialog',\n            '@base-ui/react/number-field',\n            '@base-ui/react/progress',\n            '@base-ui/react/radio',\n            '@base-ui/react/radio-group',\n            '@base-ui/react/select',\n            '@base-ui/react/slider',\n            '@base-ui/react/switch',\n            '@base-ui/react/tabs',\n            '@base-ui/react/tooltip',\n            // CommonJS leaf pulled in transitively via @dfosco/storyboard ->\n            // unified (markdown). unified does `import extend from 'extend'`,\n            // but `extend` is CJS; without pre-bundling Vite serves it raw and\n            // the default-import interop fails (\"does not provide an export\n            // named 'default'\"). Forcing it into optimizeDeps gives it a\n            // synthesized default export.\n            'extend',\n        ],\n    },\n    esbuild: {\n        // Preserve function names so the storyboard inspector shows\n        // real component names instead of minified identifiers\n        keepNames: true,\n    },\n    build: {\n        chunkSizeWarningLimit: 700,\n        rollupOptions: {\n            output: {\n                manualChunks: {\n                    'vendor-react': ['react', 'react-dom', 'react-router-dom'],\n                },\n            },\n        },\n    },\n    css: {\n        postcss: {\n            plugins: [\n                postcssPresetEnv({\n                    stage: 2,\n                    browsers,\n                    features: {\n                        'nesting-rules': {\n                            noIsPseudoSelector: true,\n                        },\n                        'focus-visible-pseudo-class': false,\n                        'logical-properties-and-values': false,\n                    },\n                }),\n            ],\n        },\n    },\n}})\n",
+        "language": "javascript"
+      }
+    ],
+    "notes": "Full normal generator configuration. Default root base is proposed; build:pages explicitly supplies /hyperbase/, all other provider build commands supply /. Branch-prefixed source routes remain handled by the runtime. No stripped-down Vite stand-in.",
+    "sources": [],
+    "reference": "F07 · 02 · Shared publication files"
+  },
+  {
+    "id": "PrepareOutput",
+    "title": "Stage provider-specific routing",
+    "kind": "Committed file",
+    "path": "scripts/prepare-publish-output.mjs",
+    "action": "Created with shared portable source; executed only by Netlify/Cloudflare build scripts",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Created with shared portable source; executed only by Netlify/Cloudflare build scripts",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Contents · proposed",
+        "text": "import fs from 'node:fs/promises'\nimport path from 'node:path'\nimport { fileURLToPath } from 'node:url'\n\nconst projectRoot = fileURLToPath(new URL('../', import.meta.url))\nconst dist = path.join(projectRoot, 'dist')\nconst provider = process.argv[2]\nawait fs.access(path.join(dist, 'index.html'))\nif (provider === 'netlify') {\n  await fs.writeFile(path.join(dist, '_redirects'), '/* /index.html 200\\n')\n} else if (provider === 'cloudflare') {\n  await fs.rm(path.join(dist, '404.html'), { force: true })\n  await fs.rm(path.join(dist, '_redirects'), { force: true })\n} else {\n  throw new Error('Unsupported provider output: ' + provider)\n}\n",
+        "language": "javascript"
+      }
+    ],
+    "notes": "Never modifies public/404.html or another provider’s already published output. Netlify gets a static rewrite file included in manual API uploads. Cloudflare gets no top-level 404 or redirects in its staged output, enabling its documented native SPA fallback. Vercel uses vercel.json rewrites; Pages keeps the existing 404 redirect.",
+    "sources": [
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/pages/configuration/serving-pages/"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+      }
+    ],
+    "reference": "F09 · 02 · Shared publication files"
+  },
+  {
+    "id": "PortableIgnore",
+    "title": "Portable generated/private exclusions",
+    "kind": "Committed file",
+    "path": ".gitignore",
+    "action": "Created at first portable project generation; keep existing user rules when updating",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Created at first portable project generation; keep existing user rules when updating",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Generated contents",
+        "text": ".hypercanvas/\n.storyboard/\n.DS_Store\nnode_modules/\ndist/\nsrc/router.ts\nvendor/hypercanvas/dist/\n",
+        "language": "text"
+      }
+    ],
+    "notes": "Full current generator output. Notebook-level .hypercanvas is also excluded by its own root ignore file. No build output, node_modules or private runtime binding is committed. Other user rules are preserved through explicit compare/merge, not replaced silently.",
+    "sources": [],
+    "reference": "F10 · 02 · Shared publication files"
+  },
+  {
+    "id": "LockBoundary",
+    "title": "Generate the lockfile; never invent one",
+    "kind": "Generation boundary",
+    "path": "package-lock.json",
+    "action": "After manifest/vendor assembly and before any workflow npm ci",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "After manifest/vendor assembly and before any workflow npm ci",
+    "persistence": "Generate complete lockfile, then commit with portable source before npm ci. No lockfile output authored here.",
+    "versions": [
+      {
+        "label": "Generation contract",
+        "text": "cd backstage/publish\nnpm install --package-lock-only --ignore-scripts\nnpm ci\n",
+        "language": "shell"
+      }
+    ],
+    "notes": "Not an authored lockfile and not represented as a generated output here. Future materialization must resolve the vendored runtime and all exact Notebook dependencies, generate the complete lock, verify root dependency equality, and commit that generated file. Existing stale/mismatched lock pauses preparation; failed generation cannot dispatch. No npm install was run by this design task. The bundled scaffold lock is not passed off as matching this new manifest.",
+    "sources": [],
+    "reference": "F08 · 02 · Shared publication files"
+  },
+  {
+    "id": "PagesWorkflow",
+    "title": "Pages: push trigger → selected dispatch",
+    "kind": "Committed file",
+    "path": ".github/workflows/deploy-pages.yml",
+    "action": "First Pages Publish creates if absent; existing workflow requires ConfigReview",
+    "root": "Notebook repository root",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "First Pages Publish creates if absent; existing workflow requires ConfigReview",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · current generator",
+        "text": "# Hypercanvas publication deploy — installs and builds the committed publication source, then deploys.\n# Build output: backstage/publish/dist (generated here, not committed; see DOCS/publishing.md).\nname: Deploy published site to GitHub Pages\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: read\n  pages: write\n  id-token: write\n\nconcurrency:\n  group: pages\n  cancel-in-progress: false\n\njobs:\n  deploy:\n    environment:\n      name: github-pages\n      url: ${{ steps.deployment.outputs.page_url }}\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 22\n          cache: npm\n          cache-dependency-path: backstage/publish/package-lock.json\n          registry-url: https://registry.npmjs.org\n      - run: npm ci\n        working-directory: backstage/publish\n      - run: npm run build\n        working-directory: backstage/publish\n      - uses: actions/configure-pages@v5\n      - uses: actions/upload-pages-artifact@v3\n        with:\n          path: backstage/publish/dist\n      - id: deployment\n        uses: actions/deploy-pages@v4\n",
+        "language": "yaml"
+      },
+      {
+        "label": "After · proposed",
+        "text": "# Hypercanvas publication deploy — installs and builds the committed publication source, then deploys.\n# Build output: backstage/publish/dist (generated here, not committed; see DOCS/publishing.md).\nname: Deploy published site to GitHub Pages\n\non:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n  pages: write\n  id-token: write\n\nconcurrency:\n  group: pages\n  cancel-in-progress: false\n\njobs:\n  deploy:\n    environment:\n      name: github-pages\n      url: ${{ steps.deployment.outputs.page_url }}\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 22\n          cache: npm\n          cache-dependency-path: backstage/publish/package-lock.json\n          registry-url: https://registry.npmjs.org\n      - run: npm ci\n        working-directory: backstage/publish\n      - run: npm run build:pages\n        working-directory: backstage/publish\n      - uses: actions/configure-pages@v5\n      - uses: actions/upload-pages-artifact@v3\n        with:\n          path: backstage/publish/dist\n      - id: deployment\n        uses: actions/deploy-pages@v4\n",
+        "language": "yaml"
+      }
+    ],
+    "notes": "Full baseline extracted from pagesWorkflowYaml({branch:main, projectDir:backstage/publish, distPath:backstage/publish/dist}). Proposed change removes push trigger and uses build:pages. Workflow must exist on the default branch before dispatch; sourceBranch alone cannot bypass this prerequisite. First setup pauses if default-branch installation is not authorized. Other attached provider triggers must already be disabled/reviewed.",
+    "sources": [
+      {
+        "label": "docs.github.com",
+        "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_dispatch"
+      }
+    ],
+    "reference": "F13 · 03 · GitHub Pages"
+  },
+  {
+    "id": "VercelConfig",
+    "title": "Vercel: explicit source build and SPA routing",
+    "kind": "Committed file",
+    "path": "vercel.json",
+    "action": "First Vercel Publish; existing config compare/replace only on approval",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "First Vercel Publish; existing config compare/replace only on approval",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · illustrative existing file",
+        "text": "{\n  \"$schema\": \"https://openapi.vercel.sh/vercel.json\",\n  \"buildCommand\": \"npm run build\",\n  \"outputDirectory\": \"dist\",\n  \"git\": {\n    \"deploymentEnabled\": true\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · proposed",
+        "text": "{\n  \"$schema\": \"https://openapi.vercel.sh/vercel.json\",\n  \"framework\": null,\n  \"installCommand\": \"npm ci\",\n  \"buildCommand\": \"npm run build:root\",\n  \"outputDirectory\": \"dist\",\n  \"git\": {\n    \"deploymentEnabled\": false\n  },\n  \"rewrites\": [\n    {\n      \"source\": \"/(.*)\",\n      \"destination\": \"/index.html\"\n    }\n  ]\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Vercel project Root Directory must be backstage/publish. The app sends selected source files via the deployment API for an explicit production build; no provider CLI is required by this design. git.deploymentEnabled:false disables automatic Git deployments. Rewrites preserve existing filesystem assets. No visibility flag or secrets in this file. Before is a complete hypothetical conflict fixture, not an observed remote file.",
+    "sources": [
+      {
+        "label": "vercel.com",
+        "url": "https://vercel.com/docs/project-configuration/vercel-json"
+      },
+      {
+        "label": "vercel.com",
+        "url": "https://vercel.com/docs/project-configuration/git-configuration"
+      }
+    ],
+    "reference": "F15 · 04 · Vercel"
+  },
+  {
+    "id": "NetlifyConfig",
+    "title": "Netlify portable build defaults",
+    "kind": "Committed file",
+    "path": "netlify.toml",
+    "action": "First Netlify Publish; explicit compare if existing",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "First Netlify Publish; explicit compare if existing",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · illustrative existing file",
+        "text": "[build]\ncommand = \"npm run build\"\npublish = \"dist\"\n",
+        "language": "toml"
+      },
+      {
+        "label": "After · proposed",
+        "text": "[build]\ncommand = \"npm run build:netlify\"\npublish = \"dist\"\n\n[build.environment]\nNODE_VERSION = \"22\"\nVITE_BASE_PATH = \"/\"\n",
+        "language": "toml"
+      }
+    ],
+    "notes": "Remote site Base directory is backstage/publish. For selected-provider publishing the app builds locally with build:netlify and uploads dist directly to the deploy API. Stopped remote builds do not run this file’s command. This file documents the portable build defaults if builds are later explicitly re-enabled. Manual upload routing comes from dist/_redirects, not an assumed netlify.toml processing step. Access remains dashboard-only.",
+    "sources": [
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/build/configure-builds/file-based-configuration/"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/build/configure-builds/stop-or-activate-builds/"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+      }
+    ],
+    "reference": "F17 · 05 · Netlify"
+  },
+  {
+    "id": "NetlifyRedirects",
+    "title": "Netlify manual-upload routing output",
+    "kind": "Build output",
+    "path": "backstage/publish/dist/_redirects",
+    "action": "Written by build:netlify before direct API deploy",
+    "root": "Notebook root",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Written by build:netlify before direct API deploy",
+    "persistence": "Generated per selected build. Do not commit.",
+    "versions": [
+      {
+        "label": "Full generated text",
+        "text": "/* /index.html 200\n",
+        "language": "text"
+      }
+    ],
+    "notes": "This one-line file is included in the uploaded dist payload. Existing assets keep filesystem precedence; the fallback is not forced. No authorization rule is encoded here.",
+    "sources": [
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/"
+      }
+    ],
+    "reference": "F18 · 05 · Netlify"
+  },
+  {
+    "id": "Cloudflare404",
+    "title": "Cloudflare: remove staged Pages 404",
+    "kind": "Build output",
+    "path": "backstage/publish/dist/404.html",
+    "action": "build:cloudflare removes this output after Vite build",
+    "root": "Notebook root",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "build:cloudflare removes this output after Vite build",
+    "persistence": "Generated per selected build. Do not commit.",
+    "versions": [
+      {
+        "label": "Before · full generated file",
+        "text": "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Redirecting&hellip;</title>\n    <script>\n      /* Resolve the nearest hosted app root so project and branch prefixes work. */\n      (async function () {\n        var segments = window.location.pathname.split(\"/\").filter(Boolean)\n        for (var count = segments.length; count >= 0; count -= 1) {\n          var base = count ? \"/\" + segments.slice(0, count).join(\"/\") + \"/\" : \"/\"\n          try {\n            var response = await fetch(base + \"index.html\", { method: \"HEAD\", cache: \"no-store\" })\n            if (!response.ok) continue\n            var route = segments.slice(count).join(\"/\") + window.location.search + window.location.hash\n            var target = base + \"?p=\" + encodeURIComponent(route) + \"&b=\" + encodeURIComponent(base)\n            window.location.replace(target)\n            return\n          } catch { /* try the next parent */ }\n        }\n        window.location.replace(\"/\")\n      })()\n    </script>\n  </head>\n  <body></body>\n</html>\n",
+        "language": "html"
+      },
+      {
+        "label": "After · absent",
+        "text": "",
+        "language": "text",
+        "absent": true
+      }
+    ],
+    "notes": "Source backstage/publish/public/404.html is retained unchanged for Pages. Only the Cloudflare staging copy is removed. Cloudflare native SPA rendering requires no top-level 404; it is not assumed while this file exists. No Wrangler file or invented catch-all is necessary.",
+    "sources": [
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/pages/configuration/serving-pages/"
+      }
+    ],
+    "reference": "F21 · 06 · Cloudflare"
+  },
+  {
+    "id": "PagesRemote",
+    "title": "Pages repository and access prerequisites",
+    "kind": "Remote settings",
+    "path": "GitHub repository → Settings → Pages",
+    "action": "Before Pages dispatch; separate source permission and website policy checks",
+    "root": "Provider dashboard / API; outside filesystem",
+    "owner": "Account owner; future integration may apply supported API changes",
+    "timing": "Before Pages dispatch; separate source permission and website policy checks",
+    "persistence": "Not a committed local configuration file.",
+    "versions": [
+      {
+        "label": "Create Pages API body",
+        "text": "{\n  \"build_type\": \"workflow\"\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Dispatch API body",
+        "text": "{\n  \"ref\": \"main\"\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Private example · review snapshot",
+        "text": "{\n  \"Snapshot type\": \"Hypothetical dashboard review, not an API body\",\n  \"Repository\": \"example-enterprise/hyperbase\",\n  \"Source visibility\": \"Private\",\n  \"Organization plan\": \"GitHub Enterprise Cloud\",\n  \"Pages source\": \"GitHub Actions\",\n  \"Website visibility\": \"Private\",\n  \"Default branch workflow present\": true,\n  \"Permitted viewers\": \"Repository readers\",\n  \"Verification\": \"Example only; must verify all site/custom URLs before dispatch\"\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "No Pages public/private field is added to committed config. Personal/public source cannot use the private example. POST repository Pages and workflow dispatch are future actions, never performed by this canvas. Workflow default-branch installation and Pages environment permission must be checked first.",
+    "sources": [
+      {
+        "label": "docs.github.com",
+        "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_dispatch"
+      },
+      {
+        "label": "docs.github.com",
+        "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site"
+      }
+    ],
+    "reference": "F14 · 03 · GitHub Pages"
+  },
+  {
+    "id": "VercelRemote",
+    "title": "Vercel production access is remote",
+    "kind": "Remote settings",
+    "path": "Vercel project settings / PATCH project",
+    "action": "AccessReview and Settings before publishing a protected production site",
+    "root": "Provider dashboard / API; outside filesystem",
+    "owner": "Account owner; future integration may apply supported API changes",
+    "timing": "AccessReview and Settings before publishing a protected production site",
+    "persistence": "Not a committed local configuration file.",
+    "versions": [
+      {
+        "label": "Supported protection PATCH body",
+        "text": "{\n  \"ssoProtection\": {\n    \"deploymentType\": \"all\"\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Complete design review snapshot",
+        "text": "{\n  \"Snapshot type\": \"Hypothetical dashboard review, not API response\",\n  \"Root Directory\": \"backstage/publish\",\n  \"Deployment method\": \"Explicit production deployment API\",\n  \"Git automatic deployments\": \"Disabled in vercel.json\",\n  \"Protection method\": \"Vercel Authentication\",\n  \"Protection scope\": \"All Deployments\",\n  \"Production domain\": \"hyperbase.vercel.app\",\n  \"Exceptions\": \"None\",\n  \"Plan\": \"Any plan, including Hobby\",\n  \"Verification\": \"Pending until provider readback and all aliases checked\"\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Vercel Authentication All Deployments includes production on all plans since September 2026. Password is a Pro paid add-on/Enterprise; Trusted IPs is Enterprise. Tokens/identity scopes are distinct from visitor access. Local config does not enforce this remote policy. Future integration must verify API behavior and exceptions before a protected label.",
+    "sources": [
+      {
+        "label": "vercel.com",
+        "url": "https://vercel.com/docs/rest-api/projects/update-an-existing-project"
+      },
+      {
+        "label": "vercel.com",
+        "url": "https://vercel.com/docs/deployment-protection"
+      }
+    ],
+    "reference": "F16 · 04 · Vercel"
+  },
+  {
+    "id": "NetlifyRemote",
+    "title": "Netlify: stopped builds and dashboard access",
+    "kind": "Remote settings",
+    "path": "Netlify → Build settings / Visitor access",
+    "action": "Setup, automatic-trigger conflict and AccessReview before selected deploy",
+    "root": "Provider dashboard / API; outside filesystem",
+    "owner": "Account owner; future integration may apply supported API changes",
+    "timing": "Setup, automatic-trigger conflict and AccessReview before selected deploy",
+    "persistence": "Not a committed local configuration file.",
+    "versions": [
+      {
+        "label": "Before · illustrative dashboard",
+        "text": "{\n  \"Snapshot type\": \"Hypothetical dashboard review, not API response\",\n  \"Base directory\": \"backstage/publish\",\n  \"Build status\": \"Active builds\",\n  \"Production visibility\": \"Public\",\n  \"Preview visibility\": \"Public\"\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · requested dashboard target",
+        "text": "{\n  \"Snapshot type\": \"Hypothetical dashboard target, not API request\",\n  \"Base directory\": \"backstage/publish\",\n  \"Build status\": \"Stopped builds\",\n  \"Manual deploy path\": \"Local build:netlify then POST /api/v1/sites/{site_id}/deploys\",\n  \"Build API path\": \"Not used\",\n  \"Production visibility\": \"Private\",\n  \"Preview visibility\": \"Private\",\n  \"Plan family\": \"Credit-based\",\n  \"Free/Personal readers\": \"Team Owner only\",\n  \"Pro readers\": \"Invited team/project members\",\n  \"Password option\": \"Pro only\",\n  \"Verification\": \"Pending manual dashboard completion and URL checks\"\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "There is no public API/CLI/MCP for project visibility in the current documentation. Production and previews are separate. Stopped builds disable push/build-hook/build-API builds, but manual deploy API accepts locally built artifacts. Relinking Git reactivates builds; review again. Legacy/Enterprise have different access-control surfaces.",
+    "sources": [
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/build/configure-builds/stop-or-activate-builds/"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/manage/security/secure-access-to-sites/project-visibility/"
+      }
+    ],
+    "reference": "F19 · 05 · Netlify"
+  },
+  {
+    "id": "CloudflareProject",
+    "title": "Cloudflare: stop every Git build trigger",
+    "kind": "Remote settings",
+    "path": "Cloudflare Pages project settings / PATCH project",
+    "action": "Existing Git-linked project setup or automatic-trigger conflict",
+    "root": "Provider dashboard / API; outside filesystem",
+    "owner": "Account owner; future integration may apply supported API changes",
+    "timing": "Existing Git-linked project setup or automatic-trigger conflict",
+    "persistence": "Not a committed local configuration file.",
+    "versions": [
+      {
+        "label": "Before · illustrative relevant config",
+        "text": "{\n  \"source\": {\n    \"type\": \"github\",\n    \"config\": {\n      \"production_branch\": \"main\",\n      \"production_deployments_enabled\": true,\n      \"preview_deployment_setting\": \"all\"\n    }\n  },\n  \"build_config\": {\n    \"root_dir\": \"backstage/publish\",\n    \"build_command\": \"npm run build:cloudflare\",\n    \"destination_dir\": \"dist\"\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · proposed PATCH body",
+        "text": "{\n  \"source\": {\n    \"type\": \"github\",\n    \"config\": {\n      \"production_branch\": \"main\",\n      \"production_deployments_enabled\": false,\n      \"preview_deployment_setting\": \"none\"\n    }\n  },\n  \"build_config\": {\n    \"root_dir\": \"backstage/publish\",\n    \"build_command\": \"npm run build:cloudflare\",\n    \"destination_dir\": \"dist\"\n  }\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Supported relevant update fields only, not a fabricated full API response. Existing Git-linked project remains Git-linked; app uploads locally built assets through Pages deployment API. No local Cloudflare config is needed for this static artifact. New Direct Upload projects keep source in GitHub independently, but cannot later switch to Git integration without a new Pages project. Dashboard drag/drop is unavailable for Git-linked projects. Verify upload API integration before wiring.",
+    "sources": [
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/api/resources/pages/subresources/projects/methods/edit/"
+      },
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/pages/configuration/branch-build-controls/"
+      },
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/pages/get-started/direct-upload/"
+      }
+    ],
+    "reference": "F20 · 06 · Cloudflare"
+  },
+  {
+    "id": "CloudflareAccess",
+    "title": "Cloudflare: protect production and every alias",
+    "kind": "Remote settings",
+    "path": "Cloudflare Zero Trust → Access applications/policies",
+    "action": "AccessReview; confirm before any protected publish",
+    "root": "Provider dashboard / API; outside filesystem",
+    "owner": "Account owner; future integration may apply supported API changes",
+    "timing": "AccessReview; confirm before any protected publish",
+    "persistence": "Not a committed local configuration file.",
+    "versions": [
+      {
+        "label": "Complete design checklist snapshot",
+        "text": "{\n  \"Snapshot type\": \"Hypothetical target checklist, not Access API body\",\n  \"Project type\": \"Existing Git-linked Pages project\",\n  \"Source repository\": \"dfosco/hyperbase\",\n  \"Production pages.dev\": {\n    \"hostname\": \"hyperbase.pages.dev\",\n    \"policy\": \"Separate Access application required\",\n    \"verification\": \"Pending\"\n  },\n  \"Preview aliases\": {\n    \"hostname\": \"*.hyperbase.pages.dev\",\n    \"policy\": \"Preview Access policy required\",\n    \"verification\": \"Pending\"\n  },\n  \"Custom domain example\": {\n    \"hostname\": \"docs.example.com\",\n    \"policy\": \"Separate self-hosted Access application required\",\n    \"verification\": \"Pending\"\n  },\n  \"Permitted identities\": \"Configured by account owner in Zero Trust\",\n  \"Protected label allowed\": false\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "The Pages Enable access policy toggle initially protects previews. Production pages.dev and every custom alias require separate policy coverage. Verify allowed and denied clients and URLs; no protection success is inferred from these examples or from deleting 404. Native third-party OAuth supports Authorization Code + PKCE, not Device Authorization; browser token fallback is shown in UI.",
+    "sources": [
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/pages/platform/known-issues/"
+      },
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/"
+      }
+    ],
+    "reference": "F22 · 06 · Cloudflare"
+  },
+  {
+    "id": "RuntimeBinding",
+    "title": "Private source and provider bindings",
+    "kind": "Private runtime",
+    "path": ".hypercanvas/publishing.json",
+    "action": "After verified connection / Save settings; selection stays local",
+    "root": "Notebook root, ignored runtime directory",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "After verified connection / Save settings; selection stays local",
+    "persistence": "Private runtime only. Never commit or export.",
+    "versions": [
+      {
+        "label": "Before · sanitized empty example",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {},\n  \"operations\": {},\n  \"projects\": {}\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Source bound · current field shape",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {},\n  \"projects\": {}\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "After · proposed provider extension",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {},\n  \"projects\": {\n    \"githubPages\": {\n      \"provider\": \"github-pages\",\n      \"projectId\": \"example-pages-project\",\n      \"websiteUrl\": \"https://dfosco.github.io/hyperbase/\",\n      \"requestedAccess\": \"public\",\n      \"verifiedAccess\": null\n    },\n    \"vercel\": {\n      \"provider\": \"vercel\",\n      \"projectId\": \"example-vercel-project\",\n      \"websiteUrl\": \"https://hyperbase.vercel.app\",\n      \"requestedAccess\": \"vercel-authentication\",\n      \"verifiedAccess\": null\n    },\n    \"netlify\": {\n      \"provider\": \"netlify\",\n      \"projectId\": \"example-netlify-site\",\n      \"websiteUrl\": \"https://hyperbase.netlify.app\",\n      \"requestedAccess\": \"private\",\n      \"verifiedAccess\": null\n    },\n    \"cloudflarePages\": {\n      \"provider\": \"cloudflare-pages\",\n      \"projectId\": \"example-cloudflare-project\",\n      \"websiteUrl\": \"https://hyperbase.pages.dev\",\n      \"requestedAccess\": \"cloudflare-access\",\n      \"verifiedAccess\": null\n    }\n  },\n  \"selectedProvider\": \"vercel\"\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Complete sanitized examples, not real credential state. Current top-level credentials/bindings/operations/projects maps are real; per-provider project contents and selectedProvider are proposed. Current reader does not preserve new selectedProvider/staging root fields, so a future migration is required. [Notebook] is redacted path notation, not a replayable path. No token, password, client secret or authorization code is stored in this example. Credential-storage implementation is still a separate integration decision.",
+    "sources": [],
+    "reference": "F02 · 01 · Source setup and operation state"
+  },
+  {
+    "id": "RuntimeOperation",
+    "title": "Private operation and cancellation state",
+    "kind": "Private runtime",
+    "path": ".hypercanvas/publishing.json",
+    "action": "First source push / publish / local wait cancellation / retry / confirmed completion",
+    "root": "Notebook root, ignored runtime directory",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Publish, local wait cancellation, retry and confirmed completion",
+    "persistence": "Private runtime only. Never commit or export.",
+    "versions": [
+      {
+        "label": "Source push · proposed",
+        "language": "json",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {\n    \"operation_example_source_push\": {\n      \"id\": \"operation_example_source_push\",\n      \"kind\": \"publish\",\n      \"request\": {\n        \"mode\": \"default\",\n        \"phase\": \"source-push\",\n        \"sourceBranch\": \"main\"\n      },\n      \"status\": \"succeeded\",\n      \"finalStatus\": \"success\",\n      \"steps\": [\n        {\n          \"name\": \"prepare-notebook-source\",\n          \"status\": \"succeeded\"\n        },\n        {\n          \"name\": \"push-repository\",\n          \"status\": \"succeeded\"\n        }\n      ],\n      \"output\": [\n        \"Notebook source pushed to GitHub. No website publication started.\"\n      ],\n      \"warnings\": [],\n      \"error\": null,\n      \"result\": {\n        \"sourcePushed\": true,\n        \"websitePublished\": false\n      },\n      \"startedAt\": \"2026-10-30T12:00:00.000Z\",\n      \"finishedAt\": \"2026-10-30T12:00:02.000Z\"\n    }\n  },\n  \"projects\": {\n    \"githubPages\": {\n      \"provider\": \"github-pages\",\n      \"projectId\": \"example-pages-project\",\n      \"websiteUrl\": \"https://dfosco.github.io/hyperbase/\",\n      \"requestedAccess\": \"public\",\n      \"verifiedAccess\": null\n    },\n    \"vercel\": {\n      \"provider\": \"vercel\",\n      \"projectId\": \"example-vercel-project\",\n      \"websiteUrl\": \"https://hyperbase.vercel.app\",\n      \"requestedAccess\": \"vercel-authentication\",\n      \"verifiedAccess\": null\n    },\n    \"netlify\": {\n      \"provider\": \"netlify\",\n      \"projectId\": \"example-netlify-site\",\n      \"websiteUrl\": \"https://hyperbase.netlify.app\",\n      \"requestedAccess\": \"private\",\n      \"verifiedAccess\": null\n    },\n    \"cloudflarePages\": {\n      \"provider\": \"cloudflare-pages\",\n      \"projectId\": \"example-cloudflare-project\",\n      \"websiteUrl\": \"https://hyperbase.pages.dev\",\n      \"requestedAccess\": \"cloudflare-access\",\n      \"verifiedAccess\": null\n    }\n  },\n  \"selectedProvider\": \"vercel\",\n  \"staging\": {\n    \"exclusiveOperationId\": null,\n    \"directory\": \"backstage/publish/dist\",\n    \"scope\": \"Source push does not build or upload a website\",\n    \"queuedProviders\": []\n  }\n}\n"
+      },
+      {
+        "label": "Publishing · proposed example",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {\n    \"operation_example_vercel\": {\n      \"id\": \"operation_example_vercel\",\n      \"kind\": \"publish\",\n      \"request\": {\n        \"mode\": \"default\",\n        \"providerId\": \"vercel\",\n        \"sourceBranch\": \"main\"\n      },\n      \"status\": \"running\",\n      \"finalStatus\": null,\n      \"steps\": [\n        {\n          \"name\": \"build-notebook\",\n          \"status\": \"succeeded\"\n        },\n        {\n          \"name\": \"deploy-selected-provider\",\n          \"status\": \"running\"\n        }\n      ],\n      \"output\": [\n        \"Build complete. Waiting for selected provider.\"\n      ],\n      \"warnings\": [],\n      \"error\": null,\n      \"result\": null,\n      \"startedAt\": \"2026-10-30T12:01:00.000Z\",\n      \"finishedAt\": null\n    }\n  },\n  \"projects\": {\n    \"githubPages\": {\n      \"provider\": \"github-pages\",\n      \"projectId\": \"example-pages-project\",\n      \"websiteUrl\": \"https://dfosco.github.io/hyperbase/\",\n      \"requestedAccess\": \"public\",\n      \"verifiedAccess\": null\n    },\n    \"vercel\": {\n      \"provider\": \"vercel\",\n      \"projectId\": \"example-vercel-project\",\n      \"websiteUrl\": \"https://hyperbase.vercel.app\",\n      \"requestedAccess\": \"vercel-authentication\",\n      \"verifiedAccess\": null\n    },\n    \"netlify\": {\n      \"provider\": \"netlify\",\n      \"projectId\": \"example-netlify-site\",\n      \"websiteUrl\": \"https://hyperbase.netlify.app\",\n      \"requestedAccess\": \"private\",\n      \"verifiedAccess\": null\n    },\n    \"cloudflarePages\": {\n      \"provider\": \"cloudflare-pages\",\n      \"projectId\": \"example-cloudflare-project\",\n      \"websiteUrl\": \"https://hyperbase.pages.dev\",\n      \"requestedAccess\": \"cloudflare-access\",\n      \"verifiedAccess\": null\n    }\n  },\n  \"selectedProvider\": \"vercel\",\n  \"staging\": {\n    \"exclusiveOperationId\": \"operation_example_vercel\",\n    \"directory\": \"backstage/publish/dist\",\n    \"scope\": \"Build through fully consumed or aborted upload\",\n    \"queuedProviders\": [\n      \"netlify\"\n    ]\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Cancelled wait · proposed",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {\n    \"operation_example_vercel\": {\n      \"id\": \"operation_example_vercel\",\n      \"kind\": \"publish\",\n      \"request\": {\n        \"mode\": \"default\",\n        \"providerId\": \"vercel\",\n        \"sourceBranch\": \"main\"\n      },\n      \"status\": \"awaiting_retry\",\n      \"finalStatus\": \"warning\",\n      \"steps\": [\n        {\n          \"name\": \"build-notebook\",\n          \"status\": \"succeeded\"\n        },\n        {\n          \"name\": \"deploy-selected-provider\",\n          \"status\": \"running\"\n        }\n      ],\n      \"output\": [\n        \"Build complete. Waiting for selected provider.\"\n      ],\n      \"warnings\": [],\n      \"error\": {\n        \"code\": \"LOCAL_WAIT_CANCELLED\",\n        \"message\": \"Upload consumed; stopped local waiting for remote confirmation. Remote deployment may still finish.\"\n      },\n      \"result\": null,\n      \"startedAt\": \"2026-10-30T12:01:00.000Z\",\n      \"finishedAt\": \"2026-10-30T12:01:10.000Z\"\n    }\n  },\n  \"projects\": {\n    \"githubPages\": {\n      \"provider\": \"github-pages\",\n      \"projectId\": \"example-pages-project\",\n      \"websiteUrl\": \"https://dfosco.github.io/hyperbase/\",\n      \"requestedAccess\": \"public\",\n      \"verifiedAccess\": null\n    },\n    \"vercel\": {\n      \"provider\": \"vercel\",\n      \"projectId\": \"example-vercel-project\",\n      \"websiteUrl\": \"https://hyperbase.vercel.app\",\n      \"requestedAccess\": \"vercel-authentication\",\n      \"verifiedAccess\": null\n    },\n    \"netlify\": {\n      \"provider\": \"netlify\",\n      \"projectId\": \"example-netlify-site\",\n      \"websiteUrl\": \"https://hyperbase.netlify.app\",\n      \"requestedAccess\": \"private\",\n      \"verifiedAccess\": null\n    },\n    \"cloudflarePages\": {\n      \"provider\": \"cloudflare-pages\",\n      \"projectId\": \"example-cloudflare-project\",\n      \"websiteUrl\": \"https://hyperbase.pages.dev\",\n      \"requestedAccess\": \"cloudflare-access\",\n      \"verifiedAccess\": null\n    }\n  },\n  \"selectedProvider\": \"vercel\",\n  \"staging\": {\n    \"exclusiveOperationId\": null,\n    \"directory\": \"backstage/publish/dist\",\n    \"scope\": \"Upload consumed; only remote confirmation remains\",\n    \"queuedProviders\": [\n      \"netlify\"\n    ]\n  }\n}\n",
+        "language": "json"
+      },
+      {
+        "label": "Confirmed · proposed",
+        "text": "{\n  \"credentials\": {},\n  \"bindings\": {\n    \"default\": {\n      \"mode\": \"default\",\n      \"projectDir\": \"[Notebook]/backstage/publish\",\n      \"repository\": {\n        \"owner\": \"dfosco\",\n        \"name\": \"hyperbase\",\n        \"branch\": \"main\",\n        \"visibility\": \"public\"\n      },\n      \"updatedAt\": \"2026-10-30T12:00:00.000Z\"\n    }\n  },\n  \"operations\": {\n    \"operation_example_vercel\": {\n      \"id\": \"operation_example_vercel\",\n      \"kind\": \"publish\",\n      \"request\": {\n        \"mode\": \"default\",\n        \"providerId\": \"vercel\",\n        \"sourceBranch\": \"main\"\n      },\n      \"status\": \"succeeded\",\n      \"finalStatus\": \"success\",\n      \"steps\": [\n        {\n          \"name\": \"build-notebook\",\n          \"status\": \"succeeded\"\n        },\n        {\n          \"name\": \"deploy-selected-provider\",\n          \"status\": \"succeeded\"\n        }\n      ],\n      \"output\": [\n        \"Build complete. Provider confirmed deployment.\"\n      ],\n      \"warnings\": [],\n      \"error\": null,\n      \"result\": {\n        \"providerId\": \"vercel\",\n        \"websiteUrl\": \"https://hyperbase.vercel.app\",\n        \"verifiedWebsiteAccess\": \"vercel-authentication\"\n      },\n      \"startedAt\": \"2026-10-30T12:01:00.000Z\",\n      \"finishedAt\": \"2026-10-30T12:01:20.000Z\"\n    }\n  },\n  \"projects\": {\n    \"githubPages\": {\n      \"provider\": \"github-pages\",\n      \"projectId\": \"example-pages-project\",\n      \"websiteUrl\": \"https://dfosco.github.io/hyperbase/\",\n      \"requestedAccess\": \"public\",\n      \"verifiedAccess\": null\n    },\n    \"vercel\": {\n      \"provider\": \"vercel\",\n      \"projectId\": \"example-vercel-project\",\n      \"websiteUrl\": \"https://hyperbase.vercel.app\",\n      \"requestedAccess\": \"vercel-authentication\",\n      \"verifiedAccess\": \"vercel-authentication\"\n    },\n    \"netlify\": {\n      \"provider\": \"netlify\",\n      \"projectId\": \"example-netlify-site\",\n      \"websiteUrl\": \"https://hyperbase.netlify.app\",\n      \"requestedAccess\": \"private\",\n      \"verifiedAccess\": null\n    },\n    \"cloudflarePages\": {\n      \"provider\": \"cloudflare-pages\",\n      \"projectId\": \"example-cloudflare-project\",\n      \"websiteUrl\": \"https://hyperbase.pages.dev\",\n      \"requestedAccess\": \"cloudflare-access\",\n      \"verifiedAccess\": null\n    }\n  },\n  \"selectedProvider\": \"vercel\",\n  \"staging\": {\n    \"exclusiveOperationId\": null,\n    \"directory\": \"backstage/publish/dist\",\n    \"scope\": \"Upload consumed and remote completion confirmed\",\n    \"queuedProviders\": [\n      \"netlify\"\n    ]\n  }\n}\n",
+        "language": "json"
+      }
+    ],
+    "notes": "Full state snapshots preserve every binding/project map. Existing operation status vocabulary is used; LOCAL_WAIT_CANCELLED/providerId/verifiedAccess are proposed additions. Cancellation does not roll back config or claim a remote job stopped. Reconcile the real remote operation before retry to prevent duplicate deployment. Only confirmed provider result updates published URL/access; other providers remain unchanged. Proposed staging is an exclusive per-operation lease: serialize every provider build plus capture/upload until the upload stream is fully consumed or aborted. Other providers queue rather than mutate dist concurrently. Release before waiting on remote completion, so remote progress can remain independent. Cancellation/retry must reconcile lease and remote IDs first. This root staging field requires the same future reader migration as selectedProvider. Source-push phase/request fields and sourcePushed/websitePublished result fields are proposed. This full source-only example preserves all destination maps and confirms no website publication. Existing-repository automatic triggers must be checked before any source push. Repeat Publish includes needed source updates in its progress; it does not reopen a first-push confirmation.",
+    "sources": [],
+    "reference": "F05 · 01 · Source setup and operation state"
+  },
+  {
+    "id": "Authorization",
+    "title": "Browser connection and cancellation contract",
+    "kind": "Private runtime",
+    "path": "Private credential store / .hypercanvas/publishing.json",
+    "action": "Browser approval, denied/expired/cancelled auth; no file write on cancellation",
+    "root": "Notebook root, ignored runtime directory",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Browser approval, denied/expired/cancelled auth; no file write on cancellation",
+    "persistence": "Private runtime only. Never commit or export.",
+    "versions": [
+      {
+        "label": "Complete design contract",
+        "text": "GITHUB\nRegister an app and request repository permissions. Validate the browser callback. A cancelled or failed flow saves no binding. Current gh-based integration is not changed by this design.\n\nVERCEL\nBrowser-created scoped API token is a manual no-install option. A registered integration can exchange its callback code securely. Sign-in ID tokens are not deployment authorization. Do not borrow the Vercel CLI client identity.\n\nNETLIFY\nPublic integration uses registered OAuth2 app/client and callback. Netlify API tokens authorize deployment, not visitor access. A denied callback leaves existing configured destinations intact.\n\nCLOUDFLARE\nBrowser-created account Pages Edit token is the depicted fallback. Registered native/browser OAuth can use Authorization Code + S256 PKCE; third-party Device Authorization is unsupported.\n\nPERSISTENCE\nNo secret values or codes in notebook files, generated source, remote review snapshots, screenshots or logs. Future private credential storage is not implemented here. Runtime examples contain empty credentials maps. Only non-secret verified provider IDs enter bindings; failure/cancel preserves the previous source/config.\n",
+        "language": "text"
+      }
+    ],
+    "notes": "This is an annotation, not product onboarding or a claimed installed authentication flow. It connects to each approval/failure/cancel state.",
+    "sources": [
+      {
+        "label": "docs.github.com",
+        "url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps"
+      },
+      {
+        "label": "vercel.com",
+        "url": "https://vercel.com/docs/integrations/create-integration/vercel-api-integrations"
+      },
+      {
+        "label": "docs.netlify.com",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+      },
+      {
+        "label": "developers.cloudflare.com",
+        "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/"
+      }
+    ],
+    "reference": "F03 · 01 · Source setup and operation state"
+  },
+  {
+    "id": "ExistingReadme",
+    "title": "Existing user README stays intact",
+    "kind": "Committed file",
+    "path": "README.md",
+    "action": "RepositoryConflict review / cancel: do not replace this file",
+    "root": "Notebook root",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "RepositoryConflict review / cancel: do not replace this file",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Before · actual Hyperbase",
+        "text": "# Hyperbase\n\nA local design notebook for reviewing Hypercanvas chrome and publishing flows.\n\nOpen this folder in Hypercanvas: `~/workspace/hypercanvas-notebooks/hyperbase`.\n\n## Notebook layout\n\n- `prototypes/chrome-overview.prototype/` owns the Chrome prototype and its supporting `components/`, `styles/`, `hooks/` and `lib/` source.\n- `ChromeSidebar.component/`, `ChromeTopbar.component/`, `ChromeDialogs.component/`, `ChromeMenus.component/` and `ChromePanels.component/` are discoverable component artifacts. Their stories reference the same Chrome implementation inside the prototype; the code is not duplicated.\n- `canvas/chrome-components.canvas/` and `canvas/loading-and-error-states.canvas/` hold the original canvas logs and stable artifact identities.\n- `PublishStates.component/` and `publish-design.canvas/` hold the publishing design exploration.\n- `backstage/config/` holds Notebook and application configuration. `backstage/assets/` holds images, snapshots and loading-state previews.\n- `.hypercanvas/` holds local runtime state, including guarded migration recovery records.\n\nSupporting folders inside a prototype are ordinary folders. Never nest another `.prototype`, `.component`, `.canvas` or `.site` artifact inside an artifact.\n\n## Review routes\n\n- `/chrome-overview.prototype` is the canonical Chrome prototype route. The migrated `/chrome-overview` alias remains available for existing links.\n- `/components/ChromeSidebar?export=Default` opens a component state. Substitute another Chrome component or export (`Active`, `Empty`, `Narrow`).\n- `/canvas/chrome-components` and `/canvas/loading-and-error-states` retain their original routes and layouts.\n- `/canvas/publish-design` is the Publish design review canvas.\n\nUse the runtime's base URL when opening links. Authored navigation preserves the current pathname, query and hash, including branch prefixes.\n\n## Component and style ownership\n\nThe Chrome prototype contains the existing shadcn Base UI primitives and CSS Modules. All implementation imports are relative to that source tree. The `#hyperbase/` alias remains configured for shadcn generation and points to the prototype folder; `components.json` and `jsconfig.json` agree with it.\n\n`prototypes/chrome-overview.prototype/styles/shadcn.css` owns Chrome's theme tokens and Tailwind build. Its explicit source scan includes the prototype entry and its component tree. Each component story imports that stylesheet in its isolated document. The Publish exploration separately vendors the actual Chrome controls and compiled styles locally; source provenance is documented in `PublishStates.component/chrome/PROVENANCE.md`. No notebook artifact imports the application package.\n\nBefore moving an approved composition into Core, copy the required source and wire callbacks to real actions. The application must not depend on this local notebook.\n\n## Publishing concepts\n\nThe Publish canvas is an interactive design artifact. Its controls simulate state changes; they do not connect GitHub, create repositories, upload files, or deploy websites.\n\nThe design distinguishes the local notebook, its GitHub source repository, and the host serving its viewing copy. The canvas presents separate connected component widgets for GitHub setup and GitHub Pages, Netlify, Cloudflare Pages and Vercel flows. All provider flows are simulations. Publishing covers the entire notebook; the source branch belongs in Hypercanvas config. Plain connectors show the relationship between states, without arrowheads.\n",
+        "language": "markdown"
+      },
+      {
+        "label": "After · unchanged",
+        "text": "# Hyperbase\n\nA local design notebook for reviewing Hypercanvas chrome and publishing flows.\n\nOpen this folder in Hypercanvas: `~/workspace/hypercanvas-notebooks/hyperbase`.\n\n## Notebook layout\n\n- `prototypes/chrome-overview.prototype/` owns the Chrome prototype and its supporting `components/`, `styles/`, `hooks/` and `lib/` source.\n- `ChromeSidebar.component/`, `ChromeTopbar.component/`, `ChromeDialogs.component/`, `ChromeMenus.component/` and `ChromePanels.component/` are discoverable component artifacts. Their stories reference the same Chrome implementation inside the prototype; the code is not duplicated.\n- `canvas/chrome-components.canvas/` and `canvas/loading-and-error-states.canvas/` hold the original canvas logs and stable artifact identities.\n- `PublishStates.component/` and `publish-design.canvas/` hold the publishing design exploration.\n- `backstage/config/` holds Notebook and application configuration. `backstage/assets/` holds images, snapshots and loading-state previews.\n- `.hypercanvas/` holds local runtime state, including guarded migration recovery records.\n\nSupporting folders inside a prototype are ordinary folders. Never nest another `.prototype`, `.component`, `.canvas` or `.site` artifact inside an artifact.\n\n## Review routes\n\n- `/chrome-overview.prototype` is the canonical Chrome prototype route. The migrated `/chrome-overview` alias remains available for existing links.\n- `/components/ChromeSidebar?export=Default` opens a component state. Substitute another Chrome component or export (`Active`, `Empty`, `Narrow`).\n- `/canvas/chrome-components` and `/canvas/loading-and-error-states` retain their original routes and layouts.\n- `/canvas/publish-design` is the Publish design review canvas.\n\nUse the runtime's base URL when opening links. Authored navigation preserves the current pathname, query and hash, including branch prefixes.\n\n## Component and style ownership\n\nThe Chrome prototype contains the existing shadcn Base UI primitives and CSS Modules. All implementation imports are relative to that source tree. The `#hyperbase/` alias remains configured for shadcn generation and points to the prototype folder; `components.json` and `jsconfig.json` agree with it.\n\n`prototypes/chrome-overview.prototype/styles/shadcn.css` owns Chrome's theme tokens and Tailwind build. Its explicit source scan includes the prototype entry and its component tree. Each component story imports that stylesheet in its isolated document. The Publish exploration separately vendors the actual Chrome controls and compiled styles locally; source provenance is documented in `PublishStates.component/chrome/PROVENANCE.md`. No notebook artifact imports the application package.\n\nBefore moving an approved composition into Core, copy the required source and wire callbacks to real actions. The application must not depend on this local notebook.\n\n## Publishing concepts\n\nThe Publish canvas is an interactive design artifact. Its controls simulate state changes; they do not connect GitHub, create repositories, upload files, or deploy websites.\n\nThe design distinguishes the local notebook, its GitHub source repository, and the host serving its viewing copy. The canvas presents separate connected component widgets for GitHub setup and GitHub Pages, Netlify, Cloudflare Pages and Vercel flows. All provider flows are simulations. Publishing covers the entire notebook; the source branch belongs in Hypercanvas config. Plain connectors show the relationship between states, without arrowheads.\n",
+        "language": "markdown"
+      }
+    ],
+    "notes": "The source repository review lists README.md. This full local snapshot illustrates preservation: no generated config change authorizes replacing unrelated user documentation. Cancel keeps every old file. A portable package.json is a distinct path from the Notebook root package.json.",
+    "sources": [],
+    "reference": "F04 · 01 · Source setup and operation state"
+  },
+  {
+    "id": "PortableRegistry",
+    "title": "Portable npm registry configuration",
+    "kind": "Committed file",
+    "path": ".npmrc",
+    "action": "Created with portable source before dependency resolution",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Created with portable source before dependency resolution",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Full generated contents",
+        "text": "@dfosco:registry=https://registry.npmjs.org/\n",
+        "language": "text"
+      }
+    ],
+    "notes": "Full current generator output, inside backstage/publish. Public registry mapping only. No registry token, authentication entry or .env file is generated. Existing user registry rules require explicit comparison before replacement.",
+    "sources": [],
+    "reference": "F11 · 02 · Shared publication files"
+  },
+  {
+    "id": "PagesMarker",
+    "title": "Empty Pages processing marker",
+    "kind": "Committed file",
+    "path": "public/.nojekyll",
+    "action": "Created with portable source; copied into build output",
+    "root": "Portable project: Notebook/backstage/publish",
+    "owner": "Hypercanvas publishing service (proposed)",
+    "timing": "Created with portable source; copied into build output",
+    "persistence": "Commit with notebook/publication source. No credentials.",
+    "versions": [
+      {
+        "label": "Full contents · empty file",
+        "text": "",
+        "language": "text"
+      }
+    ],
+    "notes": "The complete file has zero bytes. It prevents Jekyll processing where applicable. It contains no website access policy and no credentials. The source file remains shared; no provider-specific user configuration is implied.",
+    "sources": [],
+    "reference": "F12 · 02 · Shared publication files"
+  }
+]
