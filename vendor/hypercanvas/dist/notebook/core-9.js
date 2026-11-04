@@ -1,5 +1,5 @@
 import { subscribeToConfig, getConfig, getConfigSnapshot } from "./core-2.js";
-import { t as themeHueVariables, c as configDefaults } from "./chunks/configSchema-Chfvpba8.js";
+import { t as themeHueVariables, c as configDefaults } from "./chunks/configSchema-Bw-N4Op6.js";
 const THEME_STORAGE_KEY = "sb-color-scheme";
 const SYNC_STORAGE_KEY = "sb-theme-sync";
 const SYNC_DEFAULTS_VERSION_KEY = "sb-theme-sync-defaults-version";

@@ -48,7 +48,7 @@
       "@mdx-js/mdx": "3.1.1",
       "@tailwindcss/vite": "4.2.2",
       "@vitejs/plugin-react": "5.2.0",
-      "glob": "11.1.0",
+      "glob": "13.0.5",
       "ignore": "5.3.2",
       "jsonc-parser": "3.3.1",
       "react": "19.2.3",
@@ -224,9 +224,13 @@
       "bytes": 24146,
       "sha256": "b8a19ee30822c5f80ffcadb1f245ec0ba1d9c5639acac3e256b8d9d0c8d82eaf"
     },
-    "dist/notebook/chunks/CanvasViewer-B80xfRB5.js": {
-      "bytes": 43837,
-      "sha256": "0ebb8ef42c2f2c0d805667645fcd0662171a68b41a1754e9b8917a9ef596b3d2"
+    "dist/notebook/chunks/CanvasToolsPresentation-CgLIau-Y.js": {
+      "bytes": 136136,
+      "sha256": "58b970bf3e554a8fecf867b3e04b77d56bf8fc923e304d734d9fb87d21ffabd4"
+    },
+    "dist/notebook/chunks/CanvasViewer-CJVHKzkc.js": {
+      "bytes": 51693,
+      "sha256": "e9eb6da77a5346e41acdba614680f7888b02c0a8e0a445fbbfe483e1bceb5546"
     },
     "dist/notebook/chunks/ChatAddIcon-DSO8cl1i.js": {
       "bytes": 1678,
@@ -316,9 +320,9 @@
       "bytes": 3230,
       "sha256": "a314c78d62c5125d0f3092c987c5d4bb63074d133eef7ffa80cc281b84fb25cb"
     },
-    "dist/notebook/chunks/CodePenEmbed-CiEJGOBO.js": {
-      "bytes": 12009,
-      "sha256": "23adda0049d8509d2f3e4e43497c6f9a060211e9ea508f066478c90df5b78548"
+    "dist/notebook/chunks/CodePenEmbed-CWCkFPvu.js": {
+      "bytes": 12012,
+      "sha256": "ca7e059e34f5ff87ddd7132458ffb87150a144bcd84d8c023589e8bea92efc2a"
     },
     "dist/notebook/chunks/CodeReviewIcon-DeqrWWGs.js": {
       "bytes": 2039,
@@ -448,13 +452,13 @@
       "bytes": 2064,
       "sha256": "baf21a5e3c49d4114e3ae113fc04ef2797480336f7dbd2a6721a1e74a916510c"
     },
-    "dist/notebook/chunks/DialogPortal-C55KPLOF.js": {
+    "dist/notebook/chunks/DialogPortal-o7GDw13u.js": {
       "bytes": 6381,
-      "sha256": "c6876224ad207e4b1b27bf726dea457d415c22c049019d36349e6cd64ed00c57"
+      "sha256": "43dff96e144f0e01ccb07f69c170db9de44a3dcb1e056f889b66757ecd765e99"
     },
-    "dist/notebook/chunks/DialogRoot-D7cqO-Ad.js": {
+    "dist/notebook/chunks/DialogRoot-DGpWyMIY.js": {
       "bytes": 8576,
-      "sha256": "2311ac6f4a14787404007a25a9afa4b71af343e21e0522f1976d721fe10f245c"
+      "sha256": "2045cc9cb4278cfea15bb8db2e98d9d6d6f1dbf727bbf5b3d166efc3b3c8416a"
     },
     "dist/notebook/chunks/DiamondIcon-D82wl1XR.js": {
       "bytes": 1213,
@@ -500,9 +504,9 @@
       "bytes": 2236,
       "sha256": "4e5aa26db4a9f9a9799ebc6640fbd01d6077af233adfa97f2cf35ea75909cd04"
     },
-    "dist/notebook/chunks/Document-2gwDP-Y5.js": {
-      "bytes": 114399,
-      "sha256": "6b2c730bc6f088a84bab7f7f5b9d0b9e7a692d19b9a3218e26698504264885a7"
+    "dist/notebook/chunks/Document-DbLUnVhy.js": {
+      "bytes": 78147,
+      "sha256": "56e0f0686b82724742ea64e13cc8a90ad1374cfe9ee12eb19734051bc5f4150e"
     },
     "dist/notebook/chunks/DotFillIcon-CqMZVxKC.js": {
       "bytes": 721,
@@ -612,13 +616,9 @@
       "bytes": 1076,
       "sha256": "849ba91d93a9cbcd1d42ab5d67e9dbd2c55c332f7f1a718647fdbd27d25fa878"
     },
-    "dist/notebook/chunks/FieldControl-s34cBhar.js": {
-      "bytes": 117071,
-      "sha256": "2132c5c70e2f38ed816a28dd55639f9eb1139ea1aab282918a60a2ec378fbe69"
-    },
-    "dist/notebook/chunks/FigmaEmbed-xmGLzMj0.js": {
-      "bytes": 11155,
-      "sha256": "31e7e744c43a98b261ca2354587fb9cbcc6bdce765065b07ec57a6060244a385"
+    "dist/notebook/chunks/FigmaEmbed-C7yMXiMf.js": {
+      "bytes": 11158,
+      "sha256": "a6bf261b2fbd67cf143a02faa4b7bcf6699ec9be069375d4fb28f29a19c94226"
     },
     "dist/notebook/chunks/FileAddedIcon-D-uzeC6G.js": {
       "bytes": 1661,
@@ -848,9 +848,13 @@
       "bytes": 1870,
       "sha256": "5a00f24f5242991e3d95466e4b97fc0c6d2b9b9ea49ebe707e712be60f030d09"
     },
-    "dist/notebook/chunks/Icon-D6qvShid.js": {
-      "bytes": 34244,
-      "sha256": "46776f48ddc5bd169a7f60b898f2955b3fa4b4dd6ee9ae73cf91e6811fd692f9"
+    "dist/notebook/chunks/Icon-CY9OeunJ.js": {
+      "bytes": 32080,
+      "sha256": "ca1c3e4834a505eca464889b0054742232892332893230f12074c1f46c81d173"
+    },
+    "dist/notebook/chunks/Icon-I4lR4N0q.js": {
+      "bytes": 29702,
+      "sha256": "c8602e0a07184f86447ba25dc0e818e4fbdccd8a90d44eb46abb7d73d4272425"
     },
     "dist/notebook/chunks/IdBadgeIcon-yj8Xba2N.js": {
       "bytes": 2625,
@@ -928,9 +932,9 @@
       "bytes": 1964,
       "sha256": "749ebe66b0107925604682451e8cfe07f47b816fa6dbb944f5f6b388fd00d884"
     },
-    "dist/notebook/chunks/KnobsForm-DJarcYie.js": {
-      "bytes": 151324,
-      "sha256": "7564ce5d6815ccb075f49f05619311c326187f3c457c2e19991910567c9846e1"
+    "dist/notebook/chunks/KnobsForm-BaG6jvFj.js": {
+      "bytes": 151361,
+      "sha256": "e1d7d6bd04b52aba82f27c5c7593c16f909366ab964314d2e93f2753167e67f0"
     },
     "dist/notebook/chunks/LawIcon-DxzHto3l.js": {
       "bytes": 2862,
@@ -952,9 +956,9 @@
       "bytes": 1708,
       "sha256": "243ec8c844254e4ec4e91f8b82c5b3fa17497ffaa8de39c78c29e1acc99b945d"
     },
-    "dist/notebook/chunks/LinkPreview-DjLFNLPe.js": {
+    "dist/notebook/chunks/LinkPreview-C3NEgYWL.js": {
       "bytes": 19834,
-      "sha256": "5306fe1918c4451e90f9ec3e1d2a37eb978f3e3845c9eaefe5445d2b775b79a9"
+      "sha256": "094011c440b6042349305302fa0893ff022f581f9d00a740f6fb3c21dc5fb74e"
     },
     "dist/notebook/chunks/ListOrderedIcon-Q1cJxW5T.js": {
       "bytes": 2284,
@@ -1000,13 +1004,13 @@
       "bytes": 2162,
       "sha256": "51d0cf3e86dcb9bd6640bb087bd3c6cb9a23b0a88f5851a91df2dd1c4c24a48a"
     },
-    "dist/notebook/chunks/MarkdownBlock-DxsMG03P.js": {
-      "bytes": 47776,
-      "sha256": "c6113943638f50598fa87c6406611fdcba9b6351639b370c31a6a61e832729e5"
+    "dist/notebook/chunks/MarkdownBlock-DRLSDL1g.js": {
+      "bytes": 47779,
+      "sha256": "f3fb9c2d114dbc9750cc8c478e2d892f0d19e49aa71b8c5ce88d29fdb47efa72"
     },
-    "dist/notebook/chunks/MarkdownEditor-Co1WgSAW.js": {
-      "bytes": 688517,
-      "sha256": "e86daf46c0ade825ddebf1a770f8d0ff0866a302c22ef16776b15c7ece86caab"
+    "dist/notebook/chunks/MarkdownEditor-CXCDlnnq.js": {
+      "bytes": 688508,
+      "sha256": "917e56c7f34af59c1afd8e79cc65483497388f0321fb44a5db55bbd08204a672"
     },
     "dist/notebook/chunks/MarkdownIcon-DIBNLYlc.js": {
       "bytes": 1140,
@@ -1027,10 +1031,6 @@
     "dist/notebook/chunks/MentionIcon-C7ZIjxTs.js": {
       "bytes": 1431,
       "sha256": "84b46d1e4892e75e8045380c91f8bcc48521ebf7387c3bff6eb56b1379bec9b1"
-    },
-    "dist/notebook/chunks/MenuItem-O40zxRgT.js": {
-      "bytes": 108634,
-      "sha256": "43c277ab2bbedfd620dfec25d16a4d9656e3d1fa1659e2265abc739035398a23"
     },
     "dist/notebook/chunks/MeterIcon-9z5DaIXJ.js": {
       "bytes": 1266,
@@ -1100,9 +1100,13 @@
       "bytes": 1505,
       "sha256": "34ae6f693193c233b3cc0f61bde53a6def511262369e736a380cde9a0d2d7946"
     },
-    "dist/notebook/chunks/NotebookViewer-CqvITZB1.js": {
-      "bytes": 109122,
-      "sha256": "4211810707b5e8d0371eb98ca14f9ab22605145cb79c63d9ecb558d584e011a3"
+    "dist/notebook/chunks/NotebookShellPresentation-E79zlNst.js": {
+      "bytes": 20106,
+      "sha256": "f72b5a82ac1b5c6758fa7406b3bd79a7410b012e886a2f21e86fa9de0548847b"
+    },
+    "dist/notebook/chunks/NotebookViewer-DAs8-IvG.js": {
+      "bytes": 89653,
+      "sha256": "7718280cb685cd75a77997d7b2ab1357fe09c996395170ef55b1f15da8d4b37f"
     },
     "dist/notebook/chunks/NumberIcon-Bjo7NNdH.js": {
       "bytes": 2530,
@@ -1224,9 +1228,9 @@
       "bytes": 4382,
       "sha256": "7d85d67d5139258e6fd41b6f46cfead26ca378c6c2fcb593469a474052e11e51"
     },
-    "dist/notebook/chunks/PrototypeEmbed-nbUrr-Yx.js": {
+    "dist/notebook/chunks/PrototypeEmbed-DPFcUP4b.js": {
       "bytes": 42208,
-      "sha256": "b63b07bb1af5f06d41ee08137542ba3c993a296ed5115161bc4c9f4364813cbe"
+      "sha256": "a6da3d0983cd3d1eeafd33e407ad096a714bd422eda233848ffb94aa2ff2db12"
     },
     "dist/notebook/chunks/PulseIcon-d7mMYcWv.js": {
       "bytes": 1120,
@@ -1344,6 +1348,10 @@
       "bytes": 1008,
       "sha256": "38a203fd530781fda3320edbd810b0f7957f5eab448d94a71c0b4d571186d9c0"
     },
+    "dist/notebook/chunks/SelectItemText-D9UPRV0P.js": {
+      "bytes": 100703,
+      "sha256": "704bc2b42f4cf6f11c7d0b60cac402cb991b83aa27c330bd1dc5b4f5ba56e7a7"
+    },
     "dist/notebook/chunks/ServerIcon-DfzmzgKO.js": {
       "bytes": 2165,
       "sha256": "37f182814ba068dfedaf3629859b57d3ea09d7415aa4426449ca703a05ed1536"
@@ -1396,9 +1404,9 @@
       "bytes": 1640,
       "sha256": "5a1747be690193acc1ec288a0b74bc460c5bbdf8121d0dfc53ffa6e32da96e01"
     },
-    "dist/notebook/chunks/SiteFrame-ClTn1IVD.js": {
-      "bytes": 28863,
-      "sha256": "88424c01495ec803a135fb05065dc10624c8af6592b141ca1d4a38f0cf8330dc"
+    "dist/notebook/chunks/SiteFrame-r7uWCyzZ.js": {
+      "bytes": 28897,
+      "sha256": "19ff381ae253b87b6a94617de3f66281ece54ba78321a92a83910eae94bed88e"
     },
     "dist/notebook/chunks/SiteViewer-uSsH0qS_.js": {
       "bytes": 2803,
@@ -1520,9 +1528,9 @@
       "bytes": 1596,
       "sha256": "ec095f7dd9a953e1da8d471c6465f5cb378fad55f6df734d611469e63311ec42"
     },
-    "dist/notebook/chunks/StickyNote-D0qOXpee.js": {
+    "dist/notebook/chunks/StickyNote-D0k7sdyb.js": {
       "bytes": 3658,
-      "sha256": "543a48dbf847ca25c052a5f37b1334f14bd70c9c28ce576decb6150bb2219237"
+      "sha256": "786d1a27b6c3cc2646314f773a8c7ffe630dba208fa062b1bfd38e5ae8fd0e11"
     },
     "dist/notebook/chunks/StopIcon-CIKQjNbV.js": {
       "bytes": 1592,
@@ -1532,17 +1540,17 @@
       "bytes": 1706,
       "sha256": "4ec70cbd87182eced18044f59bc95752091fe2fb286c65dff5cc29f61ed0764c"
     },
-    "dist/notebook/chunks/StorySetWidget-DzbPrZkS.js": {
-      "bytes": 14940,
-      "sha256": "6110dcae7850a739067838689ca62e3220392f309b3ddb8afd36117c4cdc8100"
+    "dist/notebook/chunks/StorySetWidget-CIN0YLM-.js": {
+      "bytes": 14977,
+      "sha256": "fc7716344c5a71167a0420a4767c0dd0a25bf52e1bb56a1b876c3bf989854a4a"
     },
-    "dist/notebook/chunks/StoryWidget-3oewpv9w.js": {
-      "bytes": 20591,
-      "sha256": "2c28fe28ce3aa8042ee8211fd6dde20e1a0e08a5211d550171ccd790ab9d6d68"
+    "dist/notebook/chunks/StoryWidget-CX2cy4wN.js": {
+      "bytes": 20628,
+      "sha256": "6f3978041e90fff2639827cf4abc5e7a3ac6c2dc482596310232d215babcf409"
     },
-    "dist/notebook/chunks/StoryWidget.module-XxDW57Xe.js": {
+    "dist/notebook/chunks/StoryWidget.module-BgGSE8e2.js": {
       "bytes": 5216,
-      "sha256": "53824420b67667c85adf46113de9951f5bbdb2321ef1ab36edfe7965b50822a0"
+      "sha256": "6d8a94f45c4e5447da410ff2633fb8e25dd7f2e54c387303c9bb2a2b05810cad"
     },
     "dist/notebook/chunks/StoryboardContext-a5DglSkK.js": {
       "bytes": 123,
@@ -1760,13 +1768,9 @@
       "bytes": 1429,
       "sha256": "f6692dd2d912b0f59b52242da75f3ca2b8f1b21ad0f01a170532077aff126360"
     },
-    "dist/notebook/chunks/_commonjsHelpers-CXnYerf6.js": {
-      "bytes": 1798,
-      "sha256": "e6fc94af3c5d0351ae67581f5931c42097dbc73bdd9b2db0f0a9de8e899a69ec"
-    },
-    "dist/notebook/chunks/alert-CePdA8qB.js": {
-      "bytes": 10006,
-      "sha256": "dc929351f793694342eaa52d67154a1ee8d7b818929acb2185bf8575e1060654"
+    "dist/notebook/chunks/alert-BjgVTE5o.js": {
+      "bytes": 9996,
+      "sha256": "8ad72fa4606d050879b631e3fdda375dd97896981eca24f5f4b3b9611e83c53c"
     },
     "dist/notebook/chunks/basePathAsset-Bs6UgtNi.js": {
       "bytes": 1099,
@@ -1775,6 +1779,10 @@
     "dist/notebook/chunks/bodyClasses-BfDW4I72.js": {
       "bytes": 2178,
       "sha256": "e88800b3fcd2d7896640393fccb14aec340e9f328502fdd22bc95c58d3b23008"
+    },
+    "dist/notebook/chunks/button-Bi0ciDEN.js": {
+      "bytes": 129497,
+      "sha256": "2f829cea11bd2321a435e5eabeaf8575d0c1d6f4b2e7e7659960a222ee4a0694"
     },
     "dist/notebook/chunks/canvasApi-HT5Txujd.js": {
       "bytes": 2661,
@@ -1788,21 +1796,33 @@
       "bytes": 4188,
       "sha256": "3c466760211c66e08bee0170eed3190b0ca77239339acad731f4eaa68f2b806b"
     },
-    "dist/notebook/chunks/composite-WCaVrKIy.js": {
+    "dist/notebook/chunks/chevron-down-D7UtqrIn.js": {
+      "bytes": 277,
+      "sha256": "fa8c5f17fbac64938d8ba6e39b0d43f45ec034d7eee3e47efac74043caadee17"
+    },
+    "dist/notebook/chunks/commandActions-CvE2nUEH.js": {
+      "bytes": 4593,
+      "sha256": "72c128ce4511e6ae8a0601212499bbf4263b4c31fa25e673b58beaaa1a73f0fc"
+    },
+    "dist/notebook/chunks/composite-z4dIV_BK.js": {
       "bytes": 144291,
-      "sha256": "0326563ea7586219f95901c00d3fca0af35e456471449112a7b0a0d780bcbbad"
+      "sha256": "1c19a7932d260945baf0c83d6185d0653e3699f8a1e5a19de8db623d8cc73f7f"
     },
-    "dist/notebook/chunks/configSchema-Chfvpba8.js": {
-      "bytes": 13346,
-      "sha256": "4df2bf3f53138201ffe6839d337ea475431ddee04f27350006072f2f1077d99a"
+    "dist/notebook/chunks/configSchema-Bw-N4Op6.js": {
+      "bytes": 13377,
+      "sha256": "e371e0bdc7e6a76461e0e55c6ece088a8c08668c05dd05b330e8affc8096fb78"
     },
-    "dist/notebook/chunks/createLucideIcon-CV-5aOV3.js": {
-      "bytes": 132305,
-      "sha256": "25cc8b61ec42f11d4df886e4c6c3da1bae07f1b08d73e6a95dd99d44f62453c0"
+    "dist/notebook/chunks/contract-Tm25L5gq.js": {
+      "bytes": 3759,
+      "sha256": "b730eb2e0d01f58325ff0a424084f683868f8fea7dcb1d729b363eb2b58ee0cc"
     },
-    "dist/notebook/chunks/dialog-content-CQmOBQVP.js": {
-      "bytes": 4695,
-      "sha256": "3d6b86c540fd49e012ad73ad221691fbcd504709c56ebfc89fe49441de5b41da"
+    "dist/notebook/chunks/createLucideIcon-CgZyRq_D.js": {
+      "bytes": 2841,
+      "sha256": "b32fd9e8ef10b96896435296c8e2718417b24ab3c8985523f9dfe8e8c86bb258"
+    },
+    "dist/notebook/chunks/dialog-content-DtvqXfUu.js": {
+      "bytes": 4685,
+      "sha256": "b38eb06289e03de6ab6f2e62dcb44430b5eeff690b61df97a17cc5dd0168f642"
     },
     "dist/notebook/chunks/dotPath-CXf9dtnn.js": {
       "bytes": 1287,
@@ -1811,6 +1831,10 @@
     "dist/notebook/chunks/embedOverlay.module-BVkT7z5d.js": {
       "bytes": 1289,
       "sha256": "d95565b8ce080d9fe0a2d7b5f8ca3225b0827015841984043a50ac8d8cc48c3d"
+    },
+    "dist/notebook/chunks/feather-Bj7Bm83j.js": {
+      "bytes": 182501,
+      "sha256": "65108faf31f48670034799be8d511b3ca5ab927dc12a08bbb84a8e61300c7e47"
     },
     "dist/notebook/chunks/figmaUrl-Bzyfguzi.js": {
       "bytes": 1368,
@@ -1828,17 +1852,13 @@
       "bytes": 16326,
       "sha256": "ebf0bb83b401ec71e9bec29d78043f042239cdf83b121d4b63ccc6aa83d85a1c"
     },
-    "dist/notebook/chunks/highlighter-BxyWLlnj.js": {
-      "bytes": 95121,
-      "sha256": "529ad803acacf227523f2b138b1242ac935a8bbcfcaaf26ceac4675fe5edfa8d"
+    "dist/notebook/chunks/highlighter-65pmvChc.js": {
+      "bytes": 95112,
+      "sha256": "e6ea9b167cc8178db96ff3e0af204e8b6c4f489116e56f2fb1503658b6961b47"
     },
     "dist/notebook/chunks/iframePointerLock-CuQbsxGb.js": {
       "bytes": 3149,
       "sha256": "314ad510e92eed1c13946624dd5639de42f9ccee921edb4e0eaf75ed2a0c4275"
-    },
-    "dist/notebook/chunks/input-D-1mYuzc.js": {
-      "bytes": 2474,
-      "sha256": "d4e78c219b69de020d0364940f8e37ee9dc95a4fa0a9aace9e7c4bec9dce8811"
     },
     "dist/notebook/chunks/localStorage-DulkrQ4k.js": {
       "bytes": 3288,
@@ -1852,9 +1872,9 @@
       "bytes": 1497,
       "sha256": "b524c5201d2ff1856bc2d84562f6b9d0c05aaad8897fc7c9428cd45ebf9f2cd9"
     },
-    "dist/notebook/chunks/primerIcons-Di4IYwoZ.js": {
-      "bytes": 211768,
-      "sha256": "c6dfa817944ba8177285298f70ed9900d1ea2f6c9ca1639d4dbd7a8da5cab4b9"
+    "dist/notebook/chunks/primerIcons-CoEce9Ck.js": {
+      "bytes": 25624,
+      "sha256": "6cb38312f9755f287b1f9efc2133b9e22a68e415136b9f4bc03e37b5076a7b80"
     },
     "dist/notebook/chunks/renderOcticon-DuMQdmQC-Bkrvv2QR.js": {
       "bytes": 5077,
@@ -1868,33 +1888,33 @@
       "bytes": 1739,
       "sha256": "add4d9382dbf7b2d6f697535aff9c02ffe2cdf982549f0f337bf43f883ebf77c"
     },
-    "dist/notebook/chunks/storyFrameUrl-CIBAtrso.js": {
+    "dist/notebook/chunks/storyFrameUrl-BrqNbZ2o.js": {
       "bytes": 632,
-      "sha256": "e3c2944a4202429e9407440c41c394d2611db9985d442f9ead7f6e4d51406176"
+      "sha256": "5675d7cbf851136ed7f1e47c93146921c9fda991023ea00897077fe2d0ef8f70"
+    },
+    "dist/notebook/chunks/tooltip-content-CaxwY_7M.js": {
+      "bytes": 41661,
+      "sha256": "5c28b3c625e2ec03f0fe25ad6e475c6e3b52b8864441e3aa2667e858a1e6becb"
     },
     "dist/notebook/chunks/useCanvasFrameTheme-D4Yco8Ax.js": {
       "bytes": 32747,
       "sha256": "16cb1ef7280efe9b1be8cec8c9fd313b249c86267faee93c2b1b6d81fdd217f8"
     },
-    "dist/notebook/chunks/useExpandOverride-BmLmUDhU.js": {
+    "dist/notebook/chunks/useExpandOverride-CWRcTp1O.js": {
       "bytes": 1814,
-      "sha256": "09d4b3f787cf9c47a53cf6f494b6767f14ff65d8dbe89734caf954d9a71a70c0"
+      "sha256": "642fb7eda600e6ffdfbc6e9121408a497899096ea48944fed76526704533ad1c"
     },
-    "dist/notebook/chunks/useFocus-Djz2VYnf.js": {
-      "bytes": 5261,
-      "sha256": "c0153560448b273adeaa8aaba54166049ef5d9f8d20478d31f6fd9a53b777461"
-    },
-    "dist/notebook/chunks/useOpenInteractionType-evAUFDho.js": {
-      "bytes": 5814,
-      "sha256": "ef010e635ba4159ccab79364ec61aa007f3a65b88b936d70f8277ed3ba9e72b2"
+    "dist/notebook/chunks/useOpenInteractionType-B_v65zSf.js": {
+      "bytes": 5813,
+      "sha256": "6ae2259c45bb4907c241ef17433060ba6d2b9b655d5fbcab2d7f34c12fceaa51"
     },
     "dist/notebook/chunks/useOverride-CmpCccmF.js": {
       "bytes": 1614,
       "sha256": "50a5ca5cd7071438f6ad196e77f35df66315d7727acc05ab62fbd1f2c0b6d8cd"
     },
-    "dist/notebook/chunks/useScrollLock-6_AWQWRh.js": {
+    "dist/notebook/chunks/useScrollLock-DWfGfMje.js": {
       "bytes": 31923,
-      "sha256": "4054589389e5d8a8440520016a8abfc94b96335354a6b924b18133ac0c605850"
+      "sha256": "3bcd6a8f9b4993ee6b466b21fe7d2011b41e95a4872293b0d5474392359d938b"
     },
     "dist/notebook/chunks/useThemeState-6KPJA_hY.js": {
       "bytes": 824,
@@ -1904,17 +1924,17 @@
       "bytes": 10595,
       "sha256": "27c48f0da17afac465da8dc6371c8e5a8798cf4731b129432e73c977a548f89c"
     },
-    "dist/notebook/chunks/widgetConfig-DkrqwrI0.js": {
-      "bytes": 36975,
-      "sha256": "5b404260943d01d7c7ddd1e7d8c5347789fc255abb50bdc67705c52b63db4148"
+    "dist/notebook/chunks/widgetProps-BqIDs1ZC.js": {
+      "bytes": 714,
+      "sha256": "ae56cbbab5db74ed237586a71182ae837fee9d303d35520022201566b6321a94"
     },
-    "dist/notebook/chunks/widgetProps-_UqatjIo.js": {
-      "bytes": 711,
-      "sha256": "7037706fbff789ccdb42081fd7535d74d51cd5fc5c66afcb5143eec3626760fa"
+    "dist/notebook/chunks/widgetRegistry-CmXYjxwi.js": {
+      "bytes": 1625,
+      "sha256": "26572a20cd4e5c5c9324f7a729c0ce54a7543a603fd505eb628d88ae94f8e3cd"
     },
     "dist/notebook/config.js": {
       "bytes": 323,
-      "sha256": "1812b8292570ff1bb38576f12a2e9abf1430793eaf189a80fe3af10d7872ba55"
+      "sha256": "1700f874fbd0e271666c35b5c75d5bc3fa48899e0879344449402a36014a7fbb"
     },
     "dist/notebook/context.js": {
       "bytes": 6228,
@@ -1958,31 +1978,39 @@
     },
     "dist/notebook/core-9.js": {
       "bytes": 20180,
-      "sha256": "f17333d5d44f4ca60a175faf6e41696a7ceca109ba8ae5ad766f75c145d5c662"
+      "sha256": "09e0b3e3f5a44c998827a1a919adf2525389d8f0ad35e8cfee0a7b2e29396ebb"
     },
     "dist/notebook/core-css.manifest.json": {
-      "bytes": 95012,
-      "sha256": "4a30923269000849d1059a7a14fef11cd538226c513c02000cfa71af96c1ee0d"
+      "bytes": 95157,
+      "sha256": "ff70332318d79e571bb0acdf1ef84ceb4a9f3458377aab09abfcb3637c178a69"
     },
     "dist/notebook/core.css": {
       "bytes": 207787,
       "sha256": "ecb07d1406ed51825be07bb3129f6169f0e6e64b5564c1ab7773503277d9bffb"
     },
     "dist/notebook/core.js": {
-      "bytes": 27166,
-      "sha256": "13cf2dd6ceb93739517f4b8870bafdaed7f25fc91c8169cd50bc68be3703a518"
+      "bytes": 27212,
+      "sha256": "d8afa3e97cfa055560f5afd0b52829b9e95b2f72282b2bbc47c906992b14c5fe"
     },
     "dist/notebook/doc-page.js": {
-      "bytes": 119184,
-      "sha256": "1c44b7cb993e53f1d66c8a8ef8fca783492f1ab8d4bb7af8c98ecd7b47231441"
+      "bytes": 110741,
+      "sha256": "4353b85dfcb9d7cec3a4aac836d75992add61049be267875cacefca2af127085"
     },
     "dist/notebook/docs-resolvers.js": {
       "bytes": 95,
       "sha256": "30493c37a7852942d4b247c25989b28d78a625efd356165ba4ea6291c6fbb0db"
     },
     "dist/notebook/docs.js": {
-      "bytes": 429,
-      "sha256": "d7544fc9164bae501915b723dd2e88ad9bbe96671d2bdc64abe8fe88b632e25d"
+      "bytes": 419,
+      "sha256": "98b5c4b1145ad73a3a2551d5dce04b27b7c1ff561b5b24be72ed4f9a048c57ef"
+    },
+    "dist/notebook/fonts/Mona-Sans-LICENSE.txt": {
+      "bytes": 4402,
+      "sha256": "f6794454101b172a38189bd5aebc9f490594fa5b1b1f18cfed240157ed37e9a4"
+    },
+    "dist/notebook/fonts/Mona-Sans.woff2": {
+      "bytes": 133748,
+      "sha256": "6bde7bbfcd77d21bf13d8d2199e4299f66d24e9a69c231ae674266951f5c3a6c"
     },
     "dist/notebook/hash-preserver.js": {
       "bytes": 1868,
@@ -1993,8 +2021,8 @@
       "sha256": "f11722bcbf4b2395dd1132014cf0c92669996655e341004dc1b67c1631490c19"
     },
     "dist/notebook/react.js": {
-      "bytes": 13211,
-      "sha256": "10e859cbca415e95c6b2327b45b6165798aad5baf429d693281ce6aecf742079"
+      "bytes": 14304,
+      "sha256": "0f1883e76de454e7251dbac08ccabf43affa9a0a7a5fdc13c61cad388517a270"
     },
     "dist/notebook/runtime-react.js": {
       "bytes": 577,
@@ -2013,16 +2041,16 @@
       "sha256": "27ab1e72575e00da21d7e3f67c4ef166ea7d815df0d3a59e2270db32e243b713"
     },
     "dist/notebook/viewer.css": {
-      "bytes": 154404,
-      "sha256": "413312d9661a3f7d32a8c09e84afeeee698cc4630a385a07b8681a54fdff520b"
+      "bytes": 157077,
+      "sha256": "d4f599a41c558ed7a4438acd84cb3d2bb486191cd22ed291d510b542320590ee"
     },
     "dist/notebook/viewer.js": {
       "bytes": 9076,
-      "sha256": "fcfa5b1bdf70e32c812eb40c6a5eab6cddc57a82d1d6a2b139eb8513a5596476"
+      "sha256": "71e2de095ee40f643ba965e7b4e5f010522b72e39f1ba3ba484e802340f49e87"
     },
     "dist/notebook/vite.js": {
-      "bytes": 317536,
-      "sha256": "049d6ecf018967bbe07cb6c73e327f00dd788081012c8725731dee7e3b34c2bb"
+      "bytes": 318765,
+      "sha256": "27485437c94a1d87f142294bedf71ea8895e0e3f41a5dc4036049ddad67a0e94"
     },
     "hypercanvas.config.json": {
       "bytes": 1864,
@@ -2045,8 +2073,8 @@
       "sha256": "9773d89ed6f11e2b8ced7ab9bca531b1606e27cd54455c09fa873854715de362"
     },
     "terminal.config.json": {
-      "bytes": 3348,
-      "sha256": "4bc81d4755152983ec8500e3a562574f5d87a24663cfbaae31ce9721b41939c6"
+      "bytes": 3053,
+      "sha256": "4833921450654cc7f7e0bd684921d24386c86843342bca32f760d0542e47d04d"
     },
     "mascot.config.json": {
       "bytes": 572,
@@ -2081,7 +2109,7 @@
     "src/core/appStateDirectory.ts": "4da4b217f94c62a3d7bdd8288b420bdba8048318f106614575d4912133260bef",
     "src/core/artifact/index.ts": "c1f46b10ea20d0ea204fdadaaaace954876e26a4747196e3c51e96db4c8d2826",
     "src/core/artifact/operations.ts": "46102fd60c1a4532dfdf9255a91c116b5c0df89f319556b283f7169030ed1a0a",
-    "src/core/artifact/routes.ts": "9fc65d52466b7f1c49dc41f98c6ba6968d5d70b47a04c442bfc2d39ddaa7507f",
+    "src/core/artifact/routes.ts": "89db3bd354db11a84adae8df916086c699fbc2525c852ae808521689306d31ea",
     "src/core/artifact/validate.ts": "b92630fd90c673bb23328500391ed8ab76e2ffc9f6207862cea1ac3b00e2f600",
     "src/core/artifact/visibility.ts": "27b991b5ce627f4bda7c0889381976cf0638779fa04aa1da473f5a50424fa8af",
     "src/core/autosync/server.ts": "e11e09e9dad77285971606d2114caeed0e9c93f0b3f5985cd15f3d9ca8261a1d",
@@ -2106,23 +2134,22 @@
     "src/core/canvas/frameSnapshotStore.ts": "c673158924e431e0cbae05e9dd13348f23db5c0589c9b3eacfabaa1833410984",
     "src/core/canvas/frameSnapshotViewport.ts": "129f0cfc854b8da02927f19a35a18bb5c65716e718dd0c330c92aa41a667c0c9",
     "src/core/canvas/githubEmbeds.ts": "e9206d29f9f185ce820505cc4c98b12f7f5a71a1c31d0bd02cc524d16aba30cc",
-    "src/core/canvas/hot-pool.ts": "ee762c957c00a3ea609f3f232cf1572458d1b5d0667f597873bb1c094a7797f9",
-    "src/core/canvas/hyper-agent-config.ts": "1f1d31131992e8157f3e1e388c3351ec78710a2e2e1a2bc06eb26a5096e4fbc4",
-    "src/core/canvas/hyper-agent-feedback.ts": "47c895fbf8e8280272ee01f803a7a34e731375f7a43f17fe730b4e8484e4188b",
-    "src/core/canvas/hyper-agent-lifecycle.ts": "61a39238600faf6e0f7fd856d9b2756922c51dc561d9273bf3835f82031d27b3",
+    "src/core/canvas/hot-pool.ts": "93814dc04dea3d1f45bc25b3bcbbe3dab4bb1539e30b7afdce9364bd8080a6cc",
+    "src/core/canvas/hyper-agent-config.ts": "95b9ac6f7e79710d1f121b68f3efa8e18cebd1d730fb63d9a5f659a4a74a8582",
+    "src/core/canvas/hyper-agent-feedback.ts": "e128b81168d3e36d62e8faf3724515d53c04cf765be7ce835787ee3f68657f1f",
+    "src/core/canvas/hyper-agent-lifecycle.ts": "8544f9a46acaf2c594afbe21811efd790c145481cf690b67944e57eb95ffc4d5",
     "src/core/canvas/hyper-agent-lock.ts": "2ee2a48fae0c9539686e80a2a6e7658071ee4697a70f812d4dccb1fd78696cde",
-    "src/core/canvas/hyper-agent-routes.ts": "3a17855ee7668843da9cf3ec9863a4152c0b4f4c9600ff79257896d7144fcce8",
+    "src/core/canvas/hyper-agent-routes.ts": "747cd650e45dd597b13b375a95159fa15ffe6ffadcd93a474bfd629f0e70b1bd",
     "src/core/canvas/hyper-agent-site-context.ts": "0ca2bf00ac07442b44bba51999386873d8b42ef7648b5fabe2567988fe3297c2",
-    "src/core/canvas/hyper-agent-startup.ts": "ccabffbd2f8af0f43826734fb9d917ea8985f3e5c9c50639f356a52fc8c18849",
-    "src/core/canvas/hyper-agent-tabs.ts": "e3834fbe01cea1ee9aa2de63cf963d979a8d1d06b86916be4ebc42a240a80de7",
+    "src/core/canvas/hyper-agent-startup.ts": "41bbb66fb42f2cfaba244c3c9dd2b653ffb27a5757d0f811ae60f5bd1e3d2e96",
+    "src/core/canvas/hyper-agent-tabs.ts": "320a8cbb1532119eff50aa43978286464d8cba3aea4eea9dd73c91cf06f26d3e",
     "src/core/canvas/identity.ts": "fa8ab629c54d6bca0317807d677387577e3adf80a03f7e1092a2236248ce6e10",
     "src/core/canvas/live-terminal-coding-target.ts": "9fb69f1928b8185e758a4717370a05983ad82adf9394c91649597fb0ece0e570",
     "src/core/canvas/materializer.ts": "4aec7d61b7f1eb0764b0c377ba4e7b31de823bb75bb1d8330be9ae7eca22b5af",
-    "src/core/canvas/native-agent-hot-pool.ts": "e28d0bfb26f970dbc513b8bf6cd8dc5af86dfac59cb58f19ba07e36693277c8c",
     "src/core/canvas/page-lifecycle.ts": "1a1b39e259142536ed173629d48c757c8b4c52949b3be4b6365aca3902459c11",
     "src/core/canvas/paseo-agent-runtime.ts": "909f0a5ee0f7e5a5e2a77a863142ae48854d1fd9e8d93c796733050e6356d511",
     "src/core/canvas/paseo-agents-routes.ts": "5b11f99e0b7bf5dcc878c6f53b0b78c391b9f50938f40d0d59f5b547a88eeee1",
-    "src/core/canvas/paseo-daemon-lifecycle.ts": "0f7039cc7660d985ad37da0eba33ca37c65e1222c82b4a64daeb12e8150d9235",
+    "src/core/canvas/paseo-daemon-lifecycle.ts": "7f04f931829cdff1f0db2d6a07965a040ca3caf6b0bf63a455dd9ed860c2b6b4",
     "src/core/canvas/paseo-notebook-binding.ts": "54506f62f6dd75767d046dbda880125104cb85ae79a604811b754cbafd936f03",
     "src/core/canvas/paseo-runtime-client.ts": "a20b6c29eb2d69342acd6d9d34b589cae70a98158894c73981f83d276afeadf1",
     "src/core/canvas/paseo-terminal-agent-bootstrap.ts": "37b011cbb603e5d7e1473241228f46f741052d01a256b493fdb340ff0274c128",
@@ -2163,9 +2190,9 @@
     "src/core/cli/compact.ts": "11d8fe7a6ad61e2db6717461a166fc1d622b1ceb32980aa853876cf26d47294b",
     "src/core/cli/configureRepository.ts": "e4efff61caabfc702afb55114ed7ce88376524962cbc342003eafda874340c7f",
     "src/core/cli/create.ts": "9d9b51b2f349b7c9022167f0eef4508c3af9eca56789343be49d9c09d33f5799",
-    "src/core/cli/dev-helpers.ts": "a2aa2e42b0fd84f8391e4d796428d35e043a90fa2522d2a24200e80f9a5da376",
-    "src/core/cli/dev.ts": "75db4d3302ae6350e587ea28aa2f9bcfac5787f0cba07bd406f27c8ffa7ca34c",
-    "src/core/cli/devContract.ts": "048675e60677e57c6e79a9561f37772792d6d32964861983ac5ec31076ca75b0",
+    "src/core/cli/dev-helpers.ts": "aebab0ddfa9758ee53d1c6598db1d981d19101183d7b5c2ad5b7962d25280cad",
+    "src/core/cli/dev.ts": "ed12ad68952e62ff4bfbaa9788172df5c01a7e5819120bd9b1b6c3215869a25f",
+    "src/core/cli/devContract.ts": "388168b3b96f2533a97627c1b8a04ada2e257e159ec1b8f1121ab150d9c9e6cc",
     "src/core/cli/docsCommands.ts": "9c351064bbc417013321a13d774175a293f8ab3499821184424404ceaa4a582d",
     "src/core/cli/exit.ts": "18dd767d1f3dbd136eab3528d8981a860aadbabb7b8138787d4356b174966de3",
     "src/core/cli/file.ts": "d4351b4d736b3c1f582ce3209c4c939ff89733edd1c66104950fed8c70c8578a",
@@ -2174,7 +2201,7 @@
     "src/core/cli/frameSnapshot.ts": "5025c8ea507b34fa58e3c996e697f4e02468bd5829d9e60b6035abed82e7bd6e",
     "src/core/cli/gh.ts": "a9fdf9774d86e5c04b74e18f4b0b5706fc5b79195b5784baf35fec3070f8ab68",
     "src/core/cli/hostTools.ts": "4d073237ff729b2838bd8fdf972e4b0c5ed76d5738318632f3f85a8ce1755cb1",
-    "src/core/cli/hyperAgentCommands.ts": "6af0dac94b769d963932c5722efde3813120bca9f2a613b64e267c0604b3aad1",
+    "src/core/cli/hyperAgentCommands.ts": "320664492adae380c037c47fca3c488588ad545b2233f67af936afad85d2ef8f",
     "src/core/cli/index.ts": "839f0452d60846da7ced716086fda80e05ac6626a7d5650de657cf2ac60dae92",
     "src/core/cli/intro.ts": "06532a86da0cc7e2ecdbb52669988b77ca0178b2c4bb3dac47922b6112c5c520",
     "src/core/cli/messagesCommands.ts": "0e5222254a462d2a74c084d5dcdd303816b8dce4d9150542336de6e67303ef40",
@@ -2379,24 +2406,22 @@
     "src/core/notebook/frame-snapshot-publishing.ts": "1b134406ceb6ff3e4d79f7f9203a7fb0471ad6ff32bea3cd65ae0172c4385abf",
     "src/core/notebook/layout.ts": "f5c4634f9f0d9e0f74be70672b3ae066615c763e13724d1572a2923556e984d6",
     "src/core/notebook/legacyFileLocations.ts": "c4dcb6d3c91e8325b69c8b9a7dc3c345ba03e69449da8b9ed63b63240e868b49",
-    "src/core/notebook/lifecycle.ts": "733f8413cbcb24265d7fa99860803a9e88535b29d2b4c8af2dfedadf11da5e23",
-    "src/core/notebook/lifecycleRoutes.ts": "5a118e6fe73d114d5aa98e6c64dbe70bd85c99a36dbf368fd540bc9003dd5aa5",
     "src/core/notebook/navigation-routes.ts": "ce9fbe4884ec57cc4b2c27d926f9afad524bfbe52f12e916a89c5010b4d7d239",
     "src/core/notebook/navigation-tree-model.ts": "7bf1a92d3d2eee7fff1e67f93c2ae4b6dfcc7812faee41c698b10a28c8e5f06d",
     "src/core/notebook/navigation-tree.ts": "9baaf192e69635289b24cf1a11f88c5567b04ec1f2c931740c1ba47c4d361e14",
     "src/core/notebook/navigation.ts": "c88eca5a5d7fd353befa91fd60753a2523d84f13c8abe26a40d1f59aa903a4cf",
     "src/core/notebook/notebook.ts": "10650939a95089d206644f37617db5a0ca2e184963b3d7595802860396a21ab9",
     "src/core/notebook/operations.node.ts": "2e9c0628ede9820603902ec365fc37627537f23752b3a5f34a58700c947ee3d4",
-    "src/core/notebook/publishing-routes.ts": "102e94eabc17779ec42e67f77afb218f969c8d2973a6f8e1fcd2b11c3c891a3a",
+    "src/core/notebook/publishing-routes.ts": "d73481eceb103adfad681a82dc4125ff977d2d9686fb9cff215b1d490dff175c",
     "src/core/notebook/publishing.ts": "0aba483e91ae1673f6ca146859643c9172295fcb0ea4c725f3353ab9eb5ab923",
     "src/core/notebook/publishing/build.ts": "606f5d9ebb0cbb3a85923c18441be2170e70f161faa0c3fcd46a71ac139df500",
     "src/core/notebook/publishing/buildOwnership.ts": "c33768240f12535d7b650ad06b8b5b2e29572bf0462efe6aadf8cae2360b7dcb",
     "src/core/notebook/publishing/cloudflare.ts": "c5a4325a4edd0a14051dc3bc6b9bf6c6d675fa58847fa090afb585f1d41037eb",
-    "src/core/notebook/publishing/cloudflareDeployment.ts": "7f77708dea06bdae4ed4ffdbfe8488514a41cf668f74b7b56373d29931e9c71d",
+    "src/core/notebook/publishing/cloudflareDeployment.ts": "04d15c99779dbcd486c9384ab4137923472a1ea05cfa2700b824801ab1ee21d4",
     "src/core/notebook/publishing/cloudflarePublication.ts": "657cc6f94446a2f830ce3477347c8881a8d99d5fc01ff89d85a6cbf4101ebedd",
     "src/core/notebook/publishing/context.ts": "ac34e2a01f7f8b58b475e23fca70e5c9aedc6eb4b89527a10eb9ec2a6a65f77f",
     "src/core/notebook/publishing/credentials.ts": "74b477e5db10786dee13e444d64c52db6e8462eaa6323213e77a81ad16b41ed4",
-    "src/core/notebook/publishing/errors.ts": "1fbcdf537a4f178a88e144f3ac945d9afac87af7ad66838423b88fff91f12ce9",
+    "src/core/notebook/publishing/errors.ts": "9426e5be5b6e6e4b45dd96d95680a5574a7d2c8e97201c76c0685c4c50648169",
     "src/core/notebook/publishing/fake-github.test.helper.js": "71f015d816d463748d973471bf83d32f27bf69fac2fba1907dea803861fcd452",
     "src/core/notebook/publishing/generator.ts": "9bfee2b59551334375567a7216d994ad06e0a76e2eec6dd7660bd786007681b4",
     "src/core/notebook/publishing/ghExecutable.ts": "c5c3234c80b3bab782e780a6585e08389284c4984848f89a14fe0d0290240db0",
@@ -2404,24 +2429,24 @@
     "src/core/notebook/publishing/github.ts": "d0f6fce90e2a2ebf86d655f5aeaef2505c41b0d384be26042a4a9490df02b2a5",
     "src/core/notebook/publishing/githubConnection.ts": "c03f1742152f7b9130873adeddb76e237bd4e3036be48005b0babb14ff092cf9",
     "src/core/notebook/publishing/netlify.ts": "2c50a10271ad10c88f502bb7bf13b04cc4900ca9e7d6945b8369f510660c834f",
-    "src/core/notebook/publishing/netlifyDeployment.ts": "d1b82e274a965fa7428147b4baaa2225291f7732f7a38b4d10d8dc3909fd560d",
+    "src/core/notebook/publishing/netlifyDeployment.ts": "e988b1ac03258373e3718c8f6476da9a3a85b95079b41927da8db81de6fe0b18",
     "src/core/notebook/publishing/netlifyPublication.ts": "662cfe230d86116793823b8f83c183436136c62d83cf6fdb03a867a2ade6cad3",
-    "src/core/notebook/publishing/operations.ts": "0857644a7a7626cfe281503c5c6ee17c6a40b335b17c293a8bc505f3148a7e55",
-    "src/core/notebook/publishing/prepare.ts": "fe24830c77893e987acf95fc7395abe91ac6ffc15e2bfc1130d01d195b55027f",
+    "src/core/notebook/publishing/operations.ts": "509e3aaaa0af36936032c270a4bf51dd80fb1c188ecc30c4784c0e9a6967407b",
+    "src/core/notebook/publishing/prepare.ts": "4c518425ea11392c93d1acea3ca2a332b76eb144706d3f00553a236a8787e28a",
     "src/core/notebook/publishing/providerLogin.ts": "37075ff47aaee4909c2fcc9f33c509dd6d6ec2bde3e48c6d02e9b0a0b5a1157a",
     "src/core/notebook/publishing/providerPublication.ts": "b8b35b652651cb6b97418963158a436c703f5fe61472092da8ba7285b0470b25",
-    "src/core/notebook/publishing/providerRegistry.ts": "9875148bd4cd8fa3cd53b6f6c6e90517f1333603cadc84ac27c9a88750f9f3ae",
-    "src/core/notebook/publishing/providers.ts": "95a0906fe1a31b81b2542e28a8f109f4c32f77776f0b5d8543657c69c689118e",
+    "src/core/notebook/publishing/providerRegistry.ts": "e70d60d13978a1d173b5ec2db3577dbed509e3ccf31d87183550be6b067b4859",
+    "src/core/notebook/publishing/providers.ts": "9812946670abbe31cc7ccfd8d64cb0568f588e812ec494a718077e375187f445",
     "src/core/notebook/publishing/registration.ts": "e51a2b92dc46a12fc88f78f2bdd09b8a7f7394fb69abb3a7fed4cbb220d7e4bb",
     "src/core/notebook/publishing/review.ts": "5b7354689a3e09496723ab0af50fe10312b961b0eb6f72963144d4713b5f2990",
     "src/core/notebook/publishing/state.ts": "770495756aa526db94ec1a559eb0afe910a96544fe23295da7a1e7c26c86a99c",
     "src/core/notebook/publishing/vercel.ts": "bed3779818925c44140b8d1b3cf30f5dd8ebf38bda335017a858a7fb0f543c81",
-    "src/core/notebook/publishing/vercelDeployment.ts": "58cb6a7eec0b975a2f70856bbad0d58dad506787f48f22a5e5058f91662be880",
+    "src/core/notebook/publishing/vercelDeployment.ts": "8ca4bf964d6ff30c335970f9a11b80987eb66b9a308c433c25ec1bf64ef3f197",
     "src/core/notebook/publishing/workflow.ts": "53b679383f214eea52382ae49dc645fc4acad4adab923562587ca4d3427c1e79",
     "src/core/notebook/reader.node.ts": "4e23881ada39f2806099d62a1bfa77364b88da627947d583f21c13266264969a",
     "src/core/notebook/relocate-config.test.helper.js": "ac4a62c0d2fec5d465987736e5cc1c82292d4a0caa9a62ccb3123ba13d6a4c0d",
     "src/core/notebook/routes.node.ts": "c961c8bc3a366804f562dcb31a13e07b4e0ba2ff43b22986170b0467124a0333",
-    "src/core/notebook/runtime.ts": "7d9dee004f0bef10a01d6f659ba16a6007ae57c35916c5845bd0e23425ec964c",
+    "src/core/notebook/runtime.ts": "db7e25356a2f055f6dcd091e5b1eaa5569425b551c93cf25df05eb0f350428c3",
     "src/core/notebook/sibling-order.ts": "ffecfb7c529eed4613a6fa65c906ad68979f3613198fc2ba6a8e6a0b5392da85",
     "src/core/notebook/stateDirectory.ts": "5666df2c590236e74e4de4c171a6ffab94c92a8e31535b5d1355fd18eb88b0f5",
     "src/core/notebook/tauri-bridge.ts": "20675118bfe545cec58db58adb96375760ae3c1baf12abf6ed9e909a235f22f2",
@@ -2437,11 +2462,11 @@
     "src/core/presentation/offlineRecoveryClient.ts": "d71021b89071351443b11070b338b56f8c57acc8e7aa41dc7bc2799b8d8e3451",
     "src/core/provider-connections/model.ts": "272e2301b888a0df354481809ada26a390b386bc4c766a0294c253a56d3262c7",
     "src/core/provider-connections/registry.node.ts": "7efc779cc0993b4aafba3e334a66183ee62a9fe97e65f9b1e52ee9bd7b092860",
-    "src/core/provider-connections/runtime.ts": "e1f7e246defae01c4014e1717239752abe64eb70bf28f3fce77a0011710e5ef0",
+    "src/core/provider-connections/runtime.ts": "3f6fea7555efdea1c4d67031e2551fcfc25bc0fb3833553f3793b4bb89be150e",
     "src/core/provider-connections/service.node.ts": "4f59856d688fed54ce19779fae26efc35d3b4b0740f149de1d46c4bc242d3d9e",
     "src/core/rename-watcher/watcher.ts": "6cd40d93e1b5c557b2570a31a30cb0c5ebfa4831836206613e42b979ee5675c5",
     "src/core/runtimeDir.ts": "dba37c06e7ab996d20e337012da413a6d4ecdf075dcba51082aea543c8297b61",
-    "src/core/runtimeEnvironment.ts": "00d18abf1201ec7e65190a60fff937a209ce41a07682eb4d9341a36d1649b5da",
+    "src/core/runtimeEnvironment.ts": "6e0ec76a11af1a6e6d18ca65ee23a7b0adf8783c12b223ed9a7eb127294e3d99",
     "src/core/scaffold.ts": "8b3db844fcb61fe0689516076e0d4dc2937797e6a9ae97c1e9fd295b2edae638",
     "src/core/scaffold/fragments.ts": "00b6e702c25347824f85a5b31bcf6ec25492fabccea572e8e6a9707c3a869adc",
     "src/core/scaffold/index.ts": "87d29230b910cffecca9bb2aeb3ef8aef2d5548ae9987ed3e7ddd46b7e707ea2",
@@ -2455,10 +2480,7 @@
     "src/core/server/hypercanvas-service.ts": "01bf4957fee1cdc3fd831c6fa556fc98ca810d8baf705d7e6f507203c591fec5",
     "src/core/server/instance-claim.ts": "918dd7d771bba20bcbd590ffeaf570eeab01bbf970c620364228dbdfc4f66deb",
     "src/core/server/instance-proxy.ts": "9381878d896cb629545bf02e50c262007befdd425f9dc313349aa35bb44455e9",
-    "src/core/server/prototype-vite-child.ts": "21ff08ec4805c87ac4f80d18a53063ef238a6a94df006fec51bb03523d36b6a4",
-    "src/core/server/prototype-vite-contract.ts": "5a7e5f0f88182bf1f9e5ff714c52053cd16e3d5dfbecb684b0100f7e2b220307",
-    "src/core/server/prototype-vite-proxy.ts": "034dd99e713508f047fbc2e64e46532ccfded7cc4d580da12964fcf3c4a22ccd",
-    "src/core/server/prototype-vite-supervisor.ts": "8dc03361746aa1f5c8ad0ff744506f14aca825a1b9eea9f0bb15540ff9899e06",
+    "src/core/server/prototype-vite-supervisor.ts": "8080129801b7db8f277083d1d8f9eb88de8e5672145de790f1713b3fbd5cccd7",
     "src/core/server/workspace-services.ts": "b5c0b16a8b060338f2cb7aa4d8c44c72c4c9611f797e64f6b6b566758860c307",
     "src/core/server/wrapper-contract.ts": "1a5bfd70789eff3c5f43f448cfcdbff6cdce954e947da36143860f5bf9e3cede",
     "src/core/session/bodyClasses.ts": "d26cafcf90a2bc3f7835bd326f7f093ab0d6a0ff0cbbcca842606aeb3b12ccbd",
@@ -2489,7 +2511,7 @@
     "src/core/stores/canvasInteractionStore.ts": "77d6817e4758cc1adad0487800fe361a00171a710501ccc66853bb6d531d1c2c",
     "src/core/stores/commandActions.ts": "45e2025a5c7bd0d27934f4aba0ca47bdc1bf3998dffb8d0fd4a16fa103864a9f",
     "src/core/stores/commandPaletteConfig.ts": "a6cea9f41af1398fb38a373a6ddddac9eba67d883ba6eb3284b9ebca2a84b555",
-    "src/core/stores/configSchema.ts": "91a6983eb574007511951f4f8b2f6108eacfcdb37798576f062b294398c871e2",
+    "src/core/stores/configSchema.ts": "cd19e803dd492c5884e64134d8d9e2227f2f610a50bc7e1d328c079893da697a",
     "src/core/stores/configStore.ts": "2e2ffc88b6380883070ae7f30fd1a3732ce84b47bef9be66b79c9ed66daa6711",
     "src/core/stores/customerModeConfig.ts": "49653bb1a88f771fbbcbda20b41c4bd0b32e2685a8949e1e4c89676cd33bc7a2",
     "src/core/stores/featureFlags.ts": "f9694feef638742b7e9dca74dcd567b27e3d9023413cedae1b0b30d1c38d05e3",
@@ -2497,7 +2519,7 @@
     "src/core/stores/paletteProviders.ts": "d5685ff89ae1796139a110b1838c2d387426a70956b7245f95e760031ee7bba1",
     "src/core/stores/plugins.ts": "1f8df62e3baefa4ab10c9aa72a548ce1ee5489bf8304444126e759e2b8b852dc",
     "src/core/stores/presentationStore.ts": "ab5770a8934bc7ec171ed61cfb22f04c1a66412113dd7fa43964841306f4152f",
-    "src/core/stores/publishingStore.ts": "8f6a78654e46159bed3176ebcb32eb7e82bb7f53d9120c5f71a09f3a27a28f51",
+    "src/core/stores/publishingStore.ts": "efda7db672efc38ec1722348d4ebbf6de2b5981ffee9d19754fa36d45cdff9aa",
     "src/core/stores/recentArtifacts.ts": "a6f4e3136da326c7dde008b7c5db365eeec4d66afaa6e0451a7e90c8ba75ee90",
     "src/core/stores/sidePanelStore.ts": "823c301b2c20f59a417e7a9a0fedc64fd064faf9ffb5b319164fa86e5083292d",
     "src/core/stores/themeBootstrap.ts": "8c6c2ce5baf870fdcba5a660f922f0791a5f5e6f54111a8fc56e3aeba4067274",
@@ -2520,6 +2542,8 @@
     "src/core/storyboards/statefully.ts": "813b1799ac1f39eb25a50b2f8d2609d25b856a0813c218c9d3d3734519f33c26",
     "src/core/storyboards/structural-schema.ts": "1fcadfd084ede1f4deee7244074146a0ff6ad0d061f0a924ec10e97285b75975",
     "src/core/styles/brand-font.css": "d716f09aff3c38dc90436a62d72e132147f3c01022e26224fce7012bab439659",
+    "src/core/styles/fonts/Mona-Sans-LICENSE.txt": "f6794454101b172a38189bd5aebc9f490594fa5b1b1f18cfed240157ed37e9a4",
+    "src/core/styles/fonts/Mona-Sans.woff2": "6bde7bbfcd77d21bf13d8d2199e4299f66d24e9a69c231ae674266951f5c3a6c",
     "src/core/styles/generateThemesCss.ts": "c3db54946f08137aabf543f21660d9705f51dcdfb4a0fc24b14e2f5446094302",
     "src/core/styles/loading-brand.css": "753da3f4a0c00357765222a174c9b57f1c45a88d1e815f07a4604a83d2c15ce0",
     "src/core/styles/notebook-grid.css": "ac3c34a18d2cf41ef8b09c14f58ff76ee771084c979ce4b4876429b3359e6e9b",
@@ -2587,18 +2611,21 @@
     "src/core/ui/InspectorPanel.jsx": "191ac41f85585d6a0dbe8d7fda7d17baa7410179bb8aa56b41358c579cfe255a",
     "src/core/ui/KnobsPanel.jsx": "835404d35a0f3fd50d4b92a6c6142a60b5fa9aeb608971f3a23af0c5e8f5cfbd",
     "src/core/ui/NetlifySetup/NetlifySetup.module.css.d.ts": "b5ca5925b1f359c1d71f7b2fe38a4ba484b02def3e4b3cd40c961eac3771d532",
-    "src/core/ui/NetlifySetup/NetlifySetup.tsx": "edf1655d47f3a030e38435b627f25adb823bc3009e6498800dd903cbbbf1e5a3",
-    "src/core/ui/PublishControl.jsx": "e59e1f55bb7009b5815147e05a23ba626a66c422db71088640fd28596f5b16a6",
+    "src/core/ui/NetlifySetup/NetlifySetup.tsx": "aa8b143b801044c671ab72b84d16f843eb892a183d62cf78b79eeffa5d1f8d27",
+    "src/core/ui/PublishControl.jsx": "29c50ec8ca5c889d46dbe690c8b6b38cded30b30c71696b12d12672c1584f1b9",
     "src/core/ui/PublisherAccordion/PublisherAccordion.module.css.d.ts": "b5ca5925b1f359c1d71f7b2fe38a4ba484b02def3e4b3cd40c961eac3771d532",
     "src/core/ui/PublisherAccordion/PublisherAccordion.tsx": "43671bffe2842de0d762c15d8f0ba82336ff8700b408deeb12175fcc6ffc05d6",
     "src/core/ui/PublishingProvider/PublishingProvider.module.css.d.ts": "b5ca5925b1f359c1d71f7b2fe38a4ba484b02def3e4b3cd40c961eac3771d532",
-    "src/core/ui/PublishingProvider/PublishingProvider.tsx": "618dc751192643d600d74f07613b1965395df6fa6b895c4e6ab1599258b293a4",
+    "src/core/ui/PublishingProvider/PublishingProvider.tsx": "830a0704a2e8841654c121d721ec0e48ea0d883c79c0218cd56204c702d28586",
     "src/core/ui/PublishingProvider/publicationStatus.ts": "43839536dafb0e2b2a15a3e6122ebf47b15e3e3459ee0bdbd2fd9b3ed582e61a",
     "src/core/ui/PublishingProvider/publisherPreferences.ts": "8402d3be9b842a2bc39c844c3470e9c36a18e68f2dc89b24c23841c8af313d37",
+    "src/core/ui/PublishingRepairAction/PublishingRepairAction.module.css.d.ts": "695481d7857f3cf99775a3438ffd5aedb9de613cbc4eb5d36d950951c25e5f9f",
+    "src/core/ui/PublishingRepairAction/PublishingRepairAction.tsx": "d645cc74393a7863da22e7887b329caa20c38e8ba27e1f3b5ae82a1356f0d1b4",
+    "src/core/ui/PublishingRepairAction/publishingRepair.ts": "4767330a2b361153cabf22f0bf7bcc298147fe3bfb71a8133d7ebe2e2253b3fa",
     "src/core/ui/PwaInstallBanner.jsx": "39c31dd8feaedf06887ee8f3d2cd648cecdfb424042ae9c562fe14cdfa3912a7",
     "src/core/ui/RepositorySettings/GitHubAccount.tsx": "db9e9a7ec8401011a30f825e13cba4bd58ca55ddf6ca0b05d2ccb67e8d08165c",
     "src/core/ui/RepositorySettings/RepositorySettings.module.css.d.ts": "b5ca5925b1f359c1d71f7b2fe38a4ba484b02def3e4b3cd40c961eac3771d532",
-    "src/core/ui/RepositorySettings/RepositorySettings.tsx": "8d2428d0c22b300fabfc276489549b776a5ee7dfd8b1400141e89d556f32499a",
+    "src/core/ui/RepositorySettings/RepositorySettings.tsx": "479650797320c5d5e59bb2ff2afe5b87bbdf153539d991a3494dc384f5ce64e4",
     "src/core/ui/RepositorySettings/repositoryNotice.ts": "ed3dac5c4efc537232ecb0df41a7b7c9f14c87c2fd85ffbee03b59039c00df95",
     "src/core/ui/RunningSitesPanel.jsx": "56b20ecd823fce8404f3428923109210e83358fae71493477fea5dcf1ca2a28d",
     "src/core/ui/ShellTabs/ShellTabs.d.ts": "00f2644f862546a0ab0cc5f9ee99b07858d592f2f8332b18d69cc2df560474ad",
@@ -2621,7 +2648,7 @@
     "src/core/vite/docs-handler.ts": "1b602d9ebced7bed8abf3252308be13bcb2fed10ab86bb27d09b3fe6458a5efb",
     "src/core/vite/hypercanvas-server.ts": "4ac74d6b2ba5e00c9b7d4ad525cd9560ad3759fd281de7362b1f4c24ddc4e426",
     "src/core/vite/reload-guard.ts": "948152ed7a648b06949e2ed0c7932960538cfddc9cb25a24fa45b5ad907169bf",
-    "src/core/vite/server-plugin.ts": "ac5f2a3a4629d972949d5cf12a35c1ab01961a40836bc338eeb2d620675643b9",
+    "src/core/vite/server-plugin.ts": "d110b0d1004284dc8405dc958a93a9330320f4180f20e9ae95b22e119ba5c712",
     "src/core/workshop/features/createCanvas/CreateCanvasForm.d.ts": "c013c32c2d9c176a0ef7752739034ced1ace095aeea9580b7d3888256854e90f",
     "src/core/workshop/features/createCanvas/CreateCanvasForm.jsx": "5df2f378ea94cbe9f92271f23d1fb46e8dd6308a3f22d9270f4ec25c5feb10a5",
     "src/core/workshop/features/createCanvas/index.ts": "4f6ec6cacae97e7ae36c3d22c58840b9d2c1302cb687bb03a05a550d4217a7b2",
@@ -2646,7 +2673,7 @@
     "src/core/workshop/features/types.ts": "1a76e57bec57ca9c4367e2a77e26c71dedd9817f8db01ebfe9b9314d1dd4e134",
     "src/core/workshop/ui/WorkshopPanel.jsx": "bc1d3d04851519aae5f965714cb891e8bb944e238639537d6e27b027382ffbb5",
     "src/core/worktree/port.ts": "8b53429c1526eaa5ec7b800fdb0ed7182254b21b386106122d8d441aed4a12a0",
-    "src/core/worktree/readiness.ts": "a36c7b9e137c8aa0e9c905c9204996be49fc1aa77d89041b74b64cd0ef5f53d7",
+    "src/core/worktree/readiness.ts": "786af4cfaf5738728792e8f08f04542c3b5f851880a5cd1922bd7677caa9d8b5",
     "src/core/worktree/serverRegistry.ts": "84842d596ea32abd8c36529656f9f0c3a024df1cdbb1fe3e8df556aa447156f8",
     "src/internals/AgentComposerPresentation/AgentComposerPresentation.jsx": "978ded926b4fbc136b91bfa9a8a3b95e213c50e5f59e7083ffd0dfc90c08c647",
     "src/internals/AgentSession/AgentSession.jsx": "42cfa0341a09ee5588455c30c55d6d5997b8d9e8a67d33d1dbe2f0ccd7ef90df",
@@ -2694,11 +2721,13 @@
     "src/internals/HyperAgentFeedback/HyperAgentFeedback.jsx": "51b551eb4d267733088c6fd8f6f93e09550c4f69734459abe161eb0e5ad69732",
     "src/internals/HyperAgentFeedback/capture.js": "55c13e7d6dff61b74719b8ceca818d2c8e515be09544b259d487d5bbd728fba1",
     "src/internals/HyperAgentFeedback/captureDragLock.js": "ab0cf64d45e96084dc3d3a142496ea847ef5f51ba80c62a27539fcfac90c52de",
+    "src/internals/HyperAgentFeedback/feedbackClient.d.ts": "0ab77c8fbd3b8e90a62f51518c7c61039a345aafb8cad5287d9094bbd7611c0c",
     "src/internals/HyperAgentFeedback/feedbackClient.js": "9dba91a4c5723dee850bfc548b61a26c138b42c988c252d04482efaaace5e89f",
-    "src/internals/HyperAgentPanel/HyperAgentPanel.jsx": "033239c5530e35a087608251814328ff35b3a57429fade009855e7f35c8a6f96",
+    "src/internals/HyperAgentPanel/HyperAgentPanel.jsx": "0248c5b741d95834c79a304727a44f0fc14cd7a959c54796e56561a0de8f9346",
     "src/internals/HyperAgentPanel/HyperAgentPanel.story.jsx": "cd549ea217339bf849f35e800141edecf1fd69a3e425b52806b261174d47d0af",
     "src/internals/HyperAgentPanel/focusComposerShortcut.js": "bdaf5af9e1172caf0da95c5355f340036bf7e31dd027c9ae47499254e645715d",
-    "src/internals/HyperAgentPanel/hyperAgentController.js": "7e4a46910383fb817ee5c55c22543836b6a4f0d47d50d09a60189094aed930a2",
+    "src/internals/HyperAgentPanel/hyperAgentController.d.ts": "069de53664eb1e3143c985fc05176231fa3a1a0609986b7804033347c57621ff",
+    "src/internals/HyperAgentPanel/hyperAgentController.js": "c5e589f94b656707908183e86ef15e3bf239773d880e4a9e6ac039fa2f8390b5",
     "src/internals/Icon.jsx": "b79f5eb9a339f643276c569c9ded0f054c9b7f0455a79aaa7a0041d6eb25c71b",
     "src/internals/ImportFailureBoundary/ImportFailureBoundary.jsx": "caf6b2ccfb64e7b2c0f4312690bb762a7d1022c8ffd5ed1e4ca740bd1aa738a0",
     "src/internals/Knobs/KnobsForm.jsx": "fd1daee87cfda49f105c741a30ac818a73d9fbb4b314d14e427d594c4f7920fc",
@@ -2712,7 +2741,7 @@
     "src/internals/NotebookGate/NotebookGate.jsx": "40cd80d214d592e3f2fe72a64b5e792c076f4aed0c94709af8393f9646b0c003",
     "src/internals/NotebookHome/NotebookHome.jsx": "679bcb9952876dfc11ca359989ed0ef5a4061632be4c07640e796832604b51d5",
     "src/internals/NotebookHome/homeState.js": "5b8621a4997c37b6aa673c6ea19b7c7b076edeb5780d6bd0bd1e4da9e2df5671",
-    "src/internals/NotebookShell/NotebookShell.jsx": "da3609eb497797d7e192340c6026781117665d10b00fe937d2078f429bcd21d0",
+    "src/internals/NotebookShell/NotebookShell.jsx": "7b5bd05afce10e6accc7b8fbd3777ddcc80b0f1cf8021120b2ab9cd701b5f583",
     "src/internals/NotebookShell/NotebookShell.module.css": "19ad3fd12fd30160237e422e454e4ea547b01177823185e2b3ba46e30c28b5bd",
     "src/internals/NotebookShell/SidebarNoticeContext.js": "97bd508765f1db8f4c5057af095270ab7dc66f51afd3563443799bda69c392f1",
     "src/internals/NotebookShell/notebookSidebarWidth.js": "c2f8adddd93eadb0e20462ca9b964828e9e27586ef3e6d05b28dce208820f50d",
@@ -2761,7 +2790,7 @@
     "src/internals/artifactRendering.js": "94857eab441e086d3a4e475e491bab41d642d3457e0ba8c04f10329aa3aff81a",
     "src/internals/basePathAsset.js": "472802a1010490ca830e1941d60dbc56f2bc3efc6d6eb63890646f9e9f4184c0",
     "src/internals/canvas/CanvasControls.jsx": "87d4ba77408b2843d71bf0acf6b9ffae2b2a35f3edd59cabd0156a577b0f7652",
-    "src/internals/canvas/CanvasPage.jsx": "7cf36ee290d38d4bc47503f82e0a443183b64872770c21b04b75a0496d925d2d",
+    "src/internals/canvas/CanvasPage.jsx": "b34479c0a984fd480b84b82536b1bb102ff80dbeb310e591dec816dd8de36b09",
     "src/internals/canvas/CanvasToolbar.jsx": "b4156be3b5ea7e92c933d82d2d9fb09247c0c29cb38161dd741ee312d0765be2",
     "src/internals/canvas/ComponentErrorBoundary.jsx": "dd916d8d22768e55b4a725e6bc6d3f1104fd288c023d34064e5f5a3f5fc14dc8",
     "src/internals/canvas/ConnectorLayer.jsx": "b4847e9f8b0854ea808025b668d283b6cc88999c1e482fb9e93c3b74662d2cd5",
@@ -2770,6 +2799,7 @@
     "src/internals/canvas/PageSelector.jsx": "0dc5c19fd6db243edeff2b9f274d355bd65abd9b2921a924782314c24d88ae2d",
     "src/internals/canvas/autoPlace.js": "daa12921c7b8a76b54784eade63df6441027376ea7775efd3033c1071daab5ee",
     "src/internals/canvas/canvasApi.js": "48896b609b6d09b2ea0a4bc8e02df875ab94e8904ec1d35d1ed5bef486c1455b",
+    "src/internals/canvas/canvasBounds.js": "5d1fbf9f380b470554179728634d43d0b4cb7959f9e9ac42edd25623b268a445",
     "src/internals/canvas/canvasReloadGuard.js": "e93ad2e256f4db961e1f7d96e5c190436de1ac2630cc6b84b56837e993a14cec",
     "src/internals/canvas/canvasRowPlanner.js": "c966752ae39e69f7c5490b91140cfbbea0423ea613dfeec50e897a0c52f91f85",
     "src/internals/canvas/canvasTheme.js": "3e361ae1bbb4a1446b7e6e33cbb85ddf6c6e526cabb942f08744657f781d5725",
@@ -2846,7 +2876,7 @@
     "src/internals/canvas/widgets/StoryWidget.jsx": "a497bd689b7d251d9c348937c76bac9e5e9cae329f4087bd69a9f414794fa1ee",
     "src/internals/canvas/widgets/StoryWidget.module.css": "50f2d198143edc15b7c7eb9f60dfa86fc5439ce983bdf46ce0073c5fe4cbf5dd",
     "src/internals/canvas/widgets/TerminalReadWidget.jsx": "bd64d1b51ab5f0929ac2cc945cbdefeefca718714cf47500bdf32aceeccb201c",
-    "src/internals/canvas/widgets/TerminalWidget.jsx": "dea7f9fbe4f9488c27a62169c2e0227f7c79eca6cebc9ad905c3fb754654d61c",
+    "src/internals/canvas/widgets/TerminalWidget.jsx": "0989c21f269dbda7d7e3bc5be3eec58e83ffed8664b154dd4cd18f892807eeb4",
     "src/internals/canvas/widgets/Widget.jsx": "f4fe3fb0e845db67d0ebbdf36f08f7a154fd56acdcefcde719e67fadfcd7f385",
     "src/internals/canvas/widgets/WidgetActionBar.jsx": "3a75ed11fa207426ee29e7cadd6e9041f8efe6074eff9328a4d87b5457f46d89",
     "src/internals/canvas/widgets/WidgetChrome.jsx": "c7225a48e9268c34534cb04adda6427ed371e60ff8a6d258ff957bd5345bfe6e",
@@ -2883,7 +2913,7 @@
     "src/internals/canvas/widgets/prototypePickerEntries.js": "22ec546e42d37da92f90a6300f5fa145941af58b8699f9f3f07a517bb907b2df",
     "src/internals/canvas/widgets/storyPath.js": "117a0943d4efdec59c26f2c5e4cb17188ad298dca89b468c0fb69d1c53aaba6f",
     "src/internals/canvas/widgets/terminalMobileInput.js": "05fb3d3a7120df059059b7c87177386fe6365b22d41a80a9ac1a9f406eca368b",
-    "src/internals/canvas/widgets/terminalScroll.js": "9de4aaad4fddee1f4c58f2db0b2c56b004389d37112bd05729a8650a5e39634d",
+    "src/internals/canvas/widgets/terminalScroll.js": "14ec88f3570932a1662c6aeca2d3e2dcd97d1264c36ead488f1e4768c698fb6b",
     "src/internals/canvas/widgets/useCanvasFrameTheme.js": "6b7a5d7d046f25742ba7ea643b575992001c49357bb1dd83c34d45c47c3e98ba",
     "src/internals/canvas/widgets/useDocumentPreview.js": "732feb6bbf4b38c890ac91ef0d03d027e026630387ea76cc3cfb6dac7b3d7040",
     "src/internals/canvas/widgets/useExpandOverride.js": "76e34022435312cd6c5af5cf637e3ecaa2c36207c6ce3f3173a01dcc7306e26a",
@@ -2934,7 +2964,7 @@
     "src/internals/hooks/useSession.js": "4dae65546fe211d89f2e1a27a53799f2376d1befe5e189285c7d04b560ded9f4",
     "src/internals/hooks/useThemeState.js": "c561f486e0f4cdae73a91beb67cf87000e0a1e7d01823f1a2c58a81e07f09bc4",
     "src/internals/hooks/useUndoRedo.js": "d7bd3f9f329c8a413f8d43b88cae79f4ce2505b2357679c0c39aebfc7f5eafcd",
-    "src/internals/index.js": "7e6b7462e878d9e6634c365fa7a1d5f9c43e98020a3a14ed02bd135979a7a5b5",
+    "src/internals/index.js": "26e25071fd567face3efe0de124a913084f9cbea3481aa3e69e74490135725e6",
     "src/internals/keyboardPlatform.js": "1e8c18168ff6057834a5bf511ab40ddb6caf89b32df3fb6bf9fa01689dcf169b",
     "src/internals/loadConsumerWrapper.js": "8ae18a66513afaed510ee629fbc7d9cf937da9727193471bef7b7b3ffa2a7c19",
     "src/internals/loadingSurface.js": "b1b61a34f3e450628a077922c17e139ea53702fb8a23c51c3664eca4e1b4af75",
@@ -3018,23 +3048,24 @@
     "src/internals/lucide/shared/src/utils/toPascalCase.js": "1d39bc925d3c0c022496ac7892fef30119aa314fa107b22e87644bbbe73111f2",
     "src/internals/notebook/Browser/Browser.jsx": "63b417307ebbdb3c767c798b7cb685fd9062f903c9c60fbe336f67460c045367",
     "src/internals/notebook/Browser/Browser.module.css": "9f82b460401a6adb68efadb17e73db55fd8590b7810f02bfd3fbd88d39516c61",
-    "src/internals/notebook/CanvasViewer/CanvasViewer.jsx": "b58072a24501fed2ce9bad0d5d89314b16d7fc1c0bed5ce8effc0c3c81a9dd1e",
+    "src/internals/notebook/CanvasViewer/CanvasViewer.jsx": "81cbf262767d04dee0f3d1ea42828e611a1e181f34c6475862ff504399622830",
     "src/internals/notebook/CanvasViewer/CanvasViewer.module.css": "30fcab397d63aad2ac1fdf032a32268340077b3846f19dcf950076c4dfb14d6c",
     "src/internals/notebook/FlowProvider/FlowProvider.jsx": "a8fc648082e582388afa7020a922469b9faadaa3dc1d595f4f7f6e65f9234386",
-    "src/internals/notebook/NotebookViewer/NotebookViewer.jsx": "1ffbdd84f7fc05842261780cee7f8756d4f3fa9953a1c8c5719f795b4779a59d",
+    "src/internals/notebook/NotebookViewer/NotebookViewer.jsx": "76ba56390333cbcefc2cb076d09a524b229ccfce091b6a7ce32d18eb513e90ba",
     "src/internals/notebook/NotebookViewer/NotebookViewer.module.css": "e981820f2067759d6d631cccf4f43634512586128f774d3e092fe4ae41a3b58a",
     "src/internals/notebook/PrototypeViewer/PrototypeViewer.jsx": "8996c7ccf4ced2d98a180b08190dccb7ec3c00c22c56f074f7def13d8ff30cbb",
     "src/internals/notebook/SiteViewer/SiteViewer.jsx": "f94efee28fe27bd38ba9c8d6511f468f12db66c73c794d908ca5fe1f9b1bf326",
     "src/internals/notebook/core.js": "4d2637d031978416df017ca4be6fa8e167265b75277d630e958323a0083922bc",
-    "src/internals/notebook/react.js": "9980aaa11d72b84e8d779a99fc2dd7338d59328dd3e35b3f4f79a94c610f0ea8",
-    "src/internals/notebook/vite.js": "5b0b638b984702cb039592da3be613d2f33ab52db66ea83dee05d73a0a67ec96",
+    "src/internals/notebook/react.js": "1152a679e47def6a941c3b7a8e9009d983d932921b791751ee522b577a9c8e16",
+    "src/internals/notebook/vite.js": "3268e463911af4e26635934ddade9e3ad1431e6740cb5834f43be6c5bbf8e49f",
     "src/internals/pointerResize.css": "98cba59a3b2602301e47fdd518fed40b7619cfa531ae9de4ff6b76fa1014e837",
     "src/internals/pointerResize.js": "1a26cbe76b0fc088b26d0bc1980326856d00aae5b23ae626bc6947ef2986d9d1",
     "src/internals/routeContext.js": "d7900f6bad2f9baa9bc0795a0680912a2e7a102a904c47419e03bfc840a92802",
     "src/internals/runtimeIncidentCopy.js": "4e956cbdfa7dee6c01c14c4c637ab95f6040bad30d484e9a7154ffc994f9f8fe",
     "src/internals/sectionModuleRecovery.js": "1b53ef081bca81e8b0151f53c7fb7fffd9c2b32c264454d8f53dff79c9dadd2f",
     "src/internals/settings/FormFields.jsx": "e178f049078a48860f621f25f1fd6c32ed05adb083a5e07ea1c0fb99ec5237fa",
-    "src/internals/settings/SettingsDialog.jsx": "cd101295db5281cfd4229b072917edf7ecf718d5e8a8ea5c587138a48b1507f4",
+    "src/internals/settings/SettingsDialog.jsx": "5195076aadf5a6e43c62246339566d01aa49ed0d88998cbf1a5a082e308cc5e7",
+    "src/internals/shared-frontend.js": "f84138eec222b464f9501262d1246458b64c34f99d02479c486b041105d55872",
     "src/internals/showToast.js": "fb0aa33fec640b5eaee47b01527ae754550cbb399794a41f4ffc52cfe3360bc1",
     "src/internals/siteFrameRouteBridge.js": "41274523916882571de3108f03ec3da507f45cb9e8e1543c738d7dd17dfa975a",
     "src/internals/story/ComponentSetPage.jsx": "cbc579679628f70f723d8637b0d7f2806b9714a5c7437dec03b1f3f49f447543",
@@ -3049,7 +3080,7 @@
     "src/internals/vite/core-css.js": "7486c33dc27fc6f579b06d776ea99d0aa8d797e1b635165b48e8db51259aafe7",
     "src/internals/vite/data-operations.js": "c9d8fa76653f455440da0a6b85f1d5d19f33d77e94dec803724c6147d1523da5",
     "src/internals/vite/data-plugin.d.ts": "b4bb4326f3631a912216f9c4f8d86c4d4af1fb9407a9bea0e2be041647e71262",
-    "src/internals/vite/data-plugin.js": "5afcd6ea1653423f4cf4e9f89c1f5b1fb3c8bedff2676e263be01f836dce3198",
+    "src/internals/vite/data-plugin.js": "c6b33a08d6c725c476ad669709f5af437179906dbf14b04e1cf0a4808d881f3a",
     "src/internals/vite/dev-overlay-isolation.js": "70e425856f7b084d3b3e5a0000870bdcabaffedc7e77f2832c0b0ff286e458ba",
     "src/internals/vite/prototype-css.js": "4c962ecd1d9a60922eecfb04560469945ed7f92c3a7b98ff08aa5af140eeb9bd",
     "src/internals/vite/statefully-adapter.js": "68dd9327d0a82979867035c18f58c24829c2f94892d89f482031bfd78b6e4a65",
@@ -3096,7 +3127,8 @@
       "src/internals/hooks/useKnob.js",
       "src/internals/Knobs/index.js",
       "src/internals/hashPreserver.js",
-      "src/internals/context/FormContext.js"
+      "src/internals/context/FormContext.js",
+      "src/internals/shared-frontend.js"
     ],
     "src/internals/notebook/core.js": [
       "src/core/data/loader.ts",
@@ -3217,6 +3249,27 @@
       "src/core/stores/configSchema.ts",
       "src/core/stores/themeBootstrap.ts"
     ],
+    "src/canvas/style.css": [],
+    "src/canvas/Canvas.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/canvas/Draggable.jsx",
+      "src/canvas/utils.js"
+    ],
+    "src/canvas/Draggable.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@neodrag/react/dist/min/index.js",
+      "src/canvas/utils.js",
+      "src/internals/canvas/iframePointerLock.js",
+      "src/canvas/dragCursor.js"
+    ],
+    "src/canvas/useResetCanvas.js": [
+      "react"
+    ],
+    "src/canvas/utils.js": [
+      "react"
+    ],
     "src/internals/StoryboardContext.js": [
       "react"
     ],
@@ -3313,6 +3366,11 @@
     "src/internals/context/FormContext.js": [
       "react"
     ],
+    "src/internals/shared-frontend.js": [
+      "src/internals/Icon.jsx",
+      "src/internals/NotebookShellPresentation/NotebookShellPresentation.jsx",
+      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx"
+    ],
     "src/core/data/dotPath.ts": [],
     "src/core/session/session.ts": [],
     "src/core/session/localStorage.ts": [],
@@ -3374,27 +3432,6 @@
     "src/core/site/published.ts": [
       "src/core/site/publish.ts"
     ],
-    "src/canvas/style.css": [],
-    "src/canvas/Canvas.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/canvas/Draggable.jsx",
-      "src/canvas/utils.js"
-    ],
-    "src/canvas/Draggable.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@neodrag/react/dist/min/index.js",
-      "src/canvas/utils.js",
-      "src/internals/canvas/iframePointerLock.js",
-      "src/canvas/dragCursor.js"
-    ],
-    "src/canvas/useResetCanvas.js": [
-      "react"
-    ],
-    "src/canvas/utils.js": [
-      "react"
-    ],
     "src/internals/canvas/isolation/contentRouting.js": [
       "src/core/session/notebookView.ts"
     ],
@@ -3406,21 +3443,205 @@
       "src/core/knobs/filter.ts",
       "src/internals/Knobs/KnobsForm.module.css"
     ],
+    "src/internals/Icon.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "\u0000/Users/danielfosco/workspace/hypercanvas/node_modules/feather-icons/dist/feather.js?commonjs-es-import",
+      "src/core/ui/primerIcons.ts"
+    ],
+    "src/internals/NotebookShellPresentation/NotebookShellPresentation.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/core/lib/components/ui/button/index.js",
+      "src/internals/chrome/ui/button.jsx",
+      "src/internals/chrome/ui/input.jsx",
+      "src/internals/chrome/utils.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css",
+      "src/core/lib/components/ui/alert/alert.jsx",
+      "src/core/lib/components/ui/alert/displayLifecycle.ts",
+      "src/core/lib/components/ui/alert/alert.module.css",
+      "src/core/session/notebookCapabilities.ts"
+    ],
+    "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
     "src/core/session/notebookView.ts": [
       "src/core/embedNavigation.ts"
     ],
-    "src/internals/canvas/iframePointerLock.js": [],
-    "src/canvas/dragCursor.js": [],
+    "src/core/session/notebookCapabilities.ts": [],
+    "src/core/embedNavigation.ts": [],
+    "src/core/knobs/keys.ts": [
+      "@dfosco/statefully/core"
+    ],
+    "src/core/knobs/coerce.ts": [
+      "@dfosco/statefully/core"
+    ],
+    "src/core/knobs/writer.ts": [
+      "@dfosco/statefully/core"
+    ],
+    "src/core/knobs/statefullyAdapter.ts": [
+      "@dfosco/statefully/core",
+      "src/core/session/session.ts",
+      "src/core/session/hashSubscribe.ts",
+      "src/core/session/localStorage.ts",
+      "src/core/session/hideMode.ts"
+    ],
+    "src/core/knobs/route.ts": [],
+    "src/core/knobs/highlight.ts": [
+      "src/core/knobs/discovery.ts",
+      "@dfosco/statefully/core",
+      "src/core/session/notebookView.ts",
+      "src/core/ui/knobsPanelState.ts",
+      "src/core/session/hashSubscribe.ts",
+      "src/core/knobs/route.ts"
+    ],
+    "src/internals/chrome/utils.js": [
+      "src/internals/hc-classnames.js"
+    ],
     "src/internals/useFlowContext.js": [
       "react",
       "src/core/data/loader.ts",
       "src/core/session/bodyClasses.ts",
       "src/internals/routeContext.js"
     ],
-    "src/internals/canvas/widgets/prototypePickerEntries.js": [],
     "src/core/lib/components/ui/button/index.js": [
       "src/core/lib/components/ui/button/button.jsx"
     ],
+    "src/internals/chrome/ui/button.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/class-variance-authority/dist/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/chrome/ui/input.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/input/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css": [],
+    "src/core/lib/components/ui/alert/alert.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/core/lib/utils/index.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/core/lib/components/ui/button/index.js",
+      "src/core/lib/components/ui/alert/displayLifecycle.ts",
+      "src/core/lib/components/ui/alert/alert.module.css",
+      "src/core/session/notebookCapabilities.ts"
+    ],
+    "src/core/lib/components/ui/alert/displayLifecycle.ts": [
+      "react"
+    ],
+    "src/core/lib/components/ui/alert/alert.module.css": [],
+    "src/core/stores/themeHues.ts": [],
+    "src/core/stores/themeBootstrap.ts": [
+      "src/core/stores/themeHues.ts"
+    ],
+    "src/internals/canvas/iframePointerLock.js": [],
+    "src/canvas/dragCursor.js": [],
+    "src/core/ui/primerIcons.ts": [
+      "react",
+      "src/core/ui/primerIconLoaders.generated.ts"
+    ],
+    "src/core/styles/notebook-grid.css": [],
+    "src/internals/Document/DocPage.module.css": [],
+    "src/internals/DocEditor/DocEditor.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/popover/index.mjs",
+      "src/core/lib/components/ui/tooltip/index.js",
+      "src/internals/Document/Document.jsx",
+      "src/internals/Document/Document.module.css",
+      "src/core/notebook/docs/source-model.ts",
+      "src/internals/DocEditor/docInsertCatalog.js",
+      "src/core/stores/commandActions.ts",
+      "src/core/stores/widgetRegistry.ts",
+      "src/core/ui/Icon.jsx",
+      "src/internals/chrome/ui/input.jsx",
+      "src/internals/chrome/ui/select.jsx",
+      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
+      "src/internals/DocEditor/DocEditor.module.css",
+      "src/internals/canvas/canvasApi.js",
+      "src/internals/canvas/widgets/agentScreenshotPaste.js",
+      "src/internals/DocEditor/docDrafts.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/notebook/PrototypeViewer/PrototypeViewer.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "react-router-dom",
+      "@generouted/react-router/core",
+      "src/internals/canvas/isolation/routeCompiler.js",
+      "virtual:hypercanvas-notebook-routes",
+      "src/internals/notebook/FlowProvider/FlowProvider.jsx",
+      "virtual:hypercanvas-prototype-wrapper"
+    ],
+    "src/internals/notebook/Browser/Browser.module.css": [],
+    "src/internals/notebook/NotebookViewer/NotebookViewer.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "react-router-dom",
+      "src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx",
+      "src/internals/chrome/ui/sidebar.jsx",
+      "src/internals/chrome/ui/button.jsx",
+      "src/core/stores/featureFlags.ts",
+      "src/core/session/notebookView.ts",
+      "src/internals/artifactNavigation.js",
+      "src/internals/lucide/icons/arrow-left.js",
+      "src/internals/lucide/icons/arrow-right.js",
+      "src/internals/lucide/icons/panel-left.js",
+      "src/internals/lucide/icons/panel-right.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/internals/chrome/ui/breadcrumb.jsx",
+      "src/internals/shared-frontend.js",
+      "src/internals/NotebookShell/NotebookShell.module.css",
+      "src/internals/notebook/NotebookViewer/NotebookViewer.module.css"
+    ],
+    "src/internals/notebook/CanvasViewer/CanvasViewer.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "react-router-dom",
+      "src/canvas/index.js",
+      "src/canvas/style.css",
+      "src/internals/shared-frontend.js",
+      "src/core/ui/CanvasZoomControl.jsx",
+      "src/core/ui/CanvasZoomToFit.jsx",
+      "src/internals/canvas/widgets/StickyNote.jsx",
+      "src/internals/canvas/widgets/markdown/MarkdownEditor.jsx",
+      "src/internals/canvas/widgets/WidgetWrapper.jsx",
+      "src/internals/canvas/ConnectorLayer.jsx",
+      "src/internals/Knobs/KnobsForm.jsx",
+      "src/internals/canvas/widgets/canvasBridge.js",
+      "src/internals/canvas/widgets/knobsTargetResolver.js",
+      "src/internals/hooks/useKnob.js",
+      "src/internals/basePathAsset.js",
+      "src/core/stores/configStore.ts",
+      "src/core/stores/themeStore.ts",
+      "src/core/stores/canvasConfig.ts",
+      "src/core/session/notebookView.ts",
+      "src/internals/canvas/canvasBounds.js",
+      "src/internals/Document/resolvers.js",
+      "virtual:hypercanvas-documents",
+      "src/internals/canvas/widgets/frameTheme.js",
+      "src/internals/canvas/widgets/figmaUrl.js",
+      "virtual:storyboard-data-index",
+      "src/internals/story/storyExports.js",
+      "src/internals/notebook/CanvasViewer/CanvasViewer.module.css"
+    ],
+    "src/internals/notebook/SiteViewer/SiteViewer.jsx": [
+      "react/jsx-runtime",
+      "react-router-dom",
+      "src/internals/hooks/useThemeState.js",
+      "src/internals/SitePage/SitePage.module.css"
+    ],
+    "src/internals/canvas/widgets/prototypePickerEntries.js": [],
     "src/core/canvas/storyFrameRoute.ts": [],
     "src/internals/siteFrameRouteBridge.js": [
       "src/core/site/contract.ts"
@@ -3456,94 +3677,6 @@
       "src/internals/canvas/widgets/ExpandedPane.module.css",
       "src/internals/canvas/widgets/expandedPaneTransitions.js"
     ],
-    "src/core/ui/primerIcons.ts": [
-      "react",
-      "src/core/ui/primerIconLoaders.generated.ts"
-    ],
-    "src/internals/notebook/PrototypeViewer/PrototypeViewer.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "react-router-dom",
-      "@generouted/react-router/core",
-      "src/internals/canvas/isolation/routeCompiler.js",
-      "virtual:hypercanvas-notebook-routes",
-      "src/internals/notebook/FlowProvider/FlowProvider.jsx",
-      "virtual:hypercanvas-prototype-wrapper"
-    ],
-    "src/internals/notebook/Browser/Browser.module.css": [],
-    "src/internals/notebook/NotebookViewer/NotebookViewer.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "react-router-dom",
-      "src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx",
-      "src/internals/chrome/ui/sidebar.jsx",
-      "src/internals/chrome/ui/button.jsx",
-      "src/core/stores/featureFlags.ts",
-      "src/core/session/notebookView.ts",
-      "src/internals/artifactNavigation.js",
-      "src/internals/lucide/icons/arrow-left.js",
-      "src/internals/lucide/icons/arrow-right.js",
-      "src/internals/lucide/icons/panel-left.js",
-      "src/internals/lucide/icons/panel-right.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
-      "src/internals/chrome/ui/breadcrumb.jsx",
-      "src/internals/NotebookShell/NotebookShell.module.css",
-      "src/internals/notebook/NotebookViewer/NotebookViewer.module.css"
-    ],
-    "src/internals/notebook/CanvasViewer/CanvasViewer.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/canvas/index.js",
-      "src/canvas/style.css",
-      "src/internals/canvas/widgets/StickyNote.jsx",
-      "src/internals/canvas/widgets/markdown/MarkdownEditor.jsx",
-      "src/internals/canvas/widgets/WidgetWrapper.jsx",
-      "src/internals/canvas/ConnectorLayer.jsx",
-      "src/internals/Knobs/KnobsForm.jsx",
-      "src/internals/canvas/widgets/canvasBridge.js",
-      "src/internals/canvas/widgets/knobsTargetResolver.js",
-      "src/internals/hooks/useKnob.js",
-      "src/internals/basePathAsset.js",
-      "src/core/stores/configStore.ts",
-      "src/core/stores/themeStore.ts",
-      "src/internals/Document/resolvers.js",
-      "virtual:hypercanvas-documents",
-      "src/internals/canvas/widgets/frameTheme.js",
-      "src/internals/canvas/widgets/figmaUrl.js",
-      "virtual:storyboard-data-index",
-      "src/internals/story/storyExports.js",
-      "src/internals/notebook/CanvasViewer/CanvasViewer.module.css"
-    ],
-    "src/internals/notebook/SiteViewer/SiteViewer.jsx": [
-      "react/jsx-runtime",
-      "react-router-dom",
-      "src/internals/hooks/useThemeState.js",
-      "src/internals/SitePage/SitePage.module.css"
-    ],
-    "src/core/styles/notebook-grid.css": [],
-    "src/internals/Document/DocPage.module.css": [],
-    "src/internals/DocEditor/DocEditor.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/popover/index.mjs",
-      "src/core/lib/components/ui/tooltip/index.js",
-      "src/internals/Document/Document.jsx",
-      "src/internals/Document/Document.module.css",
-      "src/core/notebook/docs/source-model.ts",
-      "src/internals/DocEditor/docInsertCatalog.js",
-      "src/core/stores/commandActions.ts",
-      "src/core/stores/widgetRegistry.ts",
-      "src/core/ui/Icon.jsx",
-      "src/internals/chrome/ui/input.jsx",
-      "src/internals/chrome/ui/select.jsx",
-      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
-      "src/internals/DocEditor/DocEditor.module.css",
-      "src/internals/canvas/canvasApi.js",
-      "src/internals/canvas/widgets/agentScreenshotPaste.js",
-      "src/internals/DocEditor/docDrafts.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
     "src/internals/BaseUiForm/BaseUiForm.jsx": [
       "react/jsx-runtime",
       "react",
@@ -3557,13 +3690,26 @@
     ],
     "src/core/knobs/filter.ts": [],
     "src/internals/Knobs/KnobsForm.module.css": [],
+    "src/internals/hc-classnames.js": [
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/clsx/dist/clsx.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-merge/dist/bundle-mjs.mjs"
+    ],
     "src/internals/routeContext.js": [],
-    "src/internals/showToast.js": [],
+    "src/core/ui/knobsPanelState.ts": [
+      "src/core/session/session.ts"
+    ],
     "src/core/lib/components/ui/button/button.jsx": [
       "react/jsx-runtime",
       "react",
       "src/core/lib/utils/index.js",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js"
+    ],
+    "src/internals/showToast.js": [],
+    "src/core/lib/utils/index.js": [
+      "src/internals/hc-classnames.js"
+    ],
+    "src/internals/canvas/isolation/routeCompiler.js": [
+      "@generouted/react-router/core"
     ],
     "src/internals/WidgetSurface/widgetSurfaceCatalog.js": [
       "src/core/stores/widgetRegistry.ts",
@@ -3749,110 +3895,6 @@
       "src/internals/Icon.jsx",
       "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css",
       "src/core/lib/components/ui/alert/alert.jsx"
-    ],
-    "src/internals/canvas/isolation/routeCompiler.js": [
-      "@generouted/react-router/core"
-    ],
-    "src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/chrome/ui/button.jsx",
-      "src/internals/chrome/ui/dialog.jsx",
-      "src/internals/chrome/ui/skeleton.jsx",
-      "src/internals/NotebookSidebarTree/TreeIcons.jsx",
-      "src/core/stores/configStore.ts",
-      "src/core/stores/configSchema.ts",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
-      "src/internals/NotebookShellPresentation/NotebookShellPresentation.jsx",
-      "src/internals/NotebookSidebarTree/NotebookSidebarTree.module.css"
-    ],
-    "src/internals/chrome/ui/sidebar.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/merge-props/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/use-render/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/class-variance-authority/dist/index.mjs",
-      "src/internals/chrome/utils.js",
-      "src/internals/chrome/use-mobile.js",
-      "src/internals/chrome/ui/button.jsx",
-      "src/internals/chrome/ui/input.jsx",
-      "src/internals/chrome/ui/separator.jsx",
-      "src/internals/chrome/ui/sheet.jsx",
-      "src/internals/chrome/ui/skeleton.jsx",
-      "src/internals/chrome/ui/tooltip.jsx",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/chrome/ui/button.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/class-variance-authority/dist/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/artifactNavigation.js": [],
-    "src/internals/lucide/icons/arrow-left.js": [
-      "src/internals/lucide/createLucideIcon.js"
-    ],
-    "src/internals/lucide/icons/arrow-right.js": [
-      "src/internals/lucide/createLucideIcon.js"
-    ],
-    "src/internals/lucide/icons/panel-left.js": [
-      "src/internals/lucide/createLucideIcon.js"
-    ],
-    "src/internals/lucide/icons/panel-right.js": [
-      "src/internals/lucide/createLucideIcon.js"
-    ],
-    "src/internals/chrome/ui/breadcrumb.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/merge-props/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/use-render/index.mjs",
-      "src/internals/chrome/utils.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/NotebookShell/NotebookShell.module.css": [],
-    "src/internals/notebook/NotebookViewer/NotebookViewer.module.css": [],
-    "src/internals/lucide/icons/minimize.js": [
-      "src/internals/lucide/createLucideIcon.js"
-    ],
-    "src/internals/canvas/widgets/ExpandedPaneTopBar.jsx": [
-      "react/jsx-runtime",
-      "src/internals/lucide/icons/minimize.js",
-      "src/internals/Tooltip.jsx",
-      "src/internals/canvas/widgets/widgetIcons.jsx",
-      "src/internals/canvas/widgets/widgetConfig.js",
-      "src/internals/Icon.jsx",
-      "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css"
-    ],
-    "src/internals/canvas/widgets/ExpandedPane.module.css": [],
-    "src/internals/canvas/widgets/expandedPaneTransitions.js": [],
-    "src/core/stores/themeHues.ts": [],
-    "src/core/session/notebookCapabilities.ts": [],
-    "src/core/knobs/keys.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/coerce.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/writer.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/statefullyAdapter.ts": [
-      "@dfosco/statefully/core",
-      "src/core/session/session.ts",
-      "src/core/session/hashSubscribe.ts",
-      "src/core/session/localStorage.ts",
-      "src/core/session/hideMode.ts"
-    ],
-    "src/core/knobs/route.ts": [],
-    "src/core/knobs/highlight.ts": [
-      "src/core/knobs/discovery.ts",
-      "@dfosco/statefully/core",
-      "src/core/session/notebookView.ts",
-      "src/core/ui/knobsPanelState.ts",
-      "src/core/session/hashSubscribe.ts",
-      "src/core/knobs/route.ts"
-    ],
-    "src/core/stores/themeBootstrap.ts": [
-      "src/core/stores/themeHues.ts"
     ],
     "src/core/ui/primerIconLoaders.generated.ts": [
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/AccessibilityIcon.mjs",
@@ -4255,8 +4297,85 @@
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/ZoomInIcon.mjs",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/ZoomOutIcon.mjs"
     ],
+    "src/internals/BaseUiForm/BaseUiForm.module.css": [],
+    "src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/chrome/ui/button.jsx",
+      "src/internals/chrome/ui/dialog.jsx",
+      "src/internals/chrome/ui/skeleton.jsx",
+      "src/internals/NotebookSidebarTree/TreeIcons.jsx",
+      "src/core/stores/configStore.ts",
+      "src/core/stores/configSchema.ts",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/internals/NotebookShellPresentation/NotebookShellPresentation.jsx",
+      "src/internals/NotebookSidebarTree/NotebookSidebarTree.module.css"
+    ],
+    "src/internals/chrome/ui/sidebar.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/merge-props/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/use-render/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/class-variance-authority/dist/index.mjs",
+      "src/internals/chrome/utils.js",
+      "src/internals/chrome/use-mobile.js",
+      "src/internals/chrome/ui/button.jsx",
+      "src/internals/chrome/ui/input.jsx",
+      "src/internals/chrome/ui/separator.jsx",
+      "src/internals/chrome/ui/sheet.jsx",
+      "src/internals/chrome/ui/skeleton.jsx",
+      "src/internals/chrome/ui/tooltip.jsx",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/artifactNavigation.js": [],
+    "src/internals/lucide/icons/arrow-left.js": [
+      "src/internals/lucide/createLucideIcon.js"
+    ],
+    "src/internals/lucide/icons/arrow-right.js": [
+      "src/internals/lucide/createLucideIcon.js"
+    ],
+    "src/internals/lucide/icons/panel-left.js": [
+      "src/internals/lucide/createLucideIcon.js"
+    ],
+    "src/internals/lucide/icons/panel-right.js": [
+      "src/internals/lucide/createLucideIcon.js"
+    ],
+    "src/internals/chrome/ui/breadcrumb.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/merge-props/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/use-render/index.mjs",
+      "src/internals/chrome/utils.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/NotebookShell/NotebookShell.module.css": [],
+    "src/internals/notebook/NotebookViewer/NotebookViewer.module.css": [],
+    "src/internals/lucide/icons/minimize.js": [
+      "src/internals/lucide/createLucideIcon.js"
+    ],
+    "src/internals/canvas/widgets/ExpandedPaneTopBar.jsx": [
+      "react/jsx-runtime",
+      "src/internals/lucide/icons/minimize.js",
+      "src/internals/Tooltip.jsx",
+      "src/internals/canvas/widgets/widgetIcons.jsx",
+      "src/internals/canvas/widgets/widgetConfig.js",
+      "src/internals/Icon.jsx",
+      "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css"
+    ],
+    "src/internals/canvas/widgets/ExpandedPane.module.css": [],
+    "src/internals/canvas/widgets/expandedPaneTransitions.js": [],
     "src/internals/SitePage/SitePage.module.css": [],
-    "src/core/embedNavigation.ts": [],
+    "src/core/ui/CanvasZoomControl.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
+      "src/core/lib/components/ui/tooltip/index.js"
+    ],
+    "src/core/ui/CanvasZoomToFit.jsx": [
+      "react/jsx-runtime",
+      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
+      "src/core/lib/components/ui/tooltip/index.js",
+      "src/core/ui/Icon.jsx"
+    ],
     "src/internals/canvas/widgets/markdown/MarkdownEditor.jsx": [
       "react/jsx-runtime",
       "react",
@@ -4287,16 +4406,34 @@
       "src/internals/canvas/widgets/widgetConfig.js"
     ],
     "src/internals/basePathAsset.js": [],
+    "src/internals/canvas/canvasBounds.js": [],
     "src/internals/canvas/widgets/frameTheme.js": [],
     "src/internals/canvas/widgets/figmaUrl.js": [],
     "src/internals/story/storyExports.js": [
       "react"
     ],
     "src/internals/notebook/CanvasViewer/CanvasViewer.module.css": [],
-    "src/core/lib/utils/index.js": [
-      "src/internals/hc-classnames.js"
+    "src/core/lib/components/ui/tooltip/index.js": [
+      "src/core/lib/components/ui/tooltip/tooltip.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-content.jsx"
     ],
-    "src/internals/BaseUiForm/BaseUiForm.module.css": [],
+    "src/core/notebook/docs/source-model.ts": [],
+    "src/internals/DocEditor/docInsertCatalog.js": [
+      "src/internals/WidgetSurface/widgetSurfaceCatalog.js"
+    ],
+    "src/internals/chrome/ui/select.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
+      "src/internals/chrome/utils.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/DocEditor/DocEditor.module.css": [],
+    "src/internals/canvas/canvasApi.js": [
+      "src/internals/canvas/widgetRefs.js"
+    ],
+    "src/internals/canvas/widgets/agentScreenshotPaste.js": [],
+    "src/internals/DocEditor/docDrafts.js": [],
     "src/internals/canvas/widgets/widgetConfig.js": [
       "widgets.config.json",
       "src/core/stores/widgetRegistry.ts",
@@ -4313,18 +4450,14 @@
     "src/internals/canvas/widgets/widgetProps.js": [
       "src/internals/canvas/widgets/widgetConfig.js"
     ],
-    "src/internals/canvas/widgets/codepenUrl.js": [],
-    "src/internals/canvas/widgets/iframeDevLogs.js": [
-      "react"
-    ],
-    "src/internals/canvas/widgets/CodePenEmbed.module.css": [],
-    "src/internals/canvas/widgets/embedOverlay.module.css": [],
-    "src/internals/canvas/widgets/useExpandOverride.js": [
+    "src/internals/canvas/widgets/ResizeHandle.jsx": [
+      "react/jsx-runtime",
       "react",
-      "react-dom",
-      "src/internals/hooks/useOverride.js",
-      "src/internals/canvas/widgets/expandedPaneTransitions.js"
+      "src/internals/canvas/widgets/ResizeHandle.module.css",
+      "src/internals/canvas/iframePointerLock.js",
+      "src/internals/pointerResize.js"
     ],
+    "src/internals/canvas/widgets/StickyNote.module.css": [],
     "src/internals/canvas/widgets/expandUtils.js": [
       "react",
       "src/core/data/loader.ts",
@@ -4339,48 +4472,13 @@
       "src/internals/canvas/widgets/LinkPreview.module.css",
       "src/internals/canvas/widgets/ImageWidget.module.css"
     ],
-    "src/internals/canvas/widgets/FigmaEmbed.module.css": [],
-    "src/core/lib/components/ui/tooltip/index.js": [
-      "src/core/lib/components/ui/tooltip/tooltip.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-content.jsx"
-    ],
-    "src/core/notebook/docs/source-model.ts": [],
-    "src/internals/DocEditor/docInsertCatalog.js": [
-      "src/internals/WidgetSurface/widgetSurfaceCatalog.js"
-    ],
-    "src/internals/chrome/ui/input.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/input/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/chrome/ui/select.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
-      "src/internals/chrome/utils.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx": [
-      "react/jsx-runtime",
+    "src/internals/canvas/widgets/useExpandOverride.js": [
       "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
-      "src/internals/chrome/utils.js"
+      "react-dom",
+      "src/internals/hooks/useOverride.js",
+      "src/internals/canvas/widgets/expandedPaneTransitions.js"
     ],
-    "src/internals/DocEditor/DocEditor.module.css": [],
-    "src/internals/canvas/canvasApi.js": [
-      "src/internals/canvas/widgetRefs.js"
-    ],
-    "src/internals/canvas/widgets/agentScreenshotPaste.js": [],
-    "src/internals/DocEditor/docDrafts.js": [],
-    "src/internals/canvas/widgets/ResizeHandle.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/canvas/widgets/ResizeHandle.module.css",
-      "src/internals/canvas/iframePointerLock.js",
-      "src/internals/pointerResize.js"
-    ],
-    "src/internals/canvas/widgets/StickyNote.module.css": [],
+    "src/internals/canvas/widgets/MarkdownBlock.module.css": [],
     "src/internals/lucide/icons/git-branch.js": [
       "src/internals/lucide/createLucideIcon.js"
     ],
@@ -4406,14 +4504,59 @@
       "/Users/danielfosco/workspace/hypercanvas/node_modules/rehype-stringify/index.js"
     ],
     "src/internals/canvas/widgets/LinkPreview.module.css": [],
-    "src/internals/canvas/widgets/MarkdownBlock.module.css": [],
-    "src/internals/hc-classnames.js": [
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/clsx/dist/clsx.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-merge/dist/bundle-mjs.mjs"
+    "src/internals/canvas/widgets/iframeDevLogs.js": [
+      "react"
     ],
-    "src/internals/chrome/utils.js": [
-      "src/internals/hc-classnames.js"
+    "src/internals/canvas/widgets/FigmaEmbed.module.css": [],
+    "src/internals/canvas/widgets/embedOverlay.module.css": [],
+    "src/internals/canvas/widgets/codepenUrl.js": [],
+    "src/internals/canvas/widgets/CodePenEmbed.module.css": [],
+    "src/core/lib/components/ui/tooltip/tooltip.jsx": [
+      "react/jsx-runtime",
+      "react"
     ],
+    "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/core/lib/components/ui/tooltip/tooltip.jsx"
+    ],
+    "src/core/lib/components/ui/tooltip/tooltip-content.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "react-dom",
+      "src/core/lib/components/ui/tooltip/tooltip.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-content.css"
+    ],
+    "src/internals/lucide/shared/src/utils/mergeClasses.js": [],
+    "src/internals/lucide/shared/src/utils/toKebabCase.js": [],
+    "src/internals/lucide/shared/src/utils/toPascalCase.js": [
+      "src/internals/lucide/shared/src/utils/toCamelCase.js"
+    ],
+    "src/internals/lucide/Icon.js": [
+      "react",
+      "src/internals/lucide/defaultAttributes.js",
+      "src/internals/lucide/shared/src/utils/hasA11yProp.js",
+      "src/internals/lucide/shared/src/utils/mergeClasses.js",
+      "src/internals/lucide/context.js"
+    ],
+    "src/internals/chrome/ui/dialog.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/chrome/modalLifecycle.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/dialog/index.mjs",
+      "src/internals/chrome/utils.js",
+      "src/internals/chrome/ui/button.jsx",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/chrome/ui/skeleton.jsx": [
+      "react/jsx-runtime",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/NotebookSidebarTree/TreeIcons.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/NotebookSidebarTree/NotebookSidebarTree.module.css": [],
     "src/internals/Tooltip.jsx": [
       "react/jsx-runtime",
       "src/core/lib/components/ui/tooltip/index.js"
@@ -4437,78 +4580,7 @@
       "src/internals/lucide/icons/messages-square.js",
       "src/internals/lucide/icons/mail.js"
     ],
-    "src/internals/Icon.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "\u0000/Users/danielfosco/workspace/hypercanvas/node_modules/feather-icons/dist/feather.js?commonjs-es-import",
-      "src/core/ui/primerIcons.ts"
-    ],
     "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css": [],
-    "src/internals/chrome/ui/dialog.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/chrome/modalLifecycle.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/dialog/index.mjs",
-      "src/internals/chrome/utils.js",
-      "src/internals/chrome/ui/button.jsx",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/chrome/ui/skeleton.jsx": [
-      "react/jsx-runtime",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/NotebookSidebarTree/TreeIcons.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/NotebookShellPresentation/NotebookShellPresentation.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/core/lib/components/ui/button/index.js",
-      "src/internals/chrome/ui/button.jsx",
-      "src/internals/chrome/ui/input.jsx",
-      "src/internals/chrome/utils.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
-      "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css",
-      "src/core/lib/components/ui/alert/alert.jsx",
-      "src/core/lib/components/ui/alert/displayLifecycle.ts",
-      "src/core/lib/components/ui/alert/alert.module.css",
-      "src/core/session/notebookCapabilities.ts"
-    ],
-    "src/internals/NotebookSidebarTree/NotebookSidebarTree.module.css": [],
-    "src/internals/canvas/widgets/useStoryFrame.js": [
-      "react",
-      "src/core/data/loader.ts",
-      "src/core/canvas/storyFrameRoute.ts",
-      "src/internals/basePathAsset.js",
-      "src/internals/hooks/useFeatureFlag.js",
-      "src/internals/canvas/widgets/useFrameSnapshot.js",
-      "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js",
-      "src/internals/canvas/widgets/useObservedFrameLifecycle.js"
-    ],
-    "src/internals/canvas/widgets/useCanvasFrameTheme.js": [
-      "react"
-    ],
-    "src/internals/story/storyFrameUrl.js": [
-      "src/core/canvas/storyFrameRoute.ts"
-    ],
-    "src/internals/canvas/widgets/storyPath.js": [],
-    "src/internals/canvas/widgets/StoryWidget.module.css": [],
-    "src/internals/CommandPalette/WidgetArtifactDialog.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/Dialog.jsx",
-      "src/core/data/viewfinder.ts",
-      "src/core/data/loader.ts",
-      "src/internals/CommandPalette/WidgetArtifactDialog.css"
-    ],
-    "src/core/inspector/highlighter.ts": [
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/core.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/javascript.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/typescript.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/xml.js",
-      "src/core/stores/toolbarConfigStore.ts"
-    ],
     "src/internals/canvas/widgets/CropOverlay.jsx": [
       "react/jsx-runtime",
       "react",
@@ -4535,47 +4607,25 @@
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/tooltip/index.mjs",
       "src/internals/chrome/utils.js"
     ],
-    "src/core/ui/knobsPanelState.ts": [
-      "src/core/session/session.ts"
-    ],
-    "src/internals/lucide/shared/src/utils/mergeClasses.js": [],
-    "src/internals/lucide/shared/src/utils/toKebabCase.js": [],
-    "src/internals/lucide/shared/src/utils/toPascalCase.js": [
-      "src/internals/lucide/shared/src/utils/toCamelCase.js"
-    ],
-    "src/internals/lucide/Icon.js": [
+    "src/internals/canvas/widgets/useStoryFrame.js": [
       "react",
-      "src/internals/lucide/defaultAttributes.js",
-      "src/internals/lucide/shared/src/utils/hasA11yProp.js",
-      "src/internals/lucide/shared/src/utils/mergeClasses.js",
-      "src/internals/lucide/context.js"
+      "src/core/data/loader.ts",
+      "src/core/canvas/storyFrameRoute.ts",
+      "src/internals/basePathAsset.js",
+      "src/internals/hooks/useFeatureFlag.js",
+      "src/internals/canvas/widgets/useFrameSnapshot.js",
+      "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js",
+      "src/internals/canvas/widgets/useObservedFrameLifecycle.js"
     ],
-    "src/core/lib/components/ui/tooltip/tooltip.jsx": [
-      "react/jsx-runtime",
+    "src/internals/canvas/widgets/useCanvasFrameTheme.js": [
       "react"
     ],
-    "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/core/lib/components/ui/tooltip/tooltip.jsx"
+    "src/internals/story/storyFrameUrl.js": [
+      "src/core/canvas/storyFrameRoute.ts"
     ],
-    "src/core/lib/components/ui/tooltip/tooltip-content.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "react-dom",
-      "src/core/lib/components/ui/tooltip/tooltip.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-content.css"
-    ],
+    "src/internals/canvas/widgets/storyPath.js": [],
+    "src/internals/canvas/widgets/StoryWidget.module.css": [],
     "src/internals/canvas/widgets/WidgetWrapper.module.css": [],
-    "src/internals/canvas/widgetRefs.js": [],
-    "src/internals/canvas/ConnectorLayer.module.css": [],
-    "src/internals/canvas/connectorGeometry.js": [
-      "src/internals/canvas/widgets/widgetConfig.js"
-    ],
-    "src/internals/canvas/orthogonalRoutes.js": [
-      "src/internals/canvas/connectorGeometry.js",
-      "src/internals/canvas/widgets/widgetConfig.js"
-    ],
     "src/internals/canvas/widgets/markdown/markdownRender.js": [
       "src/internals/canvas/widgets/markdown/markdownSanitize.js",
       "src/core/inspector/highlighter.ts"
@@ -4584,14 +4634,37 @@
       "src/internals/canvas/widgets/markdown/markdownContent.module.css"
     ],
     "src/internals/canvas/widgets/markdown/MarkdownEditor.module.css": [],
+    "src/internals/CommandPalette/WidgetArtifactDialog.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/Dialog.jsx",
+      "src/core/data/viewfinder.ts",
+      "src/core/data/loader.ts",
+      "src/internals/CommandPalette/WidgetArtifactDialog.css"
+    ],
+    "src/core/inspector/highlighter.ts": [
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/core.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/javascript.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/typescript.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/xml.js",
+      "src/core/stores/toolbarConfigStore.ts"
+    ],
+    "src/internals/canvas/ConnectorLayer.module.css": [],
+    "src/internals/canvas/connectorGeometry.js": [
+      "src/internals/canvas/widgets/widgetConfig.js"
+    ],
+    "src/internals/canvas/orthogonalRoutes.js": [
+      "src/internals/canvas/connectorGeometry.js",
+      "src/internals/canvas/widgets/widgetConfig.js"
+    ],
     "src/internals/canvas/widgets/useObservedFrameLifecycle.js": [
       "react",
       "src/internals/canvas/widgets/frameDocumentReady.js"
     ],
-    "src/core/utils/prodMode.ts": [],
-    "src/core/site/siteEvents.ts": [
-      "src/core/site/siteHomePreview.ts"
+    "src/internals/canvas/widgets/embedTheme.js": [
+      "src/core/stores/themeStore.ts"
     ],
+    "src/internals/canvas/widgets/normalizeLegacyEmbedSrc.js": [],
     "src/internals/canvas/widgets/useFrameSnapshot.js": [
       "react",
       "src/core/canvas/frameSnapshotViewport.ts"
@@ -4602,26 +4675,6 @@
       "src/internals/canvas/widgets/frameDocumentReady.js",
       "src/core/canvas/frameSnapshotViewport.ts"
     ],
-    "src/internals/canvas/widgets/frameActionUpdates.js": [
-      "src/internals/canvas/widgets/frameDevicePresets.js"
-    ],
-    "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css": [],
-    "src/core/lib/components/ui/alert/alert.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/core/lib/utils/index.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
-      "src/core/lib/components/ui/button/index.js",
-      "src/core/lib/components/ui/alert/displayLifecycle.ts",
-      "src/core/lib/components/ui/alert/alert.module.css",
-      "src/core/session/notebookCapabilities.ts"
-    ],
-    "widgets.config.json": [],
-    "src/internals/canvas/widgets/embedTheme.js": [
-      "src/core/stores/themeStore.ts"
-    ],
-    "src/internals/canvas/widgets/normalizeLegacyEmbedSrc.js": [],
     "src/core/canvas/frameSnapshotViewport.ts": [],
     "src/internals/Dialog.jsx": [
       "react/jsx-runtime",
@@ -4629,11 +4682,28 @@
       "src/core/lib/components/ui/dialog/dialog.module.css"
     ],
     "src/internals/canvas/widgets/PrototypeEmbed.module.css": [],
+    "src/internals/lucide/shared/src/utils/toCamelCase.js": [],
+    "src/internals/lucide/defaultAttributes.js": [],
+    "src/internals/lucide/shared/src/utils/hasA11yProp.js": [],
+    "src/internals/lucide/context.js": [
+      "react"
+    ],
+    "src/internals/canvas/widgetRefs.js": [],
     "src/internals/canvas/widgets/ResizeHandle.module.css": [],
     "src/internals/pointerResize.js": [
       "src/internals/canvas/iframePointerLock.js",
       "src/internals/pointerResize.css"
     ],
+    "widgets.config.json": [],
+    "src/core/lib/components/ui/tooltip/tooltip-content.css": [],
+    "src/core/utils/prodMode.ts": [],
+    "src/core/site/siteEvents.ts": [
+      "src/core/site/siteHomePreview.ts"
+    ],
+    "src/internals/canvas/widgets/frameActionUpdates.js": [
+      "src/internals/canvas/widgets/frameDevicePresets.js"
+    ],
+    "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css": [],
     "src/internals/chrome/modalLifecycle.js": [
       "react"
     ],
@@ -4679,25 +4749,9 @@
     "src/internals/lucide/icons/mail.js": [
       "src/internals/lucide/createLucideIcon.js"
     ],
-    "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css": [],
-    "src/core/lib/components/ui/alert/displayLifecycle.ts": [
-      "react"
-    ],
-    "src/core/lib/components/ui/alert/alert.module.css": [],
-    "src/internals/canvas/widgets/CropOverlay.module.css": [],
-    "src/internals/CommandPalette/WidgetArtifactDialog.css": [],
-    "src/internals/lucide/shared/src/utils/toCamelCase.js": [],
-    "src/internals/lucide/defaultAttributes.js": [],
-    "src/internals/lucide/shared/src/utils/hasA11yProp.js": [],
-    "src/internals/lucide/context.js": [
-      "react"
-    ],
     "src/internals/canvas/widgets/markdown/markdownContent.module.css": [],
-    "src/internals/canvas/widgets/frameDevicePresets.js": [],
     "src/internals/canvas/widgets/frameDocumentReady.js": [],
-    "src/core/site/siteHomePreview.ts": [],
-    "src/core/lib/components/ui/tooltip/tooltip-content.css": [],
-    "src/internals/pointerResize.css": [],
+    "src/internals/canvas/widgets/CropOverlay.module.css": [],
     "src/core/lib/components/ui/dialog/index.js": [
       "src/core/lib/components/ui/dialog/dialog.jsx",
       "src/core/lib/components/ui/dialog/dialog-trigger.jsx",
@@ -4705,6 +4759,10 @@
       "src/core/lib/components/ui/dialog/dialog.module.css"
     ],
     "src/core/lib/components/ui/dialog/dialog.module.css": [],
+    "src/internals/CommandPalette/WidgetArtifactDialog.css": [],
+    "src/internals/pointerResize.css": [],
+    "src/internals/canvas/widgets/frameDevicePresets.js": [],
+    "src/core/site/siteHomePreview.ts": [],
     "src/core/lib/components/ui/dialog/dialog.jsx": [
       "react/jsx-runtime",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/dialog/index.mjs"
@@ -4726,42 +4784,42 @@
     "src/internals/canvas/widgets/FileWidget/FileSecondaryPane.jsx": "static-document-content-source"
   },
   "nodeInputs": [
-    "src/core/artifact/visibility.ts",
-    "src/core/canvas/canvasEvents.ts",
-    "src/core/canvas/identity.ts",
-    "src/core/canvas/materializer.ts",
-    "src/core/configFile.ts",
-    "src/core/embedNavigation.ts",
-    "src/core/notebook/artifact-migration-aliases.ts",
-    "src/core/notebook/docs/catalog.node.ts",
-    "src/core/notebook/docs/compiler.ts",
-    "src/core/notebook/docs/discovery.node.ts",
-    "src/core/notebook/docs/metadata.ts",
-    "src/core/notebook/docs/source-model.ts",
-    "src/core/notebook/docs/vite-plugin.ts",
-    "src/core/notebook/first-look/catalog.node.ts",
-    "src/core/notebook/first-look/contract.ts",
-    "src/core/notebook/first-look/descriptors.ts",
-    "src/core/notebook/first-look/discovery.node.ts",
-    "src/core/notebook/first-look/routes.ts",
-    "src/core/notebook/layout.ts",
-    "src/core/notebook/navigation-tree.ts",
-    "src/core/notebook/navigation.ts",
-    "src/core/notebook/operations.node.ts",
-    "src/core/notebook/reader.node.ts",
-    "src/core/notebook/routes.node.ts",
-    "src/core/notebook/sibling-order.ts",
-    "src/core/runtimeDir.ts",
-    "src/core/session/notebookView.ts",
-    "src/core/site/catalog.node.ts",
-    "src/core/site/contract.ts",
-    "src/core/stores/canvasConfig.ts",
-    "src/core/stores/configSchema.ts",
-    "src/core/stores/themeBootstrap.ts",
-    "src/core/stores/themeHues.ts",
-    "src/internals/notebook/vite.js",
-    "src/internals/vite/data-operations.js",
-    "src/internals/vite/prototype-css.js",
-    "src/internals/vite/statefullyCompatibility.js"
+    "packages/storyboard/src/core/artifact/visibility.ts",
+    "packages/storyboard/src/core/canvas/canvasEvents.ts",
+    "packages/storyboard/src/core/canvas/identity.ts",
+    "packages/storyboard/src/core/canvas/materializer.ts",
+    "packages/storyboard/src/core/configFile.ts",
+    "packages/storyboard/src/core/embedNavigation.ts",
+    "packages/storyboard/src/core/notebook/artifact-migration-aliases.ts",
+    "packages/storyboard/src/core/notebook/docs/catalog.node.ts",
+    "packages/storyboard/src/core/notebook/docs/compiler.ts",
+    "packages/storyboard/src/core/notebook/docs/discovery.node.ts",
+    "packages/storyboard/src/core/notebook/docs/metadata.ts",
+    "packages/storyboard/src/core/notebook/docs/source-model.ts",
+    "packages/storyboard/src/core/notebook/docs/vite-plugin.ts",
+    "packages/storyboard/src/core/notebook/first-look/catalog.node.ts",
+    "packages/storyboard/src/core/notebook/first-look/contract.ts",
+    "packages/storyboard/src/core/notebook/first-look/descriptors.ts",
+    "packages/storyboard/src/core/notebook/first-look/discovery.node.ts",
+    "packages/storyboard/src/core/notebook/first-look/routes.ts",
+    "packages/storyboard/src/core/notebook/layout.ts",
+    "packages/storyboard/src/core/notebook/navigation-tree.ts",
+    "packages/storyboard/src/core/notebook/navigation.ts",
+    "packages/storyboard/src/core/notebook/operations.node.ts",
+    "packages/storyboard/src/core/notebook/reader.node.ts",
+    "packages/storyboard/src/core/notebook/routes.node.ts",
+    "packages/storyboard/src/core/notebook/sibling-order.ts",
+    "packages/storyboard/src/core/runtimeDir.ts",
+    "packages/storyboard/src/core/session/notebookView.ts",
+    "packages/storyboard/src/core/site/catalog.node.ts",
+    "packages/storyboard/src/core/site/contract.ts",
+    "packages/storyboard/src/core/stores/canvasConfig.ts",
+    "packages/storyboard/src/core/stores/configSchema.ts",
+    "packages/storyboard/src/core/stores/themeBootstrap.ts",
+    "packages/storyboard/src/core/stores/themeHues.ts",
+    "packages/storyboard/src/internals/notebook/vite.js",
+    "packages/storyboard/src/internals/vite/data-operations.js",
+    "packages/storyboard/src/internals/vite/prototype-css.js",
+    "packages/storyboard/src/internals/vite/statefullyCompatibility.js"
   ]
 }

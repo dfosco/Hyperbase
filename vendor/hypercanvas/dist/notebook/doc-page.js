@@ -1,21 +1,23 @@
 import * as runtime from "react/jsx-runtime";
 import { jsx, jsxs } from "react/jsx-runtime";
 import * as React from "react";
-import { createContext, forwardRef, useContext, useRef, useState, useSyncExternalStore, useLayoutEffect, useCallback, useEffect, useMemo, isValidElement, cloneElement } from "react";
+import { createContext, useRef, useState, useSyncExternalStore, useLayoutEffect, useCallback, useEffect, useMemo, useContext, isValidElement, cloneElement } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import * as documents from "virtual:hypercanvas-documents";
-import { g as getWidgetSurfaceCatalog, C as CanvasWidget, S as Site, P as Prototype, I as Image$1, d as documentCss, T as Tooltip, a as TooltipTrigger, b as TooltipContent, D as DocumentContent, c as DocumentContext, e as Document } from "./chunks/Document-2gwDP-Y5.js";
-import { s as setDynamicActions, c as clearDynamicActions, I as Icon } from "./chunks/Icon-D6qvShid.js";
-import { s as subscribeToWidgetRegistry, g as getWidgetRegistrySnapshot } from "./chunks/_commonjsHelpers-CXnYerf6.js";
-import { C as ChevronDown, B as Button, I as Input } from "./chunks/input-D-1mYuzc.js";
-import { c as createLucideIcon, a as cn } from "./chunks/createLucideIcon-CV-5aOV3.js";
-import { u as useTriggerFocusGuards, a as useAnchoredPopupScrollLock, b as useToolbarRootContext, c as useSelectRootContext, d as useSelectRootPropsContext, e as useSelectPositionerContext, L as LIST_FUNCTIONAL_STYLES, s as styleDisableScrollbar, g as getMaxScrollOffset, n as normalizeScrollOffset, S as SCROLL_EDGE_TOLERANCE_PX, f as SelectRoot, h as SelectTrigger$1, i as SelectIcon, j as SelectValue$1, k as SelectPortal, l as SelectPositioner, m as SelectPopup, o as SelectItem$1, p as SelectItemText, q as SelectItemIndicator, M as MenuItem } from "./chunks/MenuItem-O40zxRgT.js";
-import { f as formatErrorMessage, R as ReactStore, t as triggerHover, a as triggerPress, e as escapeKey, b as attachPreventUnmountOnClose, c as closePress, P as PATIENT_CLICK_THRESHOLD, d as focusOut, g as createPopupOpenState, T as Timeout, F as FloatingTree, h as fastComponent, u as usePopupRootSync, i as useImplicitActiveTrigger, j as useOpenStateTransitions, k as createChangeEventDetails, l as imperativeAction, m as PopupHandleAttachment, n as usePopupRootStore, o as usePopupInteractionProps, p as fastComponentRef, q as usePopupHandleStore, r as useBaseUiId, s as useTriggerDataForwarding, v as useButton, w as useRenderElement, C as CLICK_TRIGGER_IDENTIFIER, x as FocusGuard, y as pressableTriggerOpenStateMapping, z as triggerOpenStateMapping, A as FloatingPortal, B as POPUP_COLLISION_AVOIDANCE, D as useFloatingNodeId, E as useAnimationsFinished, G as useIsoLayoutEffect, I as InternalBackdrop, H as inertValue, J as FloatingNode, K as useStableCallback, L as useOpenChangeComplete, M as createDefaultInitialFocus, N as FOCUSABLE_POPUP_PROPS, O as popupTransitionStateMapping, Q as COMPOSITE_KEYS, S as FloatingFocusManager, U as isHTMLElement, V as useTimeout, W as useTransitionStatus, X as transitionStatusMapping } from "./chunks/composite-WCaVrKIy.js";
+import { g as getWidgetSurfaceCatalog, C as CanvasWidget, S as Site, P as Prototype, I as Image$1, d as documentCss, D as DocumentContent, a as DocumentContext, b as Document } from "./chunks/Document-DbLUnVhy.js";
+import { T as Tooltip, a as TooltipTrigger, b as TooltipContent } from "./chunks/tooltip-content-CaxwY_7M.js";
+import { s as setDynamicActions, c as clearDynamicActions } from "./chunks/commandActions-CvE2nUEH.js";
+import { s as subscribeToWidgetRegistry, g as getWidgetRegistrySnapshot } from "./chunks/widgetRegistry-CmXYjxwi.js";
+import { I as Icon } from "./chunks/Icon-I4lR4N0q.js";
+import { u as useHoverReferenceInteraction, s as safePolygon, a as useAnchorPositioning, b as usePositioner, c as useHoverFloatingInteraction, g as getDisabledMountTransitionStyles, C as CanvasToolsSurface, d as CanvasToolsGroup, e as CanvasToolButton, f as CanvasToolsPopup, I as Input, h as CanvasToolMenuItem, B as Button, i as CanvasToolMenuLabel } from "./chunks/CanvasToolsPresentation-CgLIau-Y.js";
+import { c as createLucideIcon, a as cn } from "./chunks/button-Bi0ciDEN.js";
+import { C as ChevronDown } from "./chunks/chevron-down-D7UtqrIn.js";
+import { u as useTriggerFocusGuards, a as useAnchoredPopupScrollLock, b as useToolbarRootContext, c as useSelectRootContext, d as useSelectRootPropsContext, e as useSelectPositionerContext, L as LIST_FUNCTIONAL_STYLES, s as styleDisableScrollbar, g as getMaxScrollOffset, n as normalizeScrollOffset, S as SCROLL_EDGE_TOLERANCE_PX, f as SelectRoot, h as SelectTrigger$1, i as SelectIcon, j as SelectValue$1, k as SelectPortal, l as SelectPositioner, m as SelectPopup, o as SelectItem$1, p as SelectItemText, q as SelectItemIndicator } from "./chunks/SelectItemText-D9UPRV0P.js";
+import { f as formatErrorMessage, R as ReactStore, t as triggerHover, a as triggerPress, e as escapeKey, b as attachPreventUnmountOnClose, c as closePress, P as PATIENT_CLICK_THRESHOLD, d as focusOut, g as createPopupOpenState, T as Timeout, F as FloatingTree, h as fastComponent, u as usePopupRootSync, i as useImplicitActiveTrigger, j as useOpenStateTransitions, k as createChangeEventDetails, l as imperativeAction, m as PopupHandleAttachment, n as usePopupRootStore, o as usePopupInteractionProps, p as fastComponentRef, q as usePopupHandleStore, r as useBaseUiId, s as useTriggerDataForwarding, v as useButton, w as useRenderElement, C as CLICK_TRIGGER_IDENTIFIER, x as FocusGuard, y as pressableTriggerOpenStateMapping, z as triggerOpenStateMapping, A as FloatingPortal, B as POPUP_COLLISION_AVOIDANCE, D as useFloatingNodeId, E as useAnimationsFinished, G as useIsoLayoutEffect, I as InternalBackdrop, H as inertValue, J as FloatingNode, K as useStableCallback, L as useOpenChangeComplete, M as createDefaultInitialFocus, N as FOCUSABLE_POPUP_PROPS, O as popupTransitionStateMapping, Q as COMPOSITE_KEYS, S as FloatingFocusManager, U as isHTMLElement, V as useTimeout, W as useTransitionStatus, X as transitionStatusMapping } from "./chunks/composite-z4dIV_BK.js";
 import { u as uploadImage } from "./chunks/canvasApi-HT5Txujd.js";
 import * as ReactDOM from "react-dom";
-import { p as popupStoreSelectors, c as createInitialPopupStoreState, P as PopupTriggerMap, u as useDismiss } from "./chunks/useScrollLock-6_AWQWRh.js";
-import { u as useClick, a as useOpenMethodTriggerProps } from "./chunks/useOpenInteractionType-evAUFDho.js";
-import { u as useHoverReferenceInteraction, s as safePolygon, a as useAnchorPositioning, b as usePositioner, c as useHoverFloatingInteraction, g as getDisabledMountTransitionStyles } from "./chunks/FieldControl-s34cBhar.js";
+import { p as popupStoreSelectors, c as createInitialPopupStoreState, P as PopupTriggerMap, u as useDismiss } from "./chunks/useScrollLock-DWfGfMje.js";
+import { u as useClick, a as useOpenMethodTriggerProps } from "./chunks/useOpenInteractionType-B_v65zSf.js";
 import { c as createDocumentResolvers } from "./chunks/resolvers-CjNPHTkb.js";
 const page = "_page_8dmqw_1";
 const styles = {
@@ -1241,78 +1243,6 @@ function SelectScrollDownButton({
     }
   );
 }
-const MenuGroupContext = /* @__PURE__ */ React.createContext(void 0);
-if (process.env.NODE_ENV !== "production") MenuGroupContext.displayName = "MenuGroupContext";
-function useMenuGroupRootContext() {
-  const context = React.useContext(MenuGroupContext);
-  if (context === void 0) {
-    throw new Error(process.env.NODE_ENV !== "production" ? "Base UI: MenuGroupContext is missing. Menu group parts must be used within <Menu.Group> or <Menu.RadioGroup>." : formatErrorMessage(31));
-  }
-  return context;
-}
-const MenuGroupLabel = /* @__PURE__ */ React.forwardRef(function MenuGroupLabel2(componentProps, forwardedRef) {
-  const {
-    render,
-    className,
-    style,
-    id: idProp,
-    ...elementProps
-  } = componentProps;
-  const id = useBaseUiId(idProp);
-  const setLabelId = useMenuGroupRootContext();
-  useIsoLayoutEffect(() => {
-    setLabelId(id);
-    return () => {
-      setLabelId((currentId) => currentId === id ? void 0 : currentId);
-    };
-  }, [setLabelId, id]);
-  return useRenderElement("div", componentProps, {
-    ref: forwardedRef,
-    props: {
-      id,
-      "aria-hidden": true,
-      ...elementProps
-    }
-  });
-});
-if (process.env.NODE_ENV !== "production") MenuGroupLabel.displayName = "MenuGroupLabel";
-const typography = "hc-font-sans hc-text-xs hc-leading-4 hc-font-normal";
-const PresentationContext = createContext("rounded");
-const selectedState = "hc-aria-pressed:bg-[var(--hc-color-tool-selected)] hc-data-[state=open]:bg-[var(--hc-color-tool-selected)] hc-data-popup-open:bg-[var(--hc-color-tool-selected)] hc-data-active:bg-[var(--hc-color-tool-selected)] hc-data-selected:bg-[var(--hc-color-tool-selected)] hc-data-[force=selected]:bg-[var(--hc-color-tool-selected)]";
-const selectedRing = "hc-aria-pressed:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)] hc-data-[state=open]:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)] hc-data-popup-open:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)] hc-data-active:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)] hc-data-selected:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)] hc-data-[force=selected]:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring),0_1px_0_var(--hc-color-border)]";
-function themeBoundary(appearance) {
-  return appearance && appearance !== "inherit" ? { "data-sb-surface": "toolbar", "data-sb-toolbar-theme": appearance } : { "data-hc-surface": "toolbar" };
-}
-const CanvasToolsSurface = forwardRef(function CanvasToolsSurface2({ appearance = "inherit", variant = "rounded", className, children, ...props }, ref) {
-  const surfaceClass = variant === "hybrid" ? "hc-gap-0 hc-rounded-[14px] hc-bg-[var(--hc-color-field)] hc-p-1 hc-shadow-[var(--hc-shadow-tool-surface)]" : variant === "compact" ? "hc-gap-0 hc-rounded-[10px] hc-bg-[var(--hc-color-field)] hc-p-0.5 hc-shadow-[var(--hc-shadow-tool-surface)]" : "hc-gap-2.5 hc-rounded-none hc-bg-transparent hc-p-0 hc-shadow-none";
-  return /* @__PURE__ */ jsx(PresentationContext.Provider, { value: variant, children: /* @__PURE__ */ jsx("div", { ref, "data-canvas-tools-presentation": variant, "data-hc-ui": "", ...themeBoundary(appearance), className: cn(typography, "hc-box-border hc-flex hc-w-max hc-max-w-full hc-flex-wrap hc-items-center hc-text-[var(--hc-color-foreground)]", surfaceClass, className), ...props, children }) });
-});
-const CanvasToolsGroup = forwardRef(function CanvasToolsGroup2({ className, ...props }, ref) {
-  const variant = useContext(PresentationContext);
-  const groupClass = variant === "hybrid" || variant === "compact" ? `hc-relative hc-gap-0.5 ${variant === "compact" ? "hc-px-0.5" : "hc-px-1"} hc-[&+&]:before:absolute hc-[&+&]:before:-left-px hc-[&+&]:before:top-1.5 hc-[&+&]:before:bottom-1.5 hc-[&+&]:before:w-px hc-[&+&]:before:bg-[var(--hc-color-border)] hc-[&+&]:before:content-['']` : "hc-gap-1.5 hc-rounded-[16px] hc-bg-[var(--hc-color-background-muted)] hc-p-1 hc-shadow-[inset_0_0_0_1px_var(--hc-color-border)]";
-  return /* @__PURE__ */ jsx("div", { ref, role: "group", className: cn("hc-inline-flex hc-min-w-0 hc-items-center", groupClass, className), ...props });
-});
-const CanvasToolButton = forwardRef(function CanvasToolButton2({ appearance, variant: variantProp, className, ...props }, ref) {
-  const inheritedVariant = useContext(PresentationContext);
-  const variant = variantProp || inheritedVariant;
-  const buttonClass = variant === "hybrid" ? "hc-size-7 hc-rounded-[10px] hc-bg-transparent hc-shadow-none hc-[&_svg]:size-3.5" : variant === "compact" ? "hc-size-5 hc-rounded-[7px] hc-bg-transparent hc-shadow-none hc-[&_svg]:size-3" : "hc-size-8 hc-rounded-[12px] hc-bg-[var(--hc-color-field)] hc-shadow-[inset_0_0_0_1px_var(--hc-color-border),0_1px_0_var(--hc-color-border)] hc-[&_svg]:size-4";
-  const selectedClass = variant === "hybrid" ? "hc-aria-pressed:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)] hc-data-[state=open]:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)] hc-data-popup-open:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)] hc-data-active:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)] hc-data-selected:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)] hc-data-[force=selected]:shadow-[inset_0_0_0_1px_var(--hc-color-tool-ring)]" : selectedRing;
-  return /* @__PURE__ */ jsx(Button, { ref, "data-canvas-tool": "", ...appearance ? themeBoundary(appearance) : {}, className: cn("hc-box-border hc-inline-grid hc-flex-none hc-cursor-pointer hc-place-items-center hc-border-0 hc-p-0 hc-[font:inherit] hc-text-[var(--hc-color-foreground)] hc-transition-[background-color,color] hc-duration-[120ms] hc-ease-[ease] hc-hover:enabled:bg-[var(--hc-color-hover)] hc-data-[force=hover]:bg-[var(--hc-color-hover)] hc-focus-visible:outline-2 hc-focus-visible:outline-offset-2 hc-focus-visible:outline-[var(--hc-color-ring)] hc-data-[force=focus]:outline-2 hc-data-[force=focus]:outline-offset-2 hc-data-[force=focus]:outline-[var(--hc-color-ring)]", selectedState, selectedClass, "hc-disabled:cursor-not-allowed hc-disabled:bg-transparent hc-disabled:text-[var(--hc-color-foreground-muted)] hc-disabled:opacity-45 hc-data-[force=disabled]:cursor-not-allowed hc-data-[force=disabled]:bg-transparent hc-data-[force=disabled]:text-[var(--hc-color-foreground-muted)] hc-data-[force=disabled]:opacity-45 hc-[&_svg]:flex-none hc-[&_svg]:[stroke-width:1.75] hc-motion-reduce:transition-none", buttonClass, className), ...props });
-});
-const CanvasToolsPopup = forwardRef(function CanvasToolsPopup2({ as: Component = "div", appearance = "inherit", className, ...props }, ref) {
-  return /* @__PURE__ */ jsx(Component, { ref, "data-canvas-tools-popup": "", "data-hc-ui": "", ...themeBoundary(appearance), className: cn(typography, "hc-box-border hc-min-w-[212px] hc-rounded-[14px] hc-border hc-border-[var(--hc-color-border)] hc-bg-[var(--hc-color-field)] hc-p-1.5 hc-text-[var(--hc-color-foreground)] hc-shadow-[var(--hc-shadow-menu)]", className), ...props });
-});
-const CanvasToolMenuItem = forwardRef(function CanvasToolMenuItem2({ as: Component = MenuItem, className, ...props }, ref) {
-  return /* @__PURE__ */ jsx(Component, { ref, className: cn("hc-box-border hc-flex hc-h-8 hc-w-full hc-cursor-pointer hc-items-center hc-gap-2.5 hc-rounded-[9px] hc-border-0 hc-bg-transparent hc-px-2 hc-py-0 hc-text-left hc-text-xs hc-text-[var(--hc-color-foreground)] hc-data-highlighted:bg-[var(--hc-color-hover)] hc-hover:enabled:bg-[var(--hc-color-hover)] hc-focus-visible:outline-2 hc-focus-visible:outline-offset-[-2px] hc-focus-visible:outline-[var(--hc-color-ring)] hc-disabled:cursor-not-allowed hc-disabled:opacity-45 hc-[&_svg]:size-3.5 hc-[&_svg]:flex-none hc-[&_svg]:text-[var(--hc-color-foreground-muted)]", className), ...props });
-});
-const CanvasToolMenuLabel = forwardRef(function CanvasToolMenuLabel2({ as: Component = MenuGroupLabel, className, ...props }, ref) {
-  return /* @__PURE__ */ jsx(Component, { ref, className: cn("hc-m-0 hc-block hc-px-2 hc-pt-1.5 hc-pb-1 hc-text-[11px] hc-leading-4 hc-font-normal hc-text-[var(--hc-color-foreground-muted)]", className), ...props });
-});
-forwardRef(function CanvasToolValue2({ as: Component = "output", className, ...props }, ref) {
-  const variant = useContext(PresentationContext);
-  const sizeClass = variant === "hybrid" ? "hc-min-w-[42px] hc-px-0.5" : variant === "compact" ? "hc-min-w-[36px] hc-px-0.5" : "hc-min-w-[46px] hc-px-1";
-  return /* @__PURE__ */ jsx(Component, { ref, className: cn(sizeClass, "hc-text-center hc-text-[11.5px] hc-leading-4 hc-text-[var(--hc-color-foreground)] hc-tabular-nums", className), ...props });
-});
 const editor = "_editor_29lge_1";
 const title = "_title_29lge_2";
 const path = "_path_29lge_4";

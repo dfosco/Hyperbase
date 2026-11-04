@@ -82,8 +82,8 @@ const frame = "_frame_1ckvp_1";
 const css = {
   frame
 };
-const NotebookViewer = lazy(() => import("./chunks/NotebookViewer-CqvITZB1.js"));
-const CanvasViewer = lazy(() => import("./chunks/CanvasViewer-B80xfRB5.js"));
+const NotebookViewer = lazy(() => import("./chunks/NotebookViewer-DAs8-IvG.js"));
+const CanvasViewer = lazy(() => import("./chunks/CanvasViewer-CJVHKzkc.js"));
 const DocPage = lazy(() => import("./doc-page.js"));
 const SiteViewer = lazy(() => import("./chunks/SiteViewer-uSsH0qS_.js"));
 function PrototypeFrame({ prototype }) {

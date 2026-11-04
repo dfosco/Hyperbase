@@ -1,4 +1,4 @@
-// src/internals/notebook/vite.js
+// packages/storyboard/src/internals/notebook/vite.js
 import fs13 from "node:fs";
 import path14 from "node:path";
 import process2 from "node:process";
@@ -7,18 +7,18 @@ import statefully from "@dfosco/statefully/vite";
 import reactPlugin from "@vitejs/plugin-react";
 import tailwind from "@tailwindcss/vite";
 
-// src/core/notebook/docs/vite-plugin.ts
+// packages/storyboard/src/core/notebook/docs/vite-plugin.ts
 import { createHash as createHash3 } from "node:crypto";
 import fs10 from "node:fs";
 import path11 from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 
-// src/core/notebook/docs/discovery.node.ts
+// packages/storyboard/src/core/notebook/docs/discovery.node.ts
 import fs from "node:fs";
 import path from "node:path";
 
-// src/core/notebook/docs/metadata.ts
+// packages/storyboard/src/core/notebook/docs/metadata.ts
 import { parseDocument } from "yaml";
 var DOC_ID = /^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$/;
 function readDocMetadata(source, sourcePath) {
@@ -45,7 +45,7 @@ function readDocMetadata(source, sourcePath) {
   return { metadata, body: match ? source.slice(match[0].length) : source, lineOffset: match ? match[0].split("\n").length - 1 : 0, diagnostics };
 }
 
-// src/core/notebook/docs/discovery.node.ts
+// packages/storyboard/src/core/notebook/docs/discovery.node.ts
 var EXCLUDED = /* @__PURE__ */ new Set([".git", ".hypercanvas", ".storyboard", ".design-notebook", ".vite", ".cache", ".next", ".turbo", "node_modules", "dist", "build", "out", "coverage", "storybook-static", "publish"]);
 function resolveDocAsset(root, folder, reference) {
   if (!reference || /^(?:[a-z]+:|\/|\\)/i.test(reference) || reference.includes("\\")) return null;
@@ -67,7 +67,7 @@ function resolveDocAsset(root, folder, reference) {
   }
 }
 
-// src/core/notebook/docs/compiler.ts
+// packages/storyboard/src/core/notebook/docs/compiler.ts
 var DOCS_IMPORT_PATH = "design-notebook/docs";
 var BUILTINS = /* @__PURE__ */ new Set(["Prototype", "Site", "Image", "CanvasWidget"]);
 async function compileDocument(source, sourcePath) {
@@ -113,15 +113,15 @@ async function compileDocument(source, sourcePath) {
   return { ...parsed, source, compiledSource, assets: [...assets], diagnostics, available: !diagnostics.length && compiledSource !== null };
 }
 
-// src/core/notebook/operations.node.ts
+// packages/storyboard/src/core/notebook/operations.node.ts
 import fs9 from "node:fs";
 import path10 from "node:path";
 
-// src/core/site/catalog.node.ts
+// packages/storyboard/src/core/site/catalog.node.ts
 import fs2 from "node:fs";
 import path2 from "node:path";
 
-// src/core/artifact/visibility.ts
+// packages/storyboard/src/core/artifact/visibility.ts
 var ARTIFACT_SUFFIXES = [".prototype", ".component", ".canvas", ".site"];
 function artifactFolderLogicalName(folderName) {
   const basename2 = String(folderName || "").replaceAll("\\", "/").split("/").at(-1) || "";
@@ -131,7 +131,7 @@ function artifactFolderLogicalName(folderName) {
   return logicalName || null;
 }
 
-// src/core/site/contract.ts
+// packages/storyboard/src/core/site/contract.ts
 var LOOPBACK_HOSTS = /* @__PURE__ */ new Set(["localhost", "127.0.0.1", "::1", "[::1]"]);
 var SITE_ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 function normalizeSiteId(value) {
@@ -149,7 +149,7 @@ function normalizeSiteUrl(value, { loopbackOnly = false, label = "site URL" } = 
   return url.href;
 }
 
-// src/core/site/catalog.node.ts
+// packages/storyboard/src/core/site/catalog.node.ts
 var SITE_FORMAT_VERSION = 1;
 var SITE_DESCRIPTOR_FILE = "site.config.json";
 var SITE_ARTIFACT_MARKER_FILE = ".hypercanvas-artifact.json";
@@ -537,7 +537,7 @@ function readJson(file, fallback) {
   }
 }
 
-// src/core/notebook/layout.ts
+// packages/storyboard/src/core/notebook/layout.ts
 import fs3 from "node:fs";
 import path3 from "node:path";
 var NOTEBOOK_MANIFEST_FILE = "hypercanvas.notebook.json";
@@ -585,13 +585,13 @@ function resolveNotebookContentDirectory(root, name, { notebook = hasNotebookMan
   return managed;
 }
 
-// src/core/notebook/reader.node.ts
+// packages/storyboard/src/core/notebook/reader.node.ts
 import fs6 from "node:fs";
 import path6 from "node:path";
 import { createHash, randomUUID as randomUUID2 } from "node:crypto";
 import { parse as parseJsonc3 } from "jsonc-parser";
 
-// src/core/configFile.ts
+// packages/storyboard/src/core/configFile.ts
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { parse as parseJsonc } from "jsonc-parser";
@@ -667,11 +667,11 @@ function readAppConfig(root) {
   return null;
 }
 
-// src/core/notebook/first-look/catalog.node.ts
+// packages/storyboard/src/core/notebook/first-look/catalog.node.ts
 import fs5 from "node:fs";
 import path5 from "node:path";
 
-// src/core/notebook/artifact-migration-aliases.ts
+// packages/storyboard/src/core/notebook/artifact-migration-aliases.ts
 function normalizeNotebookArtifactMigrationAliases(value) {
   if (value === void 0) return {};
   if (!isRecord2(value)) return null;
@@ -734,7 +734,7 @@ function isRecord2(value) {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-// src/core/notebook/first-look/contract.ts
+// packages/storyboard/src/core/notebook/first-look/contract.ts
 var FIRST_LOOK_FORMAT_VERSION = 1;
 var FIRST_LOOK_PROTOTYPE_RUNTIME = Object.freeze({
   id: "@dfosco/statefully",
@@ -776,13 +776,13 @@ function isFirstLookId(value) {
   return typeof value === "string" && ID_PATTERN.test(value);
 }
 
-// src/core/notebook/first-look/discovery.node.ts
+// packages/storyboard/src/core/notebook/first-look/discovery.node.ts
 import fs4 from "node:fs";
 import path4 from "node:path";
 import { parse as parseJsonc2 } from "jsonc-parser";
 import { parseDocument as parseDocument2 } from "yaml";
 
-// src/core/notebook/first-look/descriptors.ts
+// packages/storyboard/src/core/notebook/first-look/descriptors.ts
 function isRecord3(value) {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -940,7 +940,7 @@ function validateFirstLookDescriptor(kind, descriptor) {
   return [];
 }
 
-// src/core/notebook/first-look/discovery.node.ts
+// packages/storyboard/src/core/notebook/first-look/discovery.node.ts
 function inside(root, candidate) {
   const relative = path4.relative(root, candidate);
   return relative === "" || !relative.startsWith(`..${path4.sep}`) && relative !== ".." && !path4.isAbsolute(relative);
@@ -1318,7 +1318,7 @@ function resolveIdentity(artifacts) {
   }
 }
 
-// src/core/notebook/first-look/routes.ts
+// packages/storyboard/src/core/notebook/first-look/routes.ts
 function normalizeRouteBase(base = "/") {
   if (typeof base !== "string" || !base.startsWith("/") || base.startsWith("//") || /[?#\\]/.test(base)) {
     throw new TypeError("base must be an absolute same-origin path prefix.");
@@ -1421,7 +1421,7 @@ function buildArtifactPath(artifact, { base = "/", viewId } = {}) {
   return withBase(routePath, base);
 }
 
-// src/core/notebook/first-look/catalog.node.ts
+// packages/storyboard/src/core/notebook/first-look/catalog.node.ts
 var LEGACY_ARTIFACT_MARKER_FILE = ".hypercanvas-artifact.json";
 var FIRST_LOOK_DIAGNOSTIC_SOURCE = "first-look";
 function tagged(diagnostic3) {
@@ -1621,7 +1621,7 @@ function portableNotebookId(root) {
   return isFirstLookId(base) ? `notebook-${base}` : "notebook-portable";
 }
 
-// src/core/runtimeDir.ts
+// packages/storyboard/src/core/runtimeDir.ts
 import { existsSync } from "node:fs";
 import { join as join2 } from "node:path";
 var RUNTIME_DIR_NAME = ".hypercanvas";
@@ -1634,7 +1634,7 @@ function resolveRuntimeDir(root) {
   return primaryDir;
 }
 
-// src/core/notebook/navigation.ts
+// packages/storyboard/src/core/notebook/navigation.ts
 import { randomUUID } from "node:crypto";
 var NOTEBOOK_PAGE_TYPES = Object.freeze(["prototype", "canvas", "component", "site", "doc"]);
 var LEGACY_NOTEBOOK_PAGE_TYPES = ["prototype", "canvas", "component", "site"];
@@ -1811,7 +1811,7 @@ function normalizeNavigation(value, pages) {
   }
 }
 
-// src/core/notebook/reader.node.ts
+// packages/storyboard/src/core/notebook/reader.node.ts
 function isPageType(value) {
   return NOTEBOOK_PAGE_TYPES.some((type) => type === value);
 }
@@ -3027,7 +3027,7 @@ function listSiteFiles(root) {
   }));
 }
 
-// src/core/notebook/docs/catalog.node.ts
+// packages/storyboard/src/core/notebook/docs/catalog.node.ts
 import path7 from "node:path";
 function documentCatalog(snapshot, { sites = [] } = {}) {
   const documents = snapshot.artifacts.filter((artifact) => artifact.kind === "doc").map((artifact) => {
@@ -3062,7 +3062,7 @@ function documentCatalog(snapshot, { sites = [] } = {}) {
   return { documents, artifacts };
 }
 
-// src/core/notebook/routes.node.ts
+// packages/storyboard/src/core/notebook/routes.node.ts
 import fs7 from "node:fs";
 import path8 from "node:path";
 import { globSync } from "glob";
@@ -3276,13 +3276,13 @@ ${storyboardViewMap(notebookRoot, artifacts)}` : ""}
 export const PROTOTYPE_ROUTE_ALIASES = ${JSON.stringify(routeAliases)}`;
 }
 
-// src/core/notebook/navigation-tree.ts
+// packages/storyboard/src/core/notebook/navigation-tree.ts
 import fs8 from "node:fs";
 import { createHash as createHash2 } from "node:crypto";
 import path9 from "node:path";
 import ignore from "ignore";
 
-// src/core/stores/canvasConfig.ts
+// packages/storyboard/src/core/stores/canvasConfig.ts
 var AUTO_PLACE_DEFAULTS = Object.freeze({
   overlap: Object.freeze({
     "overlap-nudge-trigger": 80,
@@ -3320,7 +3320,7 @@ function normalizeCanvasAutoPlace(value, fallback = AUTO_PLACE_DEFAULTS) {
   };
 }
 
-// src/core/session/notebookView.ts
+// packages/storyboard/src/core/session/notebookView.ts
 var DEFAULT_NOTEBOOK_BROWSER_LINK = Object.freeze({
   mode: "hidden",
   showTools: false
@@ -3333,7 +3333,7 @@ function normalizeNotebookBrowserLinkOptions(value) {
   };
 }
 
-// src/core/stores/themeHues.ts
+// packages/storyboard/src/core/stores/themeHues.ts
 var THEME_HUE_BASE = 295;
 var DEFAULT_THEME_HUES = {
   purple: { label: "Purple", hue: THEME_HUE_BASE },
@@ -3391,7 +3391,7 @@ function themeHueVariables(theming) {
   };
 }
 
-// src/core/stores/configSchema.ts
+// packages/storyboard/src/core/stores/configSchema.ts
 var DEFAULT_MAX_FOLDER_LAYERS = 4;
 function normalizeNotebookSidebar(value) {
   const layers = value?.maxFolderLayers;
@@ -3419,9 +3419,6 @@ var configDefaults = {
   port: 0,
   devDomainColor: "",
   repository: { owner: "", name: "" },
-  lifecycle: {
-    hooks: { onStart: [], onArtifactCreate: [] }
-  },
   modes: { enabled: false },
   comments: { discussions: { category: "Comments" } },
   plugins: {},
@@ -3444,6 +3441,8 @@ var configDefaults = {
   featureFlags: {
     // Core enforces this policy; browser-local overrides cannot enable it.
     hyperAgentInterface: true,
+    // Read once by Core at launch, never from browser-local flag overrides.
+    usePaseoApp: true,
     // Opt into the wrapper-only one-time browser handoff and session gate.
     // Disabled by default so additional browsers can open the local Core UI.
     browserSessionHandoff: false
@@ -3637,7 +3636,7 @@ function getConfig(raw = {}) {
   return mergeConfig(configDefaults, normalized);
 }
 
-// src/core/notebook/sibling-order.ts
+// packages/storyboard/src/core/notebook/sibling-order.ts
 import { parse as parseJsonc4 } from "jsonc-parser";
 function refKey(ref) {
   return ref.kind === "folder" ? `folder\0${ref.path}` : `artifact\0${ref.id}`;
@@ -3710,7 +3709,7 @@ function isRecord7(value) {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-// src/core/notebook/navigation-tree.ts
+// packages/storyboard/src/core/notebook/navigation-tree.ts
 function notebookFolderRevision(root, folderPath) {
   const stat = fs8.lstatSync(path9.join(root, folderPath));
   return createHash2("sha256").update([stat.dev, stat.ino, stat.mode, stat.mtimeMs, stat.ctimeMs].join(":")).digest("hex");
@@ -4112,7 +4111,7 @@ function buildNotebookNavigationTree(root, source, siblingOrders = {}, reorderSi
   return { root: rootNode, capabilities: { reorderSiblings }, sidebarIgnored: [...sidebarIgnorePatterns(rootRealPath)] };
 }
 
-// src/core/notebook/operations.node.ts
+// packages/storyboard/src/core/notebook/operations.node.ts
 function removeLocalSiteInputs(value) {
   delete value.local;
   delete value.binding;
@@ -4169,7 +4168,7 @@ function notebookSourceTree(source) {
   return buildNotebookNavigationTree(source.root, { ...source.snapshot, manifest: source.snapshot.manifest ?? {} });
 }
 
-// src/core/notebook/docs/vite-plugin.ts
+// packages/storyboard/src/core/notebook/docs/vite-plugin.ts
 var INDEX = "virtual:hypercanvas-documents";
 var CONTENT = "virtual:hypercanvas-document:";
 var ASSET = "virtual:hypercanvas-document-asset:";
@@ -4332,14 +4331,14 @@ if(import.meta.hot)import.meta.hot.accept(next=>{if(next){import.meta.hot.data.l
   };
 }
 
-// src/internals/vite/data-operations.js
+// packages/storyboard/src/internals/vite/data-operations.js
 import fs11 from "node:fs";
 import path12 from "node:path";
 import { createHash as createHash4 } from "node:crypto";
 import { globSync as globSync2 } from "glob";
 import { parse as parseJsonc5 } from "jsonc-parser";
 
-// src/core/canvas/canvasEvents.ts
+// packages/storyboard/src/core/canvas/canvasEvents.ts
 import { z } from "zod";
 var CANVAS_FORMAT_VERSION = 1;
 var CANVAS_FORMAT_VERSION_WITH_LAYOUT = 2;
@@ -4585,7 +4584,7 @@ function assertSupportedCanvasFormat(values) {
   }
 }
 
-// src/core/canvas/materializer.ts
+// packages/storyboard/src/core/canvas/materializer.ts
 function splitJsonObjects(text) {
   const chunks = [];
   let start = -1;
@@ -4977,7 +4976,7 @@ function isRecord10(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
-// src/core/canvas/identity.ts
+// packages/storyboard/src/core/canvas/identity.ts
 var CANVAS_SUFFIX_RE = /\.canvas\.jsonl$/;
 var FOLDER_SUFFIX_RE = /([^/]+)\.folder\//g;
 function toCanvasId(relPath) {
@@ -5002,7 +5001,7 @@ function toCanvasId(relPath) {
   return prefix + (p || "unknown");
 }
 
-// src/internals/vite/data-operations.js
+// packages/storyboard/src/internals/vite/data-operations.js
 var GLOB_PATTERN = "**/*.{flow,scene,object,record,prototype,folder,component}.{json,jsonc}";
 var CANVAS_GLOB_PATTERN = "**/*.canvas.jsonl";
 var CANVAS_META_GLOB_PATTERN = "**/*.meta.json";
@@ -6114,7 +6113,7 @@ ${storyEntries.join(",\n")}
   ].join("\n");
 }
 
-// src/internals/vite/prototype-css.js
+// packages/storyboard/src/internals/vite/prototype-css.js
 import fs12 from "node:fs";
 import path13 from "node:path";
 import { parse as parseJsonc6 } from "jsonc-parser";
@@ -6182,7 +6181,7 @@ ${code.slice(frontmatter.length)}`, map: null };
   return null;
 }
 
-// src/internals/vite/statefullyCompatibility.js
+// packages/storyboard/src/internals/vite/statefullyCompatibility.js
 function statefullyCompatibilityModule({ coreSource, reactSource, helperSource, react: react2 = false }) {
   if (react2) return `
 import { createElement, useEffect, useMemo } from 'react';
@@ -6227,7 +6226,7 @@ export const clearKnobValue = (id, options = {}) => options.session || !options.
 `;
 }
 
-// src/core/stores/themeBootstrap.ts
+// packages/storyboard/src/core/stores/themeBootstrap.ts
 var THEME_STORAGE_KEY = "sb-color-scheme";
 var SYNC_STORAGE_KEY = "sb-theme-sync";
 var SYNC_DEFAULTS_VERSION_KEY = "sb-theme-sync-defaults-version";
@@ -6313,7 +6312,7 @@ function renderInlineBootstrapScript(themesCfg) {
   ].join("\n");
 }
 
-// src/internals/notebook/vite.js
+// packages/storyboard/src/internals/notebook/vite.js
 var IDS = ["virtual:storyboard-data-index", "virtual:hypercanvas-app-config", "virtual:hypercanvas-notebook-routes", "virtual:storyboard-notebook-prototype-routes", "virtual:hypercanvas-portable-notebook", "virtual:hypercanvas-prototype-wrapper"];
 var RUNTIME_DATA = "@dfosco/statefully/data-runtime";
 var core = fileURLToPath2(import.meta.resolve("@dfosco/statefully"));
@@ -6327,6 +6326,7 @@ var contained = (root, file) => {
   const relative = path14.relative(root, file);
   return relative !== ".." && !relative.startsWith(`..${path14.sep}`) && !path14.isAbsolute(relative);
 };
+var escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function prototypeHtml(source, artifact, base, build) {
   const folder = path14.resolve(source.root, artifact.folderPath);
   const file = path14.resolve(folder, artifact.entry || "");
@@ -6350,6 +6350,8 @@ function notebookVite({ notebookRoot, base = "/" } = {}) {
   if (!notebookRoot || !path14.isAbsolute(notebookRoot)) throw new TypeError("notebookVite requires an absolute notebookRoot.");
   notebookRoot = fs13.realpathSync(notebookRoot);
   const runtimeRoot = path14.dirname(fileURLToPath2(import.meta.resolve("@dfosco/hypercanvas/notebook/viewer")));
+  const runtimeOutput = runtimeRoot.split(path14.sep).join("/");
+  const compiledRuntimePattern = new RegExp(`^${escapeRegex(runtimeOutput)}(?:/[^?]*)?(?:\\?.*)?$`);
   const runtimePackageRoot = path14.resolve(runtimeRoot, "../..");
   const runtimeManifest = JSON.parse(fs13.readFileSync(path14.join(runtimeRoot, "runtime-manifest.json"), "utf8"));
   const relativeBase = base === "./";
@@ -6490,7 +6492,7 @@ function notebookVite({ notebookRoot, base = "/" } = {}) {
       }
     }
   };
-  return [adapter, reactPlugin(), tailwind(), documentsPlugin({ root: () => notebookRoot, mode: "static", renderer: "@dfosco/hypercanvas/docs" }), state];
+  return [adapter, reactPlugin({ exclude: [/\/node_modules\//, compiledRuntimePattern] }), tailwind(), documentsPlugin({ root: () => notebookRoot, mode: "static", renderer: "@dfosco/hypercanvas/docs" }), state];
 }
 export {
   notebookVite as default

@@ -14,8 +14,11 @@ import { useFeatureFlag } from "./useFeatureFlag.js";
 import { subscribeToMode, getModeSnapshot, getCurrentMode, getRegisteredModes, activateMode } from "./core-8.js";
 import { u as u3, a } from "./chunks/useThemeState-6KPJA_hY.js";
 import { subscribeToConfig, getConfigSnapshot, getConfig } from "./core-2.js";
-import { K, u as u4 } from "./chunks/KnobsForm-DJarcYie.js";
+import { K, u as u4 } from "./chunks/KnobsForm-BaG6jvFj.js";
 import { installHashPreserver } from "./hash-preserver.js";
+import { I } from "./chunks/Icon-CY9OeunJ.js";
+import { N, a as a2, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r } from "./chunks/NotebookShellPresentation-E79zlNst.js";
+import { e as e2, h as h2, i as i2, j as j2, d as d2, f as f2, C } from "./chunks/CanvasToolsPresentation-CgLIau-Y.js";
 function useFlowData(path, opts) {
   const context = useContext(StoryboardContext);
   if (context === null) {
@@ -41,7 +44,7 @@ function useFlowData(path, opts) {
     if (exact !== null) return exact;
     const prefix = path + ".";
     const allParams = readAllParams();
-    const childKeys = Object.keys(allParams).filter((k) => k.startsWith(prefix));
+    const childKeys = Object.keys(allParams).filter((k2) => k2.startsWith(prefix));
     const sceneValue = getByPath(data, path);
     if (childKeys.length > 0 && sceneValue !== void 0) {
       const merged = deepClone(sceneValue);
@@ -101,18 +104,18 @@ function useFlows() {
   const { flowName: activeFlow, prototypeName } = context;
   const flows = useMemo(() => {
     if (!prototypeName) return [];
-    return getFlowsForPrototype(prototypeName).map((f) => {
-      const meta = getFlowMeta(f.key);
+    return getFlowsForPrototype(prototypeName).map((f3) => {
+      const meta = getFlowMeta(f3.key);
       return {
-        key: f.key,
-        name: f.name,
-        title: meta?.title || f.name,
-        route: resolveFlowRoute(f.key)
+        key: f3.key,
+        name: f3.name,
+        title: meta?.title || f3.name,
+        route: resolveFlowRoute(f3.key)
       };
     });
   }, [prototypeName]);
   const switchFlow = useCallback((flowKey) => {
-    const flow = flows.find((f) => f.key === flowKey);
+    const flow = flows.find((f3) => f3.key === flowKey);
     if (flow) {
       sbNavigate(flow.route);
     }
@@ -129,7 +132,7 @@ function applyRecordOverrides(baseRecords, resolvedName, plainName) {
   const resolvedPrefix = `record.${resolvedName}.`;
   const plainPrefix = plainName && plainName !== resolvedName ? `record.${plainName}.` : null;
   const overrideKeys = Object.keys(allParams).filter(
-    (k) => k.startsWith(resolvedPrefix) || plainPrefix && k.startsWith(plainPrefix)
+    (k2) => k2.startsWith(resolvedPrefix) || plainPrefix && k2.startsWith(plainPrefix)
   );
   if (overrideKeys.length === 0) return baseRecords;
   const records = deepClone(baseRecords);
@@ -145,7 +148,7 @@ function applyRecordOverrides(baseRecords, resolvedName, plainName) {
     byEntryId[entryId][fieldPath] = allParams[key];
   }
   for (const [entryId, fields] of Object.entries(byEntryId)) {
-    const existing = records.find((e) => e.id === entryId);
+    const existing = records.find((e3) => e3.id === entryId);
     if (existing) {
       for (const [fieldPath, value] of Object.entries(fields)) {
         setByPath(existing, fieldPath, value);
@@ -173,7 +176,7 @@ function useRecord(recordName, paramName = "id") {
       const resolvedName = resolveRecordName(prototypeName, recordName);
       const base = loadRecord(resolvedName);
       const merged = applyRecordOverrides(base, resolvedName, recordName);
-      return merged.find((e) => e[paramName] === paramValue) ?? null;
+      return merged.find((e3) => e3[paramName] === paramValue) ?? null;
     } catch (err) {
       console.error(`[useRecord] ${err.message}`);
       return null;
@@ -217,7 +220,7 @@ function useObject(objectName, path) {
     const plainPrefix = objectName !== resolvedName ? `object.${objectName}.` : null;
     const allParams = readAllParams();
     const overrideKeys = Object.keys(allParams).filter(
-      (k) => k.startsWith(resolvedPrefix) || plainPrefix && k.startsWith(plainPrefix)
+      (k2) => k2.startsWith(resolvedPrefix) || plainPrefix && k2.startsWith(plainPrefix)
     );
     if (overrideKeys.length > 0) {
       data = deepClone(data);
@@ -234,7 +237,7 @@ function useObject(objectName, path) {
     const subResolved = exactResolved + ".";
     const subPlain = exactPlain ? exactPlain + "." : null;
     const childKeys = overrideKeys.filter(
-      (k) => k.startsWith(subResolved) || subPlain && k.startsWith(subPlain)
+      (k2) => k2.startsWith(subResolved) || subPlain && k2.startsWith(subPlain)
     );
     const baseValue = getByPath(data, path);
     if (childKeys.length > 0 && baseValue !== void 0) {
@@ -302,7 +305,7 @@ function useMode() {
   useSyncExternalStore(subscribeToMode, getModeSnapshot);
   const mode = getCurrentMode();
   const modes = getRegisteredModes();
-  const currentModeConfig = modes.find((m) => m.name === mode);
+  const currentModeConfig = modes.find((m2) => m2.name === mode);
   const switchMode = useCallback((name, options) => {
     activateMode(name, options);
   }, []);
@@ -319,11 +322,38 @@ function useConfig(domain) {
 }
 const FormContext = createContext(null);
 export {
+  e2 as CanvasToolButton,
+  h2 as CanvasToolMenuItem,
+  i2 as CanvasToolMenuLabel,
+  j2 as CanvasToolValue,
+  d2 as CanvasToolsGroup,
+  f2 as CanvasToolsPopup,
+  C as CanvasToolsSurface,
   FormContext,
+  I as Icon,
   K as KnobsForm,
+  N as NotebookShellAction,
+  a2 as NotebookShellFooter,
+  b as NotebookShellFrame,
+  c as NotebookShellHeader,
+  d as NotebookShellIconButton,
+  e as NotebookShellNavigation,
+  f as NotebookShellNotice,
+  g as NotebookShellNoticeActions,
+  h as NotebookShellPanelHeader,
+  i as NotebookShellRow,
+  j as NotebookShellSearch,
+  k as NotebookShellSidebar,
+  l as NotebookShellSidebarResizeHandle,
+  m as NotebookShellTab,
+  n as NotebookShellTopbar,
   StoryboardContext,
   default2 as StoryboardProvider,
   installHashPreserver,
+  o as notebookShellButtonGroup,
+  p as notebookShellControl,
+  q as notebookShellHeaderGeometry,
+  r as notebookShellTitle,
   useConfig,
   useFeatureFlag,
   useFlow,

@@ -13,7 +13,7 @@ import { getAllFlags, getFlagKeys, initFeatureFlags, resetFlags, setFlag, syncFl
 import * as statefullyCore from "@dfosco/statefully/core";
 import { flattenKnobs, getComponentKnobs, getPrototypeKnobs, initKnobs, resolveKnobDef } from "./core-1.js";
 import { D, c as c4, d as d4, i as i4, a as a6, r as r4, u as u2 } from "./chunks/highlight-BdnfQn3S.js";
-import { I, I as I2, c as c5, e as e2, g as g7, a as a7, b as b6, h as h3, i as i5, d as d5, r as r5, s as s6, f as f2, j as j2, u as u3 } from "./chunks/Icon-D6qvShid.js";
+import { c as c5, e as e2, g as g7, a as a7, b as b6, h as h3, i as i5, d as d5, r as r5, s as s6, f as f2, j as j2, u as u3 } from "./chunks/commandActions-CvE2nUEH.js";
 import { getPluginsConfig, initPlugins, isPluginEnabled } from "./core-4.js";
 import { addHiddenItems, getHiddenItems, initUIConfig, isMenuHidden } from "./core-5.js";
 import { clearPrototypeToolbarConfig, consumeClientToolbarOverrides, getToolbarConfig, getToolbarConfigSnapshot, initToolbarConfig, setClientToolbarOverrides, setPrototypeToolbarConfig, subscribeToToolbarConfig } from "./core-7.js";
@@ -22,10 +22,11 @@ import { A, g as g8, a as a8, b as b7, c as c6, d as d6, e as e3, i as i6, f as 
 import { getConfig } from "./core-2.js";
 import { clearAllOverrides, clearOverrides, getConfigSnapshot, initConfig, setOverrides, subscribeToConfig } from "./core-2.js";
 import { getCustomerModeConfig, getCustomerModeHomepage, initCustomerModeConfig, isCustomerHidingAllTools, isCustomerHidingBranchBar, isCustomerHidingCommandPalette, isCustomerHidingHomepage, isCustomerMode, isCustomerToolHidden, resolveHomepageTarget } from "./core-6.js";
-import { b as b8, a as a9, g as g9, i as i7, r as r6, s as s7, u as u4 } from "./chunks/_commonjsHelpers-CXnYerf6.js";
+import { b as b8, a as a9, g as g9, i as i7, r as r6, s as s7, u as u4 } from "./chunks/widgetRegistry-CmXYjxwi.js";
 import { THEMES, getResolvedFor, getSurfaceSync, getTheme, getThemeSyncTargets, setSurfaceSync, setTheme, setThemeSyncTarget, surfaceSyncState, themeState, themeSyncState } from "./core-9.js";
-import { r as resolveSiteUrl, a as normalizeSiteRoute, n as normalizeSiteId } from "./chunks/primerIcons-Di4IYwoZ.js";
-import { b as b9 } from "./chunks/primerIcons-Di4IYwoZ.js";
+import { I, I as I2 } from "./chunks/Icon-I4lR4N0q.js";
+import { r as resolveSiteUrl, a as normalizeSiteRoute, n as normalizeSiteId } from "./chunks/contract-Tm25L5gq.js";
+import { b as b9 } from "./chunks/contract-Tm25L5gq.js";
 function buildKnobKey(id, options) {
   if (typeof statefullyCore.buildKnobKey !== "function") {
     throw new TypeError("The installed Statefully runtime must expose buildKnobKey().");
