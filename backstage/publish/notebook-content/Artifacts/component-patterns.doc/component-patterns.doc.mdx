@@ -1,0 +1,25 @@
+---
+formatVersion: 1
+id: bc9b4574-35cb-4c8d-83b0-d785c48f8577
+title: "Component Patterns"
+description: "A short guide combining narrative, a reusable component story, and embedded note widgets."
+---
+import { CanvasWidget } from 'design-notebook/docs'
+
+# Building with Shared Component Patterns
+
+This Doc mixes authored guidance with live examples from the Notebook. The component story below stays connected to its source, so edits to the shared story remain visible here.
+
+### A reusable form
+
+
+
+<div data-doc-width="half">
+
+<CanvasWidget type="sticky-note" id="component-pattern-reminder" props={{ text: "Prefer shared patterns when a behavior repeats.", width: 300, height: 128 }} />
+
+</div>
+
+## Implementation notes
+
+<CanvasWidget type="markdown" id="component-pattern-notes" props={{ content: "### What to review\n\nCheck the default state, validation feedback, and keyboard focus. Keep these notes close to the component they describe." }} />

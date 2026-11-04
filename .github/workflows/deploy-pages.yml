@@ -1,11 +1,20 @@
 # Hypercanvas publication deploy — installs and builds the committed publication source, then deploys.
 # Build output: backstage/publish/dist (generated here, not committed; see DOCS/publishing.md).
+# Source branch: "main". Dispatch only; source pushes do not publish.
 name: Deploy published site to GitHub Pages
+run-name: Hypercanvas Pages ${{ inputs.publication_id }}
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      publication_id:
+        description: Hypercanvas publication attempt
+        required: true
+        type: string
+      commit_sha:
+        description: Exact publication commit
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -24,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commit_sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22

@@ -25,10 +25,31 @@
       "prototypeName": null
     },
     {
-      "id": "artifact-canvas-5dc9413ede1842eb2b36",
-      "type": "canvas",
-      "title": "Publish · Design exploration",
-      "slug": "artifact-canvas-5dc9413ede1842eb2b36",
+      "id": "demo-prototype-loopline-signup",
+      "type": "prototype",
+      "title": "Loopline Signup",
+      "slug": "demo-prototype-loopline-signup",
+      "prototypeName": "LooplineSignup.prototype"
+    },
+    {
+      "id": "913a9885-c7a9-40f3-a8d6-797125dcb557",
+      "type": "prototype",
+      "title": "Silo Dashboard",
+      "slug": "913a9885-c7a9-40f3-a8d6-797125dcb557",
+      "prototypeName": "silo-dashboard.prototype"
+    },
+    {
+      "id": "bc9b4574-35cb-4c8d-83b0-d785c48f8577",
+      "type": "doc",
+      "title": "Component Patterns",
+      "slug": "bc9b4574-35cb-4c8d-83b0-d785c48f8577",
+      "prototypeName": null
+    },
+    {
+      "id": "1b633347-919e-456e-a937-a44679584479",
+      "type": "doc",
+      "title": "Widget Exploration",
+      "slug": "1b633347-919e-456e-a937-a44679584479",
       "prototypeName": null
     }
   ]

@@ -62,19 +62,31 @@
   },
   "showAgentsInAddMenu": false,
   "hotPool": {
+    "load_balancer": true,
+    "pools": {
+      "terminal": {
+        "pool_size": 1
+      },
+      "copilot": {
+        "pool_size": 1
+      },
+      "claude": {
+        "pool_size": 1
+      },
+      "codex": {
+        "pool_size": 0
+      },
+      "opencode": {
+        "pool_size": 0
+      },
+      "prompt": {
+        "pool_size": 1
+      }
+    },
     "enabled": false,
     "verbose": false,
     "default_pool_size": 1,
     "default_max_pool_size": 3,
-    "load_balancer": true,
-    "load_balancer_cooldown_mins": 10,
-    "pools": {
-      "terminal": { "pool_size": 1 },
-      "copilot": { "pool_size": 1 },
-      "claude": { "pool_size": 1 },
-      "codex": { "pool_size": 0 },
-      "opencode": { "pool_size": 0 },
-      "prompt": { "pool_size": 1 }
-    }
+    "load_balancer_cooldown_mins": 10
   }
 }

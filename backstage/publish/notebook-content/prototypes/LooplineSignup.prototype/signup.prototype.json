@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Loopline Signup",
+    "description": "Sign up flow for the Loopline customer feedback startup",
+    "author": [
+      "dfosco"
+    ],
+    "tags": [
+      "signup",
+      "tailwind"
+    ],
+    "knobs": [
+      {
+        "id": "showSocial",
+        "type": "boolean",
+        "label": "Show social login",
+        "description": "Toggle the social login buttons in the signup form.",
+        "default": true,
+        "knobMeta": {
+          "highlight": true,
+          "color": "#663399"
+        }
+      },
+      {
+        "id": "layoutDirection",
+        "type": "select",
+        "label": "Layout direction",
+        "description": "Switch the startup signup layout between side-by-side and stacked panels.",
+        "options": [
+          "horizontal",
+          "vertical"
+        ],
+        "default": "horizontal"
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "label": "Branding headline",
+        "description": "Headline shown on the left branding panel.",
+        "scope": "/Branding",
+        "default": "Know what to build next."
+      },
+      {
+        "id": "accentHue",
+        "type": "slider",
+        "label": "Accent hue",
+        "description": "Tweak the brand accent color hue (degrees on the color wheel).",
+        "scope": "/Branding",
+        "min": 0,
+        "max": 360,
+        "step": 1,
+        "default": 239
+      }
+    ]
+  },
+  "css": {
+    "library": "tailwindcss",
+    "entry": "./prototype.css"
+  }
+}

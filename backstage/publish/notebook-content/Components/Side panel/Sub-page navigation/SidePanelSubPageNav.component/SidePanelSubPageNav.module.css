@@ -1,0 +1,4 @@
+.root {
+  background-color: var(--hc-color-background, Canvas);
+  color: var(--hc-color-foreground, CanvasText);
+}

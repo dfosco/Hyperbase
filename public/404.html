@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting&hellip;</title>
+    <script>
+      /* Resolve the nearest hosted app root so project and branch prefixes work. */
+      (async function () {
+        var segments = window.location.pathname.split("/").filter(Boolean)
+        for (var count = segments.length; count >= 0; count -= 1) {
+          var base = count ? "/" + segments.slice(0, count).join("/") + "/" : "/"
+          try {
+            var response = await fetch(base + "index.html", { method: "HEAD", cache: "no-store" })
+            if (!response.ok) continue
+            var route = segments.slice(count).join("/") + window.location.search + window.location.hash
+            var target = base + "?p=" + encodeURIComponent(route) + "&b=" + encodeURIComponent(base)
+            window.location.replace(target)
+            return
+          } catch { /* try the next parent */ }
+        }
+        window.location.replace("/")
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

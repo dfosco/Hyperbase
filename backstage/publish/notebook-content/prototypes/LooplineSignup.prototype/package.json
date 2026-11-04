@@ -1,0 +1,8 @@
+{
+  "name": "hypercanvas-demo-loopline",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "tailwindcss": "4.2.2"
+  }
+}

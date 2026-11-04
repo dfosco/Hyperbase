@@ -37,7 +37,10 @@
     "proxyPort": 1234
   },
   "ui": {
-    "hide": ["workspace:components", "branch-bar"]
+    "hide": [
+      "workspace:components",
+      "branch-bar"
+    ]
   },
   "canvas": {
     "zoom": {
@@ -57,20 +60,42 @@
     "themes": {
       "light": {
         "label": "Light",
-        "attrs": { "data-color-mode": "light", "data-light-theme": "light" }
+        "attrs": {
+          "data-color-mode": "light",
+          "data-light-theme": "light"
+        }
       },
       "dark": {
         "label": "Dark",
-        "attrs": { "data-color-mode": "dark", "data-dark-theme": "dark" }
+        "attrs": {
+          "data-color-mode": "dark",
+          "data-dark-theme": "dark"
+        }
       }
     },
     "surfaces": {
-      "prototype": { "label": "Prototype",  "sync": true  },
-      "canvas":    { "label": "Canvas",     "sync": true  },
-      "toolbar":   { "label": "Tools",      "sync": true  },
-      "codeBoxes": { "label": "Code boxes", "sync": true  }
+      "prototype": {
+        "label": "Prototype",
+        "sync": true
+      },
+      "canvas": {
+        "label": "Canvas",
+        "sync": true
+      },
+      "toolbar": {
+        "label": "Tools",
+        "sync": true
+      },
+      "codeBoxes": {
+        "label": "Code boxes",
+        "sync": true
+      }
     },
-    "default": "system"
+    "default": "system",
+    "hueByMode": {
+      "dark": "purple",
+      "light": "purple"
+    }
   },
   "widgets": {
     "tiles": {
@@ -79,14 +104,55 @@
       "unlisted": true,
       "interactGate": true,
       "interactGateLabel": "Click to interact",
-      "resize": { "enabled": true, "prod": false },
+      "resize": {
+        "enabled": true,
+        "prod": false
+      },
       "props": {
-        "tiles":    { "type": "text",   "label": "Tiles",     "category": "content",  "default": [] },
-        "columns":  { "type": "number", "label": "Columns",   "category": "settings", "default": 3,  "min": 1,   "max": 20 },
-        "rows":     { "type": "number", "label": "Rows",      "category": "settings", "default": 3,  "min": 1,   "max": 20 },
-        "tileSize": { "type": "number", "label": "Tile size", "category": "settings", "default": 80, "min": 40,  "max": 300 },
-        "width":    { "type": "number", "label": "Width",     "category": "size",     "default": 270, "min": 200 },
-        "height":   { "type": "number", "label": "Height",    "category": "size",     "default": 270, "min": 100 }
+        "tiles": {
+          "type": "text",
+          "label": "Tiles",
+          "category": "content",
+          "default": []
+        },
+        "columns": {
+          "type": "number",
+          "label": "Columns",
+          "category": "settings",
+          "default": 3,
+          "min": 1,
+          "max": 20
+        },
+        "rows": {
+          "type": "number",
+          "label": "Rows",
+          "category": "settings",
+          "default": 3,
+          "min": 1,
+          "max": 20
+        },
+        "tileSize": {
+          "type": "number",
+          "label": "Tile size",
+          "category": "settings",
+          "default": 80,
+          "min": 40,
+          "max": 300
+        },
+        "width": {
+          "type": "number",
+          "label": "Width",
+          "category": "size",
+          "default": 270,
+          "min": 200
+        },
+        "height": {
+          "type": "number",
+          "label": "Height",
+          "category": "size",
+          "default": 270,
+          "min": 100
+        }
       },
       "features": [
         {
@@ -95,14 +161,42 @@
           "icon": "grid",
           "label": "Grid",
           "items": [
-            { "action": "add-column",    "label": "Add column",    "icon": "plus" },
-            { "action": "remove-column", "label": "Remove column", "icon": "dash" },
-            { "action": "add-row",       "label": "Add row",       "icon": "plus" },
-            { "action": "remove-row",    "label": "Remove row",    "icon": "dash" }
+            {
+              "action": "add-column",
+              "label": "Add column",
+              "icon": "plus"
+            },
+            {
+              "action": "remove-column",
+              "label": "Remove column",
+              "icon": "dash"
+            },
+            {
+              "action": "add-row",
+              "label": "Add row",
+              "icon": "plus"
+            },
+            {
+              "action": "remove-row",
+              "label": "Remove row",
+              "icon": "dash"
+            }
           ]
         },
-        { "id": "randomize", "type": "action", "action": "randomize", "label": "Randomize", "icon": "sync" },
-        { "id": "copy",      "type": "action", "action": "copy",      "label": "$label:duplicate", "icon": "copy" },
+        {
+          "id": "randomize",
+          "type": "action",
+          "action": "randomize",
+          "label": "Randomize",
+          "icon": "sync"
+        },
+        {
+          "id": "copy",
+          "type": "action",
+          "action": "copy",
+          "label": "$label:duplicate",
+          "icon": "copy"
+        },
         {
           "id": "copy-link",
           "type": "action",
@@ -111,37 +205,31 @@
           "icon": "link",
           "menu": true,
           "prod": true,
-          "alt": { "label": "$label:copy-id", "action": "copy-widget-id" }
+          "alt": {
+            "label": "$label:copy-id",
+            "action": "copy-widget-id"
+          }
         },
-        { "id": "delete", "type": "action", "action": "delete", "label": "$label:delete", "icon": "trash", "menu": true }
+        {
+          "id": "delete",
+          "type": "action",
+          "action": "delete",
+          "label": "$label:delete",
+          "icon": "trash",
+          "menu": true
+        }
       ],
       "connectors": {
-        "anchors": { "top": "available", "bottom": "available", "left": "available", "right": "available" },
-        "accept":  ["*"],
+        "anchors": {
+          "top": "available",
+          "bottom": "available",
+          "left": "available",
+          "right": "available"
+        },
+        "accept": [
+          "*"
+        ],
         "exclude": []
-      }
-    }
-  },
-  "hotPool": {
-    "load_balancer": false,
-    "pools": {
-      "terminal": {
-        "pool_size": 0
-      },
-      "copilot": {
-        "pool_size": 0
-      },
-      "claude": {
-        "pool_size": 0
-      },
-      "codex": {
-        "pool_size": 0
-      },
-      "opencode": {
-        "pool_size": 0
-      },
-      "prompt": {
-        "pool_size": 0
       }
     }
   }

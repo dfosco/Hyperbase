@@ -1,3 +1,0 @@
-# Repository-wide Codex settings apply to ordinary coding sessions too.
-# Canvas terminal guidance is delivered by prepareTerminalCodingLaunch() through
-# an explicit startup prompt. Keep session-specific instructions out of this file.

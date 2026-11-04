@@ -1,385 +1,59 @@
 {
-    "name": "@dfosco/hypercanvas",
-    "version": "0.73.0-beta.0",
-    "type": "module",
-    "license": "MIT",
-    "description": "Hypercanvas prototyping framework — core engine, React integration, and canvas",
-    "bin": {
-        "hypercanvas": "./dist/core/cli/index.js",
-        "hypercanvas-scaffold": "./dist/core/scaffold.js",
-        "storyboard": "./dist/core/cli/index.js",
-        "storyboard-scaffold": "./dist/core/scaffold.js",
-        "sb": "./dist/core/cli/index.js",
-        "hypercanvas-aggregate-artifacts": "./scripts/aggregate-artifacts.mjs",
-        "storyboard-aggregate-artifacts": "./scripts/aggregate-artifacts.mjs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dfosco/hypercanvas.git",
-        "directory": "packages/storyboard"
-    },
-    "files": [
-        "src",
-        "dist",
-        "assets",
-        "docs",
-        "scripts/aggregate-artifacts.mjs",
-        "scripts/gen-themes-css.mjs",
-        "vite.ui.config.js",
-        "vite.canvas.config.js",
-        "scaffold",
-        "mascot",
-        "hypercanvas.config.json",
-        "toolbar.config.json",
-        "widgets.config.json",
-        "paste.config.json",
-        "commandpalette.config.json",
-        "terminal.config.json",
-        "mascot.config.json",
-        "scripts/build-core-css.mjs"
-    ],
-    "scripts": {
-        "gen:themes-css": "node scripts/gen-themes-css.mjs",
-        "gen:primer-icons": "node scripts/generate-primer-icon-catalog.mjs",
-        "prebuild:css": "npm run gen:themes-css",
-        "build:core": "node scripts/build-core-runtime.mjs && npm run gen:themes-css && npm run build:storyboards && npm run build:css",
-        "prebuild:core": "npm --prefix ../.. run typecheck:core && npm --prefix ../.. run check:core-typing",
-        "build:css": "node scripts/build-core-css.mjs",
-        "build:ui": "vite build --config vite.ui.config.js",
-        "build:canvas": "vite build --config vite.canvas.config.js",
-        "typecheck:storyboards": "npm run typecheck:storyboards:runtime && npm run typecheck:storyboards:browser",
-        "typecheck:storyboards:runtime": "tsc --project tsconfig.storyboards.json --noEmit",
-        "typecheck:storyboards:browser": "tsc --project tsconfig.storyboards-browser.json --noEmit",
-        "build:storyboards": "npm run typecheck:storyboards && tsc --project tsconfig.storyboards.json",
-        "dev:ui": "vite build --config vite.ui.config.js --watch",
-        "prepublishOnly": "npm run build:core && npm run build:css && npm run build:ui && npm run build:canvas",
-        "prebuild:ui": "npm run build:css",
-        "dev:css": "node scripts/build-core-css.mjs --dev"
-    },
-    "exports": {
-        ".": "./src/internals/index.js",
-        "./core": {
-            "types": "./dist/core/index.d.ts",
-            "import": "./dist/core/index.js"
-        },
-        "./core/mountStoryboardCore": {
-            "types": "./dist/core/mountStoryboardCore.d.ts",
-            "import": "./dist/core/mountStoryboardCore.js"
-        },
-        "./publish": {
-            "types": "./dist/core/notebook/publishing.d.ts",
-            "import": "./dist/core/notebook/publishing.js"
-        },
-        "./notebook/publishing": {
-            "types": "./dist/core/notebook/publishing.d.ts",
-            "import": "./dist/core/notebook/publishing.js"
-        },
-        "./notebook/browserBridge": {
-            "types": "./dist/core/notebook/browserBridge.d.ts",
-            "import": "./dist/core/notebook/browserBridge.js"
-        },
-        "./core/storyboards/source-revision": {
-            "types": "./dist/core/storyboards/source-revision.d.ts",
-            "import": "./dist/core/storyboards/source-revision.js"
-        },
-        "./core/data/loader": {
-            "types": "./dist/core/data/loader.d.ts",
-            "import": "./dist/core/data/loader.js"
-        },
-        "./core/knobs/discovery": {
-            "types": "./dist/core/knobs/discovery.d.ts",
-            "import": "./dist/core/knobs/discovery.js"
-        },
-        "./core/stores/configStore": {
-            "types": "./dist/core/stores/configStore.d.ts",
-            "import": "./dist/core/stores/configStore.js"
-        },
-        "./core/stores/featureFlags": {
-            "types": "./dist/core/stores/featureFlags.d.ts",
-            "import": "./dist/core/stores/featureFlags.js"
-        },
-        "./core/stores/plugins": {
-            "types": "./dist/core/stores/plugins.d.ts",
-            "import": "./dist/core/stores/plugins.js"
-        },
-        "./core/stores/uiConfig": {
-            "types": "./dist/core/stores/uiConfig.d.ts",
-            "import": "./dist/core/stores/uiConfig.js"
-        },
-        "./core/stores/customerModeConfig": {
-            "types": "./dist/core/stores/customerModeConfig.d.ts",
-            "import": "./dist/core/stores/customerModeConfig.js"
-        },
-        "./core/stores/toolbarConfigStore": {
-            "types": "./dist/core/stores/toolbarConfigStore.d.ts",
-            "import": "./dist/core/stores/toolbarConfigStore.js"
-        },
-        "./core/modes/modes": {
-            "types": "./dist/core/modes/modes.d.ts",
-            "import": "./dist/core/modes/modes.js"
-        },
-        "./canvas": {
-            "import": "./dist/tiny-canvas.js",
-            "types": "./src/canvas/index.d.ts"
-        },
-        "./canvas/style.css": "./dist/tiny-canvas.css",
-        "./canvas/CanvasPage": "./src/internals/canvas/CanvasPage.jsx",
-        "./content-entry": "./src/internals/canvas/isolation/contentEntry.jsx",
-        "./content-frame": "./src/internals/ContentFrame/ContentFrame.jsx",
-        "./content-routing": "./src/internals/canvas/isolation/contentRouting.js",
-        "./isolation/route-compiler": "./src/internals/canvas/isolation/routeCompiler.js",
-        "./vite": "./src/internals/vite/data-plugin.js",
-        "./vite/server": {
-            "types": "./dist/core/vite/server-plugin.d.ts",
-            "import": "./dist/core/vite/server-plugin.js"
-        },
-        "./notebook/vite-routes": {
-            "types": "./dist/core/notebook/vite-routes-plugin.d.ts",
-            "import": "./dist/core/notebook/vite-routes-plugin.js"
-        },
-        "./notebook/artifact-migration-aliases": {
-            "types": "./dist/core/notebook/artifact-migration-aliases.d.ts",
-            "import": "./dist/core/notebook/artifact-migration-aliases.js"
-        },
-        "./vite/hypercanvas-server": {
-            "types": "./dist/core/vite/hypercanvas-server.d.ts",
-            "import": "./dist/core/vite/hypercanvas-server.js"
-        },
-        "./server/hypercanvas-service": {
-            "types": "./dist/core/server/hypercanvas-service.d.ts",
-            "import": "./dist/core/server/hypercanvas-service.js"
-        },
-        "./server/prototype-vite-supervisor": {
-            "types": "./dist/core/server/prototype-vite-supervisor.d.ts",
-            "import": "./dist/core/server/prototype-vite-supervisor.js"
-        },
-        "./server/workspace-services": {
-            "types": "./dist/core/server/workspace-services.d.ts",
-            "import": "./dist/core/server/workspace-services.js"
-        },
-        "./vite/dev-overlay-isolation": "./src/internals/vite/dev-overlay-isolation.js",
-        "./hash-preserver": "./src/internals/hashPreserver.js",
-        "./context": "./src/internals/context.jsx",
-        "./site-page": "./src/internals/SitePage/SitePage.jsx",
-        "./error-boundary": "./src/internals/PrototypeErrorBoundary.jsx",
-        "./notebook-gate": "./src/internals/NotebookGate/NotebookGate.jsx",
-        "./notebook-shell": "./src/internals/NotebookShell/NotebookShell.jsx",
-        "./notebook-sidebar-tree": "./src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx",
-        "./notebook-agent-page": "./src/internals/NotebookAgentPage/NotebookAgentPage.jsx",
-        "./notebook-entry": "./src/internals/NotebookEntry/NotebookEntry.jsx",
-        "./hooks/useFeatureFlag": "./src/internals/hooks/useFeatureFlag.js",
-        "./config": {
-            "types": "./dist/core/stores/configSchema.d.ts",
-            "import": "./dist/core/stores/configSchema.js"
-        },
-        "./hypercanvas.config.json": "./hypercanvas.config.json",
-        "./storyboard.config.json": "./hypercanvas.config.json",
-        "./toolbar.config.json": "./toolbar.config.json",
-        "./widgets.config.json": "./widgets.config.json",
-        "./paste.config.json": "./paste.config.json",
-        "./commandpalette.config.json": "./commandpalette.config.json",
-        "./ui-runtime": "./dist/storyboard-ui.js",
-        "./ui-runtime/style.css": "./dist/storyboard-ui.css",
-        "./canvas/materializer": {
-            "types": "./dist/core/canvas/materializer.d.ts",
-            "import": "./dist/core/canvas/materializer.js"
-        },
-        "./canvas/document.schema.json": "./src/core/canvas/canvas-document.schema.json",
-        "./canvas/collision": {
-            "types": "./dist/core/canvas/collision.d.ts",
-            "import": "./dist/core/canvas/collision.js"
-        },
-        "./canvas/identity": {
-            "types": "./dist/core/canvas/identity.d.ts",
-            "import": "./dist/core/canvas/identity.js"
-        },
-        "./canvas/writeGuard": {
-            "types": "./dist/core/canvas/writeGuard.d.ts",
-            "import": "./dist/core/canvas/writeGuard.js"
-        },
-        "./comments": {
-            "types": "./dist/core/comments/index.d.ts",
-            "import": "./dist/core/comments/index.js"
-        },
-        "./comments/ui/comments.css": "./dist/core/comments/ui/comment-layout.css",
-        "./comments/ui/comment-layout.css": "./dist/core/comments/ui/comment-layout.css",
-        "./modes.css": "./dist/core/modes/modes.css",
-        "./styles/tailwind.css": "./dist/tailwind.css",
-        "./styles/workspace-chrome.css": "./dist/core/styles/workspace-chrome.css",
-        "./worktree/port": {
-            "types": "./dist/core/worktree/port.d.ts",
-            "import": "./dist/core/worktree/port.js"
-        },
-        "./worktree/serverRegistry": {
-            "types": "./dist/core/worktree/serverRegistry.d.ts",
-            "import": "./dist/core/worktree/serverRegistry.js"
-        },
-        "./inspector/highlighter": "./dist/core/inspector/highlighter.js",
-        "./smooth-corners": {
-            "types": "./dist/core/utils/smoothCorners.d.ts",
-            "import": "./dist/core/utils/smoothCorners.js"
-        },
-        "./wrappers": "./src/internals/loadConsumerWrapper.js",
-        "./icons/*": "./src/internals/lucide/icons/*.js",
-        "./core.css": "./dist/tailwind.css",
-        "./core-css.manifest.json": "./dist/core-css.manifest.json",
-        "./vite/core-css": "./src/internals/vite/core-css.js",
-        "./vite/prototype-css": "./src/internals/vite/prototype-css.js",
-        "./doc-page": "./src/internals/Document/DocPage.jsx",
-        "./docs": "./src/internals/Document/Document.jsx",
-        "./vite/documents": "./dist/core/notebook/docs/vite-plugin.js",
-        "./docs/compiler": {
-            "types": "./dist/core/notebook/docs/compiler.d.ts",
-            "import": "./dist/core/notebook/docs/compiler.js"
-        },
-        "./docs/discovery": {
-            "types": "./dist/core/notebook/docs/discovery.node.d.ts",
-            "import": "./dist/core/notebook/docs/discovery.node.js"
-        },
-        "./docs/resolvers": "./src/internals/Document/resolvers.js"
-    },
-    "dependencies": {
-        "@base-ui/react": "^1.4.0",
-        "@clack/prompts": "^1.2.0",
-        "@codemirror/autocomplete": "^6.20.3",
-        "@codemirror/commands": "^6.10.3",
-        "@codemirror/lang-css": "^6.3.1",
-        "@codemirror/lang-html": "^6.4.11",
-        "@codemirror/lang-javascript": "^6.2.5",
-        "@codemirror/lang-json": "^6.0.2",
-        "@codemirror/lang-markdown": "^6.5.0",
-        "@codemirror/lang-python": "^6.2.1",
-        "@codemirror/lang-yaml": "^6.1.3",
-        "@codemirror/language": "^6.12.3",
-        "@codemirror/search": "^6.7.0",
-        "@codemirror/state": "^6.6.0",
-        "@codemirror/theme-one-dark": "^6.1.3",
-        "@codemirror/view": "^6.43.0",
-        "@dfosco/statefully": "^0.2.1",
-        "@mdx-js/mdx": "^3.1.1",
-        "@neodrag/react": "^2.3.1",
-        "@primer/octicons-react": "19.40.0",
-        "@toon-format/toon": "^2.1.0",
-        "ansi-to-html": "^0.7.2",
-        "class-variance-authority": "^0.7.1",
-        "clsx": "^2.1.1",
-        "cmdk": "^1.1.1",
-        "codemirror": "^6.0.2",
-        "feather-icons": "^4.29.2",
-        "ghostty-web": "^0.4.0",
-        "glob": "^11.0.0",
-        "highlight.js": "^11.11.1",
-        "html-to-image": "^1.11.13",
-        "iconoir": "^7.11.0",
-        "ignore": "^5.3.2",
-        "jsonc-parser": "^3.3.1",
-        "lucide-react": "^1.54.0",
-        "postcss": "8.5.29",
-        "postcss-selector-parser": "7.1.6",
-        "postcss-value-parser": "4.2.0",
-        "rehype-raw": "^7.0.0",
-        "rehype-sanitize": "^6.0.0",
-        "rehype-stringify": "^10.0.1",
-        "remark-gfm": "^4.0.1",
-        "remark-parse": "^11.0.0",
-        "remark-rehype": "^11.1.2",
-        "tailwind-merge": "^3.5.0",
-        "tailwind-variants": "^3.2.2",
-        "tailwindcss": "4.2.2",
-        "tw-animate-css": "^1.4.0",
-        "typescript": "^5.9.3",
-        "unified": "^11.0.5",
-        "ws": "^8.21.0",
-        "yaml": "^2.9.1",
-        "zod": "^3.23.8",
-        "@tailwindcss/vite": "4.2.2",
-        "@tailwindcss/node": "4.2.2",
-        "@tailwindcss/oxide": "4.2.2"
-    },
-    "peerDependencies": {
-        "@generouted/react-router": ">=1",
-        "@getpaseo/client": "*",
-        "@getpaseo/protocol": "*",
-        "@getpaseo/server": "*",
-        "react": ">=18",
-        "react-dom": ">=18",
-        "react-router-dom": ">=6",
-        "playwright": ">=1",
-        "vite": ">=5"
-    },
-    "peerDependenciesMeta": {
-        "@codemirror/autocomplete": {
-            "optional": true
-        },
-        "@getpaseo/client": {
-            "optional": true
-        },
-        "@getpaseo/protocol": {
-            "optional": true
-        },
-        "@getpaseo/server": {
-            "optional": true
-        },
-        "@codemirror/commands": {
-            "optional": true
-        },
-        "@codemirror/lang-css": {
-            "optional": true
-        },
-        "@codemirror/lang-html": {
-            "optional": true
-        },
-        "@codemirror/lang-javascript": {
-            "optional": true
-        },
-        "@codemirror/lang-json": {
-            "optional": true
-        },
-        "@codemirror/lang-markdown": {
-            "optional": true
-        },
-        "@codemirror/lang-python": {
-            "optional": true
-        },
-        "@codemirror/lang-yaml": {
-            "optional": true
-        },
-        "@codemirror/language": {
-            "optional": true
-        },
-        "@codemirror/search": {
-            "optional": true
-        },
-        "@codemirror/state": {
-            "optional": true
-        },
-        "@codemirror/theme-one-dark": {
-            "optional": true
-        },
-        "@codemirror/view": {
-            "optional": true
-        },
-        "@mdx-js/mdx": {
-            "optional": true
-        },
-        "@generouted/react-router": {
-            "optional": true
-        },
-        "playwright": {
-            "optional": true
-        },
-        "codemirror": {
-            "optional": true
-        },
-        "vite": {
-            "optional": true
-        }
-    },
-    "devDependencies": {
-        "@tailwindcss/cli": "^4.2.2",
-        "@types/node": "^20.0.0",
-        "@vitejs/plugin-react": "^5.1.2",
-        "marked": "^17.0.5",
-        "vite": "^7.3.5"
-    }
+  "name": "@dfosco/hypercanvas",
+  "version": "0.80.4",
+  "type": "module",
+  "exports": {
+    ".": "./dist/notebook/react.js",
+    "./core": "./dist/notebook/core.js",
+    "./notebook/vite": "./dist/notebook/vite.js",
+    "./notebook/viewer": "./dist/notebook/viewer.js",
+    "./notebook/statefully-compatibility": "./dist/notebook/statefully-compatibility.js",
+    "./notebook/runtime/route": "./dist/notebook/runtime-route.js",
+    "./notebook/runtime/react": "./dist/notebook/runtime-react.js",
+    "./context": "./dist/notebook/context.js",
+    "./hash-preserver": "./dist/notebook/hash-preserver.js",
+    "./hooks/useFeatureFlag": "./dist/notebook/useFeatureFlag.js",
+    "./config": "./dist/notebook/config.js",
+    "./canvas/style.css": "./dist/notebook/viewer.css",
+    "./docs": "./dist/notebook/docs.js",
+    "./doc-page": "./dist/notebook/doc-page.js",
+    "./docs/resolvers": "./dist/notebook/docs-resolvers.js",
+    "./core.css": "./dist/notebook/core.css",
+    "./notebook/style.css": "./dist/notebook/viewer.css",
+    "./modes.css": "./dist/notebook/modes.css",
+    "./canvas": "./dist/notebook/canvas.js",
+    "./core/data/loader": "./dist/notebook/core-0.js",
+    "./core/knobs/discovery": "./dist/notebook/core-1.js",
+    "./core/stores/configStore": "./dist/notebook/core-2.js",
+    "./core/stores/featureFlags": "./dist/notebook/core-3.js",
+    "./core/stores/plugins": "./dist/notebook/core-4.js",
+    "./core/stores/uiConfig": "./dist/notebook/core-5.js",
+    "./core/stores/customerModeConfig": "./dist/notebook/core-6.js",
+    "./core/stores/toolbarConfigStore": "./dist/notebook/core-7.js",
+    "./core/modes/modes": "./dist/notebook/core-8.js",
+    "./core/stores/themeStore": "./dist/notebook/core-9.js",
+    "./hypercanvas.config.json": "./hypercanvas.config.json",
+    "./toolbar.config.json": "./toolbar.config.json",
+    "./widgets.config.json": "./widgets.config.json",
+    "./paste.config.json": "./paste.config.json",
+    "./commandpalette.config.json": "./commandpalette.config.json",
+    "./terminal.config.json": "./terminal.config.json",
+    "./mascot.config.json": "./mascot.config.json"
+  },
+  "dependencies": {
+    "@dfosco/statefully": "0.2.1",
+    "@generouted/react-router": "1.19.11",
+    "@mdx-js/mdx": "3.1.1",
+    "@tailwindcss/vite": "4.2.2",
+    "@vitejs/plugin-react": "5.2.0",
+    "glob": "11.1.0",
+    "ignore": "5.3.2",
+    "jsonc-parser": "3.3.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-router-dom": "7.17.0",
+    "vite": "7.3.5",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  }
 }

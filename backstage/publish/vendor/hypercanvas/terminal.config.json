@@ -1,6 +1,6 @@
 {
   "$schema": "./terminal.schema.json",
-  "$comment": "Defaults for terminal widgets and canvas agents. Users can override at the project root by copying this file from .storyboard/scaffold/terminal.config.json. Leaf-level merge: only the specific keys you set are overridden, everything else inherits the library defaults — so future agent additions or readinessSignal tweaks reach you automatically.",
+  "$comment": "Defaults for terminal widgets and canvas agents. Users can override at the project root by copying this file from .hypercanvas/scaffold/terminal.config.json. Leaf-level merge: only the specific keys you set are overridden, everything else inherits the library defaults — so future agent additions or readinessSignal tweaks reach you automatically. Hyper Agent uses the persisted default provider and inherits the refill policy below. Keep-one-ready replenishes one hidden native standby; initial-only warms the initial conversation without a standby. Later tabs are created only on user request.",
   "terminal": {
     "resizable": true,
     "defaultWidth": 1000,
@@ -13,7 +13,7 @@
   },
   "agents": {
     "copilot": {
-      "label": "Copilot CLI",
+      "label": "Copilot",
       "default": true,
       "icon": "primer/copilot",
       "startupCommand": "copilot --agent terminal-agent --autopilot",
@@ -67,6 +67,7 @@
     "verbose": false,
     "default_pool_size": 1,
     "default_max_pool_size": 3,
+    "default_refill_policy": "keep-one-ready",
     "load_balancer": true,
     "load_balancer_cooldown_mins": 10,
     "pools": {

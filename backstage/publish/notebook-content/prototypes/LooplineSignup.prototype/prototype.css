@@ -1,0 +1,44 @@
+@import "tailwindcss" source(none);
+@source "./";
+
+@custom-variant dark (
+  &:where(
+    [data-sb-theme^="dark"],
+    [data-sb-theme^="dark"] *,
+    [data-sb-prototype-theme^="dark"],
+    [data-sb-prototype-theme^="dark"] *,
+    [data-sb-canvas-theme^="dark"],
+    [data-sb-canvas-theme^="dark"] *,
+    [data-sb-toolbar-theme^="dark"],
+    [data-sb-toolbar-theme^="dark"] *,
+    [data-sb-codeboxes-theme^="dark"],
+    [data-sb-codeboxes-theme^="dark"] *,
+    [data-sb-code-theme^="dark"],
+    [data-sb-code-theme^="dark"] *
+  )
+);
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #18181b;
+  --color-card: #ffffff;
+  --color-border: #e4e4e7;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+}
+
+:where(
+  html[data-sb-theme^="dark"],
+  html[data-sb-prototype-theme^="dark"],
+  html[data-sb-canvas-theme^="dark"],
+  html[data-sb-toolbar-theme^="dark"],
+  html[data-sb-codeboxes-theme^="dark"],
+  html[data-sb-code-theme^="dark"]
+) {
+  --color-background: #09090b;
+  --color-foreground: #f4f4f5;
+  --color-card: #18181b;
+  --color-border: #27272a;
+  --color-muted: #27272a;
+  --color-muted-foreground: #a1a1aa;
+}

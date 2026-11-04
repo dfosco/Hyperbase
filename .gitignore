@@ -2,3 +2,13 @@
 .storyboard/
 publish/
 node_modules/
+# Hypercanvas portable Notebook runtime
+node_modules/
+dist/
+.hypercanvas/
+.storyboard/
+!vendor/
+!vendor/hypercanvas/
+!vendor/hypercanvas/dist/
+!vendor/hypercanvas/dist/notebook/
+!vendor/hypercanvas/dist/notebook/**

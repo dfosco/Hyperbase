@@ -1,0 +1,363 @@
+/*
+ * Silo Dashboard prototype stylesheet.
+ *
+ * Plain CSS with no Tailwind or build-time dependency. Every rule is scoped under
+ * .silo-dashboard, the root class on the prototype's outermost element. The
+ * utility class names here are the ones the JSX already uses. Colors are CSS
+ * variables, so light and dark mode switch through the variables. The dark:
+ * classes in the JSX are intentionally left unstyled.
+ *
+ * Dark mode follows data-sb-theme / data-sb-prototype-theme starting with "dark",
+ * or the OS preference when neither attribute is set to light.
+ */
+
+/* ---------- Tokens ---------- */
+
+.silo-dashboard {
+  --sb-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sb-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  --sb-bg: #fafafa;
+  --sb-surface: #f5f5f5;
+  --sb-surface-hover: #e5e5e5;
+  --sb-border: #e5e5e5;
+  --sb-border-hover: #d4d4d4;
+  --sb-track: #e5e5e5;
+  --sb-fg-strong: #171717;
+  --sb-fg: #262626;
+  --sb-fg-2: #404040;
+  --sb-fg-muted: #525252;
+  --sb-fg-faint: #737373;
+  --sb-fg-subtle: #737373;
+  --sb-accent: #f59e0b;
+  --sb-accent-hover: #b45309;
+  --sb-on-accent: #fafafa;
+  --sb-chart-grid: #e5e5e5;
+  --sb-chart-text: #737373;
+
+  color-scheme: light;
+}
+
+[data-sb-theme^="dark"] .silo-dashboard,
+[data-sb-prototype-theme^="dark"] .silo-dashboard {
+  --sb-bg: #09090b;
+  --sb-surface: #171717;
+  --sb-surface-hover: #262626;
+  --sb-border: #262626;
+  --sb-border-hover: #404040;
+  --sb-track: #262626;
+  --sb-fg-strong: #f5f5f5;
+  --sb-fg: #e5e5e5;
+  --sb-fg-2: #d4d4d4;
+  --sb-fg-muted: #a3a3a3;
+  --sb-fg-faint: #737373;
+  --sb-fg-subtle: #a3a3a3;
+  --sb-accent-hover: #fcd34d;
+  --sb-on-accent: #0a0a0a;
+  --sb-chart-grid: #372f1f;
+  --sb-chart-text: #80796b;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-sb-theme^="light"]):not([data-sb-prototype-theme^="light"]) .silo-dashboard {
+    --sb-bg: #09090b;
+    --sb-surface: #171717;
+    --sb-surface-hover: #262626;
+    --sb-border: #262626;
+    --sb-border-hover: #404040;
+    --sb-track: #262626;
+    --sb-fg-strong: #f5f5f5;
+    --sb-fg: #e5e5e5;
+    --sb-fg-2: #d4d4d4;
+    --sb-fg-muted: #a3a3a3;
+    --sb-fg-faint: #737373;
+    --sb-fg-subtle: #a3a3a3;
+    --sb-accent-hover: #fcd34d;
+    --sb-on-accent: #0a0a0a;
+    --sb-chart-grid: #372f1f;
+    --sb-chart-text: #80796b;
+    color-scheme: dark;
+  }
+}
+
+/* ---------- Base (scoped) ---------- */
+
+.silo-dashboard,
+.silo-dashboard *,
+.silo-dashboard *::before,
+.silo-dashboard *::after {
+  box-sizing: border-box;
+}
+
+.silo-dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--sb-bg);
+  color: var(--sb-fg);
+  font-family: var(--sb-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.silo-dashboard h1,
+.silo-dashboard h2,
+.silo-dashboard h3,
+.silo-dashboard p {
+  margin: 0;
+  font-weight: inherit;
+}
+
+.silo-dashboard a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.silo-dashboard button,
+.silo-dashboard input,
+.silo-dashboard textarea,
+.silo-dashboard select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.silo-dashboard table {
+  border-spacing: 0;
+}
+
+.silo-dashboard svg {
+  flex-shrink: 0;
+}
+
+.silo-dashboard.font-mono,
+.silo-dashboard .font-mono {
+  font-family: var(--sb-mono);
+}
+
+/* Chart: the JSX hardcodes SVG grid and label colors, so override them here. */
+.silo-dashboard [role="img"] svg line {
+  stroke: var(--sb-chart-grid);
+}
+
+.silo-dashboard [role="img"] svg text {
+  fill: var(--sb-chart-text);
+}
+
+/* ---------- Layout ---------- */
+
+.silo-dashboard .flex { display: flex; }
+.silo-dashboard .inline-flex { display: inline-flex; }
+.silo-dashboard .inline-block { display: inline-block; }
+.silo-dashboard .grid { display: grid; }
+.silo-dashboard .grid-cols-1 { grid-template-columns: minmax(0, 1fr); }
+.silo-dashboard .flex-col { flex-direction: column; }
+.silo-dashboard .flex-1 { flex: 1 1 0%; min-width: 0; }
+.silo-dashboard .flex-none { flex: none; }
+.silo-dashboard .flex-shrink-0 { flex-shrink: 0; }
+.silo-dashboard .items-center { align-items: center; }
+.silo-dashboard .items-baseline { align-items: baseline; }
+.silo-dashboard .justify-between { justify-content: space-between; }
+/* Summary-card legend: wrap instead of overflowing the card when values are long. */
+.silo-dashboard .text-xs.justify-between { flex-wrap: wrap; gap: 0.5rem; }
+.silo-dashboard .justify-end { justify-content: flex-end; }
+.silo-dashboard .place-items-center { place-items: center; }
+.silo-dashboard .relative { position: relative; }
+.silo-dashboard .absolute { position: absolute; }
+.silo-dashboard .fixed { position: fixed; }
+.silo-dashboard .inset-0 { inset: 0; }
+.silo-dashboard .inset-y-0 { top: 0; bottom: 0; }
+.silo-dashboard .right-0 { right: 0; }
+.silo-dashboard .top-full { top: 100%; }
+.silo-dashboard .z-30 { z-index: 30; }
+.silo-dashboard .z-40 { z-index: 40; }
+.silo-dashboard .z-50 { z-index: 50; }
+.silo-dashboard .z-\[100\] { z-index: 100; }
+.silo-dashboard .overflow-hidden { overflow: hidden; }
+.silo-dashboard .overflow-visible { overflow: visible; }
+.silo-dashboard .overflow-y-auto { overflow-y: auto; }
+.silo-dashboard .resize-y { resize: vertical; }
+.silo-dashboard .transition-opacity { transition: opacity 150ms ease; }
+.silo-dashboard .outline-none { outline: none; }
+.silo-dashboard .cursor-not-allowed { cursor: not-allowed; }
+.silo-dashboard .rounded-sm { border-radius: 0.125rem; }
+.silo-dashboard .rounded { border-radius: 0.25rem; }
+.silo-dashboard .rounded-md { border-radius: 0.375rem; }
+.silo-dashboard .rounded-full { border-radius: 9999px; }
+
+/* Width, height, and spacing */
+.silo-dashboard .h-screen { height: 100vh; }
+.silo-dashboard .h-full { height: 100%; }
+.silo-dashboard .h-2 { height: 0.5rem; }
+.silo-dashboard .h-6 { height: 1.5rem; }
+.silo-dashboard .h-7 { height: 1.75rem; }
+.silo-dashboard .h-8 { height: 2rem; }
+.silo-dashboard .h-64 { height: 16rem; }
+.silo-dashboard .w-full { width: 100%; }
+.silo-dashboard .w-1\/4 { width: 25%; }
+.silo-dashboard .w-1\/5 { width: 20%; }
+.silo-dashboard .w-4\/5 { width: 80%; }
+.silo-dashboard .w-2 { width: 0.5rem; }
+.silo-dashboard .w-6 { width: 1.5rem; }
+.silo-dashboard .w-7 { width: 1.75rem; }
+.silo-dashboard .w-8 { width: 2rem; }
+.silo-dashboard .w-12 { width: 3rem; }
+.silo-dashboard .w-36 { width: 9rem; }
+.silo-dashboard .w-56 { width: 14rem; }
+.silo-dashboard .max-w-md { max-width: 28rem; }
+.silo-dashboard .min-h-16 { min-height: 4rem; }
+
+.silo-dashboard .p-4 { padding: 1rem; }
+.silo-dashboard .px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.silo-dashboard .px-1\.5 { padding-left: 0.375rem; padding-right: 0.375rem; }
+.silo-dashboard .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.silo-dashboard .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+.silo-dashboard .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.silo-dashboard .px-4 { padding-left: 1rem; padding-right: 1rem; }
+.silo-dashboard .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.silo-dashboard .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.silo-dashboard .px-8 { padding-left: 2rem; padding-right: 2rem; }
+.silo-dashboard .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+.silo-dashboard .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.silo-dashboard .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.silo-dashboard .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.silo-dashboard .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.silo-dashboard .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.silo-dashboard .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.silo-dashboard .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+.silo-dashboard .m-0 { margin: 0; }
+.silo-dashboard .mb-3 { margin-bottom: 0.75rem; }
+.silo-dashboard .ml-1 { margin-left: 0.25rem; }
+.silo-dashboard .mr-1 { margin-right: 0.25rem; }
+.silo-dashboard .mt-1 { margin-top: 0.25rem; }
+.silo-dashboard .mt-3 { margin-top: 0.75rem; }
+.silo-dashboard .mt-4 { margin-top: 1rem; }
+.silo-dashboard .mt-6 { margin-top: 1.5rem; }
+.silo-dashboard .mt-10 { margin-top: 2.5rem; }
+
+.silo-dashboard .gap-1 { gap: 0.25rem; }
+.silo-dashboard .gap-1\.5 { gap: 0.375rem; }
+.silo-dashboard .gap-2 { gap: 0.5rem; }
+.silo-dashboard .gap-2\.5 { gap: 0.625rem; }
+.silo-dashboard .gap-3 { gap: 0.75rem; }
+.silo-dashboard .gap-4 { gap: 1rem; }
+.silo-dashboard .gap-5 { gap: 1.25rem; }
+
+/* Responsive: three summary cards from the md breakpoint up */
+@media (min-width: 768px) {
+  .silo-dashboard .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ---------- Borders ---------- */
+
+.silo-dashboard .border,
+.silo-dashboard .border-t,
+.silo-dashboard .border-b,
+.silo-dashboard .border-l,
+.silo-dashboard .border-r {
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--sb-border);
+}
+.silo-dashboard .border { border-width: 1px; }
+.silo-dashboard .border-t { border-top-width: 1px; }
+.silo-dashboard .border-b { border-bottom-width: 1px; }
+.silo-dashboard .border-l { border-left-width: 1px; }
+.silo-dashboard .border-r { border-right-width: 1px; }
+.silo-dashboard .border-collapse { border-collapse: collapse; }
+.silo-dashboard .border-neutral-200 { border-color: var(--sb-border); }
+.silo-dashboard .border-amber-500 { border-color: var(--sb-accent); }
+.silo-dashboard .border-amber-700\/60 { border-color: rgba(180, 83, 9, 0.6); }
+.silo-dashboard .border-transparent { border-color: transparent; }
+
+/* ---------- Backgrounds ---------- */
+
+.silo-dashboard .bg-neutral-50 { background-color: var(--sb-bg); }
+.silo-dashboard .bg-neutral-100 { background-color: var(--sb-surface); }
+.silo-dashboard .bg-neutral-200 { background-color: var(--sb-track); }
+.silo-dashboard .bg-amber-500 { background-color: var(--sb-accent); }
+.silo-dashboard .bg-gray-600 { background-color: #4b5563; }
+.silo-dashboard .bg-amber-950\/30 { background-color: rgba(69, 26, 3, 0.3); }
+.silo-dashboard .bg-black\/40 { background-color: rgba(0, 0, 0, 0.4); }
+.silo-dashboard .bg-transparent { background-color: transparent; }
+
+/* ---------- Text ---------- */
+
+.silo-dashboard .text-xs { font-size: 0.75rem; line-height: 1rem; }
+.silo-dashboard .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.silo-dashboard .text-base { font-size: 1rem; line-height: 1.5rem; }
+.silo-dashboard .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.silo-dashboard .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.silo-dashboard .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.silo-dashboard .text-\[10px\] { font-size: 10px; line-height: 1rem; }
+.silo-dashboard .text-left { text-align: left; }
+.silo-dashboard .text-center { text-align: center; }
+.silo-dashboard .text-right { text-align: right; }
+.silo-dashboard .font-normal { font-weight: 400; }
+.silo-dashboard .font-medium { font-weight: 500; }
+.silo-dashboard .font-semibold { font-weight: 600; }
+.silo-dashboard .leading-none { line-height: 1; }
+.silo-dashboard .leading-tight { line-height: 1.25; }
+.silo-dashboard .uppercase { text-transform: uppercase; }
+.silo-dashboard .tracking-wider { letter-spacing: 0.05em; }
+.silo-dashboard .tracking-widest { letter-spacing: 0.1em; }
+.silo-dashboard .tabular-nums { font-variant-numeric: tabular-nums; }
+.silo-dashboard .underline { text-decoration-line: underline; }
+.silo-dashboard .underline-offset-4 { text-underline-offset: 4px; }
+.silo-dashboard .decoration-neutral-300 { text-decoration-color: var(--sb-border-hover); }
+
+.silo-dashboard .text-amber-500 { color: var(--sb-accent); }
+.silo-dashboard .text-neutral-50 { color: var(--sb-on-accent); }
+.silo-dashboard .text-neutral-950 { color: #0a0a0a; }
+.silo-dashboard .text-neutral-900 { color: var(--sb-fg-strong); }
+.silo-dashboard .text-neutral-800 { color: var(--sb-fg); }
+.silo-dashboard .text-neutral-700 { color: var(--sb-fg-2); }
+.silo-dashboard .text-neutral-600 { color: var(--sb-fg-muted); }
+.silo-dashboard .text-neutral-500 { color: var(--sb-fg-faint); }
+.silo-dashboard .text-neutral-300 { color: var(--sb-fg-subtle); }
+.silo-dashboard .text-red-500 { color: #ef4444; }
+
+.silo-dashboard .placeholder\:text-neutral-500::placeholder { color: var(--sb-fg-faint); }
+
+/* ---------- Opacity and shadows ---------- */
+
+.silo-dashboard .opacity-0 { opacity: 0; }
+.silo-dashboard .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.silo-dashboard .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
+/* ---------- Interactive states (light-theme classes only; dark mode via variables) ---------- */
+
+.silo-dashboard .hover\:bg-neutral-100:hover { background-color: var(--sb-surface); }
+.silo-dashboard .hover\:bg-neutral-200:hover { background-color: var(--sb-surface-hover); }
+.silo-dashboard .hover\:bg-amber-500:hover { background-color: var(--sb-accent); }
+.silo-dashboard .hover\:bg-amber-900\/40:hover { background-color: rgba(120, 53, 15, 0.4); }
+.silo-dashboard .hover\:bg-red-500\/10:hover { background-color: rgba(239, 68, 68, 0.1); }
+.silo-dashboard .hover\:border-amber-600:hover { border-color: #d97706; }
+.silo-dashboard .hover\:border-neutral-300:hover { border-color: var(--sb-border-hover); }
+.silo-dashboard .hover\:text-amber-300:hover { color: var(--sb-accent-hover); }
+.silo-dashboard .hover\:text-amber-500:hover { color: var(--sb-accent); }
+.silo-dashboard .hover\:text-neutral-900:hover { color: var(--sb-fg-strong); }
+.silo-dashboard .hover\:text-red-400:hover { color: #f87171; }
+.silo-dashboard .hover\:decoration-amber-500:hover { text-decoration-color: var(--sb-accent); }
+
+.silo-dashboard .focus\:border-amber-500:focus { border-color: var(--sb-accent); }
+.silo-dashboard .focus\:opacity-100:focus { opacity: 1; }
+.silo-dashboard .disabled\:opacity-40:disabled { opacity: 0.4; }
+.silo-dashboard .disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
+
+.silo-dashboard .group:hover .group-hover\:opacity-100 { opacity: 1; }
+
+/* ---------- Table ---------- */
+
+.silo-dashboard table { width: 100%; }
+.silo-dashboard th,
+.silo-dashboard td {
+  vertical-align: middle;
+}
+

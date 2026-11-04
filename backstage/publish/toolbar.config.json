@@ -1,5 +1,6 @@
 {
   "surfaces": {
+    "state-bar":      { "position": "bottom",       "layout": "row" },
     "command-toolbar": { "position": "bottom-right", "layout": "row" },
     "canvas-toolbar": { "position": "bottom-left", "layout": "row" },
     "collab-bar":     { "position": "top-right",    "layout": "row" },
@@ -73,6 +74,17 @@
         { "label": "Dark Dimmed", "value": "dark_dimmed" }
       ]
     },
+    "hyper-agent": {
+      "label": "Hyper Agent",
+      "ariaLabel": "Hyper Agent",
+      "icon": "buddy",
+      "meta": { "scale": 1.05 },
+      "render": "sidepanel",
+      "surface": "command-toolbar",
+      "sidepanel": "hyper-agent",
+      "modes": ["*"],
+      "prod": true
+    },
     "publish": {
       "label": "Publish",
       "ariaLabel": "Publish",
@@ -83,6 +95,18 @@
       "handler": "core:publish",
       "modes": ["*"],
       "prod": true
+    },
+    "site-terminal": {
+      "label": "Terminal",
+      "ariaLabel": "Terminal",
+      "ariaControls": "site-terminal-output",
+      "icon": "feather/terminal",
+      "render": "button",
+      "surface": "command-toolbar",
+      "handler": "core:site-terminal",
+      "modes": ["*"],
+      "prod": true,
+      "hideInCommandPalette": [".*"]
     },
     "comments": {
       "ariaLabel": "Comments",
@@ -150,8 +174,8 @@
       "hideInCommandPalette": [".*"]
     },
     "canvas-agents": {
-      "ariaLabel": "Add agent",
-      "label": "Add agent",
+      "ariaLabel": "Terminal agents",
+      "label": "Terminal agents",
       "icon": "agents",
       "render": "menu",
       "surface": "canvas-toolbar",
@@ -217,12 +241,13 @@
       "url": "/"
     },
     "publish-command": {
-      "label": "Publish",
+      "label": "Publish notebook",
       "icon": "primer/cloud",
       "render": "button",
       "surface": "command-palette",
       "handler": "core:publish",
       "modes": ["*"],
+      "hideInCommandPalette": true,
       "prod": true
     },
     "repository": {
@@ -326,6 +351,37 @@
       "trailingVisual": "count",
       "alwaysVisible": true,
       "hideInCommandPalette": [".*"]
+    },
+    "inspector-panel": {
+      "label": "Inspector",
+      "ariaLabel": "Inspector",
+      "render": "panel",
+      "surface": "sidepanel",
+      "tabId": "inspector",
+      "handler": "core:inspector",
+      "modes": ["*"],
+      "prod": true
+    },
+    "sites-panel": {
+      "label": "Sites",
+      "ariaLabel": "Sites",
+      "render": "panel",
+      "surface": "sidepanel",
+      "tabId": "sites",
+      "handler": "core:sites",
+      "modes": ["*"],
+      "prod": true
+    },
+    "publish-panel": {
+      "label": "Publish",
+      "ariaLabel": "Publish",
+      "render": "panel",
+      "surface": "sidepanel",
+      "tabId": "publish",
+      "handler": "core:publish",
+      "modes": ["*"],
+      "hideInCommandPalette": true,
+      "prod": true
     }
   }
 }

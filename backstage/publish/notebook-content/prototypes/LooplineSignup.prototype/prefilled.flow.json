@@ -1,0 +1,15 @@
+{
+  "route": "/StartupSignup",
+  "meta": {
+    "title": "Prefilled",
+    "description": "Form prefilled with sample values",
+    "author": "dfosco"
+  },
+  "signup": {
+    "fullName": "Ada Lovelace",
+    "email": "ada@example.com",
+    "company": "Analytical Engines",
+    "password": "********",
+    "agreedToTerms": true
+  }
+}

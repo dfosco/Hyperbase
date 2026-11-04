@@ -1,8 +1,0 @@
-/* Workspace layout only. Core owns its static hc- stylesheet; prototypes
- * import their own CSS entry and dependency. Never import Tailwind here. */
-:global(#root) {
-  min-height: 100vh;
-  background-color: var(--hc-color-background-muted, #f6f8fa);
-  color: var(--hc-color-foreground, #1f2328);
-  font-family: var(--hc-font-sans, system-ui);
-}
