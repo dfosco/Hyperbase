@@ -501,7 +501,7 @@
     "vendor/hypercanvas/terminal.config.json": "4bc81d4755152983ec8500e3a562574f5d87a24663cfbaae31ce9721b41939c6",
     "vendor/hypercanvas/mascot.config.json": "2fe9984ce742e9e142d751db15edd9af50ba8fbe6570cf0eaab288b476aeaba1",
     "vendor/hypercanvas/package.json": "089a76f37d5dbc0060a8f26a0b26b8568a247fbf8a56cd48c1acc0a2ac322821",
-    "vendor/hypercanvas/dist/notebook/runtime-manifest.json": "a0f044ad5b07207ffb147fde14c398b82d8231888a462c296506088e00fafcf1",
+    "vendor/hypercanvas/dist/notebook/runtime-manifest.json": "b60932a26000ae4b403f972c80acbccd812c1f7f8572378e7e5e5d90bfe1fe36",
     "vite.config.js": "4f685ce276e6271a04d78a7f678c719cd8283816bf12ff4baeb40036fb25f4d3",
     "index.html": "f7346c39ab65fc93f322f40d1b860d633f08dc2d090794d559599a5a57a10724",
     "prototypes.html": "c6343e1fa883e517d776c7c1ca6b3a33358c7d0aba4638260782a1cc782253b3",

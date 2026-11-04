@@ -2398,7 +2398,7 @@
     "src/core/notebook/publishing/credentials.ts": "74b477e5db10786dee13e444d64c52db6e8462eaa6323213e77a81ad16b41ed4",
     "src/core/notebook/publishing/errors.ts": "1fbcdf537a4f178a88e144f3ac945d9afac87af7ad66838423b88fff91f12ce9",
     "src/core/notebook/publishing/fake-github.test.helper.js": "71f015d816d463748d973471bf83d32f27bf69fac2fba1907dea803861fcd452",
-    "src/core/notebook/publishing/generator.ts": "b9db68270934e41b5e7a95c60273ba34c7f3fb23f7b105dec7371ea5f894906f",
+    "src/core/notebook/publishing/generator.ts": "9bfee2b59551334375567a7216d994ad06e0a76e2eec6dd7660bd786007681b4",
     "src/core/notebook/publishing/ghExecutable.ts": "c5c3234c80b3bab782e780a6585e08389284c4984848f89a14fe0d0290240db0",
     "src/core/notebook/publishing/git.ts": "ba457f80edf6eab1031b2b9a8ce04c5a9002939c5d8d1e2806bafa12a754eae0",
     "src/core/notebook/publishing/github.ts": "d0f6fce90e2a2ebf86d655f5aeaef2505c41b0d384be26042a4a9490df02b2a5",
@@ -2407,7 +2407,7 @@
     "src/core/notebook/publishing/netlifyDeployment.ts": "d1b82e274a965fa7428147b4baaa2225291f7732f7a38b4d10d8dc3909fd560d",
     "src/core/notebook/publishing/netlifyPublication.ts": "662cfe230d86116793823b8f83c183436136c62d83cf6fdb03a867a2ade6cad3",
     "src/core/notebook/publishing/operations.ts": "0857644a7a7626cfe281503c5c6ee17c6a40b335b17c293a8bc505f3148a7e55",
-    "src/core/notebook/publishing/prepare.ts": "62c500de8b409ae0a3850d1b6209ef9708814f4b60b1a1b514545088b09212b6",
+    "src/core/notebook/publishing/prepare.ts": "fe24830c77893e987acf95fc7395abe91ac6ffc15e2bfc1130d01d195b55027f",
     "src/core/notebook/publishing/providerLogin.ts": "37075ff47aaee4909c2fcc9f33c509dd6d6ec2bde3e48c6d02e9b0a0b5a1157a",
     "src/core/notebook/publishing/providerPublication.ts": "b8b35b652651cb6b97418963158a436c703f5fe61472092da8ba7285b0470b25",
     "src/core/notebook/publishing/providerRegistry.ts": "9875148bd4cd8fa3cd53b6f6c6e90517f1333603cadc84ac27c9a88750f9f3ae",
@@ -2598,7 +2598,7 @@
     "src/core/ui/PwaInstallBanner.jsx": "39c31dd8feaedf06887ee8f3d2cd648cecdfb424042ae9c562fe14cdfa3912a7",
     "src/core/ui/RepositorySettings/GitHubAccount.tsx": "db9e9a7ec8401011a30f825e13cba4bd58ca55ddf6ca0b05d2ccb67e8d08165c",
     "src/core/ui/RepositorySettings/RepositorySettings.module.css.d.ts": "b5ca5925b1f359c1d71f7b2fe38a4ba484b02def3e4b3cd40c961eac3771d532",
-    "src/core/ui/RepositorySettings/RepositorySettings.tsx": "0261d1b2fb76b0bd58a57de695dea0f583a79f16c98d81ce469479ec7d7debe0",
+    "src/core/ui/RepositorySettings/RepositorySettings.tsx": "8d2428d0c22b300fabfc276489549b776a5ee7dfd8b1400141e89d556f32499a",
     "src/core/ui/RepositorySettings/repositoryNotice.ts": "ed3dac5c4efc537232ecb0df41a7b7c9f14c87c2fd85ffbee03b59039c00df95",
     "src/core/ui/RunningSitesPanel.jsx": "56b20ecd823fce8404f3428923109210e83358fae71493477fea5dcf1ca2a28d",
     "src/core/ui/ShellTabs/ShellTabs.d.ts": "00f2644f862546a0ab0cc5f9ee99b07858d592f2f8332b18d69cc2df560474ad",
@@ -3217,70 +3217,6 @@
       "src/core/stores/configSchema.ts",
       "src/core/stores/themeBootstrap.ts"
     ],
-    "src/core/data/dotPath.ts": [],
-    "src/core/session/session.ts": [],
-    "src/core/session/localStorage.ts": [],
-    "src/core/session/hideMode.ts": [
-      "src/core/session/localStorage.ts",
-      "src/core/session/session.ts"
-    ],
-    "src/core/session/interceptHideParams.ts": [
-      "src/core/session/hideMode.ts"
-    ],
-    "src/core/session/hashSubscribe.ts": [],
-    "src/core/session/bodyClasses.ts": [
-      "src/core/session/session.ts",
-      "src/core/session/hideMode.ts",
-      "src/core/session/hashSubscribe.ts",
-      "src/core/session/localStorage.ts",
-      "src/core/stores/featureFlags.ts"
-    ],
-    "src/core/data/viewfinder.ts": [
-      "src/core/data/loader.ts"
-    ],
-    "src/core/knobs/index.ts": [
-      "src/core/knobs/keys.ts",
-      "src/core/knobs/coerce.ts",
-      "src/core/knobs/discovery.ts",
-      "src/core/knobs/writer.ts",
-      "src/core/knobs/statefullyAdapter.ts",
-      "src/core/knobs/route.ts",
-      "src/core/knobs/highlight.ts"
-    ],
-    "src/core/stores/commandActions.ts": [],
-    "src/core/stores/toolRegistry.ts": [],
-    "src/core/stores/toolStateStore.ts": [
-      "src/core/session/notebookCapabilities.ts",
-      "src/core/stores/featureFlags.ts",
-      "src/core/session/localStorage.ts"
-    ],
-    "src/core/comments/config.ts": [],
-    "src/core/stores/canvasConfig.ts": [],
-    "src/core/stores/commandPaletteConfig.ts": [
-      "src/core/stores/configStore.ts"
-    ],
-    "src/core/stores/presentationStore.ts": [],
-    "src/core/stores/widgetRegistry.ts": [],
-    "src/core/stores/canvasInteractionStore.ts": [],
-    "src/core/stores/recentArtifacts.ts": [],
-    "src/core/utils/fuzzySearch.ts": [],
-    "src/core/ui/Icon.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "\u0000/Users/danielfosco/workspace/hypercanvas/node_modules/feather-icons/dist/feather.js?commonjs-es-import",
-      "src/core/ui/primerIcons.ts"
-    ],
-    "src/core/navigation/sbNavigate.ts": [],
-    "src/core/site/contract.ts": [],
-    "src/core/site/publish.ts": [
-      "src/core/site/contract.ts"
-    ],
-    "src/core/site/published.ts": [
-      "src/core/site/publish.ts"
-    ],
-    "src/internals/canvas/isolation/contentRouting.js": [
-      "src/core/session/notebookView.ts"
-    ],
     "src/internals/StoryboardContext.js": [
       "react"
     ],
@@ -3377,6 +3313,67 @@
     "src/internals/context/FormContext.js": [
       "react"
     ],
+    "src/core/data/dotPath.ts": [],
+    "src/core/session/session.ts": [],
+    "src/core/session/localStorage.ts": [],
+    "src/core/session/hideMode.ts": [
+      "src/core/session/localStorage.ts",
+      "src/core/session/session.ts"
+    ],
+    "src/core/session/interceptHideParams.ts": [
+      "src/core/session/hideMode.ts"
+    ],
+    "src/core/session/hashSubscribe.ts": [],
+    "src/core/session/bodyClasses.ts": [
+      "src/core/session/session.ts",
+      "src/core/session/hideMode.ts",
+      "src/core/session/hashSubscribe.ts",
+      "src/core/session/localStorage.ts",
+      "src/core/stores/featureFlags.ts"
+    ],
+    "src/core/data/viewfinder.ts": [
+      "src/core/data/loader.ts"
+    ],
+    "src/core/knobs/index.ts": [
+      "src/core/knobs/keys.ts",
+      "src/core/knobs/coerce.ts",
+      "src/core/knobs/discovery.ts",
+      "src/core/knobs/writer.ts",
+      "src/core/knobs/statefullyAdapter.ts",
+      "src/core/knobs/route.ts",
+      "src/core/knobs/highlight.ts"
+    ],
+    "src/core/stores/commandActions.ts": [],
+    "src/core/stores/toolRegistry.ts": [],
+    "src/core/stores/toolStateStore.ts": [
+      "src/core/session/notebookCapabilities.ts",
+      "src/core/stores/featureFlags.ts",
+      "src/core/session/localStorage.ts"
+    ],
+    "src/core/comments/config.ts": [],
+    "src/core/stores/canvasConfig.ts": [],
+    "src/core/stores/commandPaletteConfig.ts": [
+      "src/core/stores/configStore.ts"
+    ],
+    "src/core/stores/presentationStore.ts": [],
+    "src/core/stores/widgetRegistry.ts": [],
+    "src/core/stores/canvasInteractionStore.ts": [],
+    "src/core/stores/recentArtifacts.ts": [],
+    "src/core/utils/fuzzySearch.ts": [],
+    "src/core/ui/Icon.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "\u0000/Users/danielfosco/workspace/hypercanvas/node_modules/feather-icons/dist/feather.js?commonjs-es-import",
+      "src/core/ui/primerIcons.ts"
+    ],
+    "src/core/navigation/sbNavigate.ts": [],
+    "src/core/site/contract.ts": [],
+    "src/core/site/publish.ts": [
+      "src/core/site/contract.ts"
+    ],
+    "src/core/site/published.ts": [
+      "src/core/site/publish.ts"
+    ],
     "src/canvas/style.css": [],
     "src/canvas/Canvas.jsx": [
       "react/jsx-runtime",
@@ -3398,35 +3395,27 @@
     "src/canvas/utils.js": [
       "react"
     ],
+    "src/internals/canvas/isolation/contentRouting.js": [
+      "src/core/session/notebookView.ts"
+    ],
+    "src/internals/Knobs/KnobsForm.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/BaseUiForm/BaseUiForm.jsx",
+      "src/core/knobs/index.ts",
+      "src/core/knobs/filter.ts",
+      "src/internals/Knobs/KnobsForm.module.css"
+    ],
+    "src/core/session/notebookView.ts": [
+      "src/core/embedNavigation.ts"
+    ],
+    "src/internals/canvas/iframePointerLock.js": [],
+    "src/canvas/dragCursor.js": [],
     "src/internals/useFlowContext.js": [
       "react",
       "src/core/data/loader.ts",
       "src/core/session/bodyClasses.ts",
       "src/internals/routeContext.js"
-    ],
-    "src/core/styles/notebook-grid.css": [],
-    "src/internals/Document/DocPage.module.css": [],
-    "src/internals/DocEditor/DocEditor.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/popover/index.mjs",
-      "src/core/lib/components/ui/tooltip/index.js",
-      "src/internals/Document/Document.jsx",
-      "src/internals/Document/Document.module.css",
-      "src/core/notebook/docs/source-model.ts",
-      "src/internals/DocEditor/docInsertCatalog.js",
-      "src/core/stores/commandActions.ts",
-      "src/core/stores/widgetRegistry.ts",
-      "src/core/ui/Icon.jsx",
-      "src/internals/chrome/ui/input.jsx",
-      "src/internals/chrome/ui/select.jsx",
-      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
-      "src/internals/DocEditor/DocEditor.module.css",
-      "src/internals/canvas/canvasApi.js",
-      "src/internals/canvas/widgets/agentScreenshotPaste.js",
-      "src/internals/DocEditor/docDrafts.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
     ],
     "src/internals/canvas/widgets/prototypePickerEntries.js": [],
     "src/core/lib/components/ui/button/index.js": [
@@ -3466,6 +3455,10 @@
       "src/internals/canvas/widgets/ExpandedPaneTopBar.jsx",
       "src/internals/canvas/widgets/ExpandedPane.module.css",
       "src/internals/canvas/widgets/expandedPaneTransitions.js"
+    ],
+    "src/core/ui/primerIcons.ts": [
+      "react",
+      "src/core/ui/primerIconLoaders.generated.ts"
     ],
     "src/internals/notebook/PrototypeViewer/PrototypeViewer.jsx": [
       "react/jsx-runtime",
@@ -3527,63 +3520,50 @@
       "src/internals/hooks/useThemeState.js",
       "src/internals/SitePage/SitePage.module.css"
     ],
-    "src/core/session/notebookView.ts": [
-      "src/core/embedNavigation.ts"
-    ],
-    "src/internals/Knobs/KnobsForm.jsx": [
+    "src/core/styles/notebook-grid.css": [],
+    "src/internals/Document/DocPage.module.css": [],
+    "src/internals/DocEditor/DocEditor.jsx": [
       "react/jsx-runtime",
       "react",
-      "src/internals/BaseUiForm/BaseUiForm.jsx",
-      "src/core/knobs/index.ts",
-      "src/core/knobs/filter.ts",
-      "src/internals/Knobs/KnobsForm.module.css"
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/popover/index.mjs",
+      "src/core/lib/components/ui/tooltip/index.js",
+      "src/internals/Document/Document.jsx",
+      "src/internals/Document/Document.module.css",
+      "src/core/notebook/docs/source-model.ts",
+      "src/internals/DocEditor/docInsertCatalog.js",
+      "src/core/stores/commandActions.ts",
+      "src/core/stores/widgetRegistry.ts",
+      "src/core/ui/Icon.jsx",
+      "src/internals/chrome/ui/input.jsx",
+      "src/internals/chrome/ui/select.jsx",
+      "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx",
+      "src/internals/DocEditor/DocEditor.module.css",
+      "src/internals/canvas/canvasApi.js",
+      "src/internals/canvas/widgets/agentScreenshotPaste.js",
+      "src/internals/DocEditor/docDrafts.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
     ],
-    "src/internals/routeContext.js": [],
-    "src/internals/canvas/iframePointerLock.js": [],
-    "src/canvas/dragCursor.js": [],
-    "src/core/ui/primerIcons.ts": [
+    "src/internals/BaseUiForm/BaseUiForm.jsx": [
+      "react/jsx-runtime",
       "react",
-      "src/core/ui/primerIconLoaders.generated.ts"
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/field/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/checkbox/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/radio-group/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/radio/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
+      "src/internals/BaseUiForm/BaseUiForm.module.css"
     ],
-    "src/core/stores/themeHues.ts": [],
-    "src/core/stores/themeBootstrap.ts": [
-      "src/core/stores/themeHues.ts"
-    ],
-    "src/core/session/notebookCapabilities.ts": [],
-    "src/core/knobs/keys.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/coerce.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/writer.ts": [
-      "@dfosco/statefully/core"
-    ],
-    "src/core/knobs/statefullyAdapter.ts": [
-      "@dfosco/statefully/core",
-      "src/core/session/session.ts",
-      "src/core/session/hashSubscribe.ts",
-      "src/core/session/localStorage.ts",
-      "src/core/session/hideMode.ts"
-    ],
-    "src/core/knobs/route.ts": [],
-    "src/core/knobs/highlight.ts": [
-      "src/core/knobs/discovery.ts",
-      "@dfosco/statefully/core",
-      "src/core/session/notebookView.ts",
-      "src/core/ui/knobsPanelState.ts",
-      "src/core/session/hashSubscribe.ts",
-      "src/core/knobs/route.ts"
-    ],
+    "src/core/knobs/filter.ts": [],
+    "src/internals/Knobs/KnobsForm.module.css": [],
+    "src/internals/routeContext.js": [],
     "src/internals/showToast.js": [],
     "src/core/lib/components/ui/button/button.jsx": [
       "react/jsx-runtime",
       "react",
       "src/core/lib/utils/index.js",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js"
-    ],
-    "src/internals/canvas/isolation/routeCompiler.js": [
-      "@generouted/react-router/core"
     ],
     "src/internals/WidgetSurface/widgetSurfaceCatalog.js": [
       "src/core/stores/widgetRegistry.ts",
@@ -3770,20 +3750,9 @@
       "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css",
       "src/core/lib/components/ui/alert/alert.jsx"
     ],
-    "src/internals/lucide/icons/minimize.js": [
-      "src/internals/lucide/createLucideIcon.js"
+    "src/internals/canvas/isolation/routeCompiler.js": [
+      "@generouted/react-router/core"
     ],
-    "src/internals/canvas/widgets/ExpandedPaneTopBar.jsx": [
-      "react/jsx-runtime",
-      "src/internals/lucide/icons/minimize.js",
-      "src/internals/Tooltip.jsx",
-      "src/internals/canvas/widgets/widgetIcons.jsx",
-      "src/internals/canvas/widgets/widgetConfig.js",
-      "src/internals/Icon.jsx",
-      "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css"
-    ],
-    "src/internals/canvas/widgets/ExpandedPane.module.css": [],
-    "src/internals/canvas/widgets/expandedPaneTransitions.js": [],
     "src/internals/NotebookSidebarTree/NotebookSidebarTree.jsx": [
       "react/jsx-runtime",
       "react",
@@ -3841,90 +3810,50 @@
     ],
     "src/internals/NotebookShell/NotebookShell.module.css": [],
     "src/internals/notebook/NotebookViewer/NotebookViewer.module.css": [],
-    "src/internals/canvas/widgets/markdown/MarkdownEditor.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/canvas/widgets/markdown/markdownRender.js",
-      "src/internals/canvas/widgets/markdown/markdownClass.js",
-      "src/internals/canvas/widgets/markdown/MarkdownEditor.module.css"
+    "src/internals/lucide/icons/minimize.js": [
+      "src/internals/lucide/createLucideIcon.js"
     ],
-    "src/internals/canvas/widgets/WidgetWrapper.jsx": [
+    "src/internals/canvas/widgets/ExpandedPaneTopBar.jsx": [
       "react/jsx-runtime",
-      "src/internals/canvas/widgets/WidgetWrapper.module.css"
-    ],
-    "src/internals/canvas/ConnectorLayer.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/canvas/ConnectorLayer.module.css",
+      "src/internals/lucide/icons/minimize.js",
+      "src/internals/Tooltip.jsx",
+      "src/internals/canvas/widgets/widgetIcons.jsx",
       "src/internals/canvas/widgets/widgetConfig.js",
-      "src/internals/canvas/connectorGeometry.js",
-      "src/internals/canvas/orthogonalRoutes.js"
+      "src/internals/Icon.jsx",
+      "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css"
     ],
-    "src/internals/canvas/widgets/canvasBridge.js": [
-      "react"
+    "src/internals/canvas/widgets/ExpandedPane.module.css": [],
+    "src/internals/canvas/widgets/expandedPaneTransitions.js": [],
+    "src/core/stores/themeHues.ts": [],
+    "src/core/session/notebookCapabilities.ts": [],
+    "src/core/knobs/keys.ts": [
+      "@dfosco/statefully/core"
     ],
-    "src/internals/canvas/widgets/knobsTargetResolver.js": [
-      "src/core/data/viewfinder.ts",
+    "src/core/knobs/coerce.ts": [
+      "@dfosco/statefully/core"
+    ],
+    "src/core/knobs/writer.ts": [
+      "@dfosco/statefully/core"
+    ],
+    "src/core/knobs/statefullyAdapter.ts": [
+      "@dfosco/statefully/core",
+      "src/core/session/session.ts",
+      "src/core/session/hashSubscribe.ts",
+      "src/core/session/localStorage.ts",
+      "src/core/session/hideMode.ts"
+    ],
+    "src/core/knobs/route.ts": [],
+    "src/core/knobs/highlight.ts": [
       "src/core/knobs/discovery.ts",
-      "src/core/data/loader.ts",
-      "src/internals/canvas/widgetRefs.js",
-      "src/internals/canvas/widgets/widgetConfig.js"
+      "@dfosco/statefully/core",
+      "src/core/session/notebookView.ts",
+      "src/core/ui/knobsPanelState.ts",
+      "src/core/session/hashSubscribe.ts",
+      "src/core/knobs/route.ts"
     ],
-    "src/internals/basePathAsset.js": [],
-    "src/internals/canvas/widgets/frameTheme.js": [],
-    "src/internals/canvas/widgets/figmaUrl.js": [],
-    "src/internals/story/storyExports.js": [
-      "react"
+    "src/core/stores/themeBootstrap.ts": [
+      "src/core/stores/themeHues.ts"
     ],
-    "src/internals/notebook/CanvasViewer/CanvasViewer.module.css": [],
-    "src/core/lib/components/ui/tooltip/index.js": [
-      "src/core/lib/components/ui/tooltip/tooltip.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-content.jsx"
-    ],
-    "src/core/notebook/docs/source-model.ts": [],
-    "src/internals/DocEditor/docInsertCatalog.js": [
-      "src/internals/WidgetSurface/widgetSurfaceCatalog.js"
-    ],
-    "src/internals/chrome/ui/input.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/input/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/chrome/ui/select.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
-      "src/internals/chrome/utils.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/DocEditor/DocEditor.module.css": [],
-    "src/internals/canvas/canvasApi.js": [
-      "src/internals/canvas/widgetRefs.js"
-    ],
-    "src/internals/canvas/widgets/agentScreenshotPaste.js": [],
-    "src/internals/DocEditor/docDrafts.js": [],
-    "src/internals/SitePage/SitePage.module.css": [],
-    "src/core/embedNavigation.ts": [],
-    "src/internals/BaseUiForm/BaseUiForm.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/field/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/checkbox/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/radio-group/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/radio/index.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
-      "src/internals/BaseUiForm/BaseUiForm.module.css"
-    ],
-    "src/core/knobs/filter.ts": [],
-    "src/internals/Knobs/KnobsForm.module.css": [],
     "src/core/ui/primerIconLoaders.generated.ts": [
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/AccessibilityIcon.mjs",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/AccessibilityInsetIcon.mjs",
@@ -4326,12 +4255,48 @@
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/ZoomInIcon.mjs",
       "/Users/danielfosco/workspace/hypercanvas/node_modules/@primer/octicons-react/dist/icons/ZoomOutIcon.mjs"
     ],
-    "src/core/ui/knobsPanelState.ts": [
-      "src/core/session/session.ts"
+    "src/internals/SitePage/SitePage.module.css": [],
+    "src/core/embedNavigation.ts": [],
+    "src/internals/canvas/widgets/markdown/MarkdownEditor.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/canvas/widgets/markdown/markdownRender.js",
+      "src/internals/canvas/widgets/markdown/markdownClass.js",
+      "src/internals/canvas/widgets/markdown/MarkdownEditor.module.css"
     ],
+    "src/internals/canvas/widgets/WidgetWrapper.jsx": [
+      "react/jsx-runtime",
+      "src/internals/canvas/widgets/WidgetWrapper.module.css"
+    ],
+    "src/internals/canvas/ConnectorLayer.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/canvas/ConnectorLayer.module.css",
+      "src/internals/canvas/widgets/widgetConfig.js",
+      "src/internals/canvas/connectorGeometry.js",
+      "src/internals/canvas/orthogonalRoutes.js"
+    ],
+    "src/internals/canvas/widgets/canvasBridge.js": [
+      "react"
+    ],
+    "src/internals/canvas/widgets/knobsTargetResolver.js": [
+      "src/core/data/viewfinder.ts",
+      "src/core/knobs/discovery.ts",
+      "src/core/data/loader.ts",
+      "src/internals/canvas/widgetRefs.js",
+      "src/internals/canvas/widgets/widgetConfig.js"
+    ],
+    "src/internals/basePathAsset.js": [],
+    "src/internals/canvas/widgets/frameTheme.js": [],
+    "src/internals/canvas/widgets/figmaUrl.js": [],
+    "src/internals/story/storyExports.js": [
+      "react"
+    ],
+    "src/internals/notebook/CanvasViewer/CanvasViewer.module.css": [],
     "src/core/lib/utils/index.js": [
       "src/internals/hc-classnames.js"
     ],
+    "src/internals/BaseUiForm/BaseUiForm.module.css": [],
     "src/internals/canvas/widgets/widgetConfig.js": [
       "widgets.config.json",
       "src/core/stores/widgetRegistry.ts",
@@ -4345,33 +4310,21 @@
       "src/internals/lucide/shared/src/utils/toPascalCase.js",
       "src/internals/lucide/Icon.js"
     ],
-    "src/core/lib/components/ui/tooltip/tooltip.jsx": [
-      "react/jsx-runtime",
-      "react"
-    ],
-    "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/core/lib/components/ui/tooltip/tooltip.jsx"
-    ],
-    "src/core/lib/components/ui/tooltip/tooltip-content.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "react-dom",
-      "src/core/lib/components/ui/tooltip/tooltip.jsx",
-      "src/core/lib/components/ui/tooltip/tooltip-content.css"
-    ],
     "src/internals/canvas/widgets/widgetProps.js": [
       "src/internals/canvas/widgets/widgetConfig.js"
     ],
-    "src/internals/canvas/widgets/ResizeHandle.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/canvas/widgets/ResizeHandle.module.css",
-      "src/internals/canvas/iframePointerLock.js",
-      "src/internals/pointerResize.js"
+    "src/internals/canvas/widgets/codepenUrl.js": [],
+    "src/internals/canvas/widgets/iframeDevLogs.js": [
+      "react"
     ],
-    "src/internals/canvas/widgets/StickyNote.module.css": [],
+    "src/internals/canvas/widgets/CodePenEmbed.module.css": [],
+    "src/internals/canvas/widgets/embedOverlay.module.css": [],
+    "src/internals/canvas/widgets/useExpandOverride.js": [
+      "react",
+      "react-dom",
+      "src/internals/hooks/useOverride.js",
+      "src/internals/canvas/widgets/expandedPaneTransitions.js"
+    ],
     "src/internals/canvas/widgets/expandUtils.js": [
       "react",
       "src/core/data/loader.ts",
@@ -4386,13 +4339,48 @@
       "src/internals/canvas/widgets/LinkPreview.module.css",
       "src/internals/canvas/widgets/ImageWidget.module.css"
     ],
-    "src/internals/canvas/widgets/useExpandOverride.js": [
-      "react",
-      "react-dom",
-      "src/internals/hooks/useOverride.js",
-      "src/internals/canvas/widgets/expandedPaneTransitions.js"
+    "src/internals/canvas/widgets/FigmaEmbed.module.css": [],
+    "src/core/lib/components/ui/tooltip/index.js": [
+      "src/core/lib/components/ui/tooltip/tooltip.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-content.jsx"
     ],
-    "src/internals/canvas/widgets/MarkdownBlock.module.css": [],
+    "src/core/notebook/docs/source-model.ts": [],
+    "src/internals/DocEditor/docInsertCatalog.js": [
+      "src/internals/WidgetSurface/widgetSurfaceCatalog.js"
+    ],
+    "src/internals/chrome/ui/input.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/input/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/chrome/ui/select.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/select/index.mjs",
+      "src/internals/chrome/utils.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/CanvasToolsPresentation/CanvasToolsPresentation.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/button/index.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/menu/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/DocEditor/DocEditor.module.css": [],
+    "src/internals/canvas/canvasApi.js": [
+      "src/internals/canvas/widgetRefs.js"
+    ],
+    "src/internals/canvas/widgets/agentScreenshotPaste.js": [],
+    "src/internals/DocEditor/docDrafts.js": [],
+    "src/internals/canvas/widgets/ResizeHandle.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/canvas/widgets/ResizeHandle.module.css",
+      "src/internals/canvas/iframePointerLock.js",
+      "src/internals/pointerResize.js"
+    ],
+    "src/internals/canvas/widgets/StickyNote.module.css": [],
     "src/internals/lucide/icons/git-branch.js": [
       "src/internals/lucide/createLucideIcon.js"
     ],
@@ -4418,6 +4406,14 @@
       "/Users/danielfosco/workspace/hypercanvas/node_modules/rehype-stringify/index.js"
     ],
     "src/internals/canvas/widgets/LinkPreview.module.css": [],
+    "src/internals/canvas/widgets/MarkdownBlock.module.css": [],
+    "src/internals/hc-classnames.js": [
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/clsx/dist/clsx.mjs",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-merge/dist/bundle-mjs.mjs"
+    ],
+    "src/internals/chrome/utils.js": [
+      "src/internals/hc-classnames.js"
+    ],
     "src/internals/Tooltip.jsx": [
       "react/jsx-runtime",
       "src/core/lib/components/ui/tooltip/index.js"
@@ -4448,104 +4444,6 @@
       "src/core/ui/primerIcons.ts"
     ],
     "src/internals/canvas/widgets/ExpandedPaneTopBar.module.css": [],
-    "src/internals/hc-classnames.js": [
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/clsx/dist/clsx.mjs",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-merge/dist/bundle-mjs.mjs"
-    ],
-    "src/internals/canvas/widgets/codepenUrl.js": [],
-    "src/internals/canvas/widgets/iframeDevLogs.js": [
-      "react"
-    ],
-    "src/internals/canvas/widgets/CodePenEmbed.module.css": [],
-    "src/internals/canvas/widgets/embedOverlay.module.css": [],
-    "src/internals/chrome/utils.js": [
-      "src/internals/hc-classnames.js"
-    ],
-    "src/internals/lucide/shared/src/utils/mergeClasses.js": [],
-    "src/internals/lucide/shared/src/utils/toKebabCase.js": [],
-    "src/internals/lucide/shared/src/utils/toPascalCase.js": [
-      "src/internals/lucide/shared/src/utils/toCamelCase.js"
-    ],
-    "src/internals/lucide/Icon.js": [
-      "react",
-      "src/internals/lucide/defaultAttributes.js",
-      "src/internals/lucide/shared/src/utils/hasA11yProp.js",
-      "src/internals/lucide/shared/src/utils/mergeClasses.js",
-      "src/internals/lucide/context.js"
-    ],
-    "widgets.config.json": [],
-    "src/internals/canvas/widgets/useObservedFrameLifecycle.js": [
-      "react",
-      "src/internals/canvas/widgets/frameDocumentReady.js"
-    ],
-    "src/core/utils/prodMode.ts": [],
-    "src/core/site/siteEvents.ts": [
-      "src/core/site/siteHomePreview.ts"
-    ],
-    "src/internals/canvas/widgets/useFrameSnapshot.js": [
-      "react",
-      "src/core/canvas/frameSnapshotViewport.ts"
-    ],
-    "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js": [
-      "react",
-      "src/internals/canvas/widgets/useFrameSnapshot.js",
-      "src/internals/canvas/widgets/frameDocumentReady.js",
-      "src/core/canvas/frameSnapshotViewport.ts"
-    ],
-    "src/internals/canvas/widgets/useCanvasFrameTheme.js": [
-      "react"
-    ],
-    "src/internals/canvas/widgets/frameActionUpdates.js": [
-      "src/internals/canvas/widgets/frameDevicePresets.js"
-    ],
-    "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css": [],
-    "src/core/lib/components/ui/alert/alert.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/core/lib/utils/index.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
-      "src/core/lib/components/ui/button/index.js",
-      "src/core/lib/components/ui/alert/displayLifecycle.ts",
-      "src/core/lib/components/ui/alert/alert.module.css",
-      "src/core/session/notebookCapabilities.ts"
-    ],
-    "src/internals/canvas/widgetRefs.js": [],
-    "src/internals/canvas/widgets/ResizeHandle.module.css": [],
-    "src/internals/pointerResize.js": [
-      "src/internals/canvas/iframePointerLock.js",
-      "src/internals/pointerResize.css"
-    ],
-    "src/internals/CommandPalette/WidgetArtifactDialog.jsx": [
-      "react/jsx-runtime",
-      "react",
-      "src/internals/Dialog.jsx",
-      "src/core/data/viewfinder.ts",
-      "src/core/data/loader.ts",
-      "src/internals/CommandPalette/WidgetArtifactDialog.css"
-    ],
-    "src/internals/canvas/widgets/useStoryFrame.js": [
-      "react",
-      "src/core/data/loader.ts",
-      "src/core/canvas/storyFrameRoute.ts",
-      "src/internals/basePathAsset.js",
-      "src/internals/hooks/useFeatureFlag.js",
-      "src/internals/canvas/widgets/useFrameSnapshot.js",
-      "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js",
-      "src/internals/canvas/widgets/useObservedFrameLifecycle.js"
-    ],
-    "src/internals/story/storyFrameUrl.js": [
-      "src/core/canvas/storyFrameRoute.ts"
-    ],
-    "src/core/inspector/highlighter.ts": [
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/core.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/javascript.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/typescript.js",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/xml.js",
-      "src/core/stores/toolbarConfigStore.ts"
-    ],
-    "src/internals/canvas/widgets/storyPath.js": [],
-    "src/internals/canvas/widgets/StoryWidget.module.css": [],
     "src/internals/chrome/ui/dialog.jsx": [
       "react/jsx-runtime",
       "react",
@@ -4578,15 +4476,148 @@
       "src/core/session/notebookCapabilities.ts"
     ],
     "src/internals/NotebookSidebarTree/NotebookSidebarTree.module.css": [],
-    "src/internals/BaseUiForm/BaseUiForm.module.css": [],
+    "src/internals/canvas/widgets/useStoryFrame.js": [
+      "react",
+      "src/core/data/loader.ts",
+      "src/core/canvas/storyFrameRoute.ts",
+      "src/internals/basePathAsset.js",
+      "src/internals/hooks/useFeatureFlag.js",
+      "src/internals/canvas/widgets/useFrameSnapshot.js",
+      "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js",
+      "src/internals/canvas/widgets/useObservedFrameLifecycle.js"
+    ],
+    "src/internals/canvas/widgets/useCanvasFrameTheme.js": [
+      "react"
+    ],
+    "src/internals/story/storyFrameUrl.js": [
+      "src/core/canvas/storyFrameRoute.ts"
+    ],
+    "src/internals/canvas/widgets/storyPath.js": [],
+    "src/internals/canvas/widgets/StoryWidget.module.css": [],
+    "src/internals/CommandPalette/WidgetArtifactDialog.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/internals/Dialog.jsx",
+      "src/core/data/viewfinder.ts",
+      "src/core/data/loader.ts",
+      "src/internals/CommandPalette/WidgetArtifactDialog.css"
+    ],
+    "src/core/inspector/highlighter.ts": [
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/core.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/javascript.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/typescript.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/highlight.js/es/languages/xml.js",
+      "src/core/stores/toolbarConfigStore.ts"
+    ],
     "src/internals/canvas/widgets/CropOverlay.jsx": [
       "react/jsx-runtime",
       "react",
       "src/internals/canvas/widgets/CropOverlay.module.css"
     ],
     "src/internals/canvas/widgets/ImageWidget.module.css": [],
-    "src/core/lib/components/ui/tooltip/tooltip-content.css": [],
-    "src/internals/canvas/widgets/FigmaEmbed.module.css": [],
+    "src/internals/chrome/use-mobile.js": [
+      "react"
+    ],
+    "src/internals/chrome/ui/separator.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/separator/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/internals/chrome/ui/sheet.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/dialog/index.mjs",
+      "src/internals/chrome/utils.js",
+      "src/internals/chrome/ui/button.jsx",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
+    ],
+    "src/internals/chrome/ui/tooltip.jsx": [
+      "react/jsx-runtime",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/tooltip/index.mjs",
+      "src/internals/chrome/utils.js"
+    ],
+    "src/core/ui/knobsPanelState.ts": [
+      "src/core/session/session.ts"
+    ],
+    "src/internals/lucide/shared/src/utils/mergeClasses.js": [],
+    "src/internals/lucide/shared/src/utils/toKebabCase.js": [],
+    "src/internals/lucide/shared/src/utils/toPascalCase.js": [
+      "src/internals/lucide/shared/src/utils/toCamelCase.js"
+    ],
+    "src/internals/lucide/Icon.js": [
+      "react",
+      "src/internals/lucide/defaultAttributes.js",
+      "src/internals/lucide/shared/src/utils/hasA11yProp.js",
+      "src/internals/lucide/shared/src/utils/mergeClasses.js",
+      "src/internals/lucide/context.js"
+    ],
+    "src/core/lib/components/ui/tooltip/tooltip.jsx": [
+      "react/jsx-runtime",
+      "react"
+    ],
+    "src/core/lib/components/ui/tooltip/tooltip-trigger.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/core/lib/components/ui/tooltip/tooltip.jsx"
+    ],
+    "src/core/lib/components/ui/tooltip/tooltip-content.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "react-dom",
+      "src/core/lib/components/ui/tooltip/tooltip.jsx",
+      "src/core/lib/components/ui/tooltip/tooltip-content.css"
+    ],
+    "src/internals/canvas/widgets/WidgetWrapper.module.css": [],
+    "src/internals/canvas/widgetRefs.js": [],
+    "src/internals/canvas/ConnectorLayer.module.css": [],
+    "src/internals/canvas/connectorGeometry.js": [
+      "src/internals/canvas/widgets/widgetConfig.js"
+    ],
+    "src/internals/canvas/orthogonalRoutes.js": [
+      "src/internals/canvas/connectorGeometry.js",
+      "src/internals/canvas/widgets/widgetConfig.js"
+    ],
+    "src/internals/canvas/widgets/markdown/markdownRender.js": [
+      "src/internals/canvas/widgets/markdown/markdownSanitize.js",
+      "src/core/inspector/highlighter.ts"
+    ],
+    "src/internals/canvas/widgets/markdown/markdownClass.js": [
+      "src/internals/canvas/widgets/markdown/markdownContent.module.css"
+    ],
+    "src/internals/canvas/widgets/markdown/MarkdownEditor.module.css": [],
+    "src/internals/canvas/widgets/useObservedFrameLifecycle.js": [
+      "react",
+      "src/internals/canvas/widgets/frameDocumentReady.js"
+    ],
+    "src/core/utils/prodMode.ts": [],
+    "src/core/site/siteEvents.ts": [
+      "src/core/site/siteHomePreview.ts"
+    ],
+    "src/internals/canvas/widgets/useFrameSnapshot.js": [
+      "react",
+      "src/core/canvas/frameSnapshotViewport.ts"
+    ],
+    "src/internals/canvas/widgets/useFrameSnapshotLifecycle.js": [
+      "react",
+      "src/internals/canvas/widgets/useFrameSnapshot.js",
+      "src/internals/canvas/widgets/frameDocumentReady.js",
+      "src/core/canvas/frameSnapshotViewport.ts"
+    ],
+    "src/internals/canvas/widgets/frameActionUpdates.js": [
+      "src/internals/canvas/widgets/frameDevicePresets.js"
+    ],
+    "src/internals/canvas/widgets/SiteFrame/SiteFrame.module.css": [],
+    "src/core/lib/components/ui/alert/alert.jsx": [
+      "react/jsx-runtime",
+      "react",
+      "src/core/lib/utils/index.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/tailwind-variants/dist/index.js",
+      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "src/core/lib/components/ui/button/index.js",
+      "src/core/lib/components/ui/alert/displayLifecycle.ts",
+      "src/core/lib/components/ui/alert/alert.module.css",
+      "src/core/session/notebookCapabilities.ts"
+    ],
+    "widgets.config.json": [],
     "src/internals/canvas/widgets/embedTheme.js": [
       "src/core/stores/themeStore.ts"
     ],
@@ -4598,7 +4629,14 @@
       "src/core/lib/components/ui/dialog/dialog.module.css"
     ],
     "src/internals/canvas/widgets/PrototypeEmbed.module.css": [],
-    "src/internals/canvas/widgets/WidgetWrapper.module.css": [],
+    "src/internals/canvas/widgets/ResizeHandle.module.css": [],
+    "src/internals/pointerResize.js": [
+      "src/internals/canvas/iframePointerLock.js",
+      "src/internals/pointerResize.css"
+    ],
+    "src/internals/chrome/modalLifecycle.js": [
+      "react"
+    ],
     "src/internals/lucide/icons/eye.js": [
       "src/internals/lucide/createLucideIcon.js"
     ],
@@ -4641,63 +4679,25 @@
     "src/internals/lucide/icons/mail.js": [
       "src/internals/lucide/createLucideIcon.js"
     ],
-    "src/internals/canvas/widgets/markdown/markdownRender.js": [
-      "src/internals/canvas/widgets/markdown/markdownSanitize.js",
-      "src/core/inspector/highlighter.ts"
-    ],
-    "src/internals/canvas/widgets/markdown/markdownClass.js": [
-      "src/internals/canvas/widgets/markdown/markdownContent.module.css"
-    ],
-    "src/internals/canvas/widgets/markdown/MarkdownEditor.module.css": [],
-    "src/internals/canvas/ConnectorLayer.module.css": [],
-    "src/internals/canvas/connectorGeometry.js": [
-      "src/internals/canvas/widgets/widgetConfig.js"
-    ],
-    "src/internals/canvas/orthogonalRoutes.js": [
-      "src/internals/canvas/connectorGeometry.js",
-      "src/internals/canvas/widgets/widgetConfig.js"
-    ],
-    "src/internals/chrome/use-mobile.js": [
+    "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css": [],
+    "src/core/lib/components/ui/alert/displayLifecycle.ts": [
       "react"
     ],
-    "src/internals/chrome/ui/separator.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/separator/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
-    "src/internals/chrome/ui/sheet.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/dialog/index.mjs",
-      "src/internals/chrome/utils.js",
-      "src/internals/chrome/ui/button.jsx",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/lucide-react/dist/esm/lucide-react.mjs"
-    ],
-    "src/internals/chrome/ui/tooltip.jsx": [
-      "react/jsx-runtime",
-      "/Users/danielfosco/workspace/hypercanvas/node_modules/@base-ui/react/tooltip/index.mjs",
-      "src/internals/chrome/utils.js"
-    ],
+    "src/core/lib/components/ui/alert/alert.module.css": [],
+    "src/internals/canvas/widgets/CropOverlay.module.css": [],
+    "src/internals/CommandPalette/WidgetArtifactDialog.css": [],
+    "src/internals/lucide/shared/src/utils/toCamelCase.js": [],
     "src/internals/lucide/defaultAttributes.js": [],
     "src/internals/lucide/shared/src/utils/hasA11yProp.js": [],
     "src/internals/lucide/context.js": [
       "react"
     ],
-    "src/internals/lucide/shared/src/utils/toCamelCase.js": [],
-    "src/internals/canvas/widgets/frameDocumentReady.js": [],
-    "src/internals/canvas/widgets/frameDevicePresets.js": [],
-    "src/internals/pointerResize.css": [],
-    "src/core/lib/components/ui/alert/displayLifecycle.ts": [
-      "react"
-    ],
-    "src/core/lib/components/ui/alert/alert.module.css": [],
-    "src/internals/CommandPalette/WidgetArtifactDialog.css": [],
-    "src/internals/chrome/modalLifecycle.js": [
-      "react"
-    ],
-    "src/internals/NotebookShellPresentation/NotebookShellPresentation.module.css": [],
-    "src/internals/canvas/widgets/CropOverlay.module.css": [],
     "src/internals/canvas/widgets/markdown/markdownContent.module.css": [],
+    "src/internals/canvas/widgets/frameDevicePresets.js": [],
+    "src/internals/canvas/widgets/frameDocumentReady.js": [],
     "src/core/site/siteHomePreview.ts": [],
+    "src/core/lib/components/ui/tooltip/tooltip-content.css": [],
+    "src/internals/pointerResize.css": [],
     "src/core/lib/components/ui/dialog/index.js": [
       "src/core/lib/components/ui/dialog/dialog.jsx",
       "src/core/lib/components/ui/dialog/dialog-trigger.jsx",
