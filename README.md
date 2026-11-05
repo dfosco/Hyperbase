@@ -28,9 +28,19 @@ Use the runtime's base URL when opening links. Authored navigation preserves the
 
 The Chrome prototype contains the existing shadcn Base UI primitives and CSS Modules. All implementation imports are relative to that source tree. The `#hyperbase/` alias remains configured for shadcn generation and points to the prototype folder; `components.json` and `jsconfig.json` agree with it.
 
-`prototypes/chrome-overview.prototype/styles/shadcn.css` owns Chrome's theme tokens and Tailwind build. Its explicit source scan includes the prototype entry and its component tree. Each component story imports that stylesheet in its isolated document. The Publish exploration separately vendors the actual Chrome controls and compiled styles locally; source provenance is documented in `PublishStates.component/chrome/PROVENANCE.md`. No notebook artifact imports the application package.
+`prototypes/chrome-overview.prototype/styles/shadcn.css` owns Chrome's theme tokens and Tailwind build. Its explicit source scan includes the prototype entry and its component tree. Each component story imports that stylesheet in its isolated document. The Publish exploration separately vendors the actual Chrome controls and compiled styles locally; source provenance is documented in `PublishStates.component/chrome/PROVENANCE.md`. Runnable artifacts use Notebook-local sources and the supported compiled Hypercanvas frontend API, not a sibling application checkout.
 
 Before moving an approved composition into Core, copy the required source and wire callbacks to real actions. The application must not depend on this local notebook.
+
+## Collaborator runtime
+
+From this repository, run `npm install`, then `npm run dev`. Run `npm run build` for a production build. The compiled runtime is included under `vendor/hypercanvas/`; no installed Hypercanvas application or sibling checkout is required.
+
+Twelve mirrored application Storybook demos are **source-only references**, not runnable Notebook components: AgentComposer, CanvasTools, CommandPalette, NotebookShell, NotebookShellNotice, NotebookSidebarResize, ShellTabs, PublisherAccordion, PublishingConnection, PublishingPanel, SidePanelStatusDots and SidePanelSubPageNav.
+
+Their source and original identity metadata are preserved in ordinary `*.reference/` folders under `Components/`, with each story stored as `*.story.jsx.txt`. These names intentionally prevent artifact registration and executable story discovery. The references retain their original application-source imports for reading; they are not standalone modules. Do not rename them back to `*.component/` or executable story files when syncing references. Publishing and agent controllers must not be added to the collaborator runtime to make these demos runnable.
+
+The other component stories, prototypes, documents and canvases remain runnable.
 
 ## Publishing concepts
 
