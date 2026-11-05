@@ -1,5 +1,5 @@
 import { jsxs, Fragment, jsx } from "react/jsx-runtime";
-import { useMemo, useState, useRef, useEffect, useCallback, createElement, Suspense } from "react";
+import { useMemo, useState, useRef, useEffect, useCallback, createElement, useLayoutEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import { C as Canvas } from "./Canvas-kSVAzYPO.js";
 import "./feather-Bj7Bm83j.js";
@@ -52,15 +52,15 @@ function getWidgetRef(id) {
   if (!id) return null;
   return getWidgetRefsStore().get(id) ?? null;
 }
-function CanvasZoomControl({ data, zoom = 100, tabindex = -1 }) {
+function CanvasZoomControl({ data, zoom: zoom2 = 100, tabindex = -1 }) {
   if (!data) return null;
   return /* @__PURE__ */ jsxs(Fragment, { children: [
     /* @__PURE__ */ jsxs(Tooltip, { children: [
       /* @__PURE__ */ jsx(TooltipTrigger, { children: /* @__PURE__ */ jsx(
         CanvasToolButton,
         {
-          onClick: () => data.zoomOut(zoom),
-          disabled: zoom <= data.ZOOM_MIN,
+          onClick: () => data.zoomOut(zoom2),
+          disabled: zoom2 <= data.ZOOM_MIN,
           "aria-label": "Decrease zoom",
           tabIndex: tabindex,
           children: /* @__PURE__ */ jsx(Minus, { "aria-hidden": "true" })
@@ -79,7 +79,7 @@ function CanvasZoomControl({ data, zoom = 100, tabindex = -1 }) {
           "aria-label": "Zoom to 100%",
           tabIndex: -1,
           children: [
-            zoom,
+            zoom2,
             "%"
           ]
         }
@@ -90,8 +90,8 @@ function CanvasZoomControl({ data, zoom = 100, tabindex = -1 }) {
       /* @__PURE__ */ jsx(TooltipTrigger, { children: /* @__PURE__ */ jsx(
         CanvasToolButton,
         {
-          onClick: () => data.zoomIn(zoom),
-          disabled: zoom >= data.ZOOM_MAX,
+          onClick: () => data.zoomIn(zoom2),
+          disabled: zoom2 >= data.ZOOM_MAX,
           "aria-label": "Increase zoom",
           tabIndex: -1,
           children: /* @__PURE__ */ jsx(Plus, { "aria-hidden": "true" })
@@ -957,17 +957,21 @@ function resolveStoryExports(module, { componentSet = false, exportNames = [] } 
   }
   return stories2;
 }
-const page = "_page_9pjb8_1";
-const header = "_header_9pjb8_2";
-const scroll = "_scroll_9pjb8_4";
-const frame = "_frame_9pjb8_7";
-const image = "_image_9pjb8_8";
-const poster = "_poster_9pjb8_9";
-const snapshot = "_snapshot_9pjb8_10";
+const page = "_page_1kdko_1";
+const header = "_header_1kdko_2";
+const toolbar = "_toolbar_1kdko_5";
+const scroll = "_scroll_1kdko_6";
+const zoom = "_zoom_1kdko_7";
+const frame = "_frame_1kdko_10";
+const image = "_image_1kdko_11";
+const poster = "_poster_1kdko_12";
+const snapshot = "_snapshot_1kdko_13";
 const css = {
   page,
   header,
+  toolbar,
   scroll,
+  zoom,
   frame,
   image,
   poster,
@@ -975,6 +979,16 @@ const css = {
 };
 const asset = (value) => resolveBasePathAsset(value, globalThis.__HYPERCANVAS_NOTEBOOK_BASE__);
 const clampZoom = (value, { min, max }) => Math.min(max, Math.max(min, value));
+function canvasSurfaceStyle(scale, bounds) {
+  return {
+    transform: `scale(${scale})`,
+    transformOrigin: "0 0",
+    width: `${100 / scale}%`,
+    height: `${100 / scale}%`,
+    minWidth: (bounds?.maxX ?? 0) + FIT_PADDING,
+    minHeight: (bounds?.maxY ?? 0) + FIT_PADDING
+  };
+}
 function moveToolbarFocus(event) {
   if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
   const buttons = [...event.currentTarget.querySelectorAll("button:not(:disabled)")];
@@ -1087,9 +1101,15 @@ function CanvasViewer({ id }) {
   const [frames, updateFrames] = useState(() => /* @__PURE__ */ new Map());
   const setFrame = (id2, element) => updateFrames((previous) => previous.get(id2) === element ? previous : new Map(previous).set(id2, element));
   const zoomConfig = getCanvasZoom();
-  const [zoom, setZoom] = useState(() => clampZoom(100, zoomConfig));
+  const [zoom2, setZoom] = useState(() => clampZoom(100, zoomConfig));
   const scrollRef = useRef(null);
-  const zoomRef = useRef(null);
+  const pendingScroll = useRef(null);
+  useLayoutEffect(() => {
+    if (!pendingScroll.current || !scrollRef.current) return;
+    scrollRef.current.scrollLeft = pendingScroll.current.left;
+    scrollRef.current.scrollTop = pendingScroll.current.top;
+    pendingScroll.current = null;
+  }, [zoom2]);
   const view = resolveNotebookView(location.search);
   if (!canvas) return /* @__PURE__ */ jsxs("p", { role: "alert", children: [
     "Canvas unavailable: ",
@@ -1113,21 +1133,26 @@ function CanvasViewer({ id }) {
       const fitScale = Math.min(scroll2.clientWidth / width, scroll2.clientHeight / height);
       const fitZoom = clampZoom(Math.floor(fitScale * 100), zoomConfig);
       const scale = fitZoom / 100;
+      const position = {
+        left: Math.max(0, (bounds.minX - FIT_PADDING) * scale),
+        top: Math.max(0, (bounds.minY - FIT_PADDING) * scale)
+      };
+      if (fitZoom === zoom2) {
+        scroll2.scrollLeft = position.left;
+        scroll2.scrollTop = position.top;
+      } else {
+        pendingScroll.current = position;
+      }
       setZoom(fitZoom);
-      if (zoomRef.current) zoomRef.current.style.zoom = String(scale);
-      scroll2.scrollLeft = (bounds.minX - FIT_PADDING) * scale;
-      scroll2.scrollTop = (bounds.minY - FIT_PADDING) * scale;
     }
   };
   return /* @__PURE__ */ jsxs("section", { className: css.page, "data-sb-surface": "content", "data-notebook-canvas": id, children: [
-    /* @__PURE__ */ jsxs("header", { className: css.header, children: [
-      /* @__PURE__ */ jsx("h1", { children: canvas.title || id }),
-      view.canvasControlsVisible && layout !== "flow" && /* @__PURE__ */ jsx(CanvasToolsSurface, { role: "toolbar", "aria-label": "Canvas toolbar", className: "hc-items-center", children: /* @__PURE__ */ jsxs(CanvasToolsGroup, { "aria-label": "Zoom", onKeyDown: moveToolbarFocus, children: [
-        /* @__PURE__ */ jsx(CanvasZoomControl, { data: zoomData, zoom, tabindex: 0 }),
-        bounds && /* @__PURE__ */ jsx(CanvasZoomToFit, { config: { label: "Zoom to objects" }, data: zoomData, tabIndex: -1 })
-      ] }) })
-    ] }),
-    /* @__PURE__ */ jsx("div", { ref: scrollRef, className: css.scroll, "data-notebook-canvas-scroll": "", children: /* @__PURE__ */ jsxs("div", { ref: zoomRef, style: { zoom: zoom / 100 }, children: [
+    /* @__PURE__ */ jsx("header", { className: css.header, "data-notebook-chrome": view.notebookVisible || void 0, children: /* @__PURE__ */ jsx("h1", { children: canvas.title || id }) }),
+    view.canvasControlsVisible && layout !== "flow" && /* @__PURE__ */ jsx(CanvasToolsSurface, { role: "toolbar", "aria-label": "Canvas toolbar", className: css.toolbar, children: /* @__PURE__ */ jsxs(CanvasToolsGroup, { "aria-label": "Zoom", onKeyDown: moveToolbarFocus, children: [
+      /* @__PURE__ */ jsx(CanvasZoomControl, { data: zoomData, zoom: zoom2, tabindex: 0 }),
+      bounds && /* @__PURE__ */ jsx(CanvasZoomToFit, { config: { label: "Zoom to objects" }, data: zoomData, tabIndex: -1 })
+    ] }) }),
+    /* @__PURE__ */ jsx("div", { ref: scrollRef, className: css.scroll, "data-notebook-canvas-scroll": "", children: /* @__PURE__ */ jsxs("div", { className: css.zoom, "data-notebook-canvas-zoom": "", "data-layout": layout, style: layout === "flow" ? void 0 : canvasSurfaceStyle(zoom2 / 100, bounds), children: [
       /* @__PURE__ */ jsx(Canvas, { locked: true, layout, gridSize: canvas.settings?.gridSize, dotted: canvas.settings?.dotted, children: widgets.filter((widget) => !widget.hidden).map((widget) => /* @__PURE__ */ jsx("section", { "data-widget-id": widget.id, "data-tc-id": widget.id, "data-tc-x": widget.position?.x || 0, "data-tc-y": widget.position?.y || 0, style: { width: widget.props?.width, minHeight: widget.props?.height }, children: /* @__PURE__ */ jsx(WidgetView, { ...{ widget, widgets, connectors, frames, setFrame } }) }, widget.id)) }),
       layout !== "flow" && /* @__PURE__ */ jsx(ConnectorLayer, { widgets, connectors, selectedWidgetIds: /* @__PURE__ */ new Set() })
     ] }) })
