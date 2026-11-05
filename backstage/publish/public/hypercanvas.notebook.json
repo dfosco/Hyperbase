@@ -93,90 +93,6 @@
       "title": "Silo Dashboard",
       "path": "prototypes/silo-dashboard.prototype",
       "route": "/silo-dashboard.prototype"
-    },
-    {
-      "id": "3b3d7086-feff-4d41-8d0a-727daa70cbe5",
-      "type": "component",
-      "title": "AgentComposer",
-      "path": "Components/Agent/Composer/AgentComposer.component",
-      "route": "/components/AgentComposer"
-    },
-    {
-      "id": "6a5fc847-b98b-436b-a84e-8e3541bb5230",
-      "type": "component",
-      "title": "CanvasTools",
-      "path": "Components/Canvas/Tools/CanvasTools.component",
-      "route": "/components/CanvasTools"
-    },
-    {
-      "id": "63276f26-6645-4dc1-9990-e8ba86073472",
-      "type": "component",
-      "title": "NotebookShell",
-      "path": "Components/Notebook/Sidebar/NotebookShell.component",
-      "route": "/components/NotebookShell"
-    },
-    {
-      "id": "29990964-0d40-4807-8a57-2be50935b47f",
-      "type": "component",
-      "title": "NotebookShellNotice",
-      "path": "Components/Notebook/Runtime notice/NotebookShellNotice.component",
-      "route": "/components/NotebookShellNotice"
-    },
-    {
-      "id": "e7a2f734-86a3-4f16-9f48-90d259ee5aa0",
-      "type": "component",
-      "title": "NotebookSidebarResize",
-      "path": "Components/Notebook shell/Resizable sidebar/NotebookSidebarResize.component",
-      "route": "/components/NotebookSidebarResize"
-    },
-    {
-      "id": "1dea6408-ac06-4f54-bd73-4dbba17d2308",
-      "type": "component",
-      "title": "ShellTabs",
-      "path": "Components/Notebook/Shared Shell Tabs/ShellTabs.component",
-      "route": "/components/ShellTabs"
-    },
-    {
-      "id": "5bc7840c-76cc-4769-a31c-d1700e47d959",
-      "type": "component",
-      "title": "PublisherAccordion",
-      "path": "Components/Publishing/Publisher accordion/PublisherAccordion.component",
-      "route": "/components/PublisherAccordion"
-    },
-    {
-      "id": "eaa52feb-a074-4474-b7e6-dd23764cdb6f",
-      "type": "component",
-      "title": "PublishingConnection",
-      "path": "Components/Publishing/Provider connection/PublishingConnection.component",
-      "route": "/components/PublishingConnection"
-    },
-    {
-      "id": "6444a896-4674-4244-be03-88fa26c58eef",
-      "type": "component",
-      "title": "PublishingPanel",
-      "path": "Components/Publishing/Panel/PublishingPanel.component",
-      "route": "/components/PublishingPanel"
-    },
-    {
-      "id": "c1c4705b-8474-4a78-98df-a7a688d54fdc",
-      "type": "component",
-      "title": "SidePanelStatusDots",
-      "path": "Components/Side panel/Status dots/SidePanelStatusDots.component",
-      "route": "/components/SidePanelStatusDots"
-    },
-    {
-      "id": "6fb8b868-8b22-4db3-911e-5cd9b3c59836",
-      "type": "component",
-      "title": "SidePanelSubPageNav",
-      "path": "Components/Side panel/Sub-page navigation/SidePanelSubPageNav.component",
-      "route": "/components/SidePanelSubPageNav"
-    },
-    {
-      "id": "1215feb5-5ed5-4f37-9835-d72bd0fbb88d",
-      "type": "component",
-      "title": "CommandPalette",
-      "path": "Components/Studio/Command Palette/CommandPalette.component",
-      "route": "/components/CommandPalette"
     }
   ],
   "navigation": {
@@ -207,19 +123,7 @@
           "591eeb01-7673-4e4f-86ff-e13fadb10efa",
           "751b33c0-fb00-494f-a13b-f095b74c2e2d",
           "494304d5-c195-4a1c-90f1-f862fa7247d1",
-          "artifact-component-55677a720a2febdbb88a",
-          "3b3d7086-feff-4d41-8d0a-727daa70cbe5",
-          "6a5fc847-b98b-436b-a84e-8e3541bb5230",
-          "63276f26-6645-4dc1-9990-e8ba86073472",
-          "29990964-0d40-4807-8a57-2be50935b47f",
-          "e7a2f734-86a3-4f16-9f48-90d259ee5aa0",
-          "1dea6408-ac06-4f54-bd73-4dbba17d2308",
-          "5bc7840c-76cc-4769-a31c-d1700e47d959",
-          "eaa52feb-a074-4474-b7e6-dd23764cdb6f",
-          "6444a896-4674-4244-be03-88fa26c58eef",
-          "c1c4705b-8474-4a78-98df-a7a688d54fdc",
-          "6fb8b868-8b22-4db3-911e-5cd9b3c59836",
-          "1215feb5-5ed5-4f37-9835-d72bd0fbb88d"
+          "artifact-component-55677a720a2febdbb88a"
         ],
         "site": []
       }
@@ -238,19 +142,7 @@
         "494304d5-c195-4a1c-90f1-f862fa7247d1",
         "artifact-component-55677a720a2febdbb88a",
         "demo-prototype-loopline-signup",
-        "913a9885-c7a9-40f3-a8d6-797125dcb557",
-        "3b3d7086-feff-4d41-8d0a-727daa70cbe5",
-        "6a5fc847-b98b-436b-a84e-8e3541bb5230",
-        "63276f26-6645-4dc1-9990-e8ba86073472",
-        "29990964-0d40-4807-8a57-2be50935b47f",
-        "e7a2f734-86a3-4f16-9f48-90d259ee5aa0",
-        "1dea6408-ac06-4f54-bd73-4dbba17d2308",
-        "5bc7840c-76cc-4769-a31c-d1700e47d959",
-        "eaa52feb-a074-4474-b7e6-dd23764cdb6f",
-        "6444a896-4674-4244-be03-88fa26c58eef",
-        "c1c4705b-8474-4a78-98df-a7a688d54fdc",
-        "6fb8b868-8b22-4db3-911e-5cd9b3c59836",
-        "1215feb5-5ed5-4f37-9835-d72bd0fbb88d"
+        "913a9885-c7a9-40f3-a8d6-797125dcb557"
       ],
       "entries": [
         {
@@ -304,54 +196,6 @@
         {
           "type": "page",
           "pageId": "913a9885-c7a9-40f3-a8d6-797125dcb557"
-        },
-        {
-          "type": "page",
-          "pageId": "3b3d7086-feff-4d41-8d0a-727daa70cbe5"
-        },
-        {
-          "type": "page",
-          "pageId": "6a5fc847-b98b-436b-a84e-8e3541bb5230"
-        },
-        {
-          "type": "page",
-          "pageId": "63276f26-6645-4dc1-9990-e8ba86073472"
-        },
-        {
-          "type": "page",
-          "pageId": "29990964-0d40-4807-8a57-2be50935b47f"
-        },
-        {
-          "type": "page",
-          "pageId": "e7a2f734-86a3-4f16-9f48-90d259ee5aa0"
-        },
-        {
-          "type": "page",
-          "pageId": "1dea6408-ac06-4f54-bd73-4dbba17d2308"
-        },
-        {
-          "type": "page",
-          "pageId": "5bc7840c-76cc-4769-a31c-d1700e47d959"
-        },
-        {
-          "type": "page",
-          "pageId": "eaa52feb-a074-4474-b7e6-dd23764cdb6f"
-        },
-        {
-          "type": "page",
-          "pageId": "6444a896-4674-4244-be03-88fa26c58eef"
-        },
-        {
-          "type": "page",
-          "pageId": "c1c4705b-8474-4a78-98df-a7a688d54fdc"
-        },
-        {
-          "type": "page",
-          "pageId": "6fb8b868-8b22-4db3-911e-5cd9b3c59836"
-        },
-        {
-          "type": "page",
-          "pageId": "1215feb5-5ed5-4f37-9835-d72bd0fbb88d"
         }
       ],
       "sections": []

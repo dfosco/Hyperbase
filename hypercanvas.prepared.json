@@ -537,7 +537,6 @@
     "@primer/octicons-react": "19.40.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "cmdk": "1.1.1",
     "lucide-react": "1.59.0",
     "shadcn": "4.22.1",
     "tailwind-merge": "3.7.0",
